@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <meta charset="UTF-8" />
+<style>
+  div#app {
+    border-width: 1px;
+    border-color: sandybrown;
+    border-style: solid;
+    padding: 1em;
+    margin: 1em;
+  }
+</style>
 <title><%= htmlWebpackPlugin.options.title %></title>
 <header>
   <h1><%= htmlWebpackPlugin.options.title %></h1>
@@ -15,11 +24,12 @@
   </section>
   <section>
     <h3>Frameworks</h3>
-    <img src="assets/logo.angular.png" title="TypeScript" width="100" />
-    <img src="assets/logo.angularjs.png" title="JavaScript" width="100" />
-    <img src="assets/logo.inferno.png" title="Babel" width="100" />
-    <img src="assets/logo.react.png" title="Babel" width="100" />
-    <img src="assets/logo.vue.png" title="Webpack" width="100" />
+    <img src="assets/logo.angular.png" title="Angular" width="100" />
+    <img src="assets/logo.angularjs.png" title="AngularJS" width="100" />
+    <img src="assets/logo.inferno.png" title="Inferno" width="100" />
+    <img src="assets/logo.react.png" title="React" width="100" />
+    <img src="assets/logo.vue.png" title="Vue" width="100" />
+    <div id="app"></div>
   </section>
 </main>
 <footer>

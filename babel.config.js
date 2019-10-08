@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: [],
+  plugins: ['@babel/plugin-proposal-class-properties'],
   presets: [
     [
       '@babel/preset-env',
@@ -9,7 +9,13 @@ module.exports = {
         }
       }
     ],
-    '@babel/preset-typescript'
+    [
+      '@babel/typescript',
+      {
+        isTSX: true,
+        allExtensions: true
+      }
+    ]
   ],
   env: {
     test: {

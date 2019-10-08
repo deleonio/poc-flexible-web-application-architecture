@@ -1,5 +1,5 @@
 const path = require('path');
-// const util = require('util');
+const util = require('util');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -25,6 +25,7 @@ module.exports = (env, argv) => {
       break;
     case 'vue':
       babelConfigPresets.push('@vue/app');
+      // babelConfigPlugins.push('transform-vue-template');
       break;
     default:
       env.framework = 'angularjs';
@@ -32,7 +33,7 @@ module.exports = (env, argv) => {
   }
 
   const config = {
-    entry: path.join(__dirname, 'src', `main.${env.framework}.ts`),
+    entry: path.join(__dirname, 'src', `${env.framework}.main.ts`),
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.js'
@@ -40,7 +41,7 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.m?(j|t)s$/,
+          test: /\.(m?(j|t)sx|vue)?$/,
           exclude: /(node_modules|bower_components)/,
           use: {
             loader: 'babel-loader',
@@ -61,7 +62,10 @@ module.exports = (env, argv) => {
         title: packageJson.description,
         version: packageJson.version
       })
-    ]
+    ],
+    resolve: {
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
+    }
   };
 
   switch (argv.mode) {
@@ -71,7 +75,7 @@ module.exports = (env, argv) => {
       config.devtool = 'source-map';
   }
 
-  // console.log(util.inspect(config, true, null, true));
+  console.log(util.inspect(config, true, null, true));
 
   return config;
 };
