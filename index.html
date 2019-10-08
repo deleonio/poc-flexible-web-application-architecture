@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Webpack based Web-Application-Development</title>
-  </head>
-  <body>
-    <img src="assets/logo.javascript.png" />
-    <img src="assets/logo.typescript.png" />
-    <img src="assets/logo.babel.png" />
-    <img src="assets/logo.webpack.png" />
-  </body>
-</html>
+<meta charset="UTF-8" />
+<title><%= htmlWebpackPlugin.options.title %></title>
+<header>
+  <h1><%= htmlWebpackPlugin.options.title %></h1>
+  <h2>Flexible web application architecture</h2>
+</header>
+<main>
+  <img src="assets/logo.javascript.png" title="JavaScript" width="100" />
+  <img src="assets/logo.typescript.png" title="TypeScript" width="100" />
+  <img src="assets/logo.babel.png" title="Babel" width="100" />
+  <img src="assets/logo.webpack.png" title="Webpack" width="100" />
+</main>
+<footer>
+  <%= htmlWebpackPlugin.options.name %> <%= htmlWebpackPlugin.options.version %>
+</footer>

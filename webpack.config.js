@@ -25,8 +25,10 @@ const config = {
   plugins: [
     new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
     new HtmlWebpackPlugin({
-      title: packageJson.desciption,
-      template: 'index.html'
+      name: packageJson.name,
+      template: 'index.html',
+      title: packageJson.description,
+      version: packageJson.version
     })
   ]
 };

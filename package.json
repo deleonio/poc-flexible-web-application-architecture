@@ -1,7 +1,7 @@
 {
   "name": "vue-composition-api",
   "version": "1.0.0",
-  "description": "Webpack based Web-Application-Development",
+  "description": "Webpack based web application development",
   "author": "Martin Oppitz <github@martinoppitz.com> (http://martinoppitz.com)",
   "private": true,
   "scripts": {
