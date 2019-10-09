@@ -1,10 +1,10 @@
 <template>
   <div>
     <label>
-      {{$ctrl.props.label}}
+      {{ $ctrl.props.label }}
       <input v-model="$ctrl.props.value" @keyup="handleChange" />
     </label>
-    <pre>{{$ctrl.props.value}}</pre>
+    <pre>{{ $ctrl.props.value }}</pre>
   </div>
 </template>
 

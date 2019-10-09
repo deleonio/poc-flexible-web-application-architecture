@@ -1,6 +1,7 @@
 import { Component } from 'inferno';
-import { AppController } from './controller';
+
 import { InputComponent } from '../input/component.inferno';
+import { AppController } from './controller';
 
 export class AppComponent extends Component {
   public $ctrl: AppController = new AppController();
