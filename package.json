@@ -1,7 +1,7 @@
 {
-  "name": "vue-composition-api",
+  "name": "poc-flexible-web-application-architecture",
   "version": "1.0.0",
-  "description": "Webpack based web application development",
+  "description": "This project demonstrate a flexible webpack based web application architecture.",
   "author": "Martin Oppitz <github@martinoppitz.com> (http://martinoppitz.com)",
   "private": true,
   "scripts": {
@@ -9,11 +9,15 @@
     "serve": "webpack-dev-server --env.framework"
   },
   "dependencies": {
-    "@angular/core": "8.2.1",
+    "@angular/common": "8.2.9",
+    "@angular/compiler": "8.2.9",
+    "@angular/core": "8.2.9",
+    "@angular/platform-browser": "8.2.9",
+    "@angular/platform-browser-dynamic": "8.2.9",
     "@vue/composition-api": "0.3.2",
     "angular": "1.7.8",
     "core-js": "3.2.1",
-    "inferno": "7.2.1",
+    "inferno": "7.3.2",
     "react": "16.10.2",
     "react-dom": "16.10.2",
     "rxjs": "6.5.3",
@@ -21,22 +25,26 @@
     "zone.js": "0.9.1"
   },
   "devDependencies": {
-    "@babel/core": "7.6.2",
+    "@babel/core": "7.6.3",
     "@babel/plugin-proposal-class-properties": "7.5.5",
-    "@babel/preset-env": "7.6.2",
+    "@babel/plugin-proposal-decorators": "7.4.4",
+    "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
-    "@babel/preset-typescript": "7.3.3",
+    "@babel/preset-typescript": "7.6.0",
     "@vue/cli-plugin-babel": "3.11.0",
     "babel-loader": "8.0.6",
+    "babel-plugin-angular2-annotations": "5.1.0",
     "babel-plugin-angularjs-annotate": "0.10.0",
     "babel-plugin-inferno": "6.1.0",
     "babel-plugin-transform-vue-template": "0.4.2",
     "copy-webpack-plugin": "5.0.4",
     "html-webpack-plugin": "3.2.0",
+    "tslint": "5.20.0",
+    "typescript": "3.6.3",
     "vue-loader": "15.7.1",
     "vue-template-compiler": "2.6.10",
     "webpack": "4.41.0",
-    "webpack-cli": "3.3.6",
-    "webpack-dev-server": "3.8.0"
+    "webpack-cli": "3.3.9",
+    "webpack-dev-server": "3.8.2"
   }
 }

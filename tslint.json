@@ -2,7 +2,6 @@
   "extends": "tslint:recommended",
   "rules": {
     "forin": false,
-    "indent": [true, "tabs"],
     "interface-name": false,
     "ban-types": true,
     "max-classes-per-file": true,

@@ -14,6 +14,7 @@ module.exports = (env, argv) => {
   const webpackAdditionalPlugins = [];
   switch (env.framework) {
     case 'angular':
+      // babelConfigPlugins.push('angular2-annotations');
       break;
     case 'inferno':
       babelConfigPlugins.push([
