@@ -5,14 +5,16 @@ import { AppController } from './controller';
   selector: 'app',
   template: `
     <div>
-      <h4>{{ this.$ctrl.helloWorld }}</h4>
+      <h4>{{ $ctrl.helloWorld }}</h4>
       <small
-        >{{ this.$ctrl.framework.name }} v{{ this.$ctrl.framework.version }} | {{ this.$ctrl.finishedRendering }} ms
-        upcomming time</small
+        >{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }} | {{ $ctrl.finishedRendering }} ms upcomming
+        time</small
       >
+      <app-input [props]="$ctrl.vornameProps"></app-input>
+      <pre>{{ $ctrl.vornameProps.value }}</pre>
     </div>
   `
 })
 export class AppComponent {
-  public $ctrl: Object = new AppController();
+  public $ctrl: AppController = new AppController();
 }

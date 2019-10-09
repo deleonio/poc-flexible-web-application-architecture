@@ -1,6 +1,6 @@
 import { render, version } from 'inferno';
 
-import { MyComponent } from './components/app/component.inferno';
+import { AppComponent } from './components/app/component.inferno';
 import { APP_HTML_DIV_ELEMENT } from './shares/constant';
 import { DI } from './shares/injector';
 
@@ -9,4 +9,4 @@ DI.register('Framework', {
   version: version
 });
 require('./shares/register');
-render(<MyComponent />, APP_HTML_DIV_ELEMENT);
+render(<AppComponent />, APP_HTML_DIV_ELEMENT);

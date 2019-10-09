@@ -1,5 +1,6 @@
 import './angularjs.module';
 import './components/app/component.angularjs';
+import './components/input/component.angularjs';
 
 import * as angular from 'angular';
 

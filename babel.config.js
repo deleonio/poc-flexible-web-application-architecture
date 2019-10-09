@@ -3,10 +3,16 @@ module.exports = {
     [
       '@babel/plugin-proposal-decorators',
       {
-        legacy: true
+        legacy: true,
+        loose: true
       }
     ],
-    ['@babel/plugin-proposal-class-properties']
+    [
+      '@babel/plugin-proposal-class-properties',
+      {
+        loose: true
+      }
+    ]
   ],
   presets: [
     [
