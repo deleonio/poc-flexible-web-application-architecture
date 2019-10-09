@@ -13,11 +13,14 @@ module.exports = (env, argv) => {
   const babelConfigPresets = [];
   const webpackAdditionalLoaders = [];
   const webpackAdditionalPlugins = [];
+  const webpackEntries = {};
   switch (env.framework) {
     case 'angular':
+      webpackEntries.angular = path.join(__dirname, 'src', `angular.ts`);
       break;
     case 'angularjs':
       babelConfigPlugins.push('angularjs-annotate');
+      webpackEntries.angularjs = path.join(__dirname, 'src', `angularjs.ts`);
       break;
     case 'inferno':
       babelConfigPlugins.push([
@@ -26,9 +29,11 @@ module.exports = (env, argv) => {
           imports: true
         }
       ]);
+      webpackEntries.inferno = path.join(__dirname, 'src', `inferno.tsx`);
       break;
     case 'react':
       babelConfigPresets.push('@babel/preset-react');
+      webpackEntries.react = path.join(__dirname, 'src', `react.tsx`);
       break;
     case 'vue':
       webpackAdditionalLoaders.push({
@@ -36,6 +41,7 @@ module.exports = (env, argv) => {
         loader: 'vue-loader'
       });
       webpackAdditionalPlugins.push(new VueLoaderPlugin());
+      webpackEntries.vue = path.join(__dirname, 'src', `vue.ts`);
       break;
     default:
       console.log(`
@@ -46,10 +52,9 @@ module.exports = (env, argv) => {
   }
 
   const config = {
-    entry: path.join(__dirname, 'src', `${env.framework}.main.ts`),
+    entry: webpackEntries,
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js'
+      path: path.resolve(__dirname, 'dist')
     },
     module: {
       rules: webpackAdditionalLoaders.concat([

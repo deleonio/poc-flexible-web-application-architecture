@@ -12,7 +12,7 @@
 
 ## Motivation
 
-This project demonstrate a flexible Babel and Webpack based web application architecture.
+This project demonstrate a flexible [Babel] and [Webpack] based web application architecture.
 
 ## Introduction
 
@@ -45,11 +45,11 @@ Run `yarn install` in your command line interface. If you have problems with you
 ### Serve
 
 Currently the following frameworks are available: 
-- angular
-- angularjs
-- inferno
-- react
-- vue
+- `angular`
+- `angularjs`
+- `inferno`
+- `react`
+- `vue`
 
 Use the this command to serve the application: `yarn serve <framework>`
 

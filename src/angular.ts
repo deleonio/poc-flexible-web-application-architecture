@@ -1,5 +1,9 @@
+import 'core-js';
+import 'zone.js';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppComponent } from './component/app/component.angular';
 
@@ -9,3 +13,5 @@ import { AppComponent } from './component/app/component.angular';
   imports: [BrowserModule]
 })
 export class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule);
