@@ -1,7 +1,6 @@
 const path = require('path');
 // const util = require('util');
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -73,7 +72,6 @@ module.exports = (env, argv) => {
       ])
     },
     plugins: [
-      new CleanWebpackPlugin(),
       new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
       new HtmlWebpackPlugin({
         author: packageJson.author,

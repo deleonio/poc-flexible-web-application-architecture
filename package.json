@@ -10,6 +10,8 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=production --env.framework",
+    "build-all": "yarn build angular && yarn build angularjs && yarn build inferno && yarn build react && yarn build vue",
+    "clear": "rm -rf coverage dist",
     "reinstall": "rm -rf node_modules && yarn install",
     "serve": "webpack-dev-server --colors --progress --env.framework"
   },
@@ -43,7 +45,6 @@
     "babel-plugin-inferno": "6.1.0",
     "babel-plugin-transform-vue-template": "0.4.2",
     "css-loader": "3.2.0",
-    "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.0.4",
     "html-webpack-plugin": "3.2.0",
     "tslint": "5.20.0",
