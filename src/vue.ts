@@ -4,7 +4,7 @@ import Vue from 'vue';
 
 import { APP_HTML_DIV_ELEMENT } from './constants';
 
-import App from './component/app/component';
+import App from './components/app/component';
 
 Vue.use(VueCompositionApi);
 
