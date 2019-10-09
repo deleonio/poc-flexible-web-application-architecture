@@ -19,5 +19,8 @@ export class AppController {
     list.push(new Date());
     this.storageService.setItem('list', list);
     this.storageService.setItem('upcommingTime', this.finishedRendering);
+    setInterval(() => {
+      console.log(this.vornameProps);
+    }, 1000);
   }
 }

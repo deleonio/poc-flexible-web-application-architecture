@@ -11,15 +11,14 @@
 </template>
 
 <script>
-import { AppController } from "./controller";
-import InputComponent from "../input/component";
+import { AppController } from './controller';
+import InputComponent from '../input/component';
 
 export default {
   components: {
-    "app-input": InputComponent
+    'app-input': InputComponent
   },
   setup() {
-    setInterval(() => {}, 1000);
     return {
       $ctrl: new AppController()
     };

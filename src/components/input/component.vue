@@ -2,29 +2,35 @@
   <div>
     <label>
       {{ $ctrl.props.label }}
-      <input v-model="$ctrl.props.value" @keyup="handleChange" />
+      <input v-model="state.model" @keyup="handleChange" />
     </label>
-    <pre>{{ $ctrl.props.value }}</pre>
+    <pre>{{ state.model }}</pre>
   </div>
 </template>
 
 <script>
-import { watch } from "vue";
-import { InputController } from "./controller";
-import { reactive } from "@vue/composition-api";
+import { InputController } from './controller';
+import Vue from 'vue';
+import { reactive } from '@vue/composition-api';
 
 export default {
-  props: ["props"],
-  setup(props) {
-    const $ctrl = reactive(new InputController(props.props));
+  props: ['props'],
+  setup(props, context) {
+    console.log(context);
+    const $ctrl = new InputController(props.props);
+    const state = reactive({
+      model: $ctrl.props.value
+    });
 
     const handleChange = event => {
       $ctrl.props.value = event.target.value;
+      context.parent.$forceUpdate();
     };
 
     return {
-      $ctrl: $ctrl,
-      handleChange: handleChange
+      $ctrl,
+      state,
+      handleChange
     };
   }
 };
