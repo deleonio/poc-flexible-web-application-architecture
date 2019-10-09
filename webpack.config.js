@@ -3,12 +3,15 @@ const util = require('util');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const packageJson = require('./package.json');
 
 module.exports = (env, argv) => {
   const babelConfigPlugins = [];
   const babelConfigPresets = [];
+  const webpackAdditionalLoaders = [];
+  const webpackAdditionalPlugins = [];
   switch (env.framework) {
     case 'angular':
       break;
@@ -24,8 +27,13 @@ module.exports = (env, argv) => {
       babelConfigPresets.push('@babel/preset-react');
       break;
     case 'vue':
-      babelConfigPresets.push('@vue/app');
+      // babelConfigPresets.push('@vue/app');
       // babelConfigPlugins.push('transform-vue-template');
+      webpackAdditionalLoaders.push({
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      });
+      webpackAdditionalPlugins.push(new VueLoaderPlugin());
       break;
     default:
       env.framework = 'angularjs';
@@ -39,9 +47,9 @@ module.exports = (env, argv) => {
       filename: 'bundle.js'
     },
     module: {
-      rules: [
+      rules: webpackAdditionalLoaders.concat([
         {
-          test: /\.(m?(j|t)sx|vue)?$/,
+          test: /\.(m?(j|t)sx?)$/,
           exclude: /(node_modules|bower_components)/,
           use: {
             loader: 'babel-loader',
@@ -52,7 +60,7 @@ module.exports = (env, argv) => {
             }
           }
         }
-      ]
+      ])
     },
     plugins: [
       new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
@@ -62,7 +70,7 @@ module.exports = (env, argv) => {
         title: packageJson.description,
         version: packageJson.version
       })
-    ],
+    ].concat(webpackAdditionalPlugins),
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
     }

@@ -1,5 +1,5 @@
 <template>
-  <div>sadasd</div>
+  <div>{{this.$ctrl.helloWorld}}</div>
 </template>
 
 <script>
