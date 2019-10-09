@@ -1,6 +1,7 @@
 const path = require('path');
-const util = require('util');
+// const util = require('util');
 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -14,7 +15,6 @@ module.exports = (env, argv) => {
   const webpackAdditionalPlugins = [];
   switch (env.framework) {
     case 'angular':
-      // babelConfigPlugins.push('angular2-annotations');
       break;
     case 'inferno':
       babelConfigPlugins.push([
@@ -28,8 +28,6 @@ module.exports = (env, argv) => {
       babelConfigPresets.push('@babel/preset-react');
       break;
     case 'vue':
-      // babelConfigPresets.push('@vue/app');
-      // babelConfigPlugins.push('transform-vue-template');
       webpackAdditionalLoaders.push({
         test: /\.vue$/,
         loader: 'vue-loader'
@@ -64,11 +62,13 @@ module.exports = (env, argv) => {
       ])
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
       new HtmlWebpackPlugin({
+        author: packageJson.author,
+        description: packageJson.description,
         name: packageJson.name,
         template: 'index.html',
-        title: packageJson.description,
         version: packageJson.version
       })
     ].concat(webpackAdditionalPlugins),
@@ -84,7 +84,7 @@ module.exports = (env, argv) => {
       config.devtool = 'source-map';
   }
 
-  console.log(util.inspect(config, true, null, true));
+  // console.log(util.inspect(config, true, null, true));
 
   return config;
 };

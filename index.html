@@ -5,14 +5,14 @@
     border-width: 1px;
     border-color: sandybrown;
     border-style: solid;
-    padding: 1em;
-    margin: 1em;
+    padding: 0.25em;
+    margin: 1em 0;
   }
 </style>
 <title><%= htmlWebpackPlugin.options.title %></title>
 <header>
-  <h1><%= htmlWebpackPlugin.options.title %></h1>
-  <h2>Flexible web application architecture</h2>
+  <h1>PoC - Flexible web application architecture</h1>
+  <h2><%= htmlWebpackPlugin.options.description %></h2>
 </header>
 <main>
   <section>
@@ -29,9 +29,19 @@
     <img src="assets/logo.inferno.png" title="Inferno" width="100" />
     <img src="assets/logo.react.png" title="React" width="100" />
     <img src="assets/logo.vue.png" title="Vue" width="100" />
+  </section>
+  <section>
+    <h3>App</h3>
     <div id="app"></div>
   </section>
 </main>
 <footer>
-  <%= htmlWebpackPlugin.options.name %> <%= htmlWebpackPlugin.options.version %>
+  <hr />
+  <code>
+    <b>Author:</b> <%= htmlWebpackPlugin.options.author.name %> |
+    <a href="mailto:<%= htmlWebpackPlugin.options.author.email %>"><%= htmlWebpackPlugin.options.author.email %></a> |
+    <a href="<%= htmlWebpackPlugin.options.author.url %>" target="<%= htmlWebpackPlugin.options.author.url %>"
+      ><%= htmlWebpackPlugin.options.author.url %></a
+    ></code
+  >
 </footer>
