@@ -39,7 +39,7 @@ module.exports = (env, argv) => {
       break;
     default:
       console.log(`
-[ERROR] No framework was given. Use: angular, angularjs, inferno, react or vue
+[ERROR] No or an invalid framework identifier was given. Use: angular, angularjs, inferno, react or vue
         > npm run serve inferno
 `);
       process.exit(1);
@@ -75,6 +75,7 @@ module.exports = (env, argv) => {
         description: packageJson.description,
         name: packageJson.name,
         template: 'index.html',
+        title: 'PoC - Flexible web application architecture',
         version: packageJson.version
       })
     ].concat(webpackAdditionalPlugins),
