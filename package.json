@@ -11,7 +11,7 @@
   "scripts": {
     "build": "webpack --mode=production --env.framework",
     "reinstall": "rm -rf node_modules && yarn install",
-    "serve": "webpack-dev-server --colors --open --progress --env.framework"
+    "serve": "webpack-dev-server --colors --progress --env.framework"
   },
   "dependencies": {
     "@angular/common": "8.2.9",

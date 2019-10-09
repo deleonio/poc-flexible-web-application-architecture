@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { VERSION } from '@angular/core';
 import { AppController } from './controller';
 
 @Component({
@@ -7,7 +6,10 @@ import { AppController } from './controller';
   template: `
     <div>
       <h4>{{ this.$ctrl.helloWorld }}</h4>
-      <small>Angular v${VERSION.full} | {{ this.$ctrl.finishedRendering }} ms upcomming time</small>
+      <small
+        >{{ this.$ctrl.framework.name }} v{{ this.$ctrl.framework.version }} | {{ this.$ctrl.finishedRendering }} ms
+        upcomming time</small
+      >
     </div>
   `
 })

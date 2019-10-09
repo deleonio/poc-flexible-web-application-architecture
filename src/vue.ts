@@ -1,10 +1,16 @@
-import VueCompositionApi from '@vue/composition-api';
-
 import Vue from 'vue';
 
-import { APP_HTML_DIV_ELEMENT } from './constants';
+import VueCompositionApi from '@vue/composition-api';
 
 import App from './components/app/component';
+import { APP_HTML_DIV_ELEMENT } from './shares/constant';
+import { DI } from './shares/injector';
+
+DI.register('Framework', {
+  name: 'Vue',
+  version: Vue.version
+});
+require('./shares/register');
 
 Vue.use(VueCompositionApi);
 

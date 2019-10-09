@@ -1,5 +1,4 @@
 import { Component } from 'inferno';
-import { version } from 'inferno';
 import { AppController } from './controller';
 
 export class MyComponent extends Component {
@@ -10,7 +9,7 @@ export class MyComponent extends Component {
       <div>
         <h4>{this.$ctrl.helloWorld}</h4>
         <small>
-          Inferno v{version} | {this.$ctrl.finishedRendering} ms upcomming time
+          {this.$ctrl.framework.name} v{this.$ctrl.framework.version} | {this.$ctrl.finishedRendering} ms upcomming time
         </small>
       </div>
     );

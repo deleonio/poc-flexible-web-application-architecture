@@ -1,8 +1,15 @@
+import './angularjs.module';
+import './components/app/component.angularjs';
+
 import * as angular from 'angular';
 
-import './angularjs.module';
-import { APP_HTML_DIV_ELEMENT } from './constants';
+import { APP_HTML_DIV_ELEMENT } from './shares/constant';
+import { DI } from './shares/injector';
 
-import './components/app/component.angularjs';
+DI.register('Framework', {
+  name: 'AngularJS',
+  version: angular.version.full
+});
+require('./shares/register');
 
 angular.bootstrap(APP_HTML_DIV_ELEMENT, ['app']);
