@@ -16,6 +16,9 @@ module.exports = (env, argv) => {
   switch (env.framework) {
     case 'angular':
       break;
+    case 'angularjs':
+      babelConfigPlugins.push('angularjs-annotate');
+      break;
     case 'inferno':
       babelConfigPlugins.push([
         'babel-plugin-inferno',
@@ -35,8 +38,11 @@ module.exports = (env, argv) => {
       webpackAdditionalPlugins.push(new VueLoaderPlugin());
       break;
     default:
-      env.framework = 'angularjs';
-      babelConfigPlugins.push('angularjs-annotate');
+      console.log(`
+[ERROR] No framework was given. Use: angular, angularjs, inferno, react or vue
+        > npm run serve inferno
+`);
+      process.exit(1);
   }
 
   const config = {
