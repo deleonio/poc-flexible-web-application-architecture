@@ -1,8 +1,10 @@
-import { InfernoComponent } from '../../inferno.component';
-import { EditorSerieComponent } from '../editor/component.inferno';
+import React from 'react';
+
+import { ReactComponent } from '../../react.component';
+import { EditorSerieComponent } from '../editor/component.react';
 import { CreateSerieController } from './controller';
 
-export class CreateSerieComponent extends InfernoComponent {
+export class CreateSerieComponent extends ReactComponent {
   public constructor(props: any) {
     super(props, new CreateSerieController());
   }

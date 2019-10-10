@@ -9,7 +9,7 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "lib": ["es2017", "dom"],
-    "types": ["inferno"],
+    "types": ["inferno", "node"],
     "jsx": "preserve",
     "noUnusedLocals": true,
     "baseUrl": "./src",

@@ -1,8 +1,8 @@
-import { Component } from 'inferno';
+import React, { Component } from 'react';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
-import { CreateSerieComponent } from '../create/component.inferno';
-import { EditSerieComponent } from '../edit/component.inferno';
+import { CreateSerieComponent } from '../create/component.react';
+import { EditSerieComponent } from '../edit/component.react';
 import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends Component {

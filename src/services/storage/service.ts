@@ -24,7 +24,9 @@ export class StorageService {
   }
 
   private restore() {
-    this.memoryStorage = JSON.parse(this.browserStorage.getItem(this.namespace) || '{}');
+    this.memoryStorage = JSON.parse(
+      this.browserStorage.getItem(this.namespace) || JSON.stringify(require('./mock.json'))
+    );
   }
 
   private store() {

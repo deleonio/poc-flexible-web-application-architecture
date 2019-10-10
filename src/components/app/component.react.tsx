@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { InputComponent } from '../input/component.react';
+import { ReactComponent } from '../react.component';
+import { ListSerieComponent } from '../series/list/component.react';
 import { AppController } from './controller';
 
-export class AppComponent extends Component {
-  public $ctrl: AppController = new AppController();
+export class AppComponent extends ReactComponent {
+  public constructor(props: any) {
+    super(props, new AppController());
+  }
 
   public render() {
     return (
@@ -13,6 +16,7 @@ export class AppComponent extends Component {
         <small>
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version} | {this.$ctrl.finishedRendering} ms upcomming time
         </small>
+        <ListSerieComponent />
       </div>
     );
   }
