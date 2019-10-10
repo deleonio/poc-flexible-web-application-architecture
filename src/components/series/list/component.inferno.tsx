@@ -4,6 +4,7 @@ import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { CreateSerieComponent } from '../create/component.inferno';
 import { ListSerieController } from './controller';
 import { EditSerieComponent } from '../edit/component.inferno';
+import { EditorForm } from '../editor/editor.form';
 
 export class ListSerieComponent extends Component {
   public $ctrl: ListSerieController = new ListSerieController();
@@ -18,8 +19,8 @@ export class ListSerieComponent extends Component {
     this.forceUpdate();
   }
 
-  private handleEdit(serie: MeasuredSerieModel) {
-    this.$ctrl.edit(serie);
+  private handleEdit(measuredSerie: MeasuredSerieModel) {
+    this.$ctrl.edit(measuredSerie);
     this.forceUpdate();
   }
 
@@ -65,7 +66,9 @@ export class ListSerieComponent extends Component {
           </tbody>
         </table>
         <CreateSerieComponent />
-        {this.$ctrl.editSerie instanceof MeasuredSerieModel && <EditSerieComponent serie={this.$ctrl.editSerie} />}
+        {this.$ctrl.measuredSerie instanceof MeasuredSerieModel && (
+          <EditSerieComponent serie={this.$ctrl.measuredSerie} />
+        )}
       </div>
     );
   }

@@ -22,8 +22,14 @@ export class MeasuredSerieModel {
   public getMeasurements(): MeasuredItemModel[] {
     return this.measurements;
   }
+  public setTitle(title: string) {
+    this.title = title;
+  }
   public getTitle(): string {
     return this.title;
+  }
+  public setUnit(unit: string) {
+    this.unit = unit;
   }
   public getUnit(): string {
     return this.unit;
