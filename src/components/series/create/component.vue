@@ -1,0 +1,31 @@
+<template>
+  <form @submit="onSubmit()">
+    <h5>Create a new measuring serie</h5>
+    <editor-serie :editor-form="$ctrl.editorForm"></editor-serie>
+    <button class="btn btn-primary">Add</button>
+  </form>
+</template>
+
+<script>
+import { CreateSerieController } from './controller';
+import EditorSerieComponent from '../editor/component';
+
+export default {
+  components: {
+    'editor-serie': EditorSerieComponent
+  },
+  setup() {
+    const $ctrl = new CreateSerieController();
+
+    const onSubmit = event => {
+      event.preventDefault();
+      $ctrl.onSubmit();
+    };
+
+    return {
+      $ctrl,
+      onSubmit
+    };
+  }
+};
+</script>

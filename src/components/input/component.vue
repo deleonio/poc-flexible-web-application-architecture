@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <label>
-      {{ $ctrl.props.label }}
-      <input v-model="state.model" @keyup="handleChange" />
-    </label>
-    <pre>{{ state.model }}</pre>
+  <div class="form-group">
+    <label :for="props.control.name">{{ props.control.label }}</label>
+    <input
+      class="form-control"
+      :id="props.control.name"
+      :name="props.control.name"
+      v-model="state.model"
+      @keyup="handleChange"
+    />
   </div>
 </template>
 
@@ -14,21 +17,22 @@ import Vue from 'vue';
 import { reactive } from '@vue/composition-api';
 
 export default {
-  props: ['props'],
+  props: ['control'],
   setup(props, context) {
-    console.log(context);
-    const $ctrl = new InputController(props.props);
+    const $ctrl = new InputController();
+
     const state = reactive({
-      model: $ctrl.props.value
+      model: props.control.value
     });
 
     const handleChange = event => {
-      $ctrl.props.value = event.target.value;
+      props.control.value = event.target.value;
       context.parent.$forceUpdate();
     };
 
     return {
       $ctrl,
+      props,
       state,
       handleChange
     };
