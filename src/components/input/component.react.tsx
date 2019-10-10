@@ -17,7 +17,7 @@ export class InputComponent extends ReactComponent {
           className="form-control"
           id={this.$ctrl.control.name}
           name={this.$ctrl.control.name}
-          defaultValue={this.$ctrl.control.value}
+          value={this.$ctrl.control.value}
           onInput={(event: any) => {
             this.$ctrl.handleChange(event.target.value);
             this.forceUpdate();

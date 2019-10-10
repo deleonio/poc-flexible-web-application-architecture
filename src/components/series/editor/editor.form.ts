@@ -14,10 +14,10 @@ export class FormControl {
 export class EditorForm extends FormControl {
   public readonly titleInput: InputControl = new InputControl('title', {
     label: 'Title',
-    value: null
+    value: ''
   });
   public readonly unitInput: InputControl = new InputControl('unit', {
     label: 'Unit',
-    value: null
+    value: ''
   });
 }
