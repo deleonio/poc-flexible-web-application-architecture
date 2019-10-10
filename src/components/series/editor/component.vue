@@ -16,7 +16,7 @@ export default {
   },
   setup(props) {
     const $ctrl = new EditorSerieController();
-    console.log(props.editorForm);
+
     return {
       $ctrl,
       props

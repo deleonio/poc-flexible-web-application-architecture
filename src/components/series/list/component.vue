@@ -39,12 +39,11 @@ export default {
   },
   setup() {
     const $ctrl = new ListSerieController();
-    const onDelete = a => {
-      $ctrl.delete(a);
+    const onDelete = measuredSerie => {
+      $ctrl.delete(measuredSerie);
     };
-    const onEdit = a => {
-      $ctrl.edit(a);
-      console.log($ctrl.measuredSerie);
+    const onEdit = measuredSerie => {
+      $ctrl.edit(measuredSerie);
     };
     return {
       $ctrl,

@@ -42,7 +42,6 @@ export class MeasurementService {
       });
       this.addSerie(measuredSerie);
     });
-    console.log(this.measuredSeries);
   }
 
   public store() {
@@ -62,6 +61,5 @@ export class MeasurementService {
       });
     });
     this.storageStorage.setItem('measuredSeries', series);
-    console.log(this.measuredSeries);
   }
 }

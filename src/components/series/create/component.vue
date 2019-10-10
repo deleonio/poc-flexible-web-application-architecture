@@ -1,5 +1,5 @@
 <template>
-  <form @submit="onSubmit()">
+  <form @submit="onSubmit">
     <h5>Create a new measuring serie</h5>
     <editor-serie :editor-form="$ctrl.editorForm"></editor-serie>
     <button class="btn btn-primary">Add</button>
