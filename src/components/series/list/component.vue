@@ -23,7 +23,7 @@
       </tbody>
     </table>
     <create-serie></create-serie>
-    <edit-serie v-if="$ctrl.measuredSerie !== null" serie="$ctrl.measuredSerie"></edit-serie>
+    <edit-serie v-if="measuredSerieRef !== null" :serie="measuredSerieRef"></edit-serie>
   </div>
 </template>
 
@@ -31,6 +31,7 @@
 import { ListSerieController } from './controller';
 import CreateSerieComponent from '../create/component';
 import EditSerieComponent from '../edit/component';
+import { reactive, ref } from '@vue/composition-api';
 
 export default {
   components: {
@@ -39,14 +40,17 @@ export default {
   },
   setup() {
     const $ctrl = new ListSerieController();
+    const measuredSerieRef = ref(null);
     const onDelete = measuredSerie => {
       $ctrl.delete(measuredSerie);
     };
     const onEdit = measuredSerie => {
       $ctrl.edit(measuredSerie);
+      measuredSerieRef.value = $ctrl.measuredSerie;
     };
     return {
       $ctrl,
+      measuredSerieRef,
       onDelete,
       onEdit
     };
