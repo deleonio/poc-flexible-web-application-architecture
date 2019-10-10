@@ -1,25 +1,20 @@
 import { ANGULARJS_MODULE } from '../../angularjs.module';
-import { InputController, InputProps } from './controller';
+import { InputController } from './controller';
 
 ANGULARJS_MODULE.component('appInput', {
   bindings: {
-    props: '<'
+    control: '<'
   },
-  controller: class InputComponent {
-    public $ctrl: InputController;
-    public props: InputProps;
-
-    public $onInit() {
-      this.$ctrl = new InputController(this.props);
-    }
-  },
+  controller: InputController,
   template: `
-    <div>
-      <label>
-        {{$ctrl.props.label}}
-        <input ng-model="$ctrl.props.value">
-      </label>
-      <pre>{{$ctrl.props.value}}</pre>
-    </div>
+  <div class="form-group">
+    <label for="{{this.$ctrl.control.name}}">{{this.$ctrl.control.label}}</label>
+    <input
+      class="form-control"
+      id="{{this.$ctrl.control.name}}"
+      name="{{this.$ctrl.control.name}}"
+      ng-model="$ctrl.control.value"
+    />
+  </div>
 `
 });

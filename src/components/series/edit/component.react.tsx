@@ -10,7 +10,7 @@ export class EditSerieComponent extends ReactComponent {
   }
 
   public render() {
-    this.$ctrl.updateProps(this.props);
+    this.$ctrl.updateProps(this.props.serie);
     return (
       <form
         onSubmit={(event: Event) => {

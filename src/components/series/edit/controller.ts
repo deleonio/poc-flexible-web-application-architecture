@@ -8,8 +8,11 @@ export class EditSerieController {
   public readonly editorForm = new EditorForm('serie');
   private measuredSerie: MeasuredSerieModel;
 
-  public updateProps(props: any) {
-    this.measuredSerie = props.serie;
+  // tslint:disable-next-line: no-empty
+  private onUpdate() {}
+
+  public updateProps(serie: any) {
+    this.measuredSerie = serie;
     this.editorForm.titleInput.value = this.measuredSerie.getTitle();
     this.editorForm.unitInput.value = this.measuredSerie.getUnit();
   }

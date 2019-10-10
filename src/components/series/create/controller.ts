@@ -7,6 +7,9 @@ export class CreateSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
   public editorForm: EditorForm = new EditorForm('serie');
 
+  // tslint:disable-next-line: no-empty
+  private onUpdate() {}
+
   public onSubmit() {
     this.measurementService.addSerie(
       new MeasuredSerieModel(this.editorForm.titleInput.value, this.editorForm.unitInput.value)

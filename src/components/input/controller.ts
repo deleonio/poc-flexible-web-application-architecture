@@ -13,11 +13,7 @@ export class InputControl {
 }
 
 export class InputController {
-  public control: InputControl = new InputControl('unnamed');
-
-  constructor(control: InputControl) {
-    this.control = control;
-  }
+  public control: InputControl;
 
   public handleChange(value: any) {
     this.control.value = value;
