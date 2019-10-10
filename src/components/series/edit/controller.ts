@@ -8,8 +8,12 @@ export class EditSerieController {
   public readonly editorForm = new EditorForm('serie');
   private measuredSerie: MeasuredSerieModel;
 
-  public constructor(measuredSerie: MeasuredSerieModel) {
-    this.measuredSerie = measuredSerie;
+  public constructor(props: any) {
+    this.onUpdate(props);
+  }
+
+  public onUpdate(props: any) {
+    this.measuredSerie = props.serie;
     this.editorForm.titleInput.value = this.measuredSerie.getTitle();
     this.editorForm.unitInput.value = this.measuredSerie.getUnit();
   }

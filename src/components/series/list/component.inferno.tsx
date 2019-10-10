@@ -67,7 +67,9 @@ export class ListSerieComponent extends Component {
         </table>
         <CreateSerieComponent />
         {this.$ctrl.measuredSerie instanceof MeasuredSerieModel && (
-          <EditSerieComponent serie={this.$ctrl.measuredSerie} />
+          <div>
+            <EditSerieComponent serie={this.$ctrl.measuredSerie} />
+          </div>
         )}
       </div>
     );

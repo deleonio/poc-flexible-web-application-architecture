@@ -21,7 +21,7 @@ export class AppController {
   constructor() {
     this.finishedRendering = Date.now() - STARTUP_TIMESTAMP;
     const list: any[] = this.storageService.getItem('list') || [];
-    list.push(new Date());
+    list.push(Date.now());
     this.storageService.setItem('list', list);
     this.storageService.setItem('upcommingTime', this.finishedRendering);
     // setInterval(() => {

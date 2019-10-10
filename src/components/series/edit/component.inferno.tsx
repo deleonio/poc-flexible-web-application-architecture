@@ -7,13 +7,13 @@ import { EditSerieController } from './controller';
 export class EditSerieComponent extends Component {
   public $ctrl: EditSerieController;
 
-  public constructor(props) {
+  public constructor(props: any) {
     super(props);
-    this.$ctrl = new EditSerieController(props.serie);
-    console.log(this.$ctrl.editorForm);
+    this.$ctrl = new EditSerieController(props);
   }
 
   public render() {
+    this.$ctrl.onUpdate(this.props);
     return (
       <form
         onSubmit={(event: Event) => {

@@ -6,12 +6,11 @@ export class InputComponent extends Component {
 
   public constructor(props: any) {
     super(props);
-    console.log(props);
     this.$ctrl = new InputController(props.control);
   }
 
   public render() {
-    console.log(this.$ctrl.control);
+    this.$ctrl.control = this.props.control;
     return (
       <div>
         <label>
@@ -24,7 +23,6 @@ export class InputComponent extends Component {
             }}
           />
         </label>
-        <pre>{this.$ctrl.control.value}</pre>
       </div>
     );
   }

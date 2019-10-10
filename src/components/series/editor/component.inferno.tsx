@@ -7,6 +7,7 @@ export class EditorSerieComponent extends Component {
   public $ctrl: EditorSerieController = new EditorSerieController();
 
   public render() {
+    console.log(this.props.editorForm);
     return (
       <fieldset>
         <InputComponent control={this.props.editorForm.titleInput} />
