@@ -1,6 +1,6 @@
 import { Component } from 'inferno';
 
-import { InputComponent } from '../input/component.inferno';
+import { ListSerieComponent } from '../series/list/component.inferno';
 import { AppController } from './controller';
 
 export class AppComponent extends Component {
@@ -13,7 +13,7 @@ export class AppComponent extends Component {
         <small>
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version} | {this.$ctrl.finishedRendering} ms upcomming time
         </small>
-        <InputComponent props={this.$ctrl.vornameProps} />
+        <ListSerieComponent />
         <pre>{this.$ctrl.vornameProps.value}</pre>
       </div>
     );
