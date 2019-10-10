@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { EditorSerieController } from './controller';
 import { EditorForm } from './editor.form';
@@ -12,11 +12,6 @@ import { EditorForm } from './editor.form';
     </div>
   `
 })
-export class EditorSerieComponent implements OnChanges {
-  public $ctrl: EditorSerieController = new EditorSerieController();
+export class EditorSerieComponent extends EditorSerieController {
   @Input() public editorForm: EditorForm;
-
-  public ngOnChanges() {
-    console.log(this.editorForm);
-  }
 }
