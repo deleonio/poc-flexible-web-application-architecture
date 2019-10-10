@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { EditSerieController } from './controller';
@@ -13,6 +13,10 @@ import { EditSerieController } from './controller';
     </form>
   `
 })
-export class EditSerieComponent extends EditSerieController {
+export class EditSerieComponent extends EditSerieController implements OnChanges {
   @Input() public serie: MeasuredSerieModel;
+
+  public ngOnChanges() {
+    this.updateProps(this.serie);
+  }
 }

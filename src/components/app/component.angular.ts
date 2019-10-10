@@ -5,15 +5,10 @@ import { AppController } from './controller';
   selector: 'app',
   template: `
     <div>
-      <h4>{{ $ctrl.helloWorld }}</h4>
-      <small
-        >{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }} | {{ $ctrl.finishedRendering }} ms upcomming
-        time</small
-      >
+      <h4>{{ helloWorld }}</h4>
+      <small>{{ framework.name }} v{{ framework.version }} | {{ finishedRendering }} ms upcomming time</small>
       <list-serie></list-serie>
     </div>
   `
 })
-export class AppComponent {
-  public $ctrl: AppController = new AppController();
-}
+export class AppComponent extends AppController {}

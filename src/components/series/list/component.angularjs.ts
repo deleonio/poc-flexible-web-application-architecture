@@ -6,13 +6,13 @@ ANGULARJS_MODULE.component('listSerie', {
   template: `
     <div>
       <h5>List</h5>
-      <table>
+      <table class="table">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Title</th>
-            <th>Unit</th>
-            <th>Action</th>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Unit</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>

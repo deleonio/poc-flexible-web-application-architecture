@@ -5,11 +5,8 @@ import { EditorForm } from '../editor/editor.form';
 
 export class EditSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
-  public readonly editorForm = new EditorForm('serie');
+  public editorForm = new EditorForm('serie');
   private measuredSerie: MeasuredSerieModel;
-
-  // tslint:disable-next-line: no-empty
-  private onUpdate() {}
 
   public updateProps(serie: any) {
     this.measuredSerie = serie;
@@ -21,7 +18,5 @@ export class EditSerieController {
     this.measuredSerie.setTitle(this.editorForm.titleInput.value);
     this.measuredSerie.setUnit(this.editorForm.unitInput.value);
     this.measurementService.store();
-    this.measuredSerie = null;
-    this.onUpdate();
   }
 }
