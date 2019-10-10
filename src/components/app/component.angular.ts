@@ -10,6 +10,7 @@ import { AppController } from './controller';
         >{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }} | {{ $ctrl.finishedRendering }} ms upcomming
         time</small
       >
+      <list-serie></list-serie>
     </div>
   `
 })

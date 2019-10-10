@@ -1,24 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { InputController, InputProps } from './controller';
+import { InputControl, InputController } from './controller';
 
 @Component({
   selector: 'app-input',
   template: `
-    <div>
-      <label>
-        {{ $ctrl.props.label }}
-        <input [(ngModel)]="$ctrl.props.value" />
-      </label>
-      <pre>{{ $ctrl.props.value }}</pre>
+    <div class="form-group">
+      <label for="{{ this.control.name }}">{{ this.control.label }}</label>
+      <input
+        class="form-control"
+        id="{{ this.control.name }}"
+        name="{{ this.control.name }}"
+        [(ngModel)]="this.control.value"
+      />
     </div>
   `
 })
-export class InputComponent implements OnInit {
-  public $ctrl: InputController;
-  @Input() public props: InputProps;
-
-  public ngOnInit() {
-    this.$ctrl = new InputController(this.props);
-  }
+export class InputComponent {
+  public $ctrl: InputController = new InputController();
+  @Input() public control: InputControl;
 }

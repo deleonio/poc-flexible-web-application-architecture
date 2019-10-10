@@ -1,8 +1,8 @@
-import { ANGULARJS_MODULE } from '../../../angularjs.module';
+import { Component } from '@angular/core';
 import { ListSerieController } from './controller';
 
-ANGULARJS_MODULE.component('listSerie', {
-  controller: ListSerieController,
+@Component({
+  selector: 'list-serie',
   template: `
     <div>
       <h5>List</h5>
@@ -16,15 +16,15 @@ ANGULARJS_MODULE.component('listSerie', {
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="serie in this.$ctrl.measuredSeries" key="{index}">
-            <td>{{ index + 1 }}</td>
+          <tr *ngFor="let serie of this.measuredSeries; index as i">
+            <td>{{ i + 1 }}</td>
             <td>{{ serie.getTitle() }}</td>
             <td>{{ serie.getUnit() }}</td>
             <td>
-              <button class="btn btn-info" type="button" ng-click="this.$ctrl.edit(serie)">
+              <button class="btn btn-info" type="button" (click)="this.edit(serie)">
                 Edit
               </button>
-              <button class="btn btn-danger" type="button" ng-click="this.$ctrl.delete(serie)">
+              <button class="btn btn-danger" type="button" (click)="this.delete(serie)">
                 Delete
               </button>
             </td>
@@ -32,7 +32,8 @@ ANGULARJS_MODULE.component('listSerie', {
         </tbody>
       </table>
       <create-serie></create-serie>
-      <edit-serie ng-if="this.$ctrl.measuredSerie !== null" serie="this.$ctrl.measuredSerie"></edit-serie>
+      <edit-serie *ngIf="this.measuredSerie !== null" [serie]="this.measuredSerie"></edit-serie>
     </div>
-`
-});
+  `
+})
+export class ListSerieComponent extends ListSerieController {}
