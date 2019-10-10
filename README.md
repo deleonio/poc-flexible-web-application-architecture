@@ -9,6 +9,7 @@
   - [Guide](#guide)
     - [Serve](#serve)
     - [Build](#build)
+  - [References](#references)
 
 ## Motivation
 
@@ -59,6 +60,24 @@ For example: `yarn serve inferno`
 Use the this command to build the application: `yarn build <framework>`
 
 For example: `yarn build inferno`
+
+## References
+
+- https://github.com/infernojs/inferno-typescript-example
+- https://medium.com/js-dojo/how-to-configure-webpack-4-with-vuejs-a-complete-guide-209e943c4772
+- https://vue-composition-api-rfc.netlify.com/
+- https://webpack.js.org/plugins/copy-webpack-plugin/
+- https://webpack.js.org/plugins/html-webpack-plugin/
+- https://vue-loader.vuejs.org/guide/
+- https://webpack.js.org/configuration/
+- https://webpack.js.org/configuration/dev-server/
+- https://vuejs.org/v2/guide/#Getting-Started
+- https://reactjs.org/docs/getting-started.html
+- https://infernojs.org/docs/guides/getting-started
+- https://angular.io/start
+- https://docs.angularjs.org/misc/started
+- https://babeljs.io/docs/en/configuration
+- https://github.com/krausest/js-framework-benchmark
 
 [Babel]: https://babeljs.io
 [TypeScript]: https:/typescriptlang.org

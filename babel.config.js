@@ -14,43 +14,10 @@ module.exports = {
       }
     ]
   ],
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          browsers: ['last 2 version', 'ie >= 11']
-        }
-      }
-    ],
-    ['@babel/typescript']
-  ],
+  presets: ['@babel/preset-env', '@babel/typescript'],
   env: {
     test: {
-      plugins: [
-        'istanbul',
-        [
-          'search-and-replace',
-          {
-            rules: [
-              {
-                search: /.*?\.html/gi,
-                replace: '@babel/core'
-              },
-              {
-                search: '$$ENVNAME$$',
-                replace: 'oev'
-              },
-              {
-                search: '$$TPLNAME$$',
-                replace: 'vkb'
-              }
-            ]
-          }
-        ]
-      ]
+      plugins: ['istanbul']
     }
-  },
-  sourceMaps: true,
-  retainLines: true
+  }
 };
