@@ -23,13 +23,7 @@ module.exports = {
         }
       }
     ],
-    [
-      '@babel/typescript',
-      {
-        isTSX: true,
-        allExtensions: true
-      }
-    ]
+    ['@babel/typescript']
   ],
   env: {
     test: {
