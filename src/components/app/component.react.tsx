@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { AppController } from './controller';
+
 import { InputComponent } from '../input/component.react';
+import { AppController } from './controller';
 
 export class AppComponent extends Component {
   public $ctrl: AppController = new AppController();

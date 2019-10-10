@@ -3,6 +3,11 @@ import { STARTUP_TIMESTAMP } from '../../shares/constant';
 import { DI } from '../../shares/injector';
 import { InputProps } from '../input/controller';
 
+interface Framework {
+  name: string;
+  version: string;
+}
+
 export class AppController {
   public helloWorld: string = 'Hello world!';
   public finishedRendering: number = null;
@@ -11,7 +16,7 @@ export class AppController {
     value: 'Martin'
   };
   private storageService: StorageService = DI.get('StorageService');
-  public readonly framework: Object = DI.get('Framework');
+  public readonly framework: Framework = DI.get('Framework');
 
   constructor() {
     this.finishedRendering = Date.now() - STARTUP_TIMESTAMP;

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { InputController, InputProps } from './controller';
+import { InputController } from './controller';
 
 export class InputComponent extends Component {
   public $ctrl: InputController;
 
-  public constructor(props: InputProps, context: any) {
-    super(props, context);
+  public constructor(props: any) {
+    super(props);
     this.$ctrl = new InputController(props.props);
   }
 
