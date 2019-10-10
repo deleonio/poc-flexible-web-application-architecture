@@ -13,8 +13,6 @@ export class AppComponent extends Component {
         <small>
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version} | {this.$ctrl.finishedRendering} ms upcomming time
         </small>
-        <InputComponent props={this.$ctrl.vornameProps} />
-        <pre>{this.$ctrl.vornameProps.value}</pre>
       </div>
     );
   }

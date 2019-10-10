@@ -12,17 +12,18 @@ export class InputComponent extends Component {
   public render() {
     this.$ctrl.control = this.props.control;
     return (
-      <div>
-        <label>
-          {this.$ctrl.control.label}
-          <input
-            defaultValue={this.$ctrl.control.value}
-            onInput={(event: any) => {
-              this.$ctrl.handleChange(event.target.value);
-              this.forceUpdate();
-            }}
-          />
-        </label>
+      <div class="form-group">
+        <label htmlFor={this.$ctrl.control.name}>{this.$ctrl.control.label}</label>
+        <input
+          className="form-control"
+          id={this.$ctrl.control.name}
+          name={this.$ctrl.control.name}
+          value={this.$ctrl.control.value}
+          onInput={(event: any) => {
+            this.$ctrl.handleChange(event.target.value);
+            this.forceUpdate();
+          }}
+        />
       </div>
     );
   }

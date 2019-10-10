@@ -10,8 +10,6 @@ import { AppController } from './controller';
         >{{ $ctrl.framework.name }} v{{ $ctrl.framework.version }} | {{ $ctrl.finishedRendering }} ms upcomming
         time</small
       >
-      <app-input [props]="$ctrl.vornameProps"></app-input>
-      <pre>{{ $ctrl.vornameProps.value }}</pre>
     </div>
   `
 })

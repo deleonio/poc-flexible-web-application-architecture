@@ -1,10 +1,11 @@
-import { Component } from 'inferno';
-
+import { InfernoComponent } from '../inferno.component';
 import { ListSerieComponent } from '../series/list/component.inferno';
 import { AppController } from './controller';
 
-export class AppComponent extends Component {
-  public $ctrl: AppController = new AppController();
+export class AppComponent extends InfernoComponent {
+  public constructor(props: any) {
+    super(props, new AppController());
+  }
 
   public render() {
     return (
@@ -14,7 +15,6 @@ export class AppComponent extends Component {
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version} | {this.$ctrl.finishedRendering} ms upcomming time
         </small>
         <ListSerieComponent />
-        <pre>{this.$ctrl.vornameProps.value}</pre>
       </div>
     );
   }

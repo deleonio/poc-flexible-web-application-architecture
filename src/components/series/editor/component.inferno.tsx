@@ -1,18 +1,18 @@
-import { Component } from 'inferno';
-
+import { InfernoComponent } from '../../inferno.component';
 import { InputComponent } from '../../input/component.inferno';
 import { EditorSerieController } from './controller';
 
-export class EditorSerieComponent extends Component {
-  public $ctrl: EditorSerieController = new EditorSerieController();
+export class EditorSerieComponent extends InfernoComponent {
+  public constructor(props: any) {
+    super(props, new EditorSerieController());
+  }
 
   public render() {
-    console.log(this.props.editorForm);
     return (
-      <fieldset>
+      <div>
         <InputComponent control={this.props.editorForm.titleInput} />
         <InputComponent control={this.props.editorForm.unitInput} />
-      </fieldset>
+      </div>
     );
   }
 }

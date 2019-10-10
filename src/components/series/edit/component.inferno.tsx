@@ -1,19 +1,14 @@
-import { Component } from 'inferno';
-
+import { InfernoComponent } from '../../inferno.component';
 import { EditorSerieComponent } from '../editor/component.inferno';
-import { EditorForm } from '../editor/editor.form';
 import { EditSerieController } from './controller';
 
-export class EditSerieComponent extends Component {
-  public $ctrl: EditSerieController;
-
+export class EditSerieComponent extends InfernoComponent {
   public constructor(props: any) {
-    super(props);
-    this.$ctrl = new EditSerieController(props);
+    super(props, new EditSerieController());
   }
 
   public render() {
-    this.$ctrl.onUpdate(this.props);
+    this.$ctrl.updateProps(this.props);
     return (
       <form
         onSubmit={(event: Event) => {
@@ -23,7 +18,7 @@ export class EditSerieComponent extends Component {
       >
         <h5>Edit a new measuring serie</h5>
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
-        <button>Edit</button>
+        <button class="btn btn-primary">Edit</button>
       </form>
     );
   }

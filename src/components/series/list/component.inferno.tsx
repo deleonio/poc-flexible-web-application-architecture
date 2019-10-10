@@ -44,6 +44,7 @@ export class ListSerieComponent extends Component {
                   <td>{serie.getUnit()}</td>
                   <td>
                     <button
+                      class="btn btn-info"
                       type="button"
                       onClick={() => {
                         this.handleEdit(serie);
@@ -52,6 +53,7 @@ export class ListSerieComponent extends Component {
                       Edit
                     </button>
                     <button
+                      class="btn btn-danger"
                       type="button"
                       onClick={() => {
                         this.handleDelete(serie);
