@@ -45,7 +45,7 @@ module.exports = (env, argv) => {
     default:
       console.log(`
 [ERROR] No or an invalid framework identifier was given. Use: angular, angularjs, inferno, react or vue
-        > npm run serve inferno
+        > yarn serve inferno
 `);
       process.exit(1);
   }
