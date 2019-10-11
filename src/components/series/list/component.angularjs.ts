@@ -16,15 +16,15 @@ ANGULARJS_MODULE.component('listSerie', {
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="serie in this.$ctrl.measuredSeries" key="{index}">
+          <tr ng-repeat="serie in $ctrl.measuredSeries" key="{index}">
             <td>{{ index + 1 }}</td>
             <td>{{ serie.getTitle() }}</td>
             <td>{{ serie.getUnit() }}</td>
             <td>
-              <button class="btn btn-info" type="button" ng-click="this.$ctrl.edit(serie)">
+              <button class="btn btn-info" type="button" ng-click="$ctrl.edit(serie)">
                 Edit
               </button>
-              <button class="btn btn-danger" type="button" ng-click="this.$ctrl.delete(serie)">
+              <button class="btn btn-danger" type="button" ng-click="$ctrl.delete(serie)">
                 Delete
               </button>
             </td>
@@ -32,7 +32,7 @@ ANGULARJS_MODULE.component('listSerie', {
         </tbody>
       </table>
       <create-serie></create-serie>
-      <edit-serie ng-if="this.$ctrl.measuredSerie !== null" serie="this.$ctrl.measuredSerie"></edit-serie>
+      <edit-serie ng-if="$ctrl.measuredSerie !== null" serie="$ctrl.measuredSerie"></edit-serie>
     </div>
 `
 });

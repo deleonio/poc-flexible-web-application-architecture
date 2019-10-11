@@ -11,9 +11,9 @@ ANGULARJS_MODULE.component('editSerie', {
     }
   },
   template: `
-    <form ng-submit="this.$ctrl.onSubmit()">
+    <form ng-submit="$ctrl.onSubmit()">
       <h5>Edit a new measuring serie</h5>
-      <editor-serie editor-form="this.$ctrl.editorForm"></editor-serie>
+      <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
       <button class="btn btn-primary">Edit</button>
     </form>
 `

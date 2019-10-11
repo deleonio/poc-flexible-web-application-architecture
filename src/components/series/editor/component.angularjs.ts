@@ -8,8 +8,8 @@ ANGULARJS_MODULE.component('editorSerie', {
   controller: EditorSerieController,
   template: `
   <div>
-    <app-input control="this.$ctrl.editorForm.titleInput"></app-input>
-    <app-input control="this.$ctrl.editorForm.unitInput"></app-input>
+    <app-input control="$ctrl.editorForm.titleInput"></app-input>
+    <app-input control="$ctrl.editorForm.unitInput"></app-input>
   </div>
 `
 });

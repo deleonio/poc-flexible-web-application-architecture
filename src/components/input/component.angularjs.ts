@@ -8,11 +8,11 @@ ANGULARJS_MODULE.component('appInput', {
   controller: InputController,
   template: `
   <div class="form-group">
-    <label for="{{this.$ctrl.control.name}}">{{this.$ctrl.control.label}}</label>
+    <label for="{{$ctrl.control.name}}">{{$ctrl.control.label}}</label>
     <input
       class="form-control"
-      id="{{this.$ctrl.control.name}}"
-      name="{{this.$ctrl.control.name}}"
+      id="{{$ctrl.control.name}}"
+      name="{{$ctrl.control.name}}"
       ng-model="$ctrl.control.value"
     />
   </div>
