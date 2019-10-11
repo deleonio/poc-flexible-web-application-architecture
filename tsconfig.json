@@ -9,7 +9,7 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "lib": ["es2017", "dom"],
-    "types": ["inferno", "node"],
+    "types": ["inferno", "node", "react"],
     "jsx": "preserve",
     "noUnusedLocals": true,
     "baseUrl": "./src",
@@ -19,5 +19,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*", "node_modules/inferno/dist/index.d.ts", "node_modules/vue/types/index.d.ts"]
+  "include": [
+    "src/**/*",
+    "node_modules/inferno/dist/index.d.ts",
+    "node_modules/@types/node/index.d.ts",
+    "node_modules/@types/react/index.d.ts",
+    "node_modules/vue/types/index.d.ts"
+  ]
 }

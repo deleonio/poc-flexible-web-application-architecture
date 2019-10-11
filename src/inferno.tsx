@@ -6,7 +6,7 @@ import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'Inferno',
-  version: version
+  version
 });
 require('./shares/register');
 render(<AppComponent />, APP_HTML_DIV_ELEMENT);

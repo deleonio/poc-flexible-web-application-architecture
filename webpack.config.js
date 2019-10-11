@@ -30,6 +30,10 @@ module.exports = (env, argv) => {
       ]);
       webpackEntries.inferno = path.join(__dirname, 'src', `inferno.tsx`);
       break;
+    case 'preact':
+      // babelConfigPresets.push('@babel/preset-react');
+      webpackEntries.preact = path.join(__dirname, 'src', `preact.tsx`);
+      break;
     case 'react':
       babelConfigPresets.push('@babel/preset-react');
       webpackEntries.react = path.join(__dirname, 'src', `react.tsx`);
@@ -44,7 +48,7 @@ module.exports = (env, argv) => {
       break;
     default:
       console.log(`
-[ERROR] No or an invalid framework identifier was given. Use: angular, angularjs, inferno, react or vue
+[ERROR] No or an invalid framework identifier was given. Use: angular, angularjs, inferno, preact, react or vue
         > yarn serve inferno
 `);
       process.exit(1);

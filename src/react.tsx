@@ -7,7 +7,7 @@ import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'React',
-  version: version
+  version
 });
 require('./shares/register');
 ReactDOM.render(<AppComponent />, APP_HTML_DIV_ELEMENT);

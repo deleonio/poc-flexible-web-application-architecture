@@ -13,6 +13,7 @@
     "no-debugger": false,
     "no-empty": true,
     "no-namespace": false,
+    "no-var-requires": false,
     "no-unused-expression": true,
     "object-literal-sort-keys": true,
     "one-variable-per-declaration": [true, "ignore-for-loop"],
