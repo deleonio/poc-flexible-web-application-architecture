@@ -6,9 +6,9 @@ import { EditSerieController } from './controller';
 @Component({
   selector: 'edit-serie',
   template: `
-    <form (ngSubmit)="this.onSubmit()">
+    <form (ngSubmit)="onSubmit()">
       <h5>Edit a new measuring serie</h5>
-      <editor-serie [editorForm]="this.editorForm"></editor-serie>
+      <editor-serie [editorForm]="editorForm"></editor-serie>
       <button class="btn btn-primary">Edit</button>
     </form>
   `

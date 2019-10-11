@@ -16,15 +16,15 @@ import { ListSerieController } from './controller';
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let serie of this.measuredSeries; index as i">
+          <tr *ngFor="let serie of measuredSeries; index as i">
             <td>{{ i + 1 }}</td>
             <td>{{ serie.getTitle() }}</td>
             <td>{{ serie.getUnit() }}</td>
             <td>
-              <button class="btn btn-info" type="button" (click)="this.edit(serie)">
+              <button class="btn btn-info" type="button" (click)="edit(serie)">
                 Edit
               </button>
-              <button class="btn btn-danger" type="button" (click)="this.delete(serie)">
+              <button class="btn btn-danger" type="button" (click)="delete(serie)">
                 Delete
               </button>
             </td>
@@ -32,7 +32,7 @@ import { ListSerieController } from './controller';
         </tbody>
       </table>
       <create-serie></create-serie>
-      <edit-serie *ngIf="this.measuredSerie !== null" [serie]="this.measuredSerie"></edit-serie>
+      <edit-serie *ngIf="measuredSerie !== null" [serie]="measuredSerie"></edit-serie>
     </div>
   `
 })

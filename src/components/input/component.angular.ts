@@ -6,17 +6,11 @@ import { InputControl, InputController } from './controller';
   selector: 'app-input',
   template: `
     <div class="form-group">
-      <label for="{{ this.control.name }}">{{ this.control.label }}</label>
-      <input
-        class="form-control"
-        id="{{ this.control.name }}"
-        name="{{ this.control.name }}"
-        [(ngModel)]="this.control.value"
-      />
+      <label for="{{ control.name }}">{{ control.label }}</label>
+      <input class="form-control" id="{{ control.name }}" name="{{ control.name }}" [(ngModel)]="control.value" />
     </div>
   `
 })
-export class InputComponent {
-  public $ctrl: InputController = new InputController();
+export class InputComponent extends InputController {
   @Input() public control: InputControl;
 }
