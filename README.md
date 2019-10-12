@@ -29,14 +29,14 @@ This project demonstrate a flexible [Babel] and [Webpack] based web application 
 
 The selection of the frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-| Framework   | Description  |         Version         | Artefact size |
-| ----------- | :----------: | :---------------------: | ------------: |
-| [Angular]   | [SPA], [PWA] |           8.2           |       1.06 MB |
-| [AngularJS] |    [SPA]     |           1.7           |       0.20 MB |
-| [Inferno]   |    [SPA]     |           7.3           |       0.04 MB |
-| [Preact]    |    [SPA]     |          10.0           |       -.-- MB |
-| [React]     | [SPA], [PWA] |          16.10          |       0.15 MB |
-| [Vue]       | [SPA], [PWA] | 2.6 ([Composition API]) |       0.10 MB |
+| Framework   | Description  |         Version         | Artefact size | Upcomming time |
+| ----------- | :----------: | :---------------------: | ------------: | -------------: |
+| [Angular]   | [SPA], [PWA] |           8.2           |       ~1,1 MB |        ~125 ms |
+| [AngularJS] |    [SPA]     |           1.7           |       ~194 KB |         ~35 ms |
+| [Inferno]   |    [SPA]     |           7.3           |        ~41 KB |          ~3 ms |
+| [Preact]    |    [SPA]     |          10.0           |        ~30 KB |          ~3 ms |
+| [React]     | [SPA], [PWA] |          16.10          |       ~150 KB |          ~8 ms |
+| [Vue]       | [SPA], [PWA] | 2.6 ([Composition API]) |        ~94 KB |         ~10 ms |
 
 ## Installation
 

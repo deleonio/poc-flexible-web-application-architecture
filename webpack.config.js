@@ -31,16 +31,12 @@ module.exports = (env, argv) => {
       webpackEntries.inferno = path.join(__dirname, 'src', `inferno.tsx`);
       break;
     case 'preact':
-      // babelConfigPresets.push('@babel/preset-react');
+      babelConfigPlugins.push(['@babel/plugin-transform-react-jsx', { pragma: 'h' }]);
       webpackEntries.preact = path.join(__dirname, 'src', `preact.tsx`);
-      console.log(`
-[ERROR] Preact framework currently not implemented. Use: angular, angularjs, inferno, react or vue
-        > yarn serve inferno
-`);
-      process.exit(1);
       break;
     case 'react':
-      babelConfigPresets.push('@babel/preset-react');
+      babelConfigPlugins.push('@babel/plugin-transform-react-jsx');
+      // babelConfigPresets.push('@babel/preset-react');
       webpackEntries.react = path.join(__dirname, 'src', `react.tsx`);
       break;
     case 'vue':
@@ -57,6 +53,19 @@ module.exports = (env, argv) => {
         > yarn serve inferno
 `);
       process.exit(1);
+  }
+
+  switch (env.framework) {
+    case 'preact':
+      babelConfigPresets.push([
+        '@babel/typescript',
+        {
+          jsxPragma: 'h'
+        }
+      ]);
+      break;
+    default:
+      babelConfigPresets.push('@babel/typescript');
   }
 
   const config = {
@@ -85,6 +94,7 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         author: packageJson.author,
         description: packageJson.description,
+        filename: env.mode === 'production' ? `${env.framework}.html` : `index.html`,
         name: packageJson.name,
         template: 'index.html',
         title: 'PoC - Flexible web application architecture',

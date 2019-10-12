@@ -1,12 +1,12 @@
-import React from 'react';
+import { h } from 'preact';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
-import { ReactComponent } from '../../react.component';
-import { CreateSerieComponent } from '../create/component.react';
-import { EditSerieComponent } from '../edit/component.react';
+import { PreactComponent } from '../../preact.component';
+import { CreateSerieComponent } from '../create/component.preact';
+import { EditSerieComponent } from '../edit/component.preact';
 import { ListSerieController } from './controller';
 
-export class ListSerieComponent extends ReactComponent {
+export class ListSerieComponent extends PreactComponent {
   public $ctrl: ListSerieController = new ListSerieController();
   constructor(props) {
     super(props);

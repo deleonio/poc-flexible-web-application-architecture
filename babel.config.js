@@ -14,7 +14,7 @@ module.exports = {
       }
     ]
   ],
-  presets: ['@babel/preset-env', '@babel/typescript'],
+  presets: ['@babel/preset-env'],
   env: {
     test: {
       plugins: ['istanbul']
