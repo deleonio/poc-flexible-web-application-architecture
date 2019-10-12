@@ -1,4 +1,5 @@
 import { ANGULARJS_MODULE } from '../../../angularjs.module';
+import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { EditSerieController } from './controller';
 
 ANGULARJS_MODULE.component('editSerie', {
@@ -6,6 +7,8 @@ ANGULARJS_MODULE.component('editSerie', {
     serie: '<'
   },
   controller: class extends EditSerieController {
+    public serie: MeasuredSerieModel;
+
     public $onChanges() {
       this.updateProps(this.serie);
     }

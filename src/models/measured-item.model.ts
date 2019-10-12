@@ -10,7 +10,7 @@ export class MeasuredItemModel {
   public getDate(): Date {
     return this.date;
   }
-  public getValue(): string {
+  public getValue(): number {
     return this.value;
   }
 }
