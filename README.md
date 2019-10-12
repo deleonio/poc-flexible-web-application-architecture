@@ -13,6 +13,7 @@
     - [Command Line Interfaces](#command-line-interfaces)
       - [Angular CLI](#angular-cli)
       - [Vue CLI](#vue-cli)
+  - [Open topics](#open-topics)
   - [References](#references)
 
 ## Motivation
@@ -88,6 +89,12 @@ Currently the [Angular CLI] is supported.
 #### Vue CLI
 
 Currently the [Vue CLI] is **not** supported.
+
+## Open topics
+
+- Clean up the code for the architectural concept.
+- Use observables to trigger rendering in correct cases.
+- Add router to the application context.
 
 ## References
 
