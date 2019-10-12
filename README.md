@@ -44,7 +44,7 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 
 ## Installation
 
-Run `yarn` / `npm install` in your command line interface. If you have problems with you installed dependencies, you can reinstall everything with `yarn reinstall` / `npm run reinstall`.
+Run `yarn` / `npm install` in the bash. If there any problems with the installed dependencies, you can reinstall everything with `yarn reinstall` / `npm run reinstall`.
 
 ## Guide
 
@@ -63,7 +63,7 @@ Currently the following frameworks are available:
 - `react`
 - `vue`
 
-Use the this command to serve the application: `yarn serve <framework>[ --open]`
+Use this command to serve the application: `yarn serve <framework>[ --open]`
 
 For example:
 - `yarn serve inferno --open`
@@ -73,7 +73,7 @@ For example:
 
 #### Build
 
-Use the this command to build the application: `yarn build <framework>`
+Use this command to build the application: `yarn build <framework>`
 
 For example:
 - `yarn build inferno`
