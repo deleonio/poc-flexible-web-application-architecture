@@ -95,6 +95,7 @@ Currently the [Vue CLI] is **not** supported.
 - Clean up the code for the architectural concept.
 - Use observables to trigger rendering in correct cases.
 - Add router to the application context.
+- Create a cheat sheet for the application architecture concept.
 
 ## References
 
