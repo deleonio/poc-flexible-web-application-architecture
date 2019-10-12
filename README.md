@@ -17,7 +17,7 @@
 
 ## Motivation
 
-This project demonstrate a flexible [Babel] and [Webpack] based web application architecture.
+This project demonstrate a scalable and flexible [Babel] and [Webpack] based web application architecture.
 
 ## Introduction
 
@@ -31,7 +31,7 @@ This project demonstrate a flexible [Babel] and [Webpack] based web application 
 
 ### Frameworks
 
-The selection of the frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
+The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
 | Framework   | Description  |         Version         | Artefact size | Upcomming time |
 | ----------- | :----------: | :---------------------: | ------------: | -------------: |
