@@ -33,6 +33,11 @@ module.exports = (env, argv) => {
     case 'preact':
       // babelConfigPresets.push('@babel/preset-react');
       webpackEntries.preact = path.join(__dirname, 'src', `preact.tsx`);
+      console.log(`
+[ERROR] Preact framework currently not implemented. Use: angular, angularjs, inferno, react or vue
+        > yarn serve inferno
+`);
+      process.exit(1);
       break;
     case 'react':
       babelConfigPresets.push('@babel/preset-react');
