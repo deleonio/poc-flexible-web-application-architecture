@@ -104,8 +104,6 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
     }
-    ,
-    devtool: 
   };
 
   switch (argv.mode) {
