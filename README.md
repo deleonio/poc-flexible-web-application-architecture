@@ -35,12 +35,12 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 
 | Framework   | Description  |         Version         | Artefact size | Upcomming time |
 | ----------- | :----------: | :---------------------: | ------------: | -------------: |
-| [Angular]   | [SPA], [PWA] |           8.2           |       ~1,1 MB |        ~125 ms |
-| [AngularJS] |    [SPA]     |           1.7           |       ~194 KB |         ~35 ms |
-| [Inferno]   |    [SPA]     |           7.3           |        ~41 KB |          ~3 ms |
-| [Preact]    |    [SPA]     |          10.0           |        ~30 KB |          ~3 ms |
-| [React]     | [SPA], [PWA] |          16.10          |       ~150 KB |          ~8 ms |
-| [Vue]       | [SPA], [PWA] | 2.6 ([Composition API]) |        ~94 KB |         ~10 ms |
+| [Angular]   | [SPA], [PWA] |           8.2           |      1,01 MiB |        ~125 ms |
+| [AngularJS] |    [SPA]     |           1.7           |       195 KiB |         ~35 ms |
+| [Inferno]   |    [SPA]     |           7.3           |      41.6 KiB |          ~3 ms |
+| [Preact]    |    [SPA]     |          10.0           |      30.3 KiB |          ~3 ms |
+| [React]     | [SPA], [PWA] |          16.10          |       151 KiB |          ~8 ms |
+| [Vue]       | [SPA], [PWA] | 2.6 ([Composition API]) |      94.2 KiB |         ~10 ms |
 
 ## Installation
 
