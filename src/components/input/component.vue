@@ -8,7 +8,7 @@
       v-model="props.control.value"
       @keyup="handleChange"
     />
-    <pre>Input(props): {{props.control}}</pre>
+    <!-- <pre>Input(props): {{props.control}}</pre> -->
   </div>
 </template>
 

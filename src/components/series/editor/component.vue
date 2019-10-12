@@ -2,7 +2,7 @@
   <div>
     <app-input :control="props.editorForm.titleInput"></app-input>
     <app-input :control="props.editorForm.unitInput"></app-input>
-    <pre>EditorForm(props): {{props.editorForm}}</pre>
+    <!-- <pre>EditorForm(props): {{props.editorForm}}</pre> -->
   </div>
 </template>
 
