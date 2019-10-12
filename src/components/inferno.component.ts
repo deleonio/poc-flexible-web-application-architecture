@@ -9,9 +9,14 @@ export class InfernoComponent extends Component {
   }
 
   private bindControllerLogic($ctrl: Object, props: Object = {}) {
-    this.$ctrl = $ctrl;
-    this.$ctrl.onUpdate = () => {
-      this.forceUpdate();
-    };
+    if (typeof $ctrl === 'object' && $ctrl !== null) {
+      try {
+        $ctrl.onUpdate = () => {
+          this.forceUpdate();
+        };
+        this.$ctrl = $ctrl;
+        // tslint:disable-next-line: no-empty
+      } catch (error) {}
+    }
   }
 }

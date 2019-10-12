@@ -10,6 +10,7 @@ export class EditSerieController {
 
   public updateProps(serie: any) {
     this.measuredSerie = serie;
+    this.editorForm = new EditorForm('serie');
     this.editorForm.titleInput.value = this.measuredSerie.getTitle();
     this.editorForm.unitInput.value = this.measuredSerie.getUnit();
   }

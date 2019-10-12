@@ -10,12 +10,8 @@ export class InputControl {
       this.value = properties.value;
     }
   }
-}
 
-export class InputController {
-  public control: InputControl;
-
-  public handleChange(value: any) {
-    this.control.value = value;
+  get id(): string {
+    return `id-${this.name}`;
   }
 }

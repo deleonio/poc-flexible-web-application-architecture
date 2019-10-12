@@ -1,28 +1,43 @@
 <template>
   <div class="form-group">
-    <label :for="props.control.name">{{ props.control.label }}</label>
+    <label :for="props.control.id">{{ props.control.label }}</label>
     <input
       class="form-control"
-      :id="props.control.name"
+      :id="props.control.id"
       :name="props.control.name"
-      v-model="state.model"
+      v-model="props.control.value"
       @keyup="handleChange"
     />
+    <pre>Input(props): {{props.control}}</pre>
   </div>
 </template>
 
 <script>
-import { InputController } from './controller';
 import Vue from 'vue';
-import { reactive } from '@vue/composition-api';
+import { reactive, ref, onMounted, onUnmounted, onUpdated, watch } from '@vue/composition-api';
 
 export default {
   props: ['control'],
   setup(props, context) {
-    const $ctrl = new InputController();
-
     const state = reactive({
       model: props.control.value
+    });
+    console.log(ref(props.control.value));
+
+    watch(() => {
+      console.log(props.control.name, props.control);
+    });
+
+    onMounted(() => {
+      console.log('mounted');
+    });
+
+    onUpdated(() => {
+      console.log('updated');
+    });
+
+    onUnmounted(() => {
+      console.log('unmounted');
     });
 
     const handleChange = event => {
@@ -31,7 +46,6 @@ export default {
     };
 
     return {
-      $ctrl,
       props,
       state,
       handleChange

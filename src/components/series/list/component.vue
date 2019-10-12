@@ -40,7 +40,7 @@ export default {
   },
   setup() {
     const $ctrl = new ListSerieController();
-    const measuredSerieRef = ref(null);
+    const measuredSerieRef = ref($ctrl.measuredSerie);
     const onDelete = measuredSerie => {
       $ctrl.delete(measuredSerie);
     };

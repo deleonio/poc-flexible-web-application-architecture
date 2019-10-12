@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 export class ReactComponent extends Component {
-  protected $ctrl: any = null;
+  protected $ctrl: Object = null;
 
   constructor(props: any, $ctrl: Object = null) {
     super(props);
@@ -9,9 +9,14 @@ export class ReactComponent extends Component {
   }
 
   private bindControllerLogic($ctrl: Object, props: Object = {}) {
-    this.$ctrl = $ctrl;
-    this.$ctrl.onUpdate = () => {
-      this.forceUpdate();
-    };
+    if (typeof $ctrl === 'object' && $ctrl !== null) {
+      try {
+        $ctrl.onUpdate = () => {
+          this.forceUpdate();
+        };
+        this.$ctrl = $ctrl;
+        // tslint:disable-next-line: no-empty
+      } catch (error) {}
+    }
   }
 }

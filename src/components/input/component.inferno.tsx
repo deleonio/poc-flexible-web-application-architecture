@@ -1,23 +1,17 @@
 import { InfernoComponent } from '../inferno.component';
-import { InputController } from './controller';
 
 export class InputComponent extends InfernoComponent {
-  public constructor(props: any) {
-    super(props, new InputController(props.control));
-  }
-
   public render() {
-    this.$ctrl.control = this.props.control;
     return (
       <div className="form-group">
-        <label htmlFor={this.$ctrl.control.name}>{this.$ctrl.control.label}</label>
+        <label htmlFor={this.props.control.id}>{this.props.control.label}</label>
         <input
           className="form-control"
-          id={this.$ctrl.control.name}
-          name={this.$ctrl.control.name}
-          value={this.$ctrl.control.value}
-          onInput={(event: any) => {
-            this.$ctrl.handleChange(event.target.value);
+          id={this.props.control.id}
+          name={this.props.control.name}
+          value={this.props.control.value}
+          onInput={(event: InputEvent) => {
+            this.props.control.value = event.target.value;
             this.forceUpdate();
           }}
         />
