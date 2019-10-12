@@ -1,5 +1,5 @@
-import 'core-js';
-import 'zone.js';
+import 'core-js/features/reflect';
+import 'zone.js/dist/zone';
 
 import { NgModule, VERSION } from '@angular/core';
 import { FormsModule } from '@angular/forms';
