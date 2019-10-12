@@ -7,8 +7,12 @@
     - [Frameworks](#frameworks)
   - [Installation](#installation)
   - [Guide](#guide)
-    - [Serve](#serve)
-    - [Build](#build)
+    - [Usual usage without CLI](#usual-usage-without-cli)
+      - [Serve](#serve)
+      - [Build](#build)
+    - [Command Line Interfaces](#command-line-interfaces)
+      - [Angular CLI](#angular-cli)
+      - [Vue CLI](#vue-cli)
   - [References](#references)
 
 ## Motivation
@@ -44,7 +48,11 @@ Run `yarn` / `npm install` in your command line interface. If you have problems 
 
 ## Guide
 
-### Serve
+### Usual usage without CLI
+
+Normally the binaries `yarn` or `npm` are used to execute the scripts.
+
+#### Serve
 
 Currently the following frameworks are available:
 
@@ -63,13 +71,23 @@ For example:
 
 > The optional option `--open` open the app in you default browser.
 
-### Build
+#### Build
 
 Use the this command to build the application: `yarn build <framework>`
 
 For example:
 - `yarn build inferno`
 - `npm run build inferno`
+
+### Command Line Interfaces
+
+#### Angular CLI
+
+Currently the [Angular CLI] is supported.
+
+#### Vue CLI
+
+Currently the [Vue CLI] is **not** supported.
 
 ## References
 
@@ -103,3 +121,5 @@ For example:
 [pwa]: https://de.wikipedia.org/wiki/Progressive_Web_App
 [composition api]: https://vue-composition-api-rfc.netlify.com
 [js-benchmark]: https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html
+[Angular CLI]: https://cli.angular.io
+[Vue CLI]: https://cli.vuejs.org
