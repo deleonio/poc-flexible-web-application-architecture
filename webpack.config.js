@@ -76,8 +76,8 @@ module.exports = (env, argv) => {
     module: {
       rules: webpackAdditionalLoaders.concat([
         {
-          test: /\.(m?(j|t)sx?)$/,
-          exclude: /(node_modules|bower_components)/,
+          test: /\.(j|t)sx?$/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
@@ -102,15 +102,6 @@ module.exports = (env, argv) => {
       })
     ].concat(webpackAdditionalPlugins),
     resolve: {
-      // alias: {
-      //   inferno: env.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js',
-      //   react: env.mode === 'production' ? 'react/umd/react.development.js' : 'react/umd/react.production.min.js',
-      //   'react-dom':
-      //     env.mode === 'production'
-      //       ? 'react-dom/umd/react-dom.development.js'
-      //       : 'react-dom/umd/react-dom.production.min.js',
-      //   vue: env.mode === 'production' ? 'vue/dist/vue.esm.browser.min.js' : 'vue/dist/vue.esm.browser.js'
-      // },
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
     }
   };
