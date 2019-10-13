@@ -26,8 +26,11 @@ export default {
     watch(() => {
       // if stop infinity loop
       if (serieRef !== props.serie) {
-        $ctrl.updateProps(props.serie);
         serieRef = props.serie;
+
+        // $ctrl.updateProps(props.serie);
+        // editorFormRef.value = $ctrl.editorForm;
+
         const editorForm = new EditorForm('serie');
         editorForm.titleInput.value = props.serie.getTitle();
         editorForm.unitInput.value = props.serie.getUnit();
@@ -42,7 +45,6 @@ export default {
     };
 
     return {
-      props,
       editorFormRef,
       onSubmit
     };

@@ -94,7 +94,7 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         author: packageJson.author,
         description: packageJson.description,
-        filename: env.mode === 'production' ? `${env.framework}.html` : `index.html`,
+        filename: argv.mode === 'production' ? `${env.framework}.html` : `index.html`,
         name: packageJson.name,
         template: 'index.html',
         title: 'PoC - Flexible web application architecture',
