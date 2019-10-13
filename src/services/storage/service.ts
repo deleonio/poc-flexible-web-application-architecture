@@ -1,6 +1,6 @@
 export class StorageService {
   private namespace: string = 'app-store';
-  private browserStorage: any = localStorage;
+  private browserStorage: any = sessionStorage;
   private memoryStorage: Object = {};
   private framework: Object = {
     name: 'Unknown',

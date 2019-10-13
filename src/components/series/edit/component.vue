@@ -10,7 +10,7 @@
 <script>
 import { EditSerieController } from './controller';
 import EditorSerieComponent from '../editor/component';
-import { onUpdated, reactive, ref, toRefs, watch } from '@vue/composition-api';
+import { ref, watch } from '@vue/composition-api';
 import { EditorForm } from '../editor/editor.form';
 
 export default {
@@ -33,10 +33,6 @@ export default {
         editorForm.unitInput.value = props.serie.getUnit();
         editorFormRef.value = editorForm;
       }
-    });
-
-    onUpdated(() => {
-      console.log('EditSerie updated');
     });
 
     const onSubmit = event => {
