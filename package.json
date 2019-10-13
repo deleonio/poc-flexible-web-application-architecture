@@ -45,7 +45,7 @@
     "@babel/preset-env": "~7.6.0",
     "@babel/preset-typescript": "~7.6.0",
     "@types/node": "~12.7.0",
-    "@types/react": "~16.8.0",
+    "@types/react": "~16.9.0",
     "@vue/cli-plugin-babel": "~3.12.0",
     "babel-loader": "~8.0.0",
     "babel-plugin-angularjs-annotate": "~0.10.0",

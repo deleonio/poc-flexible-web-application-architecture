@@ -34,14 +34,14 @@ This project demonstrate a scalable and flexible [Babel] and [Webpack] based web
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-| Framework   | Description  |         Version         | Artefact size | Upcomming time |
-| ----------- | :----------: | :---------------------: | ------------: | -------------: |
-| [Angular]   | [SPA], [PWA] |           8.2           |      1,01 MiB |        ~125 ms |
-| [AngularJS] |    [SPA]     |           1.7           |       195 KiB |         ~35 ms |
-| [Inferno]   |    [SPA]     |           7.3           |      41.6 KiB |          ~3 ms |
-| [Preact]    |    [SPA]     |          10.0           |      30.3 KiB |          ~3 ms |
-| [React]     | [SPA], [PWA] |          16.10          |       151 KiB |          ~8 ms |
-| [Vue]       | [SPA], [PWA] | 2.6 ([Composition API]) |      94.2 KiB |         ~10 ms |
+| Framework   | Description  |         Version         | Complete | Artefact size | Upcomming time |
+| ----------- | :----------: | :---------------------: | :------: | ------------: | -------------- |
+| [Angular]   | [SPA], [PWA] |           8.2           |    ✓     |      1,01 MiB | ~125 ms        |
+| [AngularJS] |    [SPA]     |           1.7           |    ✓     |       195 KiB | ~35 ms         |
+| [Inferno]   |    [SPA]     |           7.3           |    ✘     |      41.6 KiB | ~3 ms          |
+| [Preact]    |    [SPA]     |          10.0           |    ✘     |      30.3 KiB | ~3 ms          |
+| [React]     | [SPA], [PWA] |          16.10          |    ✘     |       151 KiB | ~8 ms          |
+| [Vue]       | [SPA], [PWA] | 2.6 ([Composition API]) |    ✓     |      94.2 KiB | ~10 ms         |
 
 ## Installation
 
@@ -67,6 +67,7 @@ Currently the following frameworks are available:
 Use this command to serve the application: `yarn serve <framework>[ --open]`
 
 For example:
+
 - `yarn serve inferno --open`
 - `npm run serve inferno`
 
@@ -77,6 +78,7 @@ For example:
 Use this command to build the application: `yarn build <framework>`
 
 For example:
+
 - `yarn build inferno`
 - `npm run build inferno`
 
@@ -129,5 +131,5 @@ Currently the [Vue CLI] is **not** supported.
 [pwa]: https://de.wikipedia.org/wiki/Progressive_Web_App
 [composition api]: https://vue-composition-api-rfc.netlify.com
 [js-benchmark]: https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html
-[Angular CLI]: https://cli.angular.io
-[Vue CLI]: https://cli.vuejs.org
+[angular cli]: https://cli.angular.io
+[vue cli]: https://cli.vuejs.org

@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(serie, index) in $ctrl.measuredSeries" :key="index">
+        <tr v-for="(serie, index) in measuredSeriesRef" :key="index">
           <td>{{ index + 1 }}</td>
           <td>{{ serie.getTitle() }}</td>
           <td>{{ serie.getUnit() }}</td>
@@ -41,6 +41,7 @@ export default {
   setup() {
     const $ctrl = new ListSerieController();
     const measuredSerieRef = ref($ctrl.measuredSerie);
+    const measuredSeriesRef = ref($ctrl.measuredSeries);
     const onDelete = measuredSerie => {
       $ctrl.delete(measuredSerie);
     };
@@ -48,9 +49,10 @@ export default {
       $ctrl.edit(measuredSerie);
       measuredSerieRef.value = $ctrl.measuredSerie;
     };
+
     return {
-      $ctrl,
       measuredSerieRef,
+      measuredSeriesRef,
       onDelete,
       onEdit
     };
