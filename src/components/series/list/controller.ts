@@ -6,8 +6,13 @@ export class ListSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
   public measuredSeries: MeasuredSerieModel[] = [];
   public measuredSerie: MeasuredSerieModel = null;
+  // tslint:disable-next-line: no-empty
+  public renderView: Function = () => {};
 
   constructor() {
+    this.measurementService.observe.subscribe(() => {
+      this.update();
+    });
     this.update();
   }
 
@@ -23,5 +28,6 @@ export class ListSerieController {
 
   public update() {
     this.measuredSeries = this.measurementService.getSeries();
+    this.renderView();
   }
 }

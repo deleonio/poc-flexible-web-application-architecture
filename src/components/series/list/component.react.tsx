@@ -8,15 +8,16 @@ import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends ReactComponent {
   public $ctrl: ListSerieController = new ListSerieController();
+
   constructor(props) {
     super(props);
+    this.$ctrl.renderView = this.forceUpdate.bind(this);
     this.handleDelete.bind(this);
     this.handleEdit.bind(this);
   }
 
   private handleDelete(serie: MeasuredSerieModel) {
     this.$ctrl.delete(serie);
-    this.forceUpdate();
   }
 
   private handleEdit(measuredSerie: MeasuredSerieModel) {
@@ -53,8 +54,7 @@ export class ListSerieComponent extends ReactComponent {
                       }}
                     >
                       Edit
-                    </button>
-                    &#160;
+                    </button>{' '}
                     <button
                       className="btn btn-danger"
                       type="button"

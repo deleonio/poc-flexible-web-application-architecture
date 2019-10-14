@@ -23,7 +23,8 @@ import { ListSerieController } from './controller';
             <td>
               <button class="btn btn-info" type="button" (click)="edit(serie)">
                 Edit</button
-              >&#160;<button class="btn btn-danger" type="button" (click)="delete(serie)">
+              >&#32;
+              <button class="btn btn-danger" type="button" (click)="delete(serie)">
                 Delete
               </button>
             </td>

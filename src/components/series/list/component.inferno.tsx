@@ -7,8 +7,10 @@ import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends Component {
   public $ctrl: ListSerieController = new ListSerieController();
+
   constructor(props) {
     super(props);
+    this.$ctrl.renderView = this.forceUpdate.bind(this);
     this.handleDelete.bind(this);
     this.handleEdit.bind(this);
   }
@@ -52,8 +54,7 @@ export class ListSerieComponent extends Component {
                       }}
                     >
                       Edit
-                    </button>
-                    &#160;
+                    </button>{' '}
                     <button
                       className="btn btn-danger"
                       type="button"

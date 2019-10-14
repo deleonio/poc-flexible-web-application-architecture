@@ -1,3 +1,5 @@
+import { Observable, Subject } from 'rxjs';
+
 import { MeasuredItemModel } from '../../models/measured-item.model';
 import { MeasuredSerieModel } from '../../models/measured-series.model';
 import { DI } from '../../shares/injector';
@@ -6,14 +8,20 @@ import { StorageService } from '../storage/service';
 export class MeasurementService {
   private readonly measuredSeries: MeasuredSerieModel[] = [];
   private readonly storageStorage: StorageService = DI.get('StorageService');
+  public readonly observe: Subject<MeasuredSerieModel[]> = new Subject();
 
   constructor() {
     this.restore();
   }
 
+  public getSeries(): MeasuredSerieModel[] {
+    return this.measuredSeries;
+  }
+
   public addSerie(serie: MeasuredSerieModel) {
     if (serie instanceof MeasuredSerieModel) {
       this.measuredSeries.push(serie);
+      this.observe.next();
     } else {
       throw new Error(`The measuring serie is not valid!`);
     }
@@ -23,11 +31,8 @@ export class MeasurementService {
     const index = this.measuredSeries.indexOf(serie);
     if (index >= 0) {
       this.measuredSeries.splice(index, 1);
+      this.observe.next();
     }
-  }
-
-  public getSeries(): MeasuredSerieModel[] {
-    return this.measuredSeries;
   }
 
   private restore() {
@@ -42,6 +47,7 @@ export class MeasurementService {
       });
       this.addSerie(measuredSerie);
     });
+    this.observe.next();
   }
 
   public store() {
@@ -61,5 +67,6 @@ export class MeasurementService {
       });
     });
     this.storageStorage.setItem('measuredSeries', series);
+    this.observe.next();
   }
 }

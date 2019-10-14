@@ -6,6 +6,9 @@
   const ctrl = new ListSerieController();
   let measuredSeriesRef = ctrl.measuredSeries;
   let measuredSerieRef = ctrl.measuredSerie;
+  ctrl.renderView = () => {
+    measuredSeriesRef = ctrl.measuredSeries;
+  };
 </script>
 
 <div>
