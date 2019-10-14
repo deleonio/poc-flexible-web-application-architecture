@@ -2,7 +2,6 @@
   <form @submit="onSubmit">
     <h5>Edit a new measuring serie</h5>
     <editor-serie v-if="editorFormRef !== null" :editor-form="editorFormRef"></editor-serie>
-    <!-- <pre>Serie(props): {{props.serie}}</pre> -->
     <button class="btn btn-primary">Edit</button>
   </form>
 </template>
@@ -41,6 +40,7 @@ export default {
     };
 
     return {
+      $ctrl,
       editorFormRef,
       onSubmit
     };

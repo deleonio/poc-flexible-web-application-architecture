@@ -35,12 +35,20 @@ module.exports = (env, argv) => {
       break;
     case 'react':
       babelConfigPlugins.push('@babel/plugin-transform-react-jsx');
-      // babelConfigPresets.push('@babel/preset-react');
       webpackEntries.react = path.join(__dirname, 'src', `react.tsx`);
+      break;
+    case 'svelte':
+      webpackAdditionalLoaders.push({
+        test: /\.svelte$/,
+        exclude: /node_modules/,
+        use: 'svelte-loader'
+      });
+      webpackEntries.svelte = path.join(__dirname, 'src', `svelte.svelte`);
       break;
     case 'vue':
       webpackAdditionalLoaders.push({
         test: /\.vue$/,
+        exclude: /node_modules/,
         loader: 'vue-loader'
       });
       webpackAdditionalPlugins.push(new VueLoaderPlugin());
@@ -48,7 +56,7 @@ module.exports = (env, argv) => {
       break;
     default:
       console.log(`
-[ERROR] No or an invalid framework identifier was given. Use: angular, angularjs, inferno, preact, react or vue
+[ERROR] No or an invalid framework identifier was given. Use: angular, angularjs, inferno, preact, react, svelte or vue
         > yarn serve inferno
 `);
       process.exit(1);
@@ -88,9 +96,11 @@ module.exports = (env, argv) => {
         }
       ])
     },
-    plugins: [new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }])].concat(webpackAdditionalPlugins),
+    plugins: [
+      new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }, { from: 'index.html', to: 'index.html' }])
+    ].concat(webpackAdditionalPlugins),
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
+      extensions: ['.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
     }
   };
 

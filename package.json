@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=production --env.framework",
-    "build-all": "rm -rf dist && yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build vue",
+    "build-all": "rm -rf dist && yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build svelte && yarn build vue",
     "clear": "rm -rf coverage dist",
     "prettier": "prettier --write src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn install",
@@ -31,6 +31,7 @@
     "react": "~16.10.0",
     "react-dom": "~16.10.0",
     "rxjs": "~6.5.0",
+    "svelte": "~3.12.0",
     "vue": "~2.6.0",
     "zone.js": "~0.9.0"
   },
@@ -53,6 +54,7 @@
     "babel-plugin-transform-vue-template": "~0.4.0",
     "copy-webpack-plugin": "~5.0.0",
     "css-loader": "~3.2.0",
+    "svelte-loader": "~2.13.0",
     "tslint": "~5.20.0",
     "typescript": "~3.5.0",
     "vue-loader": "~15.7.0",
