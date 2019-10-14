@@ -1,6 +1,6 @@
 <template>
   <form @submit="onSubmit">
-    <h5>Edit a new measuring serie</h5>
+    <h5>Edit a existing measuring serie</h5>
     <editor-serie v-if="editorFormRef !== null" :editor-form="editorFormRef"></editor-serie>
     <button class="btn btn-primary">Edit</button>
   </form>

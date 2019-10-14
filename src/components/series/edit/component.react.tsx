@@ -18,7 +18,7 @@ export class EditSerieComponent extends ReactComponent {
           this.$ctrl.onSubmit();
         }}
       >
-        <h5>Edit a new measuring serie</h5>
+        <h5>Edit a existing measuring serie</h5>
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
         <button className="btn btn-primary">Edit</button>
       </form>
