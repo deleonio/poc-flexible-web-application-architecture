@@ -53,6 +53,7 @@ export class ListSerieComponent extends Component {
                     >
                       Edit
                     </button>
+                    &#160;
                     <button
                       className="btn btn-danger"
                       type="button"

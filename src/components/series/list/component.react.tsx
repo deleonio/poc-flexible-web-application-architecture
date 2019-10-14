@@ -54,6 +54,7 @@ export class ListSerieComponent extends ReactComponent {
                     >
                       Edit
                     </button>
+                    &#160;
                     <button
                       className="btn btn-danger"
                       type="button"

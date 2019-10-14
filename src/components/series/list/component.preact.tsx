@@ -54,6 +54,7 @@ export class ListSerieComponent extends PreactComponent {
                     >
                       Edit
                     </button>
+                    &#160;
                     <button
                       className="btn btn-danger"
                       type="button"
