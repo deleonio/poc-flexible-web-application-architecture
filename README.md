@@ -38,13 +38,13 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 
 | Framework   |     Description     |         Version         | Complete\* | Artefact size | Upcomming time |
 | ----------- | :-----------------: | :---------------------: | :--------: | ------------: | -------------: |
-| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |     ✓      |      1,01 MiB |        ~125 ms |
+| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |     ✓      |      1.01 MiB |        ~125 ms |
 | [AngularJS] |    [SPA], [SSR]     |           1.7           |     ✓      |       195 KiB |         ~35 ms |
 | [Inferno]   |    [SPA], [SSR]     |           7.3           |     ✘      |      41.6 KiB |          ~3 ms |
-| [Preact]    |    [SPA], [SSR]     |          10.0           |     ✘      |      30.3 KiB |          ~3 ms |
+| [Preact]    |    [SPA], [SSR]     |          10.0           |     ✘      |      30.2 KiB |          ~3 ms |
 | [React]     | [SPA], [PWA], [SSR] |          16.10          |     ✘      |       151 KiB |          ~8 ms |
-| [Svelte]    |    [SPA], [SSR]     |          3.12           |     ✘      |         - KiB |           - ms |
-| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |     ✓      |      94.2 KiB |         ~10 ms |
+| [Svelte]    |    [SPA], [SSR]     |          3.12           |     ✘      |      20.5 KiB |          ~3 ms |
+| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |     ✓      |      93.4 KiB |         ~10 ms |
 
 > \* In the first stage of development without routing.
 
@@ -139,8 +139,8 @@ Currently the [Vue CLI] is **not** supported.
 [js-benchmark]: https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html
 [angular cli]: https://cli.angular.io
 [vue cli]: https://cli.vuejs.org
-[Svelte]: https://svelte.dev
+[svelte]: https://svelte.dev
 [svelte-loader]: https://github.com/sveltejs/svelte-loader
 [babel-loader]: https://github.com/babel/babel-loader
-[SSR]: https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc059b38
-[Demo]: http://github.modevel.de/poc
+[ssr]: https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc059b38
+[demo]: http://github.modevel.de/poc
