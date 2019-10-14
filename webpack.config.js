@@ -100,7 +100,7 @@ module.exports = (env, argv) => {
       new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }, { from: 'index.html', to: 'index.html' }])
     ].concat(webpackAdditionalPlugins),
     resolve: {
-      extensions: ['.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
+      extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
     }
   };
 

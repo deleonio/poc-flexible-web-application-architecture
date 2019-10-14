@@ -54,7 +54,7 @@ export class ListSerieComponent extends ReactComponent {
                       }}
                     >
                       Edit
-                    </button>{' '}
+                    </button>
                     <button
                       className="btn btn-danger"
                       type="button"

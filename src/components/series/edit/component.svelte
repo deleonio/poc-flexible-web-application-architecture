@@ -1,4 +1,5 @@
 <script>
+  import { beforeUpdate } from 'svelte';
   import { EditSerieController } from './controller';
   import EditorSerieComponent from '../editor/component.svelte';
 
@@ -7,6 +8,11 @@
   const ctrl = new EditSerieController();
   ctrl.updateProps(measuredSerie);
   let editorForm = ctrl.editorForm;
+
+  beforeUpdate(() => {
+    ctrl.updateProps(measuredSerie);
+    editorForm = ctrl.editorForm;
+  });
 </script>
 
 <form

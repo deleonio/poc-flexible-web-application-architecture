@@ -55,7 +55,7 @@ export class ListSerieComponent extends PreactComponent {
                       }}
                     >
                       Edit
-                    </button>{' '}
+                    </button>
                     <button
                       className="btn btn-danger"
                       type="button"

@@ -11,7 +11,7 @@ export class AppComponent extends InfernoComponent {
     return (
       <div>
         <h4>
-          {this.$ctrl.framework.name} v{this.$ctrl.framework.version}{' '}
+          {this.$ctrl.framework.name} v{this.$ctrl.framework.version}
         </h4>
         <small>{this.$ctrl.finishedRendering} ms upcomming time</small>
         <ListSerieComponent />
