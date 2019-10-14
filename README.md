@@ -36,17 +36,18 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-| Framework   |     Description     |         Version         | Complete\* | Artefact size | Upcomming time |
-| ----------- | :-----------------: | :---------------------: | :--------: | ------------: | -------------: |
-| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |     ✓      |      1.01 MiB |        ~125 ms |
-| [AngularJS] |    [SPA], [SSR]     |           1.7           |     ✓      |       206 KiB |         ~35 ms |
-| [Inferno]   |    [SPA], [SSR]     |           7.3           |     ✓      |      52.7 KiB |          ~3 ms |
-| [Preact]    |    [SPA], [SSR]     |          10.0           |     ✓      |      41.3 KiB |          ~3 ms |
-| [React]     | [SPA], [PWA], [SSR] |          16.10          |     ✓      |       162 KiB |          ~8 ms |
-| [Svelte]    |    [SPA], [SSR]     |          3.12           |     ✘      |      32.2 KiB |          ~3 ms |
-| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |     ✓      |       104 KiB |         ~10 ms |
+| Framework         |     Description     |         Version         | Router\* | Artefact size | Upcomming time |
+| ----------------- | :-----------------: | :---------------------: | :------: | ------------: | -------------: |
+| [Angular]         | [SPA], [PWA], [SSR] |           8.2           |    ✓     |      1.01 MiB |        ~125 ms |
+| > ng build --prod |                     |                         |          |       ~602 kB |                |
+| [AngularJS]       |    [SPA], [SSR]     |           1.7           |    ✓     |       206 KiB |         ~35 ms |
+| [Inferno]         |    [SPA], [SSR]     |           7.3           |    ✓     |      52.7 KiB |          ~3 ms |
+| [Preact]          |    [SPA], [SSR]     |          10.0           |    ✓     |      41.3 KiB |          ~3 ms |
+| [React]           | [SPA], [PWA], [SSR] |          16.10          |    ✓     |       162 KiB |          ~8 ms |
+| [Svelte]          |    [SPA], [SSR]     |          3.12           |    ✘     |      32.2 KiB |          ~3 ms |
+| [Vue]             | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |    ✓     |       104 KiB |         ~10 ms |
 
-> \* In the first stage of development without routing.
+> \* Router module exists but is not implemented.
 
 ## Installation
 
