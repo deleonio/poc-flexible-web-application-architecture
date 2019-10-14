@@ -1,5 +1,10 @@
 <script>
-	let name = 'world';
+  import { AppController } from './controller';
+  const ctrl = new AppController();
 </script>
 
-<h1>Hello {name}!</h1>
+<div>
+  <h4>{ctrl.framework.name} v{ctrl.framework.version}</h4>
+  <small>{ctrl.finishedRendering} ms upcomming time</small>
+  <!-- <list-serie /> -->
+</div>
