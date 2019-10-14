@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=production --env.framework",
-    "build-all": "yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build vue",
+    "build-all": "rm -rf dist && yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build vue",
     "clear": "rm -rf coverage dist",
     "prettier": "prettier --write src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn install",
