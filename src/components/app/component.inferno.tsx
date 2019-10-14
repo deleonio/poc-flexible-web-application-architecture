@@ -9,7 +9,7 @@ export class AppComponent extends InfernoComponent {
 
   public render() {
     return (
-      <div>
+      <div id="app">
         <h4>
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version}
         </h4>

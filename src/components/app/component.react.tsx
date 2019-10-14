@@ -11,7 +11,7 @@ export class AppComponent extends ReactComponent {
 
   public render() {
     return (
-      <div>
+      <div id="app">
         <h4>
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version}
         </h4>
