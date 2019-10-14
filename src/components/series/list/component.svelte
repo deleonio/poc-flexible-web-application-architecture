@@ -20,8 +20,9 @@
       </tr>
     </thead>
     <tbody>
-      {#each measuredSeriesRef as serie, index}
-        <tr key={index}>
+      {#each measuredSeriesRef as serie, index (index)}
+        <tr>
+          <td>{index + 1}</td>
           <td>{serie.getTitle()}</td>
           <td>{serie.getUnit()}</td>
           <td>
