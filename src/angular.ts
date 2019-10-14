@@ -13,6 +13,7 @@ import { CreateSerieComponent } from './components/series/create/component.angul
 import { EditSerieComponent } from './components/series/edit/component.angular';
 import { EditorSerieComponent } from './components/series/editor/component.angular';
 import { ListSerieComponent } from './components/series/list/component.angular';
+import { APP_HTML_ELEMENT } from './shares/constant';
 import { DI } from './shares/injector';
 
 DI.register('Framework', {
@@ -20,6 +21,8 @@ DI.register('Framework', {
   version: VERSION.full
 });
 require('./shares/register');
+
+document.querySelector('div#angular').appendChild(APP_HTML_ELEMENT);
 
 @NgModule({
   bootstrap: [AppComponent],

@@ -8,7 +8,7 @@ import './components/series/list/component.angularjs';
 
 import * as angular from 'angular';
 
-import { APP_HTML_DIV_ELEMENT } from './shares/constant';
+import { APP_HTML_ELEMENT } from './shares/constant';
 import { DI } from './shares/injector';
 
 DI.register('Framework', {
@@ -17,4 +17,5 @@ DI.register('Framework', {
 });
 require('./shares/register');
 
-angular.bootstrap(APP_HTML_DIV_ELEMENT, ['app']);
+document.querySelector('div#angularjs').appendChild(APP_HTML_ELEMENT);
+angular.bootstrap(document.querySelector('div#angularjs'), ['app']);

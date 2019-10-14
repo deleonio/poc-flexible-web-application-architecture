@@ -1,7 +1,6 @@
 import { render, version } from 'inferno';
 
 import { AppComponent } from './components/app/component.inferno';
-import { APP_HTML_DIV_ELEMENT } from './shares/constant';
 import { DI } from './shares/injector';
 
 DI.register('Framework', {
@@ -9,4 +8,4 @@ DI.register('Framework', {
   version
 });
 require('./shares/register');
-render(<AppComponent />, APP_HTML_DIV_ELEMENT);
+render(<AppComponent />, document.querySelector('div#inferno'));

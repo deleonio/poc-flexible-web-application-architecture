@@ -8,7 +8,6 @@ interface Framework {
 }
 
 export class AppController {
-  public helloWorld: string = 'Hello world!';
   public finishedRendering: number = null;
   private storageService: StorageService = DI.get('StorageService');
   public readonly framework: Framework = DI.get('Framework');

@@ -12,10 +12,10 @@ export class AppComponent extends ReactComponent {
   public render() {
     return (
       <div>
-        <h4>{this.$ctrl.helloWorld}</h4>
-        <small>
-          {this.$ctrl.framework.name} v{this.$ctrl.framework.version} | {this.$ctrl.finishedRendering} ms upcomming time
-        </small>
+        <h4>
+          {this.$ctrl.framework.name} v{this.$ctrl.framework.version}{' '}
+        </h4>
+        <small>{this.$ctrl.finishedRendering} ms upcomming time</small>
         <ListSerieComponent />
       </div>
     );

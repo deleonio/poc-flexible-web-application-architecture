@@ -5,8 +5,8 @@ import { AppController } from './controller';
   selector: 'app',
   template: `
     <div>
-      <h4>{{ helloWorld }}</h4>
-      <small>{{ framework.name }} v{{ framework.version }} | {{ finishedRendering }} ms upcomming time</small>
+      <h4>{{ framework.name }} v{{ framework.version }}</h4>
+      <small>{{ finishedRendering }} ms upcomming time</small>
       <list-serie></list-serie>
     </div>
   `

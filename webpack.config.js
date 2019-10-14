@@ -2,7 +2,6 @@ const path = require('path');
 // const util = require('util');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const packageJson = require('./package.json');
@@ -89,29 +88,11 @@ module.exports = (env, argv) => {
         }
       ])
     },
-    plugins: [
-      new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
-      new HtmlWebpackPlugin({
-        author: packageJson.author,
-        description: packageJson.description,
-        filename: argv.mode === 'production' ? `${env.framework}.html` : `index.html`,
-        name: packageJson.name,
-        template: 'index.html',
-        title: 'PoC - Flexible web application architecture',
-        version: packageJson.version
-      })
-    ].concat(webpackAdditionalPlugins),
+    plugins: [new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }])].concat(webpackAdditionalPlugins),
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
     }
   };
-
-  switch (argv.mode) {
-    case 'production':
-      break;
-    default:
-      config.devtool = 'source-map';
-  }
 
   // console.log(util.inspect(config, true, null, true));
 

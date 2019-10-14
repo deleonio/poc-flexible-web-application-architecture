@@ -14,7 +14,7 @@
     "clear": "rm -rf coverage dist",
     "prettier": "prettier --write src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn install",
-    "serve": "webpack-dev-server --colors --progress --env.framework"
+    "serve": "webpack-dev-server --colors --devtool source-map --progress --env.framework"
   },
   "dependencies": {
     "@angular/common": "~8.2.0",
@@ -53,7 +53,6 @@
     "babel-plugin-transform-vue-template": "~0.4.0",
     "copy-webpack-plugin": "~5.0.0",
     "css-loader": "~3.2.0",
-    "html-webpack-plugin": "~3.2.0",
     "tslint": "~5.20.0",
     "typescript": "~3.5.0",
     "vue-loader": "~15.7.0",

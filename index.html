@@ -8,7 +8,7 @@
   crossorigin="anonymous"
 />
 <style>
-  div#app {
+  div.app {
     border-width: 1px;
     border-color: sandybrown;
     border-style: solid;
@@ -16,11 +16,11 @@
     margin: 1em 0;
   }
 </style>
-<title><%= htmlWebpackPlugin.options.title %></title>
+<title>PoC - Flexible web application architecture</title>
 <div class="container-fluid">
   <header>
-    <h1><%= htmlWebpackPlugin.options.title %></h1>
-    <h2><%= htmlWebpackPlugin.options.description %></h2>
+    <h1>PoC - Flexible web application architecture</h1>
+    <h2>This project demonstrate a flexible Babel and Webpack based web application architecture.</h2>
   </header>
   <main>
     <div class="row">
@@ -45,19 +45,28 @@
     </div>
     <div class="row">
       <div class="col">
-        <h3>App</h3>
-        <div id="app"></div>
+        <h3>Apps</h3>
+        <div id="angular" class="app"></div>
+        <div id="angularjs" class="app"></div>
+        <div id="inferno" class="app"></div>
+        <div id="preact" class="app"></div>
+        <div id="react" class="app"></div>
+        <div id="vue" class="app"></div>
       </div>
     </div>
   </main>
   <footer>
     <hr />
     <code>
-      <b>Author:</b> <%= htmlWebpackPlugin.options.author.name %> |
-      <a href="mailto:<%= htmlWebpackPlugin.options.author.email %>"><%= htmlWebpackPlugin.options.author.email %></a> |
-      <a href="<%= htmlWebpackPlugin.options.author.url %>" target="<%= htmlWebpackPlugin.options.author.url %>"
-        ><%= htmlWebpackPlugin.options.author.url %></a
-      ></code
+      <b>Author:</b> Martin Oppitz | <a href="mailto:github@martinoppitz.com">github@martinoppitz.com</a> |
+      <a href="http://martinoppitz.com" target="http://martinoppitz.com">http://martinoppitz.com</a></code
     >
   </footer>
 </div>
+<!-- serve will load only one of this scripts -->
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript" src="angularjs.js"></script>
+<script type="text/javascript" src="inferno.js"></script>
+<script type="text/javascript" src="preact.js"></script>
+<script type="text/javascript" src="react.js"></script>
+<script type="text/javascript" src="vue.js"></script>
