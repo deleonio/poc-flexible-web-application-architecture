@@ -6,5 +6,7 @@
 <div>
   <h4>{ctrl.framework.name} v{ctrl.framework.version}</h4>
   <small>{ctrl.finishedRendering} ms upcomming time</small>
-  <!-- <list-serie /> -->
+  <br />
+  <code>[TODO: Application context incomplete ...]</code>
+  <list-serie />
 </div>
