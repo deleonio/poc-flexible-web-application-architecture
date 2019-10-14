@@ -22,21 +22,17 @@ export default {
     const $ctrl = new EditSerieController();
     const editorFormRef = ref(null);
 
-    let serieRef = null;
-    watch(() => {
-      // if stop infinity loop
-      if (serieRef !== props.serie) {
-        serieRef = props.serie;
-
-        // $ctrl.updateProps(props.serie);
-        // editorFormRef.value = $ctrl.editorForm;
-
-        const editorForm = new EditorForm('serie');
-        editorForm.titleInput.value = props.serie.getTitle();
-        editorForm.unitInput.value = props.serie.getUnit();
-        editorFormRef.value = editorForm;
+    watch(
+      // this function is required for the following function
+      () => {
+        return props.serie;
+      },
+      // get the return value of the previous function
+      serie => {
+        $ctrl.updateProps(serie);
+        editorFormRef.value = $ctrl.editorForm;
       }
-    });
+    );
 
     const onSubmit = event => {
       event.preventDefault();
