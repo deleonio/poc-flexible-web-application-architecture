@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 import VueCompositionApi from '@vue/composition-api';
 
-import App from './components/app/component';
+import App from './components/app/component.vue';
 import { DI } from './shares/injector';
 
 DI.register('Framework', {

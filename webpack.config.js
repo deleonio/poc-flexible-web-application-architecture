@@ -43,7 +43,7 @@ module.exports = (env, argv) => {
         exclude: /node_modules/,
         use: 'svelte-loader'
       });
-      webpackEntries.svelte = path.join(__dirname, 'src', `svelte.svelte`);
+      webpackEntries.svelte = path.join(__dirname, 'src', `svelte.ts`);
       break;
     case 'vue':
       webpackAdditionalLoaders.push({

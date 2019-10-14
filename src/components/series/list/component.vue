@@ -29,8 +29,8 @@
 
 <script>
 import { ListSerieController } from './controller';
-import CreateSerieComponent from '../create/component';
-import EditSerieComponent from '../edit/component';
+import CreateSerieComponent from '../create/component.vue';
+import EditSerieComponent from '../edit/component.vue';
 import { reactive, ref } from '@vue/composition-api';
 
 export default {

@@ -8,7 +8,7 @@
 
 <script>
 import { CreateSerieController } from './controller';
-import EditorSerieComponent from '../editor/component';
+import EditorSerieComponent from '../editor/component.vue';
 import { ref } from '@vue/composition-api';
 
 export default {

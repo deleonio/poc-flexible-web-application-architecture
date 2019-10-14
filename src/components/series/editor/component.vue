@@ -7,7 +7,7 @@
 
 <script>
 import { CreateSerieController, EditorSerieController } from './controller';
-import InputComponent from '../../input/component';
+import InputComponent from '../../input/component.vue';
 
 export default {
   props: ['editor-form'],

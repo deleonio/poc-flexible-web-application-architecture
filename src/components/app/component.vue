@@ -8,8 +8,8 @@
 
 <script>
 import { AppController } from './controller';
-import InputComponent from '../input/component';
-import ListSerieComponent from '../series/list/component';
+import InputComponent from '../input/component.vue';
+import ListSerieComponent from '../series/list/component.vue';
 
 export default {
   components: {

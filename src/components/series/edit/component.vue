@@ -8,7 +8,7 @@
 
 <script>
 import { EditSerieController } from './controller';
-import EditorSerieComponent from '../editor/component';
+import EditorSerieComponent from '../editor/component.vue';
 import { ref, watch } from '@vue/composition-api';
 import { EditorForm } from '../editor/editor.form';
 
