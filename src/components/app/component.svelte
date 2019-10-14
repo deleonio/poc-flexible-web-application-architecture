@@ -1,5 +1,6 @@
 <script>
   import { AppController } from './controller';
+  import ListSerieComponent from '../series/list/component.svelte';
   const ctrl = new AppController();
 </script>
 
@@ -8,5 +9,5 @@
   <small>{ctrl.finishedRendering} ms upcomming time</small>
   <br />
   <code>[TODO: Application context incomplete ...]</code>
-  <list-serie />
+  <ListSerieComponent />
 </div>

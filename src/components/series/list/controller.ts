@@ -8,7 +8,7 @@ export class ListSerieController {
   public measuredSerie: MeasuredSerieModel = null;
 
   constructor() {
-    this.measuredSeries = this.measurementService.getSeries();
+    this.update();
   }
 
   public edit(measuredSerie: MeasuredSerieModel) {
@@ -18,5 +18,10 @@ export class ListSerieController {
   public delete(measuredSerie: MeasuredSerieModel) {
     this.measurementService.removeSerie(measuredSerie);
     this.measurementService.store();
+    this.measuredSeries = this.measurementService.getSeries();
+  }
+
+  public update() {
+    this.measuredSeries = this.measurementService.getSeries();
   }
 }
