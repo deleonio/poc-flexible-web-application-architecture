@@ -43,7 +43,7 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 | [Inferno]   |    [SPA], [SSR]     |           7.3           |     ✘      |      41.6 KiB |          ~3 ms |
 | [Preact]    |    [SPA], [SSR]     |          10.0           |     ✘      |      30.2 KiB |          ~3 ms |
 | [React]     | [SPA], [PWA], [SSR] |          16.10          |     ✘      |       151 KiB |          ~8 ms |
-| [Svelte]    |    [SPA], [SSR]     |          3.12           |     ✘      |      20.5 KiB |          ~3 ms |
+| [Svelte]    |    [SPA], [SSR]     |          3.12           |     ✘      |      20.4 KiB |          ~3 ms |
 | [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |     ✓      |      93.4 KiB |         ~10 ms |
 
 > \* In the first stage of development without routing.
