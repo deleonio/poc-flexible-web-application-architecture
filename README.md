@@ -22,6 +22,8 @@ This project demonstrate a scalable and flexible [Babel] and [Webpack] based web
 
 ## Introduction
 
+We write always the same application with different JavaScript-Frameworks. Here you can find a [Demo]-Link.
+
 ### Tools
 
 | Tool         | Description |
@@ -141,3 +143,4 @@ Currently the [Vue CLI] is **not** supported.
 [svelte-loader]: https://github.com/sveltejs/svelte-loader
 [babel-loader]: https://github.com/babel/babel-loader
 [SSR]: https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc059b38
+[Demo]: http://github.modevel.de/poc
