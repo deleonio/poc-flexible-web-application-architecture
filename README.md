@@ -118,7 +118,7 @@ Currently not supported.
 
 ### E2E-Test
 
-Execute alle unit tests with `yarn e2e`. Note that the application can be reached under http://localhost:8080 (e.g. `yarn serve preact`).
+Execute all e2e tests with `yarn e2e`. Note that the application can be reached under http://localhost:8080 (e.g. `yarn serve preact`).
 
 ## Open topics
 
