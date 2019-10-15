@@ -110,7 +110,7 @@ Currently the [Vue CLI] is **not** supported.
 
 ### Unit-Test
 
-Execute alle unit tests with `yarn test` or `yarn test --watch`.
+Execute all unit tests with `yarn test` or `yarn test --watch`.
 
 ### Snapshot-Test
 
