@@ -126,9 +126,9 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 
 ## Open topics
 
-- <span style="color:grey">~~Clean up the code for the architectural concept.~~</span> <span style="color:green">✓</span>
-- <span style="color:grey">~~Use observables to trigger rendering in correct cases.~~</span> <span style="color:green">✓</span>
-- <span style="color:grey">~~Prepare the project for unit and e2e testing.~~</span> <span style="color:green">✓</span>
+- ~~Clean up the code for the architectural concept.~~ ✓
+- ~~Use observables to trigger rendering in correct cases.~~ ✓
+- ~~Prepare the project for unit and e2e testing.~~ ✓
 - Add router to the application context. ⌛
 - Create a cheat sheet for the application architecture concept. ⌛
 
