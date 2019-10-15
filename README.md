@@ -13,6 +13,10 @@
     - [Command Line Interfaces](#command-line-interfaces)
       - [Angular CLI](#angular-cli)
       - [Vue CLI](#vue-cli)
+  - [Testing](#testing)
+    - [Unit-Test](#unit-test)
+    - [Snapshot-Test](#snapshot-test)
+    - [E2E-Test](#e2e-test)
   - [Open topics](#open-topics)
   - [References](#references)
 
@@ -95,9 +99,26 @@ For example:
 
 Currently the [Angular CLI] is supported.
 
+- `serve`
+- `build[ --prod]`
+
 #### Vue CLI
 
 Currently the [Vue CLI] is **not** supported.
+
+## Testing
+
+### Unit-Test
+
+Execute alle unit tests with `yarn test` or `yarn test --watch`.
+
+### Snapshot-Test
+
+Currently not supported.
+
+### E2E-Test
+
+Execute alle unit tests with `yarn e2e`. Note that the application can be reached under http://localhost:8080 (e.g. `yarn serve preact`).
 
 ## Open topics
 
