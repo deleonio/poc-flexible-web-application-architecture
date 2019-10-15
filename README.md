@@ -114,7 +114,7 @@ Execute all unit tests with `yarn test` or `yarn test --watch`.
 
 ### Snapshot-Test
 
-Currently not supported.
+Currently **not** supported.
 
 ### E2E-Test
 
