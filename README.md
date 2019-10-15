@@ -30,11 +30,14 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 ### Tools
 
-| Tool         | Description |
-| ------------ | :---------: |
-| [Babel]      | Transpiler  |
-| [Webpack]    |   Bundler   |
-| [TypeScript] |  Language   |
+| Tool         |   Description    |
+| ------------ | :--------------: |
+| [Babel]      |    Transpiler    |
+| [Webpack]    |     Bundler      |
+| [TypeScript] |     Language     |
+| [Mocha]      | Unit-Test-Runner |
+| [Chai]       |    Assertion     |
+| [Nightwatch] | E2E-Test-Runner  |
 
 ### Frameworks
 
