@@ -11,12 +11,12 @@
   "scripts": {
     "build": "webpack --mode=production --env.framework",
     "build-all": "yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build svelte && yarn build vue",
-    "clear": "rm -rf coverage dist",
-    "mocha": "cross-env NODE_ENV=test mocha --watch-extensions ts",
-    "nightwatch": "nightwatch",
+    "clear": "rm -rf coverage dist tests_output *.log",
+    "e2e": "nightwatch",
     "prettier": "prettier --write src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn install",
-    "serve": "webpack-dev-server --colors --devtool source-map --progress --env.framework"
+    "serve": "webpack-dev-server --colors --devtool source-map --progress --env.framework",
+    "test": "cross-env NODE_ENV=test mocha --watch-extensions ts"
   },
   "dependencies": {
     "@angular/common": "~8.2.0",
