@@ -38,6 +38,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 | [Mocha]      | Unit-Test-Runner |
 | [Chai]       |    Assertion     |
 | [Nightwatch] | E2E-Test-Runner  |
+| [NYC]        |  Code-Coverage   |
 
 ### Frameworks
 
@@ -170,3 +171,7 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 [babel-loader]: https://github.com/babel/babel-loader
 [ssr]: https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc059b38
 [demo]: http://github.modevel.de/poc
+[mocha]: https://mochajs.org
+[chai]: https://www.chaijs.com
+[nightwatch]: https://nightwatchjs.org
+[nyc]: https://istanbul.js.org
