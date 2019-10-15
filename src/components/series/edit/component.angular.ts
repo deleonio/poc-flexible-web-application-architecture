@@ -9,7 +9,7 @@ import { EditSerieController } from './controller';
     <form (ngSubmit)="onSubmit()">
       <h5>Edit a existing measuring serie</h5>
       <editor-serie [editorForm]="editorForm"></editor-serie>
-      <button class="btn btn-primary">Edit</button>
+      <button class="btn btn-primary" id="submit-edit">Edit</button>
     </form>
   `
 })

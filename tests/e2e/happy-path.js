@@ -3,12 +3,17 @@ module.exports = {
     browser
       .url('http://localhost:8080/')
       .waitForElementVisible('div#app')
-      // .assert.titleContains('Ecosia')
-      // .assert.visible('input[type=search]')
-      // .setValue('input[type=search]', 'nightwatch')
-      // .assert.visible('button[type=submit]')
-      // .click('button[type=submit]')
-      // .assert.containsText('.mainline-results', 'Nightwatch.js')
+      .waitForElementVisible('input#new_title')
+      .waitForElementVisible('input#new_unit')
+      .setValue('input#new_title', 'nightwatch')
+      .setValue('input#new_unit', 'nightwatch')
+      .click('button#submit-add')
+      .waitForElementVisible('button#submit-add')
+      .click('button#edit-0')
+      .setValue('input#edit_title', 'nightwatch')
+      .setValue('input#edit_unit', 'nightwatch')
+      .click('button#submit-edit')
+      .click('button#delete-0')
       .end();
   }
 };

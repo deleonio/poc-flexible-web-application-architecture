@@ -31,6 +31,7 @@
           <td>
             <button
               class="btn btn-info"
+              id="edit-{index}"
               type="button"
               on:click={() => {
                 ctrl.edit(serie);
@@ -40,6 +41,7 @@
             </button>
             <button
               class="btn btn-danger"
+              id="delete-{index}"
               type="button"
               on:click={() => {
                 ctrl.delete(serie);

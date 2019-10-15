@@ -12,8 +12,8 @@ export class EditorSerieComponent extends ReactComponent {
   public render() {
     return (
       <div>
-        <InputComponent control={this.props.editorForm.titleInput} />
-        <InputComponent control={this.props.editorForm.unitInput} />
+        <InputComponent control={this.props.editorForm.getInput('title')} />
+        <InputComponent control={this.props.editorForm.getInput('unit')} />
       </div>
     );
   }

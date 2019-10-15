@@ -5,13 +5,13 @@ import { EditorForm } from '../editor/editor.form';
 
 export class CreateSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
-  public editorForm: EditorForm = new EditorForm('serie');
+  public editorForm: EditorForm = new EditorForm('new');
 
   public onSubmit() {
     this.measurementService.addSerie(
-      new MeasuredSerieModel(this.editorForm.titleInput.value, this.editorForm.unitInput.value)
+      new MeasuredSerieModel(this.editorForm.getInput('title').value, this.editorForm.getInput('unit').value)
     );
     this.measurementService.store();
-    this.editorForm = new EditorForm('serie');
+    this.editorForm = new EditorForm('new');
   }
 }

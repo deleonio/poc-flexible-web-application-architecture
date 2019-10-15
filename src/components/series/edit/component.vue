@@ -2,7 +2,7 @@
   <form @submit="onSubmit">
     <h5>Edit a existing measuring serie</h5>
     <editor-serie v-if="editorFormRef !== null" :editor-form="editorFormRef"></editor-serie>
-    <button class="btn btn-primary">Edit</button>
+    <button class="btn btn-primary" id="submit-edit">Edit</button>
   </form>
 </template>
 

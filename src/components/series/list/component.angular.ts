@@ -21,10 +21,10 @@ import { ListSerieController } from './controller';
             <td>{{ serie.getTitle() }}</td>
             <td>{{ serie.getUnit() }}</td>
             <td>
-              <button class="btn btn-info" type="button" (click)="edit(serie)">
+              <button class="btn btn-info" id="edit-{{ i }}" type="button" (click)="edit(serie)">
                 Edit
               </button>
-              <button class="btn btn-danger" type="button" (click)="delete(serie)">
+              <button class="btn btn-danger" id="delete-{{ i }}" type="button" (click)="delete(serie)">
                 Delete
               </button>
             </td>

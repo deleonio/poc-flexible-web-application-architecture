@@ -48,6 +48,7 @@ export class ListSerieComponent extends ReactComponent {
                   <td>
                     <button
                       className="btn btn-info"
+                      id={`edit-${index}`}
                       type="button"
                       onClick={() => {
                         this.handleEdit(serie);
@@ -57,6 +58,7 @@ export class ListSerieComponent extends ReactComponent {
                     </button>
                     <button
                       className="btn btn-danger"
+                      id={`delete-${index}`}
                       type="button"
                       onClick={() => {
                         this.handleDelete(serie);

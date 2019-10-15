@@ -1,10 +1,9 @@
 const path = require('path');
 // const util = require('util');
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
-const packageJson = require('./package.json');
 
 module.exports = (env, argv) => {
   const babelConfigPlugins = [];
@@ -73,6 +72,17 @@ module.exports = (env, argv) => {
       break;
     default:
       babelConfigPresets.push('@babel/typescript');
+  }
+
+  switch (argv.mode) {
+    case 'production':
+      webpackAdditionalPlugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          reportFilename: `${env.framework}.report.html`
+        })
+      );
+      break;
   }
 
   const config = {

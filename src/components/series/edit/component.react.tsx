@@ -20,7 +20,9 @@ export class EditSerieComponent extends ReactComponent {
       >
         <h5>Edit a existing measuring serie</h5>
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
-        <button className="btn btn-primary">Edit</button>
+        <button className="btn btn-primary" id="submit-edit">
+          Edit
+        </button>
       </form>
     );
   }

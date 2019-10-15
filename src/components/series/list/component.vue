@@ -16,8 +16,18 @@
           <td>{{ serie.getTitle() }}</td>
           <td>{{ serie.getUnit() }}</td>
           <td>
-            <button class="btn btn-info" type="button" @click="onEdit(serie)">Edit</button>
-            <button class="btn btn-danger" type="button" @click="onDelete(serie)">Delete</button>
+            <button
+              class="btn btn-info"
+              :id="'edit-' + index"
+              type="button"
+              @click="onEdit(serie)"
+            >Edit</button>
+            <button
+              class="btn btn-danger"
+              :id="'delete-' + index"
+              type="button"
+              @click="onDelete(serie)"
+            >Delete</button>
           </td>
         </tr>
       </tbody>

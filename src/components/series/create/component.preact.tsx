@@ -19,7 +19,9 @@ export class CreateSerieComponent extends PreactComponent {
       >
         <h5>Create a new measuring serie</h5>
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
-        <button className="btn btn-primary">Add</button>
+        <button className="btn btn-primary" id="submit-add">
+          Add
+        </button>
       </form>
     );
   }

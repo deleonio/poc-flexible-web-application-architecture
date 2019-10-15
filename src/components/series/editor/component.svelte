@@ -4,9 +4,10 @@
 
   const ctrl = new EditorSerieController();
   export let editorForm;
+  console.log(editorForm);
 </script>
 
 <div>
-  <InputComponent control={editorForm.titleInput} />
-  <InputComponent control={editorForm.unitInput} />
+  <InputComponent control={editorForm.getInput('title')} />
+  <InputComponent control={editorForm.getInput('unit')} />
 </div>

@@ -7,7 +7,7 @@ ANGULARJS_MODULE.component('createSerie', {
   <form ng-submit="$ctrl.onSubmit()">
     <h5>Create a new measuring serie</h5>
     <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
-    <button class="btn btn-primary">Add</button>
+    <button class="btn btn-primary" id="submit-add">Add</button>
   </form>
 `
 });

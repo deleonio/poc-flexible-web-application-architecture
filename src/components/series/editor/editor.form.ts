@@ -1,23 +1,19 @@
-import { InputControl } from '../../input/controller';
-
-export class FormControl {
-  public name: string = null;
-
-  constructor(name: string, properties: any = {}) {
-    this.name = name;
-    // tslint:disable-next-line: no-empty
-    if (properties) {
-    }
-  }
-}
+import { FormControl, InputControl } from '../../input/controller';
 
 export class EditorForm extends FormControl {
-  public readonly titleInput: InputControl = new InputControl('title', {
-    label: 'Title',
-    value: ''
-  });
-  public readonly unitInput: InputControl = new InputControl('unit', {
-    label: 'Unit',
-    value: ''
-  });
+  constructor(name: string) {
+    super(name);
+    this.addInput(
+      new InputControl('title', {
+        label: 'Title',
+        value: ''
+      })
+    );
+    this.addInput(
+      new InputControl('unit', {
+        label: 'Unit',
+        value: ''
+      })
+    );
+  }
 }
