@@ -9,7 +9,7 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "lib": ["es2017", "dom"],
-    "types": ["inferno", "node", "react"],
+    "types": ["inferno", "mocha", "node", "react", "vue"],
     "typeRoots": ["node_modules/@types"],
     "jsx": "preserve",
     "noUnusedLocals": true,
