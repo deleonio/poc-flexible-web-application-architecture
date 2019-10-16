@@ -1,6 +1,7 @@
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { MeasurementService } from '../../../services/measurements/service';
 import { DI } from '../../../shares/injector';
+import { RouterService } from '../../../services/router/service';
 
 export class ListSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
@@ -14,6 +15,10 @@ export class ListSerieController {
       this.update();
     });
     this.update();
+  }
+
+  public add() {
+    RouterService.navigate('series/create');
   }
 
   public edit(measuredSerie: MeasuredSerieModel) {

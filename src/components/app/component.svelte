@@ -16,7 +16,7 @@
   {#if resolveRoute === '/series'}
     <ListSerieComponent />
   {/if}
-  {#if resolveRoute === '/series'}
+  {#if resolveRoute === '/series/create'}
     <CreateSerieComponent />
   {/if}
 </div>

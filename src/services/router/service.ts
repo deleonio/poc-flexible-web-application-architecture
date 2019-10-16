@@ -33,6 +33,10 @@ export class RouterService {
     NAVIGO.navigate(route, absolute);
   }
 
+  public static currect() {
+    return NAVIGO.lastRouteResolved;
+  }
+
   public static subscribe(subscriber: Function) {
     if (subscriber instanceof Function) {
       this.subscribers.push(subscriber);

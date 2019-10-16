@@ -13,6 +13,15 @@
 
 <div>
   <h5>List</h5>
+  <button
+    class="btn btn-success"
+    id="add"
+    type="button"
+    on:click={() => {
+      ctrl.add();
+    }}>
+    Add
+  </button>
   <table class="table">
     <thead>
       <tr>
