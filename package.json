@@ -52,8 +52,6 @@
     "@types/mocha": "~5.2.0",
     "@types/node": "~12.11.0",
     "@types/react": "~16.9.0",
-    "@vue/cli-plugin-babel": "~3.12.0",
-    "@vue/cli-plugin-typescript": "~3.12.0",
     "babel-loader": "~8.0.0",
     "babel-plugin-angularjs-annotate": "~0.10.0",
     "babel-plugin-inferno": "~6.1.0",

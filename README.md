@@ -120,7 +120,7 @@ Currently the [Vue CLI] is **not** supported.
 
 Please use primary this documentation: https://cli.vuejs.org/guide/installation.html
 
-`yarn global add @vue/cli @vue/cli-service-global`
+`yarn global add @vue/cli @vue/cli-service-global @vue/plugin-typescript`
 
 ## Testing
 
