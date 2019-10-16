@@ -6,7 +6,7 @@
   </form>
 </template>
 
-<script>
+<script lang="ts">
 import { EditSerieController } from './controller';
 import EditorSerieComponent from '../editor/component.vue';
 import { ref, watch } from '@vue/composition-api';

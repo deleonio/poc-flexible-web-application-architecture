@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { CreateSerieController, EditorSerieController } from './controller';
 import InputComponent from '../../input/component.vue';
 

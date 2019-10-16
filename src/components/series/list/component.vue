@@ -37,7 +37,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ListSerieController } from './controller';
 import CreateSerieComponent from '../create/component.vue';
 import EditSerieComponent from '../edit/component.vue';

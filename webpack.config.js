@@ -1,9 +1,9 @@
 const path = require('path');
-// const util = require('util');
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
+const optionalWebpackConfig = require('./webpack.config.addons');
 
 module.exports = (env, argv) => {
   const babelConfigPlugins = [];
@@ -74,16 +74,7 @@ module.exports = (env, argv) => {
       babelConfigPresets.push('@babel/typescript');
   }
 
-  switch (argv.mode) {
-    case 'production':
-      webpackAdditionalPlugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'static',
-          reportFilename: `${env.framework}.report.html`
-        })
-      );
-      break;
-  }
+  optionalWebpackConfig(env, argv, webpackAdditionalPlugins);
 
   const config = {
     entry: webpackEntries,
@@ -113,8 +104,6 @@ module.exports = (env, argv) => {
       extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
     }
   };
-
-  // console.log(util.inspect(config, true, null, true));
 
   return config;
 };

@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { AppController } from './controller';
 import InputComponent from '../input/component.vue';
 import ListSerieComponent from '../series/list/component.vue';
