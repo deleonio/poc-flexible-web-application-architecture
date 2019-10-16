@@ -46,7 +46,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-| Framework         |     Description     |         Version         | Router\* | Artefact size | Upcomming time |
+| Framework         |     Description     |         Version         | Router\* | Artifact size | Upcomming time |
 | ----------------- | :-----------------: | :---------------------: | :------: | ------------: | -------------: |
 | [Angular]         | [SPA], [PWA], [SSR] |           8.2           |    ⌛     |     ~1,087 kB |        ~125 ms |
 | > ng build --prod |                     |                         |          |       ~602 kB |                |
