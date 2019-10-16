@@ -9,6 +9,4 @@ module.exports = (env, argv, webpackAdditionalPlugins) => {
       })
     );
   }
-
-  return config;
 };

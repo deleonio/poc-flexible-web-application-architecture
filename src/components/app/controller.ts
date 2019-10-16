@@ -1,3 +1,4 @@
+import { RouterService } from '../../services/router/service';
 import { StorageService } from '../../services/storage/service';
 import { STARTUP_TIMESTAMP } from '../../shares/constant';
 import { DI } from '../../shares/injector';
@@ -18,5 +19,6 @@ export class AppController {
     list.push(Date.now());
     this.storageService.setItem('list', list);
     this.storageService.setItem('upcommingTime', this.finishedRendering);
+    RouterService.navigate('/series');
   }
 }

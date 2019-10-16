@@ -6,6 +6,7 @@ DI.register('Framework', {
   version: '3.12.1'
 });
 require('./shares/register');
+require('./shares/routing');
 
 export default new App({
   target: document.querySelector('div#svelte')
