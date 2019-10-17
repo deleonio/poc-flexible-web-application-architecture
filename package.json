@@ -1,13 +1,13 @@
 {
   "name": "poc-flexible-web-application-architecture",
   "version": "1.0.0",
+  "private": true,
   "description": "This project demonstrate a flexible Babel and Webpack based web application architecture.",
   "author": {
     "name": "Martin Oppitz",
     "email": "github@martinoppitz.com",
     "url": "http://martinoppitz.com"
   },
-  "private": true,
   "scripts": {
     "build": "webpack --mode=production --env.framework",
     "build-all": "yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build svelte && yarn build vue",
@@ -17,7 +17,9 @@
     "prettier": "prettier --write src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn install",
     "serve": "webpack-dev-server --colors --devtool source-map --progress --env.framework",
-    "test": "cross-env NODE_ENV=test mocha --watch-extensions ts"
+    "test": "cross-env NODE_ENV=test mocha --watch-extensions ts",
+    "storybook": "start-storybook",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@angular/common": "~8.2.0",
@@ -50,14 +52,21 @@
     "@babel/preset-env": "~7.6.0",
     "@babel/preset-typescript": "~7.6.0",
     "@babel/register": "~7.6.0",
+    "@storybook/addon-actions": "~5.2.4",
+    "@storybook/addon-links": "~5.2.4",
+    "@storybook/addons": "~5.2.4",
+    "@storybook/vue": "~5.2.4",
     "@types/mocha": "~5.2.0",
     "@types/node": "~12.11.0",
     "@types/react": "~16.9.0",
+    "@vue/cli-plugin-typescript": "~4.0.0",
+    "@vue/cli-service": "~4.0.0",
     "babel-loader": "~8.0.0",
     "babel-plugin-angularjs-annotate": "~0.10.0",
     "babel-plugin-inferno": "~6.1.0",
     "babel-plugin-istanbul": "~5.2.0",
     "babel-plugin-transform-vue-template": "~0.4.0",
+    "babel-preset-vue": "~2.0.0",
     "chai": "~4.2.0",
     "chromedriver": "~77.0.0",
     "copy-webpack-plugin": "~5.0.0",
@@ -76,7 +85,7 @@
     "vue-loader": "~15.7.0",
     "vue-template-compiler": "~2.6.0",
     "webpack": "~4.41.0",
-    "webpack-bundle-analyzer": "~3.5.0",
+    "webpack-bundle-analyzer": "~3.6.0",
     "webpack-cli": "~3.3.0",
     "webpack-dev-server": "~3.8.0"
   }
