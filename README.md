@@ -19,6 +19,7 @@
     - [Unit-Test](#unit-test)
     - [Snapshot-Test](#snapshot-test)
     - [E2E-Test](#e2e-test)
+  - [Dokumentation](#dokumentation)
   - [Open topics](#open-topics)
   - [References](#references)
 
@@ -41,6 +42,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 | [Chai]       |    Assertion     |
 | [Nightwatch] | E2E-Test-Runner  |
 | [NYC]        |  Code-Coverage   |
+| [Storybook]  |  Documentation   |
 
 ### Frameworks
 
@@ -128,7 +130,7 @@ Please use primary this documentation: https://cli.vuejs.org/guide/installation.
 `yarn global add @vue/cli @vue/cli-service-global @vue/plugin-typescript`
 
 ## Testing
-
+****
 ### Unit-Test
 
 Execute all unit tests with `yarn test` or `yarn test --watch`.
@@ -140,6 +142,13 @@ Currently **not** supported.
 ### E2E-Test
 
 Execute all e2e tests with `yarn e2e`. Note that the application can be reached under http://localhost:8080 (e.g. `yarn serve preact`).
+
+## Dokumentation
+
+[Storybook] is a realy nice tool to document the components and there usage.
+
+- `yarn storybook:serve` for serve the documentation
+- `yarn storybook:build` for build the documentation
 
 ## Open topics
 
@@ -193,3 +202,4 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 [chai]: https://www.chaijs.com
 [nightwatch]: https://nightwatchjs.org
 [nyc]: https://istanbul.js.org
+[Storybook]: https://storybook.js.org/
