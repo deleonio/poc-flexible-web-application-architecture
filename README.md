@@ -101,12 +101,14 @@ For example:
 
 ### Command Line Interfaces
 
+You should know that this project should show the generic architecture concept. The showcase with CLI usage demonstrates the independent codebase.
+
 #### Angular CLI
 
-Currently the [Angular CLI] is supported.
+Currently the [Angular CLI] is partially supported. You must delete all non-angular sources from the `src/` folder.
 
-- `serve`
-- `build[ --prod]`
+- `ng serve`
+- `ng build[ --prod]`
 
 ##### Installation
 
@@ -114,7 +116,10 @@ Please use primary this documentation: https://angular.io/cli
 
 #### Vue CLI
 
-Currently the [Vue CLI] is **not** supported.
+Currently the [Vue CLI] is partially supported. You must delete all non-vue sources from the `src/` folder.
+
+- `yarn vue:serve` executes `vue-cli-service serve src/vue.ts`
+- `yarn vue:build[ --prod]` executes `vue-cli-service build src/vue.ts`
 
 ##### Installation
 
