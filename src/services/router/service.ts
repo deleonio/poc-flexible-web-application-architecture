@@ -1,4 +1,4 @@
-import Navigo from 'navigo';
+import Navigo from "navigo";
 
 export const NAVIGO = new Navigo(null, true);
 
@@ -9,7 +9,7 @@ export interface Route {
 }
 
 export class RouterService {
-  private static readonly subscribers: Object[] = [];
+  private static readonly subscribers: Function[] = [];
   private constructor() {}
 
   private static notify(route: Route, ...args: any) {

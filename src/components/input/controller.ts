@@ -1,5 +1,5 @@
 abstract class AbstractControl {
-  public name: string = null;
+  public name: string = "unnamed";
   private readonly parentForms: Map<string, FormControl> = new Map();
 
   constructor(name: string) {
@@ -7,9 +7,9 @@ abstract class AbstractControl {
   }
 
   get id(): string {
-    let id = '';
+    let id = "";
     if (this.parentForms.size > 0) {
-      id = this.parentForms.values().next().value.id + '_';
+      id = this.parentForms.values().next().value.id + "_";
     }
     return `${id}${this.name}`;
   }
@@ -18,7 +18,9 @@ abstract class AbstractControl {
     if (this.parentForms.has(form.name) === false) {
       this.parentForms.set(form.name, form);
     } else {
-      throw new Error(`An form control with the name '${form.name}' already exists.`);
+      throw new Error(
+        `An form control with the name '${form.name}' already exists.`
+      );
     }
   }
 
@@ -26,7 +28,9 @@ abstract class AbstractControl {
     if (this.parentForms.has(name) === true) {
       this.parentForms.delete(name);
     } else {
-      throw new Error(`An form control with the name '${name}' does not exists.`);
+      throw new Error(
+        `An form control with the name '${name}' does not exists.`
+      );
     }
   }
 }
@@ -43,16 +47,23 @@ export class FormControl extends AbstractControl {
       input.addParentForm(this);
       this.inputs.set(input.name, input);
     } else {
-      throw new Error(`An input control with the name '${input.name}' already exists.`);
+      throw new Error(
+        `An input control with the name '${input.name}' already exists.`
+      );
     }
   }
 
   public removeInput(name: string) {
     if (this.inputs.has(name) === true) {
-      this.inputs.get(name).removeParentForm(this.name);
-      this.inputs.delete(name);
+      const input = this.inputs.get(name);
+      if (input instanceof InputControl) {
+        input.removeParentForm(this.name);
+        this.inputs.delete(name);
+      }
     } else {
-      throw new Error(`An input control with the name '${name}' does not exists.`);
+      throw new Error(
+        `An input control with the name '${name}' does not exists.`
+      );
     }
   }
 
@@ -61,16 +72,19 @@ export class FormControl extends AbstractControl {
   }
 
   public getInput(name: string): InputControl {
-    if (this.inputs.has(name) === true) {
-      return this.inputs.get(name);
+    const input = this.inputs.get(name);
+    if (input instanceof InputControl) {
+      return input;
     } else {
-      throw new Error(`An input control with the name '${name}' does not exists.`);
+      throw new Error(
+        `An input control with the name '${name}' does not exists.`
+      );
     }
   }
 }
 
 export class InputControl extends AbstractControl {
-  public label: string = null;
+  public label: string | null = null;
   public value: any = null;
 
   constructor(name: string, properties: any = {}) {

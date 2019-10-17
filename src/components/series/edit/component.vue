@@ -7,19 +7,19 @@
 </template>
 
 <script lang="ts">
-import { EditSerieController } from './controller';
-import EditorSerieComponent from '../editor/component.vue';
-import { ref, watch } from '@vue/composition-api';
-import { EditorForm } from '../editor/editor.form';
+import { EditSerieController } from "./controller";
+import EditorSerieComponent from "../editor/component.vue";
+import { ref, watch } from "@vue/composition-api";
+import { EditorForm } from "../editor/editor.form";
 
 export default {
-  props: ['serie'],
+  props: ["serie"],
   components: {
-    'editor-serie': EditorSerieComponent
+    "editor-serie": EditorSerieComponent
   },
-  setup(props, context) {
+  setup(props: any) {
     const $ctrl = new EditSerieController();
-    const editorFormRef = ref(null);
+    const editorFormRef: any = ref(null);
 
     watch(
       // this function is required for the following function
@@ -33,7 +33,7 @@ export default {
       }
     );
 
-    const onSubmit = event => {
+    const onSubmit = (event: Event) => {
       event.preventDefault();
       $ctrl.editorForm = editorFormRef.value;
       $ctrl.onSubmit();

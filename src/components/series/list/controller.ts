@@ -1,12 +1,14 @@
-import { MeasuredSerieModel } from '../../../models/measured-series.model';
-import { MeasurementService } from '../../../services/measurements/service';
-import { DI } from '../../../shares/injector';
-import { RouterService } from '../../../services/router/service';
+import { MeasuredSerieModel } from "../../../models/measured-series.model";
+import { MeasurementService } from "../../../services/measurements/service";
+import { DI } from "../../../shares/injector";
+import { RouterService } from "../../../services/router/service";
 
 export class ListSerieController {
-  private readonly measurementService: MeasurementService = DI.get('MeasurementService');
+  private readonly measurementService: MeasurementService = DI.get(
+    "MeasurementService"
+  );
   public measuredSeries: MeasuredSerieModel[] = [];
-  public measuredSerie: MeasuredSerieModel = null;
+  public measuredSerie: MeasuredSerieModel | null = null;
   // tslint:disable-next-line: no-empty
   public renderView: Function = () => {};
 
@@ -18,7 +20,7 @@ export class ListSerieController {
   }
 
   public add() {
-    RouterService.navigate('series/create');
+    RouterService.navigate("series/create");
   }
 
   public edit(measuredSerie: MeasuredSerieModel) {

@@ -1,11 +1,11 @@
 class Injector {
-  private readonly services: Object = {};
+  private readonly services: any = {};
 
   public register(identifier: string, service: Object) {
     if (
-      typeof identifier === 'string' &&
+      typeof identifier === "string" &&
       this.services.hasOwnProperty(identifier) === false &&
-      typeof service === 'object' &&
+      typeof service === "object" &&
       service !== null
     ) {
       this.services[identifier] = service;
@@ -16,9 +16,9 @@ class Injector {
 
   public get(identifier: string): any {
     if (
-      typeof identifier === 'string' &&
+      typeof identifier === "string" &&
       this.services.hasOwnProperty(identifier) === true &&
-      typeof this.services[identifier] === 'object' &&
+      typeof this.services[identifier] === "object" &&
       this.services[identifier] !== null
     ) {
       return this.services[identifier];

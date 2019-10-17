@@ -12,11 +12,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 
 export default {
-  props: ['control'],
-  setup(props) {
+  props: ["control"],
+  setup(props: any) {
     return {
       props
     };

@@ -7,19 +7,19 @@
 </template>
 
 <script lang="ts">
-import { CreateSerieController } from './controller';
-import EditorSerieComponent from '../editor/component.vue';
-import { ref } from '@vue/composition-api';
+import { CreateSerieController } from "./controller";
+import EditorSerieComponent from "../editor/component.vue";
+import { ref } from "@vue/composition-api";
 
 export default {
   components: {
-    'editor-serie': EditorSerieComponent
+    "editor-serie": EditorSerieComponent
   },
   setup() {
     const $ctrl = new CreateSerieController();
-    const editorFormRef = ref($ctrl.editorForm);
+    const editorFormRef: any = ref($ctrl.editorForm);
 
-    const onSubmit = event => {
+    const onSubmit = (event: Event) => {
       event.preventDefault();
       $ctrl.onSubmit();
       editorFormRef.value = $ctrl.editorForm;

@@ -38,24 +38,25 @@
 </template>
 
 <script lang="ts">
-import { ListSerieController } from './controller';
-import CreateSerieComponent from '../create/component.vue';
-import EditSerieComponent from '../edit/component.vue';
-import { reactive, ref } from '@vue/composition-api';
+import { ListSerieController } from "./controller";
+import CreateSerieComponent from "../create/component.vue";
+import EditSerieComponent from "../edit/component.vue";
+import { reactive, ref } from "@vue/composition-api";
+import { MeasuredSerieModel } from "../../../models/measured-series.model";
 
 export default {
   components: {
-    'create-serie': CreateSerieComponent,
-    'edit-serie': EditSerieComponent
+    "create-serie": CreateSerieComponent,
+    "edit-serie": EditSerieComponent
   },
   setup() {
     const $ctrl = new ListSerieController();
     const measuredSerieRef = ref($ctrl.measuredSerie);
     const measuredSeriesRef = ref($ctrl.measuredSeries);
-    const onDelete = measuredSerie => {
+    const onDelete = (measuredSerie: MeasuredSerieModel) => {
       $ctrl.delete(measuredSerie);
     };
-    const onEdit = measuredSerie => {
+    const onEdit = (measuredSerie: MeasuredSerieModel) => {
       $ctrl.edit(measuredSerie);
       measuredSerieRef.value = $ctrl.measuredSerie;
     };
