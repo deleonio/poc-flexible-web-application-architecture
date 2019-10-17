@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts">
-import { EditorSerieController } from "./controller";
-import InputComponent from "../../input/component.vue";
+import { EditorSerieController } from './controller';
+import InputComponent from '../../input/component.vue';
 
 export default {
-  props: ["editor-form"],
+  props: ['editor-form'],
   components: {
-    "app-input": InputComponent
+    'app-input': InputComponent
   },
   setup(props: any) {
     // const $ctrl = new EditorSerieController();

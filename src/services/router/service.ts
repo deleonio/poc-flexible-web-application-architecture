@@ -1,4 +1,4 @@
-import Navigo from "navigo";
+import Navigo from 'navigo';
 
 export const NAVIGO = new Navigo(null, true);
 

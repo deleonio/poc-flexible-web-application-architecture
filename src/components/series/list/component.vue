@@ -38,16 +38,16 @@
 </template>
 
 <script lang="ts">
-import { ListSerieController } from "./controller";
-import CreateSerieComponent from "../create/component.vue";
-import EditSerieComponent from "../edit/component.vue";
-import { reactive, ref } from "@vue/composition-api";
-import { MeasuredSerieModel } from "../../../models/measured-series.model";
+import { ListSerieController } from './controller';
+import CreateSerieComponent from '../create/component.vue';
+import EditSerieComponent from '../edit/component.vue';
+import { reactive, ref } from '@vue/composition-api';
+import { MeasuredSerieModel } from '../../../models/measured-series.model';
 
 export default {
   components: {
-    "create-serie": CreateSerieComponent,
-    "edit-serie": EditSerieComponent
+    'create-serie': CreateSerieComponent,
+    'edit-serie': EditSerieComponent
   },
   setup() {
     const $ctrl = new ListSerieController();

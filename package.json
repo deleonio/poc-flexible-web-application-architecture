@@ -17,9 +17,11 @@
     "prettier": "prettier --write src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn install",
     "serve": "webpack-dev-server --colors --devtool source-map --progress --env.framework",
+    "storybook:serve": "start-storybook",
+    "storybook:build": "build-storybook",
     "test": "cross-env NODE_ENV=test mocha --watch-extensions ts",
-    "storybook": "start-storybook",
-    "build-storybook": "build-storybook"
+    "vue:serve": "vue-cli-service serve src/vue.ts",
+    "vue:build": "vue-cli-service build src/vue.ts"
   },
   "dependencies": {
     "@angular/common": "~8.2.0",

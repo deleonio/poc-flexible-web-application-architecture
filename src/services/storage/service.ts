@@ -1,16 +1,16 @@
 export class StorageService {
-  private namespace: string = "app-store";
+  private namespace: string = 'app-store';
   private browserStorage: any = window.sessionStorage;
   private memoryStorage: any = {};
   private framework: Object = {
-    name: "Unknown",
-    version: "0.0.0"
+    name: 'Unknown',
+    version: '0.0.0'
   };
 
   public constructor(framework: Object) {
     this.framework = framework;
     this.restore();
-    this.setItem("framework", this.framework);
+    this.setItem('framework', this.framework);
     this.store();
   }
 
@@ -25,15 +25,11 @@ export class StorageService {
 
   private restore() {
     this.memoryStorage = JSON.parse(
-      this.browserStorage.getItem(this.namespace) ||
-        JSON.stringify(require("./mock.json"))
+      this.browserStorage.getItem(this.namespace) || JSON.stringify(require('./mock.json'))
     );
   }
 
   private store() {
-    this.browserStorage.setItem(
-      this.namespace,
-      JSON.stringify(this.memoryStorage)
-    );
+    this.browserStorage.setItem(this.namespace, JSON.stringify(this.memoryStorage));
   }
 }

@@ -1,5 +1,5 @@
 abstract class AbstractControl {
-  public name: string = "unnamed";
+  public name: string = 'unnamed';
   private readonly parentForms: Map<string, FormControl> = new Map();
 
   constructor(name: string) {
@@ -7,9 +7,9 @@ abstract class AbstractControl {
   }
 
   get id(): string {
-    let id = "";
+    let id = '';
     if (this.parentForms.size > 0) {
-      id = this.parentForms.values().next().value.id + "_";
+      id = this.parentForms.values().next().value.id + '_';
     }
     return `${id}${this.name}`;
   }
@@ -18,9 +18,7 @@ abstract class AbstractControl {
     if (this.parentForms.has(form.name) === false) {
       this.parentForms.set(form.name, form);
     } else {
-      throw new Error(
-        `An form control with the name '${form.name}' already exists.`
-      );
+      throw new Error(`An form control with the name '${form.name}' already exists.`);
     }
   }
 
@@ -28,9 +26,7 @@ abstract class AbstractControl {
     if (this.parentForms.has(name) === true) {
       this.parentForms.delete(name);
     } else {
-      throw new Error(
-        `An form control with the name '${name}' does not exists.`
-      );
+      throw new Error(`An form control with the name '${name}' does not exists.`);
     }
   }
 }
@@ -47,9 +43,7 @@ export class FormControl extends AbstractControl {
       input.addParentForm(this);
       this.inputs.set(input.name, input);
     } else {
-      throw new Error(
-        `An input control with the name '${input.name}' already exists.`
-      );
+      throw new Error(`An input control with the name '${input.name}' already exists.`);
     }
   }
 
@@ -61,9 +55,7 @@ export class FormControl extends AbstractControl {
         this.inputs.delete(name);
       }
     } else {
-      throw new Error(
-        `An input control with the name '${name}' does not exists.`
-      );
+      throw new Error(`An input control with the name '${name}' does not exists.`);
     }
   }
 
@@ -76,9 +68,7 @@ export class FormControl extends AbstractControl {
     if (input instanceof InputControl) {
       return input;
     } else {
-      throw new Error(
-        `An input control with the name '${name}' does not exists.`
-      );
+      throw new Error(`An input control with the name '${name}' does not exists.`);
     }
   }
 }
