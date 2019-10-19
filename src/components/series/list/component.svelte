@@ -13,15 +13,18 @@
 
 <div>
   <h5>List</h5>
-  <button
-    class="btn btn-success"
-    id="add"
-    type="button"
-    on:click={() => {
-      ctrl.add();
-    }}>
-    Add
-  </button>
+  <div>
+    <button
+      class="btn btn-success"
+      id="add"
+      type="button"
+      on:click={() => {
+        ctrl.add();
+      }}>
+      Add
+    </button>
+  </div>
+  <br />
   <table class="table">
     <thead>
       <tr>
@@ -61,11 +64,6 @@
           </td>
         </tr>
       {/each}
-
     </tbody>
   </table>
-  <CreateSerieComponent />
-  {#if measuredSerieRef !== null}
-    <EditSerieComponent measuredSerie={measuredSerieRef} />
-  {/if}
 </div>

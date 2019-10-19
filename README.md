@@ -56,7 +56,7 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 | [Inferno]         |    [SPA], [SSR]     |           7.3           |    ⌛     |        ~57 kB |          ~3 ms |
 | [Preact]          |    [SPA], [SSR]     |          10.0           |    ⌛     |        ~45 kB |          ~3 ms |
 | [React]           | [SPA], [PWA], [SSR] |          16.10          |    ⌛     |       ~172 kB |          ~8 ms |
-| [Svelte]          |    [SPA], [SSR]     |          3.12           |    ⌛     |        ~35 kB |          ~3 ms |
+| [Svelte]          |    [SPA], [SSR]     |          3.12           |    ✓     |        ~46 kB |          ~3 ms |
 | [Vue]             | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |    ⌛     |       ~112 kB |         ~10 ms |
 
 > \* Router module exists but is not implemented.

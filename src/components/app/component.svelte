@@ -3,20 +3,31 @@
   import { RouterService, NAVIGO } from '../../services/router/service';
   import ListSerieComponent from '../series/list/component.svelte';
   import CreateSerieComponent from '../series/create/component.svelte';
+  import EditSerieComponent from '../series/edit/component.svelte';
+
   const ctrl = new AppController();
-  let resolveRoute = null;
+  let resolvedRoute = {
+    url: 'series'
+  };
   RouterService.subscribe((route, ...args) => {
-    resolveRoute = route.url;
+    resolvedRoute = {
+      url: route.url,
+      params: args[0],
+      query: args[1]
+    };
   });
 </script>
 
 <div id="app">
   <h4>{ctrl.framework.name} v{ctrl.framework.version}</h4>
   <small>{ctrl.finishedRendering} ms upcomming time</small>
-  {#if resolveRoute === '/series'}
+  {#if resolvedRoute.url === 'series'}
     <ListSerieComponent />
   {/if}
-  {#if resolveRoute === '/series/create'}
+  {#if resolvedRoute.url === 'series/create'}
     <CreateSerieComponent />
+  {/if}
+  {#if resolvedRoute.url === 'series/:id/edit'}
+    <EditSerieComponent {resolvedRoute} />
   {/if}
 </div>

@@ -21,7 +21,8 @@
     "storybook:build": "build-storybook",
     "test": "cross-env NODE_ENV=test mocha --watch-extensions ts",
     "vue:serve": "vue-cli-service serve src/vue.ts",
-    "vue:build": "vue-cli-service build src/vue.ts"
+    "vue:build": "vue-cli-service build src/vue.ts",
+    "update": "yarn && yarn upgrade && yarn outdated"
   },
   "dependencies": {
     "@angular/common": "~8.2.0",

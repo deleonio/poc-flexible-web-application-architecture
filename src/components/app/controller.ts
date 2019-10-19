@@ -19,6 +19,6 @@ export class AppController {
     list.push(Date.now());
     this.storageService.setItem('list', list);
     this.storageService.setItem('upcommingTime', this.finishedRendering);
-    RouterService.navigate('/series');
+    RouterService.navigate('series');
   }
 }

@@ -1,5 +1,6 @@
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { MeasurementService } from '../../../services/measurements/service';
+import { RouterService } from '../../../services/router/service';
 import { DI } from '../../../shares/injector';
 import { EditorForm } from '../editor/editor.form';
 
@@ -13,5 +14,10 @@ export class CreateSerieController {
     );
     this.measurementService.store();
     this.editorForm = new EditorForm('new');
+    this.onCancel();
+  }
+
+  public onCancel() {
+    RouterService.navigate('series');
   }
 }

@@ -1,4 +1,4 @@
-import { Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 import { MeasuredItemModel } from '../../models/measured-item.model';
 import { MeasuredSerieModel } from '../../models/measured-series.model';
@@ -16,6 +16,12 @@ export class MeasurementService {
 
   public getSeries(): MeasuredSerieModel[] {
     return this.measuredSeries;
+  }
+
+  public getSerie(id: number): MeasuredSerieModel {
+    return this.measuredSeries.find((measuredSerie: MeasuredSerieModel) => {
+      return measuredSerie.getId() == id;
+    });
   }
 
   public addSerie(serie: MeasuredSerieModel) {

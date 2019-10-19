@@ -22,7 +22,7 @@ export class ListSerieController {
   }
 
   public edit(measuredSerie: MeasuredSerieModel) {
-    this.measuredSerie = measuredSerie;
+    RouterService.navigate(`series/${measuredSerie.getId()}/edit`);
   }
 
   public delete(measuredSerie: MeasuredSerieModel) {

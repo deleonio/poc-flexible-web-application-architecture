@@ -1,6 +1,7 @@
 import { MeasuredItemModel } from './measured-item.model';
 
 export class MeasuredSerieModel {
+  private readonly id: number = Math.random();
   private readonly measurements: MeasuredItemModel[] = [];
   private title: string;
   private unit: string;
@@ -18,6 +19,9 @@ export class MeasuredSerieModel {
     if (index >= 0) {
       this.measurements.splice(index, 1);
     }
+  }
+  public getId(): number {
+    return this.id;
   }
   public getMeasurements(): MeasuredItemModel[] {
     return this.measurements;

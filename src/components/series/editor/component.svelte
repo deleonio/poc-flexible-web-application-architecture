@@ -4,7 +4,6 @@
 
   const ctrl = new EditorSerieController();
   export let editorForm;
-  console.log(editorForm);
 </script>
 
 <div>
