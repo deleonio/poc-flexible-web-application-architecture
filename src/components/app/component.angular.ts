@@ -1,4 +1,4 @@
-import { Component, ApplicationRef } from '@angular/core';
+import { ApplicationRef, Component } from '@angular/core';
 
 import { RouterService } from '../../services/router/service';
 import { AppController } from './controller';
@@ -20,7 +20,7 @@ export class AppComponent extends AppController {
     url: 'series'
   };
 
-  constructor(appRef: ApplicationRef) {
+  public constructor(appRef: ApplicationRef) {
     super();
     RouterService.subscribe((route, ...args) => {
       this.resolvedRoute = {

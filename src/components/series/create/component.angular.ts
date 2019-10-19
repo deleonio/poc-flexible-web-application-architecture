@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { CreateSerieController } from './controller';
 
 @Component({
@@ -8,6 +9,9 @@ import { CreateSerieController } from './controller';
       <h5>Create a new measuring serie</h5>
       <editor-serie [editorForm]="editorForm"></editor-serie>
       <button class="btn btn-primary" id="submit-add">Add</button>
+      <button class="btn" id="cancel-edit" (click)="onCancel()">
+        Abbrechen
+      </button>
     </form>
   `
 })

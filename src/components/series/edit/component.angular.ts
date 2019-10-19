@@ -10,6 +10,9 @@ import { EditSerieController } from './controller';
       <h5>Edit a existing measuring serie</h5>
       <editor-serie [editorForm]="editorForm"></editor-serie>
       <button class="btn btn-primary" id="submit-edit">Edit</button>
+      <button class="btn" id="cancel-edit" (click)="onCancel()">
+        Abbrechen
+      </button>
     </form>
   `
 })
