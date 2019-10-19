@@ -75,7 +75,7 @@ Normally the binaries `yarn` or `npm` are used to execute the scripts.
 
 Currently the following frameworks are available:
 
-- `angular`
+- ~~`angular`~~ use instead `ng serve` (ApplicationRef is only provided by using the Angular CLI.)
 - `angularjs`
 - `inferno`
 - `preact`

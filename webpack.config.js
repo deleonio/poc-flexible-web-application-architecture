@@ -13,7 +13,12 @@ module.exports = (env, argv) => {
   const webpackEntries = {};
   switch (env.framework) {
     case 'angular':
-      webpackEntries.angular = path.join(__dirname, 'src', `angular.ts`);
+      console.log(`
+[ERROR] The Angular magic DIs only supported by using the Angular CLI. Use: > ng serve
+`);
+      process.exit(1);
+      // babelConfigPlugins.push('babel-plugin-angular2-annotations');
+      // webpackEntries.angular = path.join(__dirname, 'src', `angular.ts`);
       break;
     case 'angularjs':
       babelConfigPlugins.push('angularjs-annotate');

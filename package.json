@@ -65,6 +65,7 @@
     "@vue/cli-plugin-typescript": "~4.0.0",
     "@vue/cli-service": "~4.0.0",
     "babel-loader": "~8.0.0",
+    "babel-plugin-angular2-annotations": "5.1.0",
     "babel-plugin-angularjs-annotate": "~0.10.0",
     "babel-plugin-inferno": "~6.1.0",
     "babel-plugin-istanbul": "~5.2.0",

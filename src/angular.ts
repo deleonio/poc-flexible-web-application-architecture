@@ -21,6 +21,7 @@ DI.register('Framework', {
   version: VERSION.full
 });
 require('./shares/register');
+require('./shares/routing');
 
 document.querySelector('div#angular').appendChild(APP_HTML_ELEMENT);
 

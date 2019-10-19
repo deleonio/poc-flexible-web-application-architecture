@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { ApplicationRef, Component } from '@angular/core';
+
+import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
 @Component({
@@ -6,6 +8,12 @@ import { ListSerieController } from './controller';
   template: `
     <div>
       <h5>List</h5>
+      <div>
+        <button class="btn btn-success" id="add" type="button" (click)="add()">
+          Add
+        </button>
+      </div>
+      <br />
       <table class="table">
         <thead>
           <tr>
@@ -24,16 +32,23 @@ import { ListSerieController } from './controller';
               <button class="btn btn-info" id="edit-{{ i }}" type="button" (click)="edit(serie)">
                 Edit
               </button>
-              <button class="btn btn-danger" id="delete-{{ i }}" type="button" (click)="delete(serie)">
+              <button class="btn btn-danger" id="delete-{{ i }}" type="button" (click)="onDelete(serie)">
                 Delete
               </button>
             </td>
           </tr>
         </tbody>
       </table>
-      <create-serie></create-serie>
-      <edit-serie *ngIf="measuredSerie !== null" [serie]="measuredSerie"></edit-serie>
     </div>
   `
 })
-export class ListSerieComponent extends ListSerieController {}
+export class ListSerieComponent extends ListSerieController {
+  public constructor(private appRef: ApplicationRef) {
+    super();
+  }
+
+  public onDelete(measuredSerie: MeasuredSerieModel) {
+    this.delete(measuredSerie);
+    this.appRef.tick();
+  }
+}
