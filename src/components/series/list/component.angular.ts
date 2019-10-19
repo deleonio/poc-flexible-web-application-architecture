@@ -6,6 +6,12 @@ import { ListSerieController } from './controller';
   template: `
     <div>
       <h5>List</h5>
+      <div>
+        <button class="btn btn-success" id="add" type="button" (click)="add()">
+          Add
+        </button>
+      </div>
+      <br />
       <table class="table">
         <thead>
           <tr>
@@ -31,8 +37,6 @@ import { ListSerieController } from './controller';
           </tr>
         </tbody>
       </table>
-      <create-serie></create-serie>
-      <edit-serie *ngIf="measuredSerie !== null" [serie]="measuredSerie"></edit-serie>
     </div>
   `
 })
