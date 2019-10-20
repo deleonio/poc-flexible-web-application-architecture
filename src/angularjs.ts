@@ -16,6 +16,7 @@ DI.register('Framework', {
   version: angular.version.full
 });
 require('./shares/register');
+require('./shares/routing');
 
 document.querySelector('div#angularjs').appendChild(APP_HTML_ELEMENT);
 angular.bootstrap(document.querySelector('div#angularjs'), ['app']);

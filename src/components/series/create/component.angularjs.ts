@@ -8,6 +8,9 @@ ANGULARJS_MODULE.component('createSerie', {
     <h5>Create a new measuring serie</h5>
     <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
     <button class="btn btn-primary" id="submit-add">Add</button>
+    <button class="btn" id="cancel-edit" (click)="$ctrl.onCancel()">
+      Abbrechen
+    </button>
   </form>
 `
 });

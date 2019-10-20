@@ -1,16 +1,15 @@
 import { ANGULARJS_MODULE } from '../../../angularjs.module';
-import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { EditSerieController } from './controller';
 
 ANGULARJS_MODULE.component('editSerie', {
   bindings: {
-    serie: '<'
+    resolvedRoute: '<'
   },
   controller: class extends EditSerieController {
-    public serie: MeasuredSerieModel;
+    public resolvedRoute: any;
 
     public $onChanges() {
-      this.updateProps(this.serie);
+      this.changeMeasuredSerie(this.resolvedRoute.params.id);
     }
   },
   template: `
@@ -18,6 +17,9 @@ ANGULARJS_MODULE.component('editSerie', {
       <h5>Edit a existing measuring serie</h5>
       <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
       <button class="btn btn-primary" id="submit-edit">Edit</button>
+      <button class="btn" id="cancel-edit" (click)="$ctrl.onCancel()">
+        Abbrechen
+      </button>
     </form>
 `
 });

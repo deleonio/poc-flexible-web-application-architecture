@@ -6,6 +6,11 @@ ANGULARJS_MODULE.component('listSerie', {
   template: `
     <div>
       <h5>List</h5>
+      <div>
+        <button class="btn btn-success" id="add" type="button" ng-click="$ctrl.add()">
+          Add
+        </button>
+      </div>
       <table class="table">
         <thead>
           <tr>
@@ -31,8 +36,6 @@ ANGULARJS_MODULE.component('listSerie', {
           </tr>
         </tbody>
       </table>
-      <create-serie></create-serie>
-      <edit-serie ng-if="$ctrl.measuredSerie !== null" serie="$ctrl.measuredSerie"></edit-serie>
     </div>
 `
 });
