@@ -16,7 +16,6 @@
   });
 </script>
 
-<pre>{JSON.stringify(resolvedRoute)}</pre>
 <form
   on:submit={event => {
     event.preventDefault();

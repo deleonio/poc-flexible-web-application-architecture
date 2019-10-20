@@ -7,7 +7,6 @@
       :name="props.control.name"
       v-model="props.control.value"
     />
-    <!-- <pre>Input(props): {{props.control}}</pre> -->
   </div>
 </template>
 
