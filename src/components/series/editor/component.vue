@@ -5,8 +5,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { EditorSerieController } from './controller';
+<script>
 import InputComponent from '../../input/component.vue';
 
 export default {
@@ -14,7 +13,7 @@ export default {
   components: {
     'app-input': InputComponent
   },
-  setup(props: any) {
+  setup(props) {
     // const $ctrl = new EditorSerieController();
     return {
       props

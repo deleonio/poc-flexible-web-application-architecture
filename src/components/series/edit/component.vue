@@ -6,7 +6,7 @@
   </form>
 </template>
 
-<script lang="ts">
+<script>
 import { EditSerieController } from './controller';
 import EditorSerieComponent from '../editor/component.vue';
 import { ref, watch } from '@vue/composition-api';
@@ -16,9 +16,9 @@ export default {
   components: {
     'editor-serie': EditorSerieComponent
   },
-  setup(props: any) {
+  setup(props) {
     const $ctrl = new EditSerieController();
-    const editorFormRef: any = ref(null);
+    const editorFormRef= ref(null);
 
     watch(
       // this function is required for the following function
@@ -32,7 +32,7 @@ export default {
       }
     );
 
-    const onSubmit = (event: Event) => {
+    const onSubmit = (event) => {
       event.preventDefault();
       $ctrl.editorForm = editorFormRef.value;
       $ctrl.onSubmit();

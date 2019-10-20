@@ -37,7 +37,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ListSerieController } from './controller';
 import CreateSerieComponent from '../create/component.vue';
 import EditSerieComponent from '../edit/component.vue';
@@ -53,10 +53,10 @@ export default {
     const $ctrl = new ListSerieController();
     const measuredSerieRef = ref($ctrl.measuredSerie);
     const measuredSeriesRef = ref($ctrl.measuredSeries);
-    const onDelete = (measuredSerie: MeasuredSerieModel) => {
+    const onDelete = (measuredSerie) => {
       $ctrl.delete(measuredSerie);
     };
-    const onEdit = (measuredSerie: MeasuredSerieModel) => {
+    const onEdit = (measuredSerie) => {
       $ctrl.edit(measuredSerie);
       measuredSerieRef.value = $ctrl.measuredSerie;
     };
