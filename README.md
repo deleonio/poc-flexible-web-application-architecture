@@ -48,16 +48,15 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-| Framework         |     Description     |         Version         | Router\* | Artifact size | Upcomming time |
-| ----------------- | :-----------------: | :---------------------: | :------: | ------------: | -------------: |
-| [Angular]         | [SPA], [PWA], [SSR] |           8.2           |    ⌛     |     ~1,087 kB |        ~125 ms |
-| > ng build --prod |                     |                         |          |       ~602 kB |                |
-| [AngularJS]       |    [SPA], [SSR]     |           1.7           |    ⌛     |       ~218 kB |         ~35 ms |
-| [Inferno]         |    [SPA], [SSR]     |           7.3           |    ⌛     |        ~57 kB |          ~3 ms |
-| [Preact]          |    [SPA], [SSR]     |          10.0           |    ⌛     |        ~45 kB |          ~3 ms |
-| [React]           | [SPA], [PWA], [SSR] |          16.10          |    ⌛     |       ~172 kB |          ~8 ms |
-| [Svelte]          |    [SPA], [SSR]     |          3.12           |    ✓     |        ~46 kB |          ~3 ms |
-| [Vue]             | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |    ⌛     |       ~112 kB |         ~10 ms |
+| Framework   |     Description     |         Version         | Router\* | Artifact size | Upcomming time |
+| ----------- | :-----------------: | :---------------------: | :------: | ------------: | -------------: |
+| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |    ⌛     |      ~538 KiB |           - ms |
+| [AngularJS] |    [SPA], [SSR]     |           1.7           |    ⌛     |      ~218 KiB |         ~35 ms |
+| [Inferno]   |    [SPA], [SSR]     |           7.3           |    ⌛     |       ~65 KiB |          ~3 ms |
+| [Preact]    |    [SPA], [SSR]     |          10.0           |    ⌛     |       ~54 KiB |          ~3 ms |
+| [React]     | [SPA], [PWA], [SSR] |          16.10          |    ⌛     |      ~174 KiB |          ~8 ms |
+| [Svelte]    |    [SPA], [SSR]     |          3.12           |    ✓     |       ~46 KiB |          ~3 ms |
+| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |    ⌛     |      ~112 KiB |         ~10 ms |
 
 > \* Router module exists but is not implemented.
 
@@ -75,7 +74,7 @@ Normally the binaries `yarn` or `npm` are used to execute the scripts.
 
 Currently the following frameworks are available:
 
-- ~~`angular`~~ use instead `ng serve` (ApplicationRef is only provided by using the Angular CLI.)
+- `angular`
 - `angularjs`
 - `inferno`
 - `preact`

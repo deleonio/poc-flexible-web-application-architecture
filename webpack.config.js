@@ -1,5 +1,6 @@
 const path = require('path');
 
+const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
@@ -13,12 +14,18 @@ module.exports = (env, argv) => {
   const webpackEntries = {};
   switch (env.framework) {
     case 'angular':
-      console.log(`
-[ERROR] The Angular magic DIs only supported by using the Angular CLI. Use: > ng serve
-`);
-      process.exit(1);
-      // babelConfigPlugins.push('babel-plugin-angular2-annotations');
-      // webpackEntries.angular = path.join(__dirname, 'src', `angular.ts`);
+      webpackAdditionalLoaders.push({
+        test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
+        use: '@ngtools/webpack'
+      });
+      webpackAdditionalPlugins.push(
+        new AngularCompilerPlugin({
+          tsConfigPath: path.join(__dirname, `tsconfig.app.json`),
+          entryModule: path.join(__dirname, 'src', `angular.module#AppModule`),
+          sourceMap: true
+        })
+      );
+      webpackEntries.angular = path.join(__dirname, 'src', `angular.ts`);
       break;
     case 'angularjs':
       babelConfigPlugins.push('angularjs-annotate');
