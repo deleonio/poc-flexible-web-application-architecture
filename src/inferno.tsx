@@ -8,4 +8,6 @@ DI.register('Framework', {
   version
 });
 require('./shares/register');
+require('./shares/routing');
+
 render(<AppComponent />, document.querySelector('div#inferno'));

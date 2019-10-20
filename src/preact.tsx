@@ -8,5 +8,6 @@ DI.register('Framework', {
   version: '10.0.0'
 });
 require('./shares/register');
+require('./shares/routing');
 
 render(<AppComponent />, document.querySelector('div#preact'));

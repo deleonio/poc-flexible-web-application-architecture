@@ -21,10 +21,10 @@ export class EditSerieComponent extends EditSerieController implements OnChanges
 
   public constructor() {
     super(null);
-    RouterService.subscribe((route, ...args) => {
+    RouterService.subscribe((route: any, params: any, query: any) => {
       this.resolvedRoute = {
-        params: args[0],
-        query: args[1],
+        params,
+        query,
         url: route.url
       };
     });

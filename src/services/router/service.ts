@@ -12,9 +12,9 @@ export class RouterService {
   private static readonly subscribers: Function[] = [];
   private constructor() {}
 
-  private static notify(route: Route, ...args: any) {
+  private static notify(route: Route, params: any, query: any) {
     RouterService.subscribers.forEach((subscriber: Function) => {
-      subscriber(route, ...args);
+      subscriber(route, params, query);
     });
   }
 
@@ -22,8 +22,8 @@ export class RouterService {
     routes.forEach((route: Route) => {
       NAVIGO.on(route.url, {
         as: route.url,
-        uses: (...args: any) => {
-          RouterService.notify(route, ...args);
+        uses: (params: any, query: any) => {
+          RouterService.notify(route, params, query);
         }
       }).resolve();
     });

@@ -9,4 +9,6 @@ DI.register('Framework', {
   version
 });
 require('./shares/register');
+require('./shares/routing');
+
 ReactDOM.render(<AppComponent />, document.querySelector('div#react'));

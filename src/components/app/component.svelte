@@ -9,11 +9,11 @@
   let resolvedRoute = {
     url: 'series'
   };
-  RouterService.subscribe((route, ...args) => {
+  RouterService.subscribe((route, params, query) => {
     resolvedRoute = {
-      url: route.url,
-      params: args[0],
-      query: args[1]
+      params,
+      query,
+      url: route.url
     };
   });
 </script>

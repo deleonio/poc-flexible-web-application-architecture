@@ -11,7 +11,7 @@
   let editorForm = ctrl.editorForm;
 
   beforeUpdate(() => {
-    ctrl.updateProps(measuredSerie);
+    ctrl.changeMeasuredSerie(resolvedRoute.params.id);
     editorForm = ctrl.editorForm;
   });
 </script>

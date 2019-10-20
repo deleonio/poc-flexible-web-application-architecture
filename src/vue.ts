@@ -11,6 +11,7 @@ DI.register('Framework', {
   version: Vue.version
 });
 require('./shares/register');
+require('./shares/routing');
 
 Vue.use(VueCompositionApi);
 
