@@ -5,6 +5,7 @@
   "lang": "de-DE",
   "start_url": "https://github.modevel.de/poc",
   "display": "standalone",
+  "orientation": "any",
   "theme_color": "#ddd",
   "icons": [
     {
