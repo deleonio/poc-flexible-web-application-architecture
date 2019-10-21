@@ -113,6 +113,9 @@ module.exports = (env, argv) => {
       new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }, { from: 'index.html', to: 'index.html' }])
     ].concat(webpackAdditionalPlugins),
     resolve: {
+      alias: {
+        inferno: env.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
+      },
       extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
     }
   };

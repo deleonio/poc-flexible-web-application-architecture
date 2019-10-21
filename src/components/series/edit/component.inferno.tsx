@@ -4,11 +4,10 @@ import { EditSerieController } from './controller';
 
 export class EditSerieComponent extends InfernoComponent {
   public constructor(props: any) {
-    super(props, new EditSerieController());
+    super(props, new EditSerieController(props.resolvedRoute.params.id));
   }
 
   public render() {
-    this.$ctrl.updateProps(this.props.serie);
     return (
       <form
         onSubmit={(event: Event) => {
@@ -21,6 +20,16 @@ export class EditSerieComponent extends InfernoComponent {
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
         <button className="btn btn-primary" type="submit" id="submit-edit">
           Edit
+        </button>
+        <button
+          className="btn"
+          type="reset"
+          id="cancel-edit"
+          onClick={() => {
+            this.$ctrl.onCancel();
+          }}
+        >
+          Abbrechen
         </button>
       </form>
     );

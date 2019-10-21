@@ -1,8 +1,6 @@
 import { Component } from 'inferno';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
-import { CreateSerieComponent } from '../create/component.inferno';
-import { EditSerieComponent } from '../edit/component.inferno';
 import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends Component {
@@ -29,6 +27,18 @@ export class ListSerieComponent extends Component {
     return (
       <div>
         <h5>List</h5>
+        <div>
+          <button
+            className="btn btn-success"
+            id="add"
+            type="button"
+            onClick={() => {
+              this.$ctrl.add();
+            }}
+          >
+            Add
+          </button>
+        </div>
         <table className="table">
           <thead>
             <tr>
@@ -72,12 +82,6 @@ export class ListSerieComponent extends Component {
             })}
           </tbody>
         </table>
-        <CreateSerieComponent />
-        {this.$ctrl.measuredSerie instanceof MeasuredSerieModel && (
-          <div>
-            <EditSerieComponent serie={this.$ctrl.measuredSerie} />
-          </div>
-        )}
       </div>
     );
   }

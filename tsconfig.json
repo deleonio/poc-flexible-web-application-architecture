@@ -20,5 +20,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*", "node_modules/inferno/dist/index.d.ts", "node_modules/vue/types/index.d.ts"]
+  "include": [
+    "src/**/*",
+    "node_modules/inferno/dist/index.d.ts",
+    "node_modules/preact/src/index.d.ts",
+    "node_modules/vue/types/index.d.ts"
+  ]
 }

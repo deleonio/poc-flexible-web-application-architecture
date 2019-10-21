@@ -10,7 +10,6 @@ export class EditSerieComponent extends PreactComponent {
   }
 
   public render() {
-    this.$ctrl.updateProps(this.props.serie);
     return (
       <form
         onSubmit={(event: Event) => {
