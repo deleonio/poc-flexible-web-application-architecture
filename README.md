@@ -160,7 +160,7 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 
 ## Known bugs
 
-- In the parallel app execution breaks the params routing. ❗
+- In the parallel app execution the params routing breaks. ❗
 
 ## References
 
