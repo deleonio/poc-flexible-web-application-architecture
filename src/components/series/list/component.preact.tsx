@@ -85,12 +85,6 @@ export class ListSerieComponent extends PreactComponent {
             })}
           </tbody>
         </table>
-        <CreateSerieComponent />
-        {this.$ctrl.measuredSerie instanceof MeasuredSerieModel && (
-          <div>
-            <EditSerieComponent serie={this.$ctrl.measuredSerie} />
-          </div>
-        )}
       </div>
     );
   }
