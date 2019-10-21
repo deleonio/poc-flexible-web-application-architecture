@@ -20,7 +20,7 @@ export class EditSerieComponent extends PreactComponent {
       >
         <h5>Edit a existing measuring serie</h5>
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
-        <button className="btn btn-primary" id="submit-edit">
+        <button className="btn btn-primary" type="submit" id="submit-edit">
           Edit
         </button>
       </form>

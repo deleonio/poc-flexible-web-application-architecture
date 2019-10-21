@@ -24,7 +24,7 @@
   }}>
   <h5>Edit a existing measuring serie</h5>
   <EditorSerieComponent {editorForm} />
-  <button class="btn btn-primary" id="submit-edit">Edit</button>
+  <button class="btn btn-primary" type="submit" id="submit-edit">Edit</button>
   <button
     class="btn"
     id="cancel-edit"

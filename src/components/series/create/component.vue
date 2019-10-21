@@ -2,8 +2,8 @@
   <form @submit="onSubmit">
     <h5>Create a new measuring serie</h5>
     <editor-serie :editor-form="editorFormRef"></editor-serie>
-    <button class="btn btn-primary" id="submit-add">Add</button>
-    <button class="btn" id="cancel-edit" @click="onCancel">Abbrechen</button>
+    <button class="btn btn-primary" type="submit" id="submit-add">Add</button>
+    <button class="btn" type="reset" id="cancel-edit" @click="onCancel">Abbrechen</button>
   </form>
 </template>
 
