@@ -9,6 +9,7 @@
 <form
   on:submit={event => {
     event.preventDefault();
+    event.stopPropagation();
     ctrl.onSubmit();
     editorForm = ctrl.editorForm;
   }}>
@@ -17,9 +18,8 @@
   <button class="btn btn-primary" type="submit" id="submit-add">Add</button>
   <button
     class="btn"
-    id="cancel-edit"
+    id="cancel-add"
     on:click={event => {
-      event.preventDefault();
       ctrl.onCancel();
     }}>
     Abbrechen

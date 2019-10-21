@@ -6,15 +6,19 @@ import { EditSerieController } from './controller';
 
 export class EditSerieComponent extends ReactComponent {
   public constructor(props: any) {
-    super(props, new EditSerieController());
+    super(props, new EditSerieController(props.resolvedRoute.params.id));
+  }
+
+  public useEffect() {
+    console.log('useEffect');
   }
 
   public render() {
-    this.$ctrl.updateProps(this.props.serie);
     return (
       <form
         onSubmit={(event: Event) => {
           event.preventDefault();
+          event.stopPropagation();
           this.$ctrl.onSubmit();
         }}
       >
@@ -22,6 +26,16 @@ export class EditSerieComponent extends ReactComponent {
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
         <button className="btn btn-primary" type="submit" id="submit-edit">
           Edit
+        </button>
+        <button
+          className="btn"
+          type="reset"
+          id="cancel-edit"
+          onClick={() => {
+            this.$ctrl.onCancel();
+          }}
+        >
+          Abbrechen
         </button>
       </form>
     );

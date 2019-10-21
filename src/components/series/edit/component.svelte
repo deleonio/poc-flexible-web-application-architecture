@@ -7,7 +7,6 @@
   export let resolvedRoute;
 
   const ctrl = new EditSerieController(resolvedRoute.params.id);
-  // ctrl.updateProps(measuredSerie);
   let editorForm = ctrl.editorForm;
 
   beforeUpdate(() => {
@@ -19,6 +18,7 @@
 <form
   on:submit={event => {
     event.preventDefault();
+    event.stopPropagation();
     ctrl.onSubmit();
     editorForm = ctrl.editorForm;
   }}>
@@ -29,7 +29,6 @@
     class="btn"
     id="cancel-edit"
     on:click={event => {
-      event.preventDefault();
       ctrl.onCancel();
     }}>
     Abbrechen

@@ -12,6 +12,7 @@ export class CreateSerieComponent extends InfernoComponent {
       <form
         onSubmit={(event: Event) => {
           event.preventDefault();
+          event.stopPropagation();
           this.$ctrl.onSubmit();
         }}
       >

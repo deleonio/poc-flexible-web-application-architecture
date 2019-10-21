@@ -14,6 +14,7 @@ export class CreateSerieComponent extends ReactComponent {
       <form
         onSubmit={(event: Event) => {
           event.preventDefault();
+          event.stopPropagation();
           this.$ctrl.onSubmit();
         }}
       >
@@ -21,6 +22,16 @@ export class CreateSerieComponent extends ReactComponent {
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
         <button className="btn btn-primary" type="submit" id="submit-add">
           Add
+        </button>
+        <button
+          className="btn"
+          type="reset"
+          id="cancel-add"
+          onClick={() => {
+            this.$ctrl.onCancel();
+          }}
+        >
+          Abbrechen
         </button>
       </form>
     );

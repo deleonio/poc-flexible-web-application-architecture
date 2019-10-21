@@ -3,7 +3,7 @@
     <h5>Create a new measuring serie</h5>
     <editor-serie :editor-form="editorFormRef"></editor-serie>
     <button class="btn btn-primary" type="submit" id="submit-add">Add</button>
-    <button class="btn" type="reset" id="cancel-edit" @click="onCancel">Abbrechen</button>
+    <button class="btn" type="reset" id="cancel-add" @click="onCancel">Abbrechen</button>
   </form>
 </template>
 
@@ -21,11 +21,11 @@ export default {
     const editorFormRef = ref($ctrl.editorForm);
 
     const onCancel = event => {
-      event.preventDefault();
       $ctrl.onCancel();
     };
     const onSubmit = event => {
       event.preventDefault();
+      event.stopPropagation();
       $ctrl.onSubmit();
       editorFormRef.value = $ctrl.editorForm;
     };

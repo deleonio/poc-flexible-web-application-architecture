@@ -18,7 +18,7 @@ export default {
     'editor-serie': EditorSerieComponent
   },
   setup(props) {
-    const $ctrl = new EditSerieController();
+    const $ctrl = new EditSerieController(props.resolvedRoute.params.id);
     const editorFormRef = ref(null);
 
     watch(
@@ -34,11 +34,11 @@ export default {
     );
 
     const onCancel = event => {
-      event.preventDefault();
       $ctrl.onCancel();
     };
     const onSubmit = event => {
       event.preventDefault();
+      event.stopPropagation();
       $ctrl.editorForm = editorFormRef.value;
       $ctrl.onSubmit();
     };

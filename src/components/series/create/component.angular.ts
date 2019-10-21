@@ -9,7 +9,7 @@ import { CreateSerieController } from './controller';
       <h5>Create a new measuring serie</h5>
       <editor-serie [editorForm]="editorForm"></editor-serie>
       <button class="btn btn-primary" type="submit" id="submit-add">Add</button>
-      <button class="btn" type="reset" id="cancel-edit" (click)="onCancel()">
+      <button class="btn" type="reset" id="cancel-add" (click)="onCancel()">
         Abbrechen
       </button>
     </form>

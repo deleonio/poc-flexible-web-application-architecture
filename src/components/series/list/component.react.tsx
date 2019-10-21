@@ -2,8 +2,6 @@ import React from 'react';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ReactComponent } from '../../react.component';
-import { CreateSerieComponent } from '../create/component.react';
-import { EditSerieComponent } from '../edit/component.react';
 import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends ReactComponent {
@@ -29,6 +27,18 @@ export class ListSerieComponent extends ReactComponent {
     return (
       <div>
         <h5>List</h5>
+        <div>
+          <button
+            className="btn btn-success"
+            id="add"
+            type="button"
+            onClick={() => {
+              this.$ctrl.add();
+            }}
+          >
+            Add
+          </button>
+        </div>
         <table className="table">
           <thead>
             <tr>
@@ -72,12 +82,6 @@ export class ListSerieComponent extends ReactComponent {
             })}
           </tbody>
         </table>
-        <CreateSerieComponent />
-        {this.$ctrl.measuredSerie instanceof MeasuredSerieModel && (
-          <div>
-            <EditSerieComponent serie={this.$ctrl.measuredSerie} />
-          </div>
-        )}
       </div>
     );
   }

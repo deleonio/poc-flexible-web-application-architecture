@@ -14,6 +14,7 @@ export class CreateSerieComponent extends PreactComponent {
       <form
         onSubmit={(event: Event) => {
           event.preventDefault();
+          event.stopPropagation();
           this.$ctrl.onSubmit();
         }}
       >

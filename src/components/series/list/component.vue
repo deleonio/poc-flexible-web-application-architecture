@@ -46,10 +46,6 @@ import { ref } from '@vue/composition-api';
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 
 export default {
-  components: {
-    'create-serie': CreateSerieComponent,
-    'edit-serie': EditSerieComponent
-  },
   setup() {
     const $ctrl = new ListSerieController();
     const measuredSerieRef = ref($ctrl.measuredSerie);
