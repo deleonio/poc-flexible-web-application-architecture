@@ -125,8 +125,6 @@ Currently the [Vue CLI] is partially supported. You must delete all non-vue sour
 
 Please use primary this documentation: https://cli.vuejs.org/guide/installation.html
 
-`yarn global add @vue/cli @vue/cli-service-global @vue/plugin-typescript`
-
 ## Testing
 
 ### Unit-Test
@@ -200,7 +198,7 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 [svelte-loader]: https://github.com/sveltejs/svelte-loader
 [babel-loader]: https://github.com/babel/babel-loader
 [ssr]: https://medium.com/@baphemot/whats-server-side-rendering-and-do-i-need-it-cb42dc059b38
-[demo]: http://github.modevel.de/poc
+[demo]: https://github.modevel.de/poc
 [mocha]: https://mochajs.org
 [chai]: https://www.chaijs.com
 [nightwatch]: https://nightwatchjs.org

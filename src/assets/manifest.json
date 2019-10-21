@@ -1,0 +1,16 @@
+{
+  "name": "Flexible web application architecture",
+  "short_name": "PoC",
+  "description": "This project demonstrate a flexible Babel and Webpack based web application architecture.",
+  "lang": "de-DE",
+  "start_url": "https://github.modevel.de/poc",
+  "display": "standalone",
+  "theme_color": "#ddd",
+  "icons": [
+    {
+      "src": "pwa.icon.png",
+      "sizes": "144x144"
+    }
+  ],
+  "background_color": "#fff"
+}
