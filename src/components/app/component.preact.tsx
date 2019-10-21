@@ -1,12 +1,27 @@
 import { h } from 'preact';
 
+import { RouterService } from '../../services/router/service';
 import { PreactComponent } from '../preact.component';
+import { CreateSerieComponent } from '../series/create/component.preact';
+import { EditSerieComponent } from '../series/edit/component.preact';
 import { ListSerieComponent } from '../series/list/component.preact';
 import { AppController } from './controller';
 
 export class AppComponent extends PreactComponent {
+  private resolvedRoute: any = {
+    url: 'series'
+  };
+
   public constructor(props: any) {
     super(props, new AppController());
+    RouterService.subscribe((route: any, params: any, query: any) => {
+      this.resolvedRoute = {
+        params,
+        query,
+        url: route.url
+      };
+      this.forceUpdate();
+    });
   }
 
   public render() {
@@ -16,7 +31,9 @@ export class AppComponent extends PreactComponent {
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version}
         </h4>
         <small>{this.$ctrl.finishedRendering} ms upcomming time</small>
-        <ListSerieComponent />
+        {this.resolvedRoute.url === 'series' && <ListSerieComponent />}
+        {this.resolvedRoute.url === 'series/create' && <CreateSerieComponent />}
+        {this.resolvedRoute.url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={this.resolvedRoute} />}
       </div>
     );
   }

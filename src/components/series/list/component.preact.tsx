@@ -30,6 +30,18 @@ export class ListSerieComponent extends PreactComponent {
     return (
       <div>
         <h5>List</h5>
+        <div>
+          <button
+            className="btn btn-success"
+            id="add"
+            type="button"
+            onClick={() => {
+              this.$ctrl.add();
+            }}
+          >
+            Add
+          </button>
+        </div>
         <table className="table">
           <thead>
             <tr>

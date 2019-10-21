@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, RouterService } from '../../services/router/service';
+import { RouterService } from '../../services/router/service';
 import { ReactComponent } from '../react.component';
 import { CreateSerieComponent } from '../series/create/component.react';
 import { EditSerieComponent } from '../series/edit/component.react';

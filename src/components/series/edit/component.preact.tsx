@@ -6,7 +6,7 @@ import { EditSerieController } from './controller';
 
 export class EditSerieComponent extends PreactComponent {
   public constructor(props: any) {
-    super(props, new EditSerieController());
+    super(props, new EditSerieController(props.resolvedRoute.params.id));
   }
 
   public render() {
@@ -23,6 +23,16 @@ export class EditSerieComponent extends PreactComponent {
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
         <button className="btn btn-primary" type="submit" id="submit-edit">
           Edit
+        </button>
+        <button
+          className="btn"
+          type="reset"
+          id="cancel-edit"
+          onClick={() => {
+            this.$ctrl.onCancel();
+          }}
+        >
+          Abbrechen
         </button>
       </form>
     );

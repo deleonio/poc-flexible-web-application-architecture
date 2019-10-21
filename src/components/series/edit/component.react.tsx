@@ -9,10 +9,6 @@ export class EditSerieComponent extends ReactComponent {
     super(props, new EditSerieController(props.resolvedRoute.params.id));
   }
 
-  public useEffect() {
-    console.log('useEffect');
-  }
-
   public render() {
     return (
       <form
