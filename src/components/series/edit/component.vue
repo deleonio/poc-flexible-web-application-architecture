@@ -20,7 +20,6 @@ export default {
   setup(props) {
     const $ctrl = new EditSerieController();
     const editorFormRef = ref(null);
-    console.log(props);
 
     watch(
       // this function is required for the following function
