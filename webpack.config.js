@@ -118,7 +118,12 @@ module.exports = (env, argv) => {
       ])
     },
     plugins: [
-      new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }, { from: 'index.html', to: 'index.html' }])
+      new CopyWebpackPlugin([
+        { from: 'src/assets', to: 'assets' },
+        { from: 'index.html', to: 'index.html' },
+        { from: 'manifest.json', to: 'manifest.json' },
+        { from: 'service-worker.js', to: 'service-worker.js' }
+      ])
     ].concat(webpackAdditionalPlugins),
     resolve: {
       alias: {
