@@ -20,6 +20,7 @@ export class MeasurementService {
 
   public getSerie(id: number): MeasuredSerieModel {
     return this.measuredSeries.find((measuredSerie: MeasuredSerieModel) => {
+      // tslint:disable-next-line: triple-equals
       return measuredSerie.getId() == id;
     });
   }
@@ -48,9 +49,14 @@ export class MeasurementService {
     }
     series.forEach((serie: any) => {
       const measuredSerie = new MeasuredSerieModel(serie.title, serie.unit);
-      serie.measurements.forEach((measurement: any) => {
-        measuredSerie.addMeasurement(new MeasuredItemModel(measurement.date, measurement.value));
-      });
+      if (typeof serie.id === 'number') {
+        measuredSerie.setId(serie.id);
+      }
+      if (Array.isArray(serie.measurements)) {
+        serie.measurements.forEach((measurement: any) => {
+          measuredSerie.addMeasurement(new MeasuredItemModel(measurement.date, measurement.value));
+        });
+      }
       this.addSerie(measuredSerie);
     });
     this.observe.next();
@@ -67,6 +73,7 @@ export class MeasurementService {
         });
       });
       series.push({
+        id: measuredSerie.getId(),
         measurements,
         title: measuredSerie.getTitle(),
         unit: measuredSerie.getUnit()

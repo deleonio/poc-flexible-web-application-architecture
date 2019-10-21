@@ -29,6 +29,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Title</th>
         <th scope="col">Unit</th>
         <th scope="col">Action</th>
@@ -38,6 +39,7 @@
       {#each measuredSeriesRef as serie, index (index)}
         <tr>
           <td>{index + 1}</td>
+          <td>{serie.getId()}</td>
           <td>{serie.getTitle()}</td>
           <td>{serie.getUnit()}</td>
           <td>

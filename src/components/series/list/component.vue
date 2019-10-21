@@ -8,6 +8,7 @@
       <thead>
         <tr>
           <th scope="col">#</th>
+          <th scope="col">ID</th>
           <th scope="col">Title</th>
           <th scope="col">Unit</th>
           <th scope="col">Action</th>
@@ -16,6 +17,7 @@
       <tbody>
         <tr v-for="(serie, index) in measuredSeriesRef" :key="index">
           <td>{{ index + 1 }}</td>
+          <td>{{ serie.getId() }}</td>
           <td>{{ serie.getTitle() }}</td>
           <td>{{ serie.getUnit() }}</td>
           <td>

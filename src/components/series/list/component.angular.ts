@@ -18,6 +18,7 @@ import { ListSerieController } from './controller';
         <thead>
           <tr>
             <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Title</th>
             <th scope="col">Unit</th>
             <th scope="col">Action</th>
@@ -26,6 +27,7 @@ import { ListSerieController } from './controller';
         <tbody>
           <tr *ngFor="let serie of measuredSeries; index as i">
             <td>{{ i + 1 }}</td>
+            <td>{{ serie.getId() }}</td>
             <td>{{ serie.getTitle() }}</td>
             <td>{{ serie.getUnit() }}</td>
             <td>
