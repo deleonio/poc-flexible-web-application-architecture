@@ -50,13 +50,13 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 
 | Framework   |     Description     |         Version         | Router\* | Artifact size | Upcomming time |
 | ----------- | :-----------------: | :---------------------: | :------: | ------------: | -------------: |
-| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |    ✓     |      ~537 KiB |           - ms |
-| [AngularJS] |    [SPA], [SSR]     |           1.7           |    ✓     |      ~220 KiB |         ~35 ms |
-| [Inferno]   |    [SPA], [SSR]     |           7.3           |    ✓     |     ~70.6 KiB |          ~3 ms |
-| [Preact]    |    [SPA], [SSR]     |          10.0           |    ✓     |     ~54.2 KiB |          ~3 ms |
-| [React]     | [SPA], [PWA], [SSR] |          16.10          |    ✓     |      ~175 KiB |          ~8 ms |
-| [Svelte]    |    [SPA], [SSR]     |          3.12           |    ✓     |     ~46.1 KiB |          ~3 ms |
-| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |    ✓     |       ~118KiB |         ~10 ms |
+| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |    ✓     |       538 KiB |         ~50 ms |
+| [AngularJS] |    [SPA], [SSR]     |           1.7           |    ✓     |       220 KiB |         ~50 ms |
+| [Inferno]   |    [SPA], [SSR]     |           7.3           |    ✓     |      65.5 KiB |         ~11 ms |
+| [Preact]    |    [SPA], [SSR]     |          10.0           |    ✓     |      54.2 KiB |         ~12 ms |
+| [React]     | [SPA], [PWA], [SSR] |          16.10          |    ✓     |       175 KiB |         ~13 ms |
+| [Svelte]    |    [SPA], [SSR]     |          3.12           |    ✓     |      46.1 KiB |         ~13 ms |
+| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |    ✓     |        118KiB |         ~18 ms |
 
 > \* Router module exists but is not implemented.
 
@@ -129,7 +129,9 @@ Please use primary this documentation: https://cli.vuejs.org/guide/installation.
 `yarn global add @vue/cli @vue/cli-service-global @vue/plugin-typescript`
 
 ## Testing
-****
+
+---
+
 ### Unit-Test
 
 Execute all unit tests with `yarn test` or `yarn test --watch`.
@@ -201,4 +203,4 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 [chai]: https://www.chaijs.com
 [nightwatch]: https://nightwatchjs.org
 [nyc]: https://istanbul.js.org
-[Storybook]: https://storybook.js.org/
+[storybook]: https://storybook.js.org/

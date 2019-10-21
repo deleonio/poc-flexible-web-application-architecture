@@ -97,6 +97,14 @@ module.exports = (env, argv) => {
       rules: webpackAdditionalLoaders.concat([
         {
           test: /\.(j|t)sx?$/,
+          loader: 'string-replace-loader',
+          options: {
+            search: '$$WEBPACK_MODE$$',
+            replace: argv.mode
+          }
+        },
+        {
+          test: /\.(j|t)sx?$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
@@ -114,7 +122,7 @@ module.exports = (env, argv) => {
     ].concat(webpackAdditionalPlugins),
     resolve: {
       alias: {
-        inferno: env.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
+        inferno: argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
       },
       extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
     }

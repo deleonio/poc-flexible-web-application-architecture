@@ -83,6 +83,7 @@
     "mock-local-storage": "~1.1.0",
     "nightwatch": "~1.2.0",
     "nyc": "~14.1.0",
+    "string-replace-loader": "~2.2.0",
     "svelte-loader": "~2.13.0",
     "tslint": "~5.20.0",
     "typescript": "~3.5.0",
