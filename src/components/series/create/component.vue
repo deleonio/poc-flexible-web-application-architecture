@@ -3,6 +3,7 @@
     <h5>Create a new measuring serie</h5>
     <editor-serie :editor-form="editorFormRef"></editor-serie>
     <button class="btn btn-primary" id="submit-add">Add</button>
+    <button class="btn" id="cancel-edit" @click="onCancel">Abbrechen</button>
   </form>
 </template>
 
@@ -19,6 +20,10 @@ export default {
     const $ctrl = new CreateSerieController();
     const editorFormRef = ref($ctrl.editorForm);
 
+    const onCancel = event => {
+      event.preventDefault();
+      $ctrl.onCancel();
+    };
     const onSubmit = event => {
       event.preventDefault();
       $ctrl.onSubmit();
@@ -27,6 +32,7 @@ export default {
 
     return {
       editorFormRef,
+      onCancel,
       onSubmit
     };
   }

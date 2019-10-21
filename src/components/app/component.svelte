@@ -1,6 +1,6 @@
 <script>
   import { AppController } from './controller';
-  import { RouterService, NAVIGO } from '../../services/router/service';
+  import { RouterService } from '../../services/router/service';
   import ListSerieComponent from '../series/list/component.svelte';
   import CreateSerieComponent from '../series/create/component.svelte';
   import EditSerieComponent from '../series/edit/component.svelte';

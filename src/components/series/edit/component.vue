@@ -3,6 +3,7 @@
     <h5>Edit a existing measuring serie</h5>
     <editor-serie v-if="editorFormRef !== null" :editor-form="editorFormRef"></editor-serie>
     <button class="btn btn-primary" id="submit-edit">Edit</button>
+    <button class="btn" id="cancel-edit" @click="onCancel">Abbrechen</button>
   </form>
 </template>
 
@@ -12,27 +13,32 @@ import EditorSerieComponent from '../editor/component.vue';
 import { ref, watch } from '@vue/composition-api';
 
 export default {
-  props: ['serie'],
+  props: ['resolvedRoute'],
   components: {
     'editor-serie': EditorSerieComponent
   },
   setup(props) {
     const $ctrl = new EditSerieController();
-    const editorFormRef= ref(null);
+    const editorFormRef = ref(null);
+    console.log(props);
 
     watch(
       // this function is required for the following function
       () => {
-        return props.serie;
+        return props.resolvedRoute;
       },
       // get the return value of the previous function
-      serie => {
-        $ctrl.updateProps(serie);
+      resolvedRoute => {
+        $ctrl.changeMeasuredSerie(resolvedRoute.params.id);
         editorFormRef.value = $ctrl.editorForm;
       }
     );
 
-    const onSubmit = (event) => {
+    const onCancel = event => {
+      event.preventDefault();
+      $ctrl.onCancel();
+    };
+    const onSubmit = event => {
       event.preventDefault();
       $ctrl.editorForm = editorFormRef.value;
       $ctrl.onSubmit();
@@ -41,6 +47,7 @@ export default {
     return {
       $ctrl,
       editorFormRef,
+      onCancel,
       onSubmit
     };
   }

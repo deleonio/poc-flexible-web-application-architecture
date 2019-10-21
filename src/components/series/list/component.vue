@@ -1,6 +1,9 @@
 <template>
   <div>
     <h5>List</h5>
+    <div>
+      <button class="btn btn-success" id="add" type="button" @click="onAdd()">Add</button>
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -32,8 +35,6 @@
         </tr>
       </tbody>
     </table>
-    <create-serie></create-serie>
-    <edit-serie v-if="measuredSerieRef !== null" :serie="measuredSerieRef"></edit-serie>
   </div>
 </template>
 
@@ -41,7 +42,7 @@
 import { ListSerieController } from './controller';
 import CreateSerieComponent from '../create/component.vue';
 import EditSerieComponent from '../edit/component.vue';
-import { reactive, ref } from '@vue/composition-api';
+import { ref } from '@vue/composition-api';
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 
 export default {
@@ -53,10 +54,13 @@ export default {
     const $ctrl = new ListSerieController();
     const measuredSerieRef = ref($ctrl.measuredSerie);
     const measuredSeriesRef = ref($ctrl.measuredSeries);
-    const onDelete = (measuredSerie) => {
+    const onAdd = () => {
+      $ctrl.add();
+    };
+    const onDelete = measuredSerie => {
       $ctrl.delete(measuredSerie);
     };
-    const onEdit = (measuredSerie) => {
+    const onEdit = measuredSerie => {
       $ctrl.edit(measuredSerie);
       measuredSerieRef.value = $ctrl.measuredSerie;
     };
@@ -64,6 +68,7 @@ export default {
     return {
       measuredSerieRef,
       measuredSeriesRef,
+      onAdd,
       onDelete,
       onEdit
     };
