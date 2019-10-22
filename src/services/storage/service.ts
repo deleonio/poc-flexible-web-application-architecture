@@ -2,16 +2,9 @@ export class StorageService {
   private namespace: string = 'app-store';
   private browserStorage: any = window.sessionStorage;
   private memoryStorage: any = {};
-  private framework: Object = {
-    name: 'Unknown',
-    version: '0.0.0'
-  };
 
-  public constructor(framework: Object) {
-    this.framework = framework;
+  public constructor() {
     this.restore();
-    this.setItem('framework', this.framework);
-    this.store();
   }
 
   public setItem(key: string, value: any) {
@@ -20,6 +13,7 @@ export class StorageService {
   }
 
   public getItem(key: string): any {
+    this.restore();
     return this.memoryStorage[key];
   }
 

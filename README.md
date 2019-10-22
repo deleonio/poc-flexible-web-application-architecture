@@ -51,13 +51,13 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 
 | Framework   |     Description     |         Version         | Artifact size | Upcomming time |
 | ----------- | :-----------------: | :---------------------: | ------------: | -------------: |
-| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |       538 KiB |         ~50 ms |
-| [AngularJS] |    [SPA], [SSR]     |           1.7           |       220 KiB |         ~50 ms |
-| [Inferno]   |    [SPA], [SSR]     |           7.3           |      65.9 KiB |         ~11 ms |
-| [Preact]    |    [SPA], [SSR]     |          10.0           |      54.6 KiB |         ~12 ms |
-| [React]     | [SPA], [PWA], [SSR] |          16.10          |       175 KiB |         ~13 ms |
-| [Svelte]    |    [SPA], [SSR]     |          3.12           |      46.6 KiB |         ~13 ms |
-| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |        118KiB |         ~18 ms |
+| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |       540 KiB |         ~50 ms |
+| [AngularJS] |    [SPA], [SSR]     |           1.7           |       222 KiB |         ~50 ms |
+| [Inferno]   |    [SPA], [SSR]     |           7.3           |      67.3 KiB |         ~11 ms |
+| [Preact]    |    [SPA], [SSR]     |          10.0           |        56 KiB |         ~12 ms |
+| [React]     | [SPA], [PWA], [SSR] |          16.10          |       177 KiB |         ~13 ms |
+| [Svelte]    |    [SPA], [SSR]     |          3.12           |        48 KiB |         ~13 ms |
+| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |        119KiB |         ~18 ms |
 
 ## Installation
 

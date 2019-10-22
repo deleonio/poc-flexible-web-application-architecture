@@ -97,14 +97,6 @@ module.exports = (env, argv) => {
       rules: webpackAdditionalLoaders.concat([
         {
           test: /\.(j|t)sx?$/,
-          loader: 'string-replace-loader',
-          options: {
-            search: '$$WEBPACK_MODE$$',
-            replace: argv.mode
-          }
-        },
-        {
-          test: /\.(j|t)sx?$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',

@@ -6,7 +6,7 @@ import { DI } from '../../shares/injector';
 import { StorageService } from '../storage/service';
 
 export class MeasurementService {
-  private readonly measuredSeries: MeasuredSerieModel[] = [];
+  private measuredSeries: MeasuredSerieModel[] = [];
   private readonly storageStorage: StorageService = DI.get('StorageService');
   public readonly observe: Subject<MeasuredSerieModel[]> = new Subject();
 
@@ -15,6 +15,7 @@ export class MeasurementService {
   }
 
   public getSeries(): MeasuredSerieModel[] {
+    this.restore();
     return this.measuredSeries;
   }
 
@@ -28,7 +29,7 @@ export class MeasurementService {
   public addSerie(serie: MeasuredSerieModel) {
     if (serie instanceof MeasuredSerieModel) {
       this.measuredSeries.push(serie);
-      this.observe.next();
+      this.store();
     } else {
       throw new Error(`The measuring serie is not valid!`);
     }
@@ -38,12 +39,13 @@ export class MeasurementService {
     const index = this.measuredSeries.indexOf(serie);
     if (index >= 0) {
       this.measuredSeries.splice(index, 1);
-      this.observe.next();
+      this.store();
     }
   }
 
   private restore() {
     let series: Object[] = this.storageStorage.getItem('measuredSeries');
+    this.measuredSeries = [];
     if (Array.isArray(series) === false) {
       series = [];
     }
@@ -57,9 +59,8 @@ export class MeasurementService {
           measuredSerie.addMeasurement(new MeasuredItemModel(measurement.date, measurement.value));
         });
       }
-      this.addSerie(measuredSerie);
+      this.measuredSeries.push(measuredSerie);
     });
-    this.observe.next();
   }
 
   public store() {
