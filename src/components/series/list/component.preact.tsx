@@ -19,22 +19,10 @@ export class ListSerieComponent extends PreactComponent {
   }
 
   public render() {
-    return (
-      <div>
-        <h5>List</h5>
-        <div>
-          <button
-            className="btn btn-success"
-            id="add"
-            type="button"
-            onClick={() => {
-              this.$ctrl.add();
-            }}
-          >
-            Add
-          </button>
-        </div>
-        <table className="table">
+    const tables: any[] = [];
+    for (let i = 0; i < this.$ctrl.elements.length; i++) {
+      tables.push(
+        <table className="table" key={i}>
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -69,6 +57,35 @@ export class ListSerieComponent extends PreactComponent {
             })}
           </tbody>
         </table>
+      );
+    }
+    return (
+      <div>
+        <h5>List</h5>
+        <div>
+          <button
+            className="btn btn-success"
+            id="add"
+            type="button"
+            onClick={() => {
+              this.$ctrl.add();
+            }}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-info"
+            id="start"
+            type="button"
+            onClick={() => {
+              this.$ctrl.onStart();
+            }}
+          >
+            Performance
+          </button>
+        </div>
+        {tables}
+        <small>Duration: {this.$ctrl.duration} ms</small>
       </div>
     );
   }

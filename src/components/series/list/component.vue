@@ -3,8 +3,9 @@
     <h5>List</h5>
     <div>
       <button class="btn btn-success" id="add" type="button" @click="onAdd()">Add</button>
+      <button class="btn btn-info" id="start" type="button" @click="onStart()">Performance</button>
     </div>
-    <table class="table">
+    <table class="table" v-for="(element, index) in elementsRef" :key="index">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -31,6 +32,7 @@
         </tr>
       </tbody>
     </table>
+    <small>Duration: {{durationRef}} ms</small>
   </div>
 </template>
 
@@ -44,6 +46,8 @@ import { MeasuredSerieModel } from '../../../models/measured-series.model';
 export default {
   setup() {
     const $ctrl = new ListSerieController();
+    const elementsRef = ref($ctrl.elements);
+    const durationRef = ref($ctrl.duration);
     const measuredSerieRef = ref($ctrl.measuredSerie);
     const measuredSeriesRef = ref($ctrl.measuredSeries);
     const onAdd = () => {
@@ -53,11 +57,22 @@ export default {
       $ctrl.edit(measuredSerie);
       measuredSerieRef.value = $ctrl.measuredSerie;
     };
+    const onStart = () => {
+      $ctrl.onStart();
+    };
+
+    $ctrl.renderView = () => {
+      elementsRef.value = $ctrl.elements;
+      durationRef.value = $ctrl.duration;
+    }
 
     return {
+      elementsRef,
+      durationRef,
       measuredSerieRef,
       measuredSeriesRef,
       onAdd,
+      onStart,
       onEdit
     };
   }

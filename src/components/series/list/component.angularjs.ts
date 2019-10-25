@@ -2,7 +2,14 @@ import { ANGULARJS_MODULE } from '../../../angularjs.module';
 import { ListSerieController } from './controller';
 
 ANGULARJS_MODULE.component('listSerie', {
-  controller: ListSerieController,
+  controller: class extends ListSerieController {
+    public constructor($scope) {
+      super();
+      this.renderView = () => {
+        $scope.$apply();
+      };
+    }
+  },
   template: `
     <div>
       <h5>List</h5>
@@ -10,8 +17,11 @@ ANGULARJS_MODULE.component('listSerie', {
         <button class="btn btn-success" id="add" type="button" ng-click="$ctrl.add()">
           Add
         </button>
+        <button class="btn btn-info" id="start" type="button" ng-click="$ctrl.onStart()">
+          Performance
+        </button>
       </div>
-      <table class="table">
+      <table class="table" ng-repeat="element in $ctrl.elements track by $index" key="{index}">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -35,6 +45,7 @@ ANGULARJS_MODULE.component('listSerie', {
           </tr>
         </tbody>
       </table>
+      <small>Duration: {{ $ctrl.duration }} ms</small>
     </div>
 `
 });

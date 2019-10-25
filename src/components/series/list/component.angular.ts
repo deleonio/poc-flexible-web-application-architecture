@@ -1,6 +1,5 @@
-import { ApplicationRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { ListSerieController } from './controller';
 
 @Component({
@@ -12,8 +11,11 @@ import { ListSerieController } from './controller';
         <button class="btn btn-success" id="add" type="button" (click)="add()">
           Add
         </button>
+        <button class="btn btn-info" id="start" type="button" (click)="onStart()">
+          Performance
+        </button>
       </div>
-      <table class="table">
+      <table class="table" *ngFor="let element of elements; index as i">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -37,6 +39,7 @@ import { ListSerieController } from './controller';
           </tr>
         </tbody>
       </table>
+      <small>Duration: {{ duration }} ms</small>
     </div>
   `
 })
