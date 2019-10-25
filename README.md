@@ -53,9 +53,9 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 | ----------- | :-----------------: | :---------------------: | ------------: | -------------: |
 | [Angular]   | [SPA], [PWA], [SSR] |           8.2           |       539 KiB |         ~50 ms |
 | [AngularJS] |    [SPA], [SSR]     |           1.7           |       222 KiB |         ~50 ms |
-| [Inferno]   |    [SPA], [SSR]     |           7.3           |      67.3 KiB |         ~11 ms |
-| [Preact]    |    [SPA], [SSR]     |          10.0           |        56 KiB |         ~12 ms |
-| [React]     | [SPA], [PWA], [SSR] |          16.10          |       177 KiB |         ~13 ms |
+| [Inferno]   |    [SPA], [SSR]     |           7.3           |      67.2 KiB |         ~11 ms |
+| [Preact]    |    [SPA], [SSR]     |          10.0           |      55.9 KiB |         ~12 ms |
+| [React]     | [SPA], [PWA], [SSR] |          16.10          |       176 KiB |         ~13 ms |
 | [Svelte]    |    [SPA], [SSR]     |          3.12           |      47.8 KiB |         ~13 ms |
 | [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |        119KiB |         ~18 ms |
 
