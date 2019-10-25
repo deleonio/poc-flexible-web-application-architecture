@@ -3,7 +3,7 @@ import { MeasurementService } from '../../../services/measurements/service';
 import { RouterService } from '../../../services/router/service';
 import { DI } from '../../../shares/injector';
 
-const PERFORMANCE_ANZAHL: number = 10000;
+const PERFORMANCE_ANZAHL: number = 2500;
 
 export class ListSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
