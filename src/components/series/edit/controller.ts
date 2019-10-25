@@ -1,8 +1,8 @@
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { MeasurementService } from '../../../services/measurements/service';
+import { RouterService } from '../../../services/router/service';
 import { DI } from '../../../shares/injector';
 import { EditorForm } from '../editor/editor.form';
-import { RouterService } from '../../../services/router/service';
 
 export class EditSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
@@ -30,6 +30,13 @@ export class EditSerieController {
       this.editorForm = new EditorForm('edit');
       this.editorForm.getInput('title').value = this.measuredSerie.getTitle();
       this.editorForm.getInput('unit').value = this.measuredSerie.getUnit();
+    }
+  }
+
+  public onDelete() {
+    if (this.measuredSerie instanceof MeasuredSerieModel) {
+      this.measurementService.removeSerie(this.measuredSerie);
+      this.onCancel();
     }
   }
 

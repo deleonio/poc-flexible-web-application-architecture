@@ -31,9 +31,6 @@ ANGULARJS_MODULE.component('listSerie', {
               <button class="btn btn-info" id="edit-{{$index}}" type="button" ng-click="$ctrl.edit(serie)">
                 Edit
               </button>
-              <button class="btn btn-danger" id="delete-{{$index}}" type="button" ng-click="$ctrl.delete(serie)">
-                Delete
-              </button>
             </td>
           </tr>
         </tbody>

@@ -15,10 +15,10 @@
   }}>
   <h5>Create a new measuring serie</h5>
   <EditorSerieComponent {editorForm} />
-  <button class="btn btn-primary" type="submit" id="submit-add">Add</button>
+  <button class="btn btn-primary" type="submit" id="submit">Add</button>
   <button
     class="btn"
-    id="cancel-add"
+    id="cancel"
     on:click={event => {
       ctrl.onCancel();
     }}>

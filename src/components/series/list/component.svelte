@@ -53,16 +53,6 @@
               }}>
               Edit
             </button>
-            <button
-              class="btn btn-danger"
-              id="delete-{index}"
-              type="button"
-              on:click={() => {
-                ctrl.delete(serie);
-                measuredSeriesRef = ctrl.measuredSeries;
-              }}>
-              Delete
-            </button>
           </td>
         </tr>
       {/each}

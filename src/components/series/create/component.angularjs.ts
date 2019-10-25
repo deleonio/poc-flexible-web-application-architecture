@@ -7,8 +7,8 @@ ANGULARJS_MODULE.component('createSerie', {
   <form ng-submit="$ctrl.onSubmit()">
     <h5>Create a new measuring serie</h5>
     <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
-    <button class="btn btn-primary" type="submit" id="submit-add">Add</button>
-    <button class="btn" type="reset" id="cancel-add" (click)="$ctrl.onCancel()">
+    <button class="btn btn-primary" type="submit" id="submit">Add</button>
+    <button class="btn" type="reset" id="cancel" (click)="$ctrl.onCancel()">
       Abbrechen
     </button>
   </form>

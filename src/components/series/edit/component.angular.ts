@@ -9,9 +9,12 @@ import { EditSerieController } from './controller';
     <form (ngSubmit)="onSubmit()">
       <h5>Edit a existing measuring serie</h5>
       <editor-serie [editorForm]="editorForm"></editor-serie>
-      <button class="btn btn-primary" type="submit" id="submit-edit">Edit</button>
-      <button class="btn" type="reset" id="cancel-edit" (click)="onCancel()">
+      <button class="btn btn-primary" type="submit" id="submit">Edit</button>
+      <button class="btn btn-secondary" type="reset" id="cancel" (click)="onCancel()">
         Abbrechen
+      </button>
+      <button class="btn btn-danger" id="delete" type="button" (click)="onDelete()">
+        Delete
       </button>
     </form>
   `

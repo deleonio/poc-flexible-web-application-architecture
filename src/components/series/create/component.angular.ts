@@ -8,8 +8,8 @@ import { CreateSerieController } from './controller';
     <form (ngSubmit)="onSubmit()">
       <h5>Create a new measuring serie</h5>
       <editor-serie [editorForm]="editorForm"></editor-serie>
-      <button class="btn btn-primary" type="submit" id="submit-add">Add</button>
-      <button class="btn" type="reset" id="cancel-add" (click)="onCancel()">
+      <button class="btn btn-primary" type="submit" id="submit">Add</button>
+      <button class="btn" type="reset" id="cancel" (click)="onCancel()">
         Abbrechen
       </button>
     </form>

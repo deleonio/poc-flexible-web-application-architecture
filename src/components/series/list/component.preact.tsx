@@ -10,13 +10,7 @@ export class ListSerieComponent extends PreactComponent {
   constructor(props) {
     super(props);
     this.$ctrl.renderView = this.forceUpdate.bind(this);
-    this.handleDelete.bind(this);
     this.handleEdit.bind(this);
-  }
-
-  private handleDelete(serie: MeasuredSerieModel) {
-    this.$ctrl.delete(serie);
-    this.forceUpdate();
   }
 
   private handleEdit(measuredSerie: MeasuredSerieModel) {
@@ -68,16 +62,6 @@ export class ListSerieComponent extends PreactComponent {
                       }}
                     >
                       Edit
-                    </button>
-                    <button
-                      className="btn btn-danger"
-                      id={`delete-${index}`}
-                      type="button"
-                      onClick={() => {
-                        this.handleDelete(serie);
-                      }}
-                    >
-                      Delete
                     </button>
                   </td>
                 </tr>

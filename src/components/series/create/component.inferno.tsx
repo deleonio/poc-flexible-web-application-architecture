@@ -18,13 +18,13 @@ export class CreateSerieComponent extends InfernoComponent {
       >
         <h5>Create a new measuring serie</h5>
         <EditorSerieComponent editorForm={this.$ctrl.editorForm} />
-        <button className="btn btn-primary" type="submit" id="submit-add">
+        <button className="btn btn-primary" type="submit" id="submit">
           Add
         </button>
         <button
           className="btn"
           type="reset"
-          id="cancel-add"
+          id="cancel"
           onClick={() => {
             this.$ctrl.onCancel();
           }}

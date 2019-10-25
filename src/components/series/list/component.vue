@@ -27,12 +27,6 @@
               type="button"
               @click="onEdit(serie)"
             >Edit</button>
-            <button
-              class="btn btn-danger"
-              :id="'delete-' + index"
-              type="button"
-              @click="onDelete(serie)"
-            >Delete</button>
           </td>
         </tr>
       </tbody>
@@ -55,9 +49,6 @@ export default {
     const onAdd = () => {
       $ctrl.add();
     };
-    const onDelete = measuredSerie => {
-      $ctrl.delete(measuredSerie);
-    };
     const onEdit = measuredSerie => {
       $ctrl.edit(measuredSerie);
       measuredSerieRef.value = $ctrl.measuredSerie;
@@ -67,7 +58,6 @@ export default {
       measuredSerieRef,
       measuredSeriesRef,
       onAdd,
-      onDelete,
       onEdit
     };
   }

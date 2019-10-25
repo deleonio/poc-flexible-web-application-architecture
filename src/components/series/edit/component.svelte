@@ -24,13 +24,22 @@
   }}>
   <h5>Edit a existing measuring serie</h5>
   <EditorSerieComponent {editorForm} />
-  <button class="btn btn-primary" type="submit" id="submit-edit">Edit</button>
+  <button class="btn btn-primary" type="submit" id="submit">Edit</button>
   <button
-    class="btn"
-    id="cancel-edit"
+    class="btn btn-secondary"
+    id="cancel"
     on:click={event => {
       ctrl.onCancel();
     }}>
     Abbrechen
+  </button>
+  <button
+    class="btn btn-danger"
+    id="delete"
+    type="button"
+    on:click={() => {
+      ctrl.onDelete();
+    }}>
+    Delete
   </button>
 </form>
