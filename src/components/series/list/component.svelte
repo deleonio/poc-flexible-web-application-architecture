@@ -24,7 +24,6 @@
       Add
     </button>
   </div>
-  <br />
   <table class="table">
     <thead>
       <tr>

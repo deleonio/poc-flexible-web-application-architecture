@@ -13,7 +13,6 @@ import { ListSerieController } from './controller';
           Add
         </button>
       </div>
-      <br />
       <table class="table">
         <thead>
           <tr>
