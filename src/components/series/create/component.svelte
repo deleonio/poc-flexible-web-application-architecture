@@ -17,7 +17,7 @@
   <EditorSerieComponent {editorForm} />
   <button class="btn btn-primary" type="submit" id="submit">Add</button>
   <button
-    class="btn"
+    class="btn secondary"
     id="cancel"
     on:click={event => {
       ctrl.onCancel();

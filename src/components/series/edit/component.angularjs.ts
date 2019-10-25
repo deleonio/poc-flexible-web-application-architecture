@@ -17,7 +17,7 @@ ANGULARJS_MODULE.component('editSerie', {
       <h5>Edit a existing measuring serie</h5>
       <editor-serie editor-form="$ctrl.editorForm"></editor-serie>
       <button class="btn btn-primary" type="submit" id="submit">Edit</button>
-      <button class="btn btn-secondary" type="reset" id="cancel" (click)="$ctrl.onCancel()">
+      <button class="btn btn-secondary" type="reset" id="cancel" ng-click="$ctrl.onCancel()">
         Abbrechen
       </button>
       <button class="btn btn-danger" id="delete" type="button" ng-click="$ctrl.onDelete()">
