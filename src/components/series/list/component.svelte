@@ -8,10 +8,12 @@
   let durationRef = ctrl.duration;
   let measuredSeriesRef = ctrl.measuredSeries;
   let measuredSerieRef = ctrl.measuredSerie;
+  let showPerformanceButtonRef = ctrl.showPerformanceButton;
   ctrl.renderView = () => {
     measuredSeriesRef = ctrl.measuredSeries;
     elementsRef = ctrl.elements;
     durationRef = ctrl.duration;
+    showPerformanceButtonRef = ctrl.showPerformanceButton;
   };
 </script>
 
@@ -27,15 +29,17 @@
       }}>
       Add
     </button>
-    <button
-      class="btn btn-info"
-      id="start"
-      type="button"
-      on:click={() => {
-        ctrl.onStart();
-      }}>
-      Performance
-    </button>
+    {#if this.$ctrl.showPerformanceButton}
+      <button
+        class="btn btn-info"
+        id="start"
+        type="button"
+        on:click={() => {
+          ctrl.onStart();
+        }}>
+        Performance
+      </button>
+    {/if}
   </div>
   {elementsRef.length}
   {#each elementsRef as serie, index (index)}

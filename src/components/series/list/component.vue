@@ -3,7 +3,13 @@
     <h5>List</h5>
     <div>
       <button class="btn btn-success" id="add" type="button" @click="onAdd()">Add</button>
-      <button class="btn btn-info" id="start" type="button" @click="onStart()">Performance</button>
+      <button
+        class="btn btn-info"
+        id="start"
+        type="button"
+        v-if="showPerformanceButtonRef"
+        @click="onStart()"
+      >Performance</button>
     </div>
     <table class="table" v-for="(element, index) in elementsRef" :key="index">
       <thead>
@@ -50,6 +56,7 @@ export default {
     const durationRef = ref($ctrl.duration);
     const measuredSerieRef = ref($ctrl.measuredSerie);
     const measuredSeriesRef = ref($ctrl.measuredSeries);
+    const showPerformanceButtonRef = ref($ctrl.showPerformanceButton);
     const onAdd = () => {
       $ctrl.add();
     };
@@ -64,13 +71,15 @@ export default {
     $ctrl.renderView = () => {
       elementsRef.value = $ctrl.elements;
       durationRef.value = $ctrl.duration;
-    }
+      showPerformanceButtonRef.value = $ctrl.showPerformanceButton;
+    };
 
     return {
       elementsRef,
       durationRef,
       measuredSerieRef,
       measuredSeriesRef,
+      showPerformanceButtonRef,
       onAdd,
       onStart,
       onEdit

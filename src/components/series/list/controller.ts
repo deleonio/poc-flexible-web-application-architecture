@@ -13,6 +13,7 @@ export class ListSerieController {
   public renderView: Function = () => {};
   public elements: any[] = [null];
   public duration: number = 0;
+  public showPerformanceButton: boolean = true;
 
   constructor() {
     this.measurementService.observe.subscribe(() => {
@@ -35,12 +36,15 @@ export class ListSerieController {
   }
 
   public onStart() {
-    const start: number = Date.now();
-    this.elements = new Array(PERFORMANCE_ANZAHL);
-
+    this.showPerformanceButton = false;
     setTimeout(() => {
-      this.duration = (Date.now() - start) / 1000;
-      this.elements = [null];
+      const start: number = Date.now();
+      this.elements = new Array(PERFORMANCE_ANZAHL);
+      setTimeout(() => {
+        this.duration = (Date.now() - start) / 1000;
+        this.elements = [null];
+        this.renderView();
+      }, 0);
       this.renderView();
     }, 0);
     this.renderView();

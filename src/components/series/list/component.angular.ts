@@ -11,7 +11,7 @@ import { ListSerieController } from './controller';
         <button class="btn btn-success" id="add" type="button" (click)="add()">
           Add
         </button>
-        <button class="btn btn-info" id="start" type="button" (click)="onStart()">
+        <button class="btn btn-info" id="start" type="button" *ngIf="showPerformanceButton" (click)="onStart()">
           Performance
         </button>
       </div>

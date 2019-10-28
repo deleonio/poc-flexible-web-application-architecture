@@ -73,16 +73,18 @@ export class ListSerieComponent extends ReactComponent {
           >
             Add
           </button>
-          <button
-            className="btn btn-info"
-            id="start"
-            type="button"
-            onClick={() => {
-              this.$ctrl.onStart();
-            }}
-          >
-            Performance
-          </button>
+          {this.$ctrl.showPerformanceButton && (
+            <button
+              className="btn btn-info"
+              id="start"
+              type="button"
+              onClick={() => {
+                this.$ctrl.onStart();
+              }}
+            >
+              Performance
+            </button>
+          )}
         </div>
         {tables}
         <small>Duration: {this.$ctrl.duration} ms</small>

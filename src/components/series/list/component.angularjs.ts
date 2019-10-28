@@ -6,7 +6,7 @@ ANGULARJS_MODULE.component('listSerie', {
     public constructor($scope) {
       super();
       this.renderView = () => {
-        $scope.$apply();
+        setTimeout($scope.$apply.bind(this));
       };
     }
   },
@@ -17,7 +17,7 @@ ANGULARJS_MODULE.component('listSerie', {
         <button class="btn btn-success" id="add" type="button" ng-click="$ctrl.add()">
           Add
         </button>
-        <button class="btn btn-info" id="start" type="button" ng-click="$ctrl.onStart()">
+        <button class="btn btn-info" id="start" type="button" ng-if="$ctrl.showPerformanceButton" ng-click="$ctrl.onStart()">
           Performance
         </button>
       </div>
