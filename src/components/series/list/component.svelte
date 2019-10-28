@@ -29,7 +29,7 @@
       }}>
       Add
     </button>
-    {#if this.$ctrl.showPerformanceButton}
+    {#if showPerformanceButtonRef}
       <button
         class="btn btn-info"
         id="start"
@@ -41,7 +41,6 @@
       </button>
     {/if}
   </div>
-  {elementsRef.length}
   {#each elementsRef as serie, index (index)}
     <table class="table">
       <thead>
