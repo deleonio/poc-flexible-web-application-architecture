@@ -5,7 +5,7 @@ import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'Preact',
-  version: '10.0.0'
+  version: '10.0.2'
 });
 require('./shares/register');
 require('./shares/routing');
