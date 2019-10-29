@@ -42,7 +42,10 @@ export class ListSerieController {
       this.elements = new Array(PERFORMANCE_ANZAHL);
       setTimeout(() => {
         this.duration = (Date.now() - start) / 1000;
-        this.elements = [null];
+        setTimeout(() => {
+          this.elements = [null];
+          this.renderView();
+        }, 0);
         this.renderView();
       }, 0);
       this.renderView();
