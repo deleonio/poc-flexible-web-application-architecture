@@ -49,20 +49,20 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-| Merkmal           | [Angular] | [AngularJS] | [Inferno] | [Preact] | [React] | [Svelte] | [Vue]                   |
-| ----------------- | --------- | ----------- | --------- | -------- | ------- | -------- | ----------------------- |
-| Version           | 8.2       | 1.7         | 7.3       | 10.0     | 16.11   | 3.12     | 2.6 ([Composition API]) |
-| Artifact size     | 502 KiB   | 222 KiB     | 66.9 KiB  | 55.5 KiB | 174 KiB | 48.3KiB  | 118 KiB                 |
-| Upcomming time    | ~50 ms    | ~50 ms      | ~11 ms    | ~12 ms   | ~13 ms  | ~13 ms   | ~18 ms                  |
-| Performance test  | ⌛        | ⌛          | ⌛        | ⌛       | ⌛      | ⌛       | ⌛                      |
-| Devtools          | ⌛        | ⌛          | ✔️        | ✔️       | ✔️      | ⌛       | ✔️                      |
-| Router            | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
-| DI                | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
-| [SPA]             | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
-| [PWA]             | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
-| [SSR]             | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
-| Internet Explorer | ❌        | ✔️          | ✔️        | ✔️       | ✔️      | ❌       | ✔️                      |
-| Framework CLI     | ✔️        | ❌          | ❌        | ❌       | ❌      | ❌       | ✔️                      |
+|           Merkmal | [Angular] | [AngularJS] | [Inferno] | [Preact] | [React] | [Svelte] |          [Vue]          |
+| ----------------: | :-------: | :---------: | :-------: | :------: | :-----: | :------: | :---------------------: |
+|           Version |    8.2    |     1.7     |    7.3    |   10.0   |  16.11  |   3.12   | 2.6 ([Composition API]) |
+|     Artifact size |  502 KiB  |   222 KiB   | 66.9 KiB  | 55.5 KiB | 174 KiB | 48.3KiB  |         118 KiB         |
+|    Upcomming time |  ~50 ms   |   ~50 ms    |  ~11 ms   |  ~12 ms  | ~13 ms  |  ~13 ms  |         ~18 ms          |
+|  Performance test |    ⌛     |     ⌛      |    ⌛     |    ⌛    |   ⌛    |    ⌛    |           ⌛            |
+|          Devtools |    ⌛     |     ⌛      |    ✔️     |    ✔️    |   ✔️    |    ⌛    |           ✔️            |
+|            Router |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|                DI |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|             [SPA] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|             [PWA] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|             [SSR] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+| Internet Explorer |    ❌     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ❌    |           ✔️            |
+|     Framework CLI |    ✔️     |     ❌      |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
 
 ## Installation
 
