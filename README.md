@@ -49,15 +49,20 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-| Framework   |     Description     |         Version         | Artifact size | Upcomming time | Internet Explorer |
-| ----------- | :-----------------: | :---------------------: | ------------: | -------------: | :---------------: |
-| [Angular]   | [SPA], [PWA], [SSR] |           8.2           |       540 KiB |         ~50 ms |        ❌         |
-| [AngularJS] |    [SPA], [SSR]     |           1.7           |       223 KiB |         ~50 ms |        ✔️         |
-| [Inferno]   |    [SPA], [SSR]     |           7.3           |      67.6 KiB |         ~11 ms |        ✔️         |
-| [Preact]    |    [SPA], [SSR]     |          10.0           |      56.2 KiB |         ~12 ms |        ✔️         |
-| [React]     | [SPA], [PWA], [SSR] |          16.11          |       176 KiB |         ~13 ms |        ✔️         |
-| [Svelte]    |    [SPA], [SSR]     |          3.12           |      49.1 KiB |         ~13 ms |        ❌         |
-| [Vue]       | [SPA], [PWA], [SSR] | 2.6 ([Composition API]) |       120 KiB |         ~18 ms |        ✔️         |
+| Merkmal           | [Angular] | [AngularJS] | [Inferno] | [Preact] | [React] | [Svelte] | [Vue]                   |
+| ----------------- | --------- | ----------- | --------- | -------- | ------- | -------- | ----------------------- |
+| Version           | 8.2       | 1.7         | 7.3       | 10.0     | 16.11   | 3.12     | 2.6 ([Composition API]) |
+| Artifact size     | 502 KiB   | 222 KiB     | 66.9 KiB  | 55.5 KiB | 174 KiB | 48.3KiB  | 118 KiB                 |
+| Upcomming time    | ~50 ms    | ~50 ms      | ~11 ms    | ~12 ms   | ~13 ms  | ~13 ms   | ~18 ms                  |
+| Performance test  | ⌛        | ⌛          | ⌛        | ⌛       | ⌛      | ⌛       | ⌛                      |
+| Devtools          | ⌛        | ⌛          | ✔️        | ✔️       | ✔️      | ⌛       | ✔️                      |
+| Router            | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
+| DI                | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
+| [SPA]             | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
+| [PWA]             | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
+| [SSR]             | ✔️        | ✔️          | ✔️        | ✔️       | ✔️      | ✔️       | ✔️                      |
+| Internet Explorer | ❌        | ✔️          | ✔️        | ✔️       | ✔️      | ❌       | ✔️                      |
+| Framework CLI     | ✔️        | ❌          | ❌        | ❌       | ❌      | ❌       | ✔️                      |
 
 ## Installation
 

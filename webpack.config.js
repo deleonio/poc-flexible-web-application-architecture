@@ -2,8 +2,10 @@ const path = require('path');
 
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
+// There are optional features
 const optionalWebpackConfig = require('./webpack.config.addons');
 
 module.exports = (env, argv) => {
@@ -86,6 +88,7 @@ module.exports = (env, argv) => {
       babelConfigPresets.push('@babel/typescript');
   }
 
+  // Optional features hook
   optionalWebpackConfig(env, argv, webpackAdditionalPlugins);
 
   const config = {
@@ -108,6 +111,9 @@ module.exports = (env, argv) => {
           }
         }
       ])
+    },
+    optimization: {
+      minimizer: [new TerserPlugin()]
     },
     plugins: [
       new CopyWebpackPlugin([

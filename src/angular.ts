@@ -6,9 +6,8 @@ import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './angular.module';
-import { WEBPACK_MODE } from './shares/constant';
 
-if (WEBPACK_MODE === 'production') {
+if (process.env.NODE_ENV === 'production') {
   enableProdMode();
 }
 
