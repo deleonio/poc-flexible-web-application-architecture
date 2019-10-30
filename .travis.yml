@@ -6,9 +6,9 @@ notifications:
     on_success: change
     on_failure: always
 install:
-  - npm run update
+  - yarn update
 jobs:
   include:
   - script:
-    - npm run test
-    - npm run build-all
+    - yarn test
+    - yarn build-all
