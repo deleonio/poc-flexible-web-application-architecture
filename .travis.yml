@@ -25,4 +25,4 @@ jobs:
         - yarn coverage
         - yarn coveralls
         - yarn build-all
-        - yarn serve inferno
+        - yarn nightwatch
