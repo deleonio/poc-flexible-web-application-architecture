@@ -25,12 +25,6 @@
     "vue:build": "vue-cli-service build src/vue.ts",
     "update": "yarn && yarn upgrade && yarn outdated"
   },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn prettier && yarn test"
