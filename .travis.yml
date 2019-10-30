@@ -11,4 +11,4 @@ jobs:
   include:
   - script:
     - npm run test
-    - npm run build-add
+    - npm run build-all
