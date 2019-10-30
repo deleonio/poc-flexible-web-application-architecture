@@ -8,6 +8,7 @@
   - [Introduction](#introduction)
     - [Tools](#tools)
     - [Frameworks](#frameworks)
+      - [Devtools](#devtools)
   - [Installation](#installation)
   - [Guide](#guide)
     - [Usual usage without CLI](#usual-usage-without-cli)
@@ -22,9 +23,12 @@
     - [Unit-Test](#unit-test)
     - [Snapshot-Test](#snapshot-test)
     - [E2E-Test](#e2e-test)
-  - [Dokumentation](#dokumentation)
+  - [Documentation](#documentation)
   - [Open topics](#open-topics)
   - [Known bugs](#known-bugs)
+  - [Gained knowledge](#gained-knowledge)
+    - [Artifact analyser](#artifact-analyser)
+    - [Artifact minimisation](#artifact-minimisation)
   - [References](#references)
 
 ## Motivation
