@@ -5,5 +5,7 @@ notifications:
   email:
     on_success: change
     on_failure: always
-# before_script:
-#   - npm test
+jobs:
+  include:
+  - script:
+    - npm run build-add
