@@ -15,7 +15,7 @@
     "coverage": "cross-env NODE_ENV=test nyc mocha",
     "coveralls": "coveralls < coverage/lcov.info",
     "e2e": "nightwatch",
-    "prettier": "prettier --write src/**/*.ts*",
+    "prettier": "prettier src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn",
     "serve": "webpack-dev-server --colors --devtool source-map --progress --framework",
     "storybook:serve": "start-storybook",
@@ -32,7 +32,7 @@
   },
   "lint-staged": {
     "**/*": [
-      "yarn prettier",
+      "yarn prettier --write",
       "git add"
     ]
   },
