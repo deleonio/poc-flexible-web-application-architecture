@@ -6,7 +6,7 @@ notifications:
     on_success: change
     on_failure: always
 install:
-  - yarn update
+  - yarn install
 jobs:
   include:
   - script:
