@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture.svg?branch=master)](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture)
+[![Coverage Status](https://coveralls.io/repos/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg)](https://coveralls.io/github/martinoppitz/poc-flexible-web-application-architecture)
+
 # PoC - Flexible web application architecture
 
 - [PoC - Flexible web application architecture](#poc---flexible-web-application-architecture)
