@@ -98,7 +98,6 @@
     "lint-staged": "~9.4.0",
     "mocha": "~6.2.0",
     "mock-local-storage": "~1.1.0",
-    "nightwatch": "~1.2.0",
     "nock": "~11.6.0",
     "nyc": "~14.1.0",
     "sinon": "~7.5.0",
