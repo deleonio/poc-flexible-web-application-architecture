@@ -1,6 +1,14 @@
 language: node_js
-  node_js:
-    12
-os: windows
-before_script:
-  - npm test
+node_js:
+  - 12
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+install:
+  - yarn install
+jobs:
+  include:
+  - script:
+    - yarn test
+    - yarn build-all
