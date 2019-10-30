@@ -10,7 +10,6 @@ install:
 jobs:
   include:
     - script:
-        - yarn test
         - yarn coverage
         - yarn coveralls
         - yarn build-all
