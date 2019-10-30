@@ -2,7 +2,6 @@ const path = require('path');
 
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 // There are optional features
@@ -11,16 +10,18 @@ const optionalWebpackConfig = require('./webpack.config.addons');
 module.exports = (env, argv) => {
   const babelConfigPlugins = [];
   const babelConfigPresets = [];
-  const webpackAdditionalLoaders = [];
-  const webpackAdditionalPlugins = [];
+  const webpackAdditionals = {
+    Loaders: [],
+f    Plugins: []
+  };
   const webpackEntries = {};
-  switch (env.framework) {
+  switch (argv.framework) {
     case 'angular':
-      webpackAdditionalLoaders.push({
+      webpackAdditionals.Loaders.push({
         test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
         use: '@ngtools/webpack'
       });
-      webpackAdditionalPlugins.push(
+      webpackAdditionals.Plugins.push(
         new AngularCompilerPlugin({
           tsConfigPath: path.join(__dirname, `tsconfig.app.json`),
           entryModule: path.join(__dirname, 'src', `angular.module#AppModule`),
@@ -51,7 +52,7 @@ module.exports = (env, argv) => {
       webpackEntries.react = path.join(__dirname, 'src', `react.tsx`);
       break;
     case 'svelte':
-      webpackAdditionalLoaders.push({
+      webpackAdditionals.Loaders.push({
         test: /\.svelte$/,
         exclude: /node_modules/,
         use: 'svelte-loader'
@@ -59,12 +60,12 @@ module.exports = (env, argv) => {
       webpackEntries.svelte = path.join(__dirname, 'src', `svelte.ts`);
       break;
     case 'vue':
-      webpackAdditionalLoaders.push({
+      webpackAdditionals.Loaders.push({
         test: /\.vue$/,
         exclude: /node_modules/,
         loader: 'vue-loader'
       });
-      webpackAdditionalPlugins.push(new VueLoaderPlugin());
+      webpackAdditionals.Plugins.push(new VueLoaderPlugin());
       webpackEntries.vue = path.join(__dirname, 'src', `vue.ts`);
       break;
     default:
@@ -75,7 +76,7 @@ module.exports = (env, argv) => {
       process.exit(1);
   }
 
-  switch (env.framework) {
+  switch (argv.framework) {
     case 'preact':
       babelConfigPresets.push([
         '@babel/typescript',
@@ -89,7 +90,7 @@ module.exports = (env, argv) => {
   }
 
   // Optional features hook
-  optionalWebpackConfig(env, argv, webpackAdditionalPlugins);
+  optionalWebpackConfig(argv, webpackAdditionals);
 
   const config = {
     entry: webpackEntries,
@@ -97,7 +98,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist')
     },
     module: {
-      rules: webpackAdditionalLoaders.concat([
+      rules: webpackAdditionals.Loaders.concat([
         {
           test: /\.(j|t)sx?$/,
           exclude: /node_modules/,
@@ -113,7 +114,7 @@ module.exports = (env, argv) => {
       ])
     },
     optimization: {
-      minimizer: [new TerserPlugin()]
+      minimizer: webpackAdditionals.Minimizers
     },
     plugins: [
       new CopyWebpackPlugin([
@@ -122,7 +123,7 @@ module.exports = (env, argv) => {
         { from: 'manifest.json', to: 'manifest.json' },
         { from: 'service-worker.js', to: 'service-worker.js' }
       ])
-    ].concat(webpackAdditionalPlugins),
+    ].concat(webpackAdditionals.Plugins),
     resolve: {
       alias: {
         inferno: argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'

@@ -176,9 +176,34 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 
 - ~~In the parallel app execution the params routing breaks.~~ ✔️
 
-## Known bugs
+## Gained knowledge
 
-- ~~In the parallel app execution the params routing breaks.~~ ✔️
+### Artifact analyser
+
+If that's interesting ...
+
+Needs additional devDependency:
+
+- webpack-bundle-analyzer: ~3.6.0
+
+Usage: `yarn build angular --analyser`
+
+### Artifact minimisation
+
+There are some optional plugins to minimize the build artifacts in webpack. However, these options are not really better than the default webpack setup.
+
+- https://webpack.js.org/plugins/closure-webpack-plugin/ ❌
+- https://webpack.js.org/plugins/uglifyjs-webpack-plugin/ ✔️
+- https://webpack.js.org/plugins/terser-webpack-plugin/ ✔️
+
+Needs additional devDependencies:
+
+- closure-webpack-plugin: ~2.0.0
+- google-closure-compiler: ~20190929.0.0
+- terser-webpack-plugin: ~2.2.0
+- uglifyjs-webpack-plugin: ~2.2.0
+
+Usage: `yarn build react --minimizer terser`
 
 ## References
 
