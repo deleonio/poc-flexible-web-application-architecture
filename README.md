@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture.svg?branch=master)](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture)
-
 # PoC - Flexible web application architecture
 
 - [PoC - Flexible web application architecture](#poc---flexible-web-application-architecture)
@@ -51,20 +49,28 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-|           Merkmal | [Angular] | [AngularJS] | [Inferno] | [Preact] | [React] | [Svelte] |          [Vue]          |
-| ----------------: | :-------: | :---------: | :-------: | :------: | :-----: | :------: | :---------------------: |
-|           Version |    8.2    |     1.7     |    7.3    |   10.0   |  16.11  |   3.12   | 2.6 ([Composition API]) |
-|     Artifact size |  502 KiB  |   222 KiB   | 66.9 KiB  | 55.5 KiB | 174 KiB | 48.3KiB  |         118 KiB         |
-|    Upcomming time |  ~50 ms   |   ~50 ms    |  ~11 ms   |  ~12 ms  | ~13 ms  |  ~13 ms  |         ~18 ms          |
-|  Performance test |    ⌛     |     ⌛      |    ⌛     |    ⌛    |   ⌛    |    ⌛    |           ⌛            |
-|          Devtools |    ⌛     |     ⌛      |    ✔️     |    ✔️    |   ✔️    |    ⌛    |           ✔️            |
-|            Router |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|                DI |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|             [SPA] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|             [PWA] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|             [SSR] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-| Internet Explorer |    ❌     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ❌    |           ✔️            |
-|     Framework CLI |    ✔️     |     ❌      |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
+|                  Merkmal | [Angular] | [AngularJS] | [Inferno] | [Preact] | [React] | [Svelte] |          [Vue]          |
+| -----------------------: | :-------: | :---------: | :-------: | :------: | :-----: | :------: | :---------------------: |
+|                  Version |    8.2    |     1.7     |    7.3    |   10.0   |  16.11  |   3.12   | 2.6 ([Composition API]) |
+|            Artifact size |  502 KiB  |   222 KiB   | 66.9 KiB  | 55.5 KiB | 174 KiB | 48.3KiB  |         118 KiB         |
+|           Upcomming time |  ~50 ms   |   ~50 ms    |  ~11 ms   |  ~12 ms  | ~13 ms  |  ~13 ms  |         ~18 ms          |
+|         Performance test |    ⌛     |     ⌛      |    ⌛     |    ⌛    |   ⌛    |    ⌛    |           ⌛            |
+| [Devtools](####devtools) |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|                   Router |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|                       DI |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|                    [SPA] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|                    [PWA] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|                    [SSR] |    ✔️     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
+|        Internet Explorer |    ❌     |     ✔️      |    ✔️     |    ✔️    |   ✔️    |    ❌    |           ✔️            |
+|            Framework CLI |    ✔️     |     ❌      |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
+
+#### Devtools
+
+- [Angular Devtools]
+- [AngularJS Devtools]
+- [React Devtools], also for Inferno and Preact
+- [Svelte Devtools]
+- [Vue Devtools]
 
 ## Installation
 
@@ -146,7 +152,7 @@ Currently **not** supported.
 
 Execute all e2e tests with `yarn e2e`. Note that the application can be reached under http://localhost:8080 (e.g. `yarn serve preact`).
 
-## Dokumentation
+## Documentation
 
 [Storybook] is a realy nice tool to document the components and there usage.
 
@@ -162,6 +168,10 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 - ~~Add router to the application context.~~ ✔️
 - Create a cheat sheet for the application architecture concept. ⌛
 - Provide a PWA manifest for each framework artifact. ⌛
+
+## Known bugs
+
+- ~~In the parallel app execution the params routing breaks.~~ ✔️
 
 ## Known bugs
 
@@ -211,3 +221,8 @@ Execute all e2e tests with `yarn e2e`. Note that the application can be reached 
 [nightwatch]: https://nightwatchjs.org
 [nyc]: https://istanbul.js.org
 [storybook]: https://storybook.js.org/
+[angular devtools]: https://augury.rangle.io/
+[react devtools]: https://reactjs.org/docs/optimizing-performance.html
+[vue devtools]: https://github.com/vuejs/vue-devtools
+[angularjs devtools]: https://chrome.google.com/webstore/detail/ng-inspect-for-angularjs/cidepfmbgngpdapgncfhpecbdhmnnemf
+[svelte devtools]: https://github.com/RedHatter/svelte-devtools
