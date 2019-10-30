@@ -27,8 +27,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier && yarn test"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn prettier",
+      "yarn test",
+      "git add"
+    ]
   },
   "dependencies": {
     "@angular/common": "~8.2.0",
@@ -89,6 +96,7 @@
     "husky": "~3.0.0",
     "jsdom": "~15.2.0",
     "jsdom-global": "~3.0.0",
+    "lint-staged": "~9.4.0",
     "mocha": "~6.2.0",
     "mock-local-storage": "~1.1.0",
     "nightwatch": "~1.2.0",

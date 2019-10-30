@@ -1,4 +1,4 @@
-import { h, Component, render } from 'preact';
+import { Component, h, render } from 'preact';
 
 import { AppComponent } from './components/app/component.preact';
 import { DI } from './shares/injector';
@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'development') {
 
 DI.register('Framework', {
   name: 'Preact',
-  version: '10.0.2'
+  version: '10.0.4'
 });
 require('./shares/register');
 require('./shares/routing');
