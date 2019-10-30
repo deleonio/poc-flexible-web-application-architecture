@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
   const babelConfigPresets = [];
   const webpackAdditionals = {
     Loaders: [],
-f    Plugins: []
+    Plugins: []
   };
   const webpackEntries = {};
   switch (argv.framework) {
