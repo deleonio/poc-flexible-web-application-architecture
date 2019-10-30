@@ -4,6 +4,7 @@ node_js:
 cache:
   directories:
     - node_modules
+    - yarn.lock
 notifications:
   email:
     on_success: change
