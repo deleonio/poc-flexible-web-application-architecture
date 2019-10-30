@@ -9,6 +9,7 @@ install:
   - yarn install
 jobs:
   include:
-  - script:
-    - yarn test
-    - yarn build-all
+    - script:
+        - yarn test
+        - yarn coveralls
+        - yarn build-all
