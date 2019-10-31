@@ -1,4 +1,5 @@
 pwd
 ls -la
-rm -rf *
+-rm vue*
+ls -la
 bye
