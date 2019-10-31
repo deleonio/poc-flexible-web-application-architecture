@@ -18,4 +18,4 @@ jobs:
         # - yarn coverage
         # - yarn coveralls
         # - yarn build-all
-after_success: echo "ls -la" | sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/
+after_success: echo "ls -la" | sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}
