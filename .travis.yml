@@ -13,14 +13,14 @@ notifications:
 before_install:
   - sudo apt-get install sshpass
 install:
-  # - yarn
-  - ls -la
+  - yarn
 jobs:
   include:
     - script:
         - yarn prettier --check
-        # - yarn coverage
-        # - yarn coveralls
-        # - yarn build-all
+        - yarn tslint
+        - yarn coverage
+        - yarn coveralls
+        - yarn build-all
         - export SSHPASS=${SFTP_PASSWORD}
         - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
