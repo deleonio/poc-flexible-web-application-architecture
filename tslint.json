@@ -11,6 +11,7 @@
     "no-bitwise": false,
     "no-conditional-assignment": false,
     "no-debugger": false,
+    "no-console": false,
     "no-empty": true,
     "no-namespace": false,
     "no-var-requires": false,

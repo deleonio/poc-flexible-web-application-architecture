@@ -13,7 +13,6 @@ export class RouterService {
   private constructor() {}
 
   private static notify(route: Route, params: any, query: any) {
-    console.log(JSON.parse(JSON.stringify({ route, params, query })));
     RouterService.subscribers.forEach((subscriber: Function) => {
       subscriber(route, params, query);
     });

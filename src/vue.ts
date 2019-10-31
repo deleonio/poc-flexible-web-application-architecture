@@ -21,6 +21,7 @@ Vue.use(VueCompositionApi);
 const htmlDivElement: HTMLDivElement | null = document.querySelector('div#vue');
 if (htmlDivElement instanceof HTMLDivElement) {
   htmlDivElement.appendChild(APP_HTML_ELEMENT);
+  // tslint:disable-next-line: no-unused-expression
   new Vue({
     el: APP_HTML_ELEMENT,
     render: (h: any) => h(App)
