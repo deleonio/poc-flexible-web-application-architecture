@@ -19,7 +19,8 @@ jobs:
         # - yarn coveralls
         # - yarn build-all
 after_success:
-  - sftp -o StrictHostKeyChecking=no "${SFTP_USER}":"${SFTP_PASSWORD}"@${SFTP_HOST}:poc << !
+  - export SSHPASS=${SFTP_PASSWORD}
+  - sshpass -e sftp -oBatchMode=no -b - ${SFTP_USER}@${SFTP_HOST}:poc << !
     pwd
     ls -la
     bye
