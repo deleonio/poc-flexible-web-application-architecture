@@ -33,7 +33,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{!sftp}": [
+    "**/*": [
       "yarn prettier --write",
       "git add"
     ],
