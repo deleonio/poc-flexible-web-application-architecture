@@ -34,6 +34,6 @@ jobs:
 #   on:
 #     all_branches: true
 after_success:
-  - ssh -o "StrictHostKeyChecking=no" ${SFTP_USER}@${SFTP_HOST}
+  # - ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" ${SFTP_USER}@${SFTP_HOST}
   - export SSHPASS=${SFTP_PASSWORD}
   - sshpass -e sftp -oBatchMode=no -b scripts/batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
