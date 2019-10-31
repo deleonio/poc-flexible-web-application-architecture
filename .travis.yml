@@ -10,8 +10,8 @@ notifications:
   email:
     on_success: change
     on_failure: always
-# before_install:
-# - sudo apt-get install sshpass
+before_install:
+  - sudo apt-get install sshpass
 install:
   - yarn
 jobs:
@@ -26,6 +26,7 @@ jobs:
         # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
         # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
 deploy:
+  skip_cleanup: true
   provider: script
   script: bash scripts/deploy.sh
   on:
