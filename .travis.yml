@@ -22,5 +22,6 @@ jobs:
         - yarn coverage
         - yarn coveralls
         - yarn build-all
-        - export SSHPASS=${SFTP_PASSWORD}
-        - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
+        # - export SSHPASS=${SFTP_PASSWORD}
+        # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
+        - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
