@@ -11,8 +11,9 @@
   "scripts": {
     "build": "webpack --mode production --framework",
     "build-all": "yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build svelte && yarn build vue",
+    "commit": "git add . && git commit && git push",
     "clear": "rm -rf .nyc_output coverage dist tests_output *.log",
-    "coverage": "cross-env NODE_ENV=test nyc mocha",
+    "coverage": "cross-env NODE_ENV=test nyc mocha && nyc check-coverage",
     "coveralls": "coveralls < coverage/lcov.info",
     "e2e": "nightwatch",
     "prettier": "prettier src/**/*.ts*",
