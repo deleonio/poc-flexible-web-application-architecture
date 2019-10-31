@@ -13,7 +13,8 @@ notifications:
 before_install:
   - sudo apt-get install sshpass
 install:
-  - yarn
+  # - yarn
+  - ls -la
 jobs:
   include:
     - script:
