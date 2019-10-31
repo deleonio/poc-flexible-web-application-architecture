@@ -13,15 +13,17 @@ notifications:
 before_install:
   - sudo apt-get install sshpass
 install:
-  - yarn
+  # - yarn
+  - ls -la
 jobs:
   include:
     - script:
-        - yarn prettier --check
-        - yarn tslint
-        - yarn coverage
-        - yarn coveralls
-        - yarn build-all
+        - ls -la
+        # - yarn prettier --check
+        # - yarn tslint
+        # - yarn coverage
+        # - yarn coveralls
+        # - yarn build-all
         # - export SSHPASS=${SFTP_PASSWORD}
         # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
         # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
@@ -32,6 +34,6 @@ jobs:
 #   on:
 #     all_branches: true
 after_success:
-  - export SSHPASS=${SFTP_PASSWORD}
   - ssh -o "StrictHostKeyChecking=no" ${SFTP_USER}@${SFTP_HOST}
+  - export SSHPASS=${SFTP_PASSWORD}
   - sshpass -e sftp -oBatchMode=no -b scripts/batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
