@@ -23,4 +23,4 @@ jobs:
         # - yarn coveralls
         # - yarn build-all
         - export SSHPASS=${SFTP_PASSWORD}
-        - sshpass -e sftp -oBatchMode=no -b batchfile.sftp u54145776-travis@home292045786.1and1-data.host:poc
+        - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
