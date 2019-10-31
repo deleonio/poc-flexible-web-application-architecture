@@ -22,6 +22,5 @@ jobs:
         # - yarn coverage
         # - yarn coveralls
         # - yarn build-all
-after_success:
-  - export SSHPASS=${SFTP_PASSWORD}
-  - sshpass -e sftp -oBatchMode=no -b batchfile.sftp u54145776-travis@home292045786.1and1-data.host:poc
+        - export SSHPASS=${SFTP_PASSWORD}
+        - sshpass -e sftp -oBatchMode=no -b batchfile.sftp u54145776-travis@home292045786.1and1-data.host:poc
