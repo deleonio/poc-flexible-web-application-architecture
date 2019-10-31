@@ -19,4 +19,4 @@ jobs:
         # - yarn coveralls
         # - yarn build-all
 after_success:
-  - sftp "${SFTP_USER}":"${SFTP_PASSWORD}"@${SFTP_HOST}:poc
+  - sftp -o StrictHostKeyChecking=no "${SFTP_USER}":"${SFTP_PASSWORD}"@${SFTP_HOST}:poc
