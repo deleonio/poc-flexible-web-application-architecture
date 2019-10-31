@@ -11,7 +11,7 @@ notifications:
     on_success: change
     on_failure: always
 before_install:
-  - apt install sshpass
+  - sudo apt-get install sshpass
 install:
   - yarn
 jobs:
