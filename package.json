@@ -33,7 +33,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,json,ts,tsx}": [
+    "**/*.{!sftp}": [
       "prettier --write",
       "git add"
     ],
