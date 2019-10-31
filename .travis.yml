@@ -27,4 +27,4 @@ after_success:
   - sshpass -e sftp -oBatchMode=no -b - ${SFTP_USER}@${SFTP_HOST}:poc << !\n
     ls -la\n
     bye\n
-    !
+    !n
