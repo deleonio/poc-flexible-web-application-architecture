@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture.svg?branch=master)](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture)
 [![Coverage Status](https://coveralls.io/repos/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg?branch=master)](https://coveralls.io/github/martinoppitz/poc-flexible-web-application-architecture?branch=master)
 
-> The source code is not completely clean for the architecture concept, but all aspects are currently are evaluated.
+> The source code is not completely clean for the architecture concept, but all aspects are evaluated.
 
 # PoC - Flexible web application architecture
 
