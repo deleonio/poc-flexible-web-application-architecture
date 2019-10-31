@@ -33,11 +33,11 @@
     }
   },
   "lint-staged": {
-    "**/*": [
+    "**/*,!scripts/": [
       "yarn prettier --write",
       "git add"
     ],
-    "**/*.{ts,tsx}": [
+    "**/*.{ts,tsx},!scripts/": [
       "yarn tslint",
       "yarn test",
       "git add"
