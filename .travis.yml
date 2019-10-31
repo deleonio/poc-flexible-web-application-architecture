@@ -23,8 +23,4 @@ jobs:
         # - yarn build-all
 after_success:
   - export SSHPASS=${SFTP_PASSWORD}
-  - sshpass -e sftp -oBatchMode=no -b - ${SFTP_USER}@${SFTP_HOST}:poc << !
-    pwd
-    ls -la
-    bye
-    !
+  - sshpass -e sftp -oBatchMode=no -b batchfile.sftp - ${SFTP_USER}@${SFTP_HOST}:poc
