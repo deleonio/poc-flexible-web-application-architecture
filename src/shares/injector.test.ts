@@ -1,6 +1,7 @@
 // @flow
 
 import { expect } from 'chai';
+
 import { DI } from './injector';
 
 describe(`Test: Injector-Service (DI)`, () => {
@@ -29,6 +30,7 @@ describe(`Test: Injector-Service (DI)`, () => {
     test(`number`, 0);
     test(`string`, '');
     test(`boolean`, true);
+    test(`null`, null);
   });
   describe(`Service fehlerhaft registrieren`, () => {
     function test(type: string, service: any) {

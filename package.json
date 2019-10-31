@@ -27,12 +27,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test"
+      "pre-commit": "lint-staged && sdfsf",
+      "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
     "**/*": [
       "yarn prettier --write",
+      "yarn tslint",
+      "yarn test",
       "git add"
     ]
   },
