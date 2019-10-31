@@ -16,10 +16,6 @@ install:
   - yarn
 jobs:
   include:
-    - stage: test
-    - stage: build
-    - stage: deploy
-
     - script:
         - yarn prettier --check
         - yarn tslint
