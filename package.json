@@ -66,9 +66,9 @@
     "zone.js": "~0.10.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "next",
     "@angular/cli": "next",
     "@angular/compiler-cli": "next",
-    "@angular-devkit/build-angular": "next",
     "@babel/core": "~7.6.0",
     "@babel/plugin-proposal-class-properties": "~7.5.0",
     "@babel/plugin-proposal-decorators": "~7.6.0",
