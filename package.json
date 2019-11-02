@@ -61,7 +61,7 @@
     "react-dom": "~16.11.0",
     "register-service-worker": "~1.6.0",
     "rxjs": "~6.5.0",
-    "svelte": "~3.12.0",
+    "svelte": "next",
     "vue": "~2.6.0",
     "zone.js": "~0.9.0"
   },
