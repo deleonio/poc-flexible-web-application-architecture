@@ -1,6 +1,7 @@
 const path = require('path');
 
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
+const { AureliaPlugin } = require('aurelia-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
@@ -33,6 +34,14 @@ module.exports = (env, argv) => {
     case 'angularjs':
       babelConfigPlugins.push('angularjs-annotate');
       webpackEntries.angularjs = path.join(__dirname, 'src', `angularjs.ts`);
+      break;
+    case 'aurelia':
+      webpackAdditionals.Plugins.push(
+        new AureliaPlugin({
+          aureliaApp: 'app'
+        })
+      );
+      webpackEntries.aurelia = path.join(__dirname, 'src', `aurelia.ts`);
       break;
     case 'inferno':
       babelConfigPlugins.push([
