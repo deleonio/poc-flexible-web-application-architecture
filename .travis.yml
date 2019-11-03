@@ -1,29 +1,27 @@
-sudo: true
+# sudo: true
 language: node_js
 node_js:
   - 12
-# cache:
-#   yarn: true
-#   directories:
-#     - node_modules
+cache:
+  yarn: true
+  directories:
+    - node_modules
 notifications:
   email:
     on_success: change
     on_failure: always
-before_install:
-  - sudo apt-get install sshpass
+# before_install:
+#   - sudo apt-get install sshpass
 install:
-  # - yarn
-  - ls -la
+  - yarn
 jobs:
   include:
     - script:
-        - ls -la
-        # - yarn prettier --check
-        # - yarn tslint
-        # - yarn coverage
-        # - yarn coveralls
-        # - yarn build-all
+        - yarn prettier --check
+        - yarn tslint
+        - yarn coverage
+        - yarn coveralls
+        - yarn build-all
         # - export SSHPASS=${SFTP_PASSWORD}
         # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
         # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
@@ -33,7 +31,7 @@ jobs:
 #   script: bash scripts/deploy.sh
 #   on:
 #     all_branches: true
-after_success:
-  - ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" ${SFTP_USER}@${SFTP_HOST}
-  - export SSHPASS=${SFTP_PASSWORD}
-  - sshpass -e sftp -oBatchMode=no -b scripts/batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
+# after_success:
+#   - ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" ${SFTP_USER}@${SFTP_HOST}
+#   - export SSHPASS=${SFTP_PASSWORD}
+#   - sshpass -e sftp -oBatchMode=no -b scripts/batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc

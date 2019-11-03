@@ -1,6 +1,7 @@
 const path = require('path');
 
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
+const { AureliaPlugin } = require('aurelia-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
@@ -33,6 +34,15 @@ module.exports = (env, argv) => {
     case 'angularjs':
       babelConfigPlugins.push('angularjs-annotate');
       webpackEntries.angularjs = path.join(__dirname, 'src', `angularjs.ts`);
+      break;
+    case 'aurelia':
+      webpackAdditionals.Plugins.push(
+        new AureliaPlugin({
+          aureliaApp: 'aurelia'
+        })
+      );
+      webpackAdditionals.Loaders.push({ test: /\.html$/, loader: 'html-loader' });
+      webpackEntries.aurelia = path.join(__dirname, 'src', `aurelia.ts`);
       break;
     case 'inferno':
       babelConfigPlugins.push([
@@ -126,9 +136,11 @@ module.exports = (env, argv) => {
     ].concat(webpackAdditionals.Plugins),
     resolve: {
       alias: {
+        'aurelia-binding': path.resolve(__dirname, 'node_modules/aurelia-binding'),
         inferno: argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
       },
-      extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
+      modules: ['src', 'node_modules'],
+      extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue', '.html']
     }
   };
 
