@@ -42,7 +42,6 @@ module.exports = (env, argv) => {
         })
       );
       webpackAdditionals.Loaders.push({ test: /\.html$/, loader: 'html-loader' });
-      // webpackAdditionals.Loaders.push({ test: /\.ts$/, loader: 'ts-loader' });
       webpackEntries.aurelia = path.join(__dirname, 'src', `aurelia.ts`);
       break;
     case 'inferno':
@@ -137,9 +136,9 @@ module.exports = (env, argv) => {
     ].concat(webpackAdditionals.Plugins),
     resolve: {
       alias: {
+        'aurelia-binding': path.resolve(__dirname, 'node_modules/aurelia-binding'),
         inferno: argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
       },
-      alias: { 'aurelia-binding': path.resolve(__dirname, 'node_modules/aurelia-binding') },
       modules: ['src', 'node_modules'],
       extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue', '.html']
     }
