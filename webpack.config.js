@@ -16,6 +16,7 @@ module.exports = (env, argv) => {
     Plugins: []
   };
   const webpackEntries = {};
+  const webpackResolveModules = ['node_modules'];
   switch (argv.framework) {
     case 'angular':
       webpackAdditionals.Loaders.push({
@@ -49,6 +50,8 @@ module.exports = (env, argv) => {
         }
       });
       webpackEntries.aurelia = path.join(__dirname, 'src', `aurelia.ts`);
+      webpackResolveModules.push('src');
+      // webpackResolveModules.push('node_modules');
       break;
     case 'inferno':
       babelConfigPlugins.push([
@@ -145,7 +148,6 @@ module.exports = (env, argv) => {
         'aurelia-binding': path.resolve(__dirname, 'node_modules/aurelia-binding'),
         inferno: argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
       },
-      modules: ['src', 'node_modules'],
       extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
     }
   };
