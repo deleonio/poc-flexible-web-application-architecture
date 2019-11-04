@@ -71,7 +71,9 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 |                    [PWA] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
 |                    [SSR] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
 |        Internet Explorer |     ❌      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ❌    |           ✔️            |
-|            Framework CLI | ✔️ (252 kB) |     ❌      |    ⌛     |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
+|            Framework CLI | ✔️ (252 kB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
+
+\* The Aurelia CLI can not be used for this project.
 
 #### Devtools
 
