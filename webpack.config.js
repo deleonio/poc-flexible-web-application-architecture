@@ -3,6 +3,7 @@ const path = require('path');
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const { AureliaPlugin } = require('aurelia-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 // There are optional features
@@ -41,7 +42,13 @@ module.exports = (env, argv) => {
           aureliaApp: 'aurelia'
         })
       );
-      webpackAdditionals.Loaders.push({ test: /\.html$/, loader: 'html-loader' });
+      webpackAdditionals.Loaders.push({
+        test: /\.html$/,
+        loader: 'html-loader',
+        options: {
+          attrs: false
+        }
+      });
       webpackEntries.aurelia = path.join(__dirname, 'src', `aurelia.ts`);
       break;
     case 'inferno':
@@ -140,7 +147,7 @@ module.exports = (env, argv) => {
         inferno: argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
       },
       modules: ['src', 'node_modules'],
-      extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue', '.html']
+      extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
     }
   };
 

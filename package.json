@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "webpack --mode production --framework",
-    "build-all": "yarn build angular && yarn build angularjs && yarn build inferno && yarn build preact && yarn build react && yarn build svelte && yarn build vue",
+    "build-all": "yarn build angular && yarn build angularjs && yarn build  aurelia && yarn build inferno && yarn build preact && yarn build react && yarn build svelte && yarn build vue",
     "commit": "git add . && git commit && git push",
     "clear": "rm -rf .nyc_output coverage dist tests_output *.log",
     "coverage": "cross-env NODE_ENV=test nyc mocha && nyc check-coverage",
@@ -52,8 +52,8 @@
     "@angular/platform-browser": "next",
     "@angular/platform-browser-dynamic": "next",
     "@vue/composition-api": "~0.3.0",
-    "aurelia-framework": "1.3.1",
     "angular": "~1.7.0",
+    "aurelia-framework": "~1.3.0",
     "core-js": "~3.3.0",
     "inferno": "~7.3.0",
     "navigo": "~7.1.0",
