@@ -1,7 +1,7 @@
 import { bootstrap } from 'aurelia-bootstrapper';
 import { Aurelia } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
-import { DI } from 'shares/injector';
+import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'Aurelia',
