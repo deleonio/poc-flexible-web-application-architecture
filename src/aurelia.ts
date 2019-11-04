@@ -3,8 +3,6 @@ import { Aurelia } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
 import { DI } from 'shares/injector';
 
-console.log(Aurelia);
-
 DI.register('Framework', {
   name: 'Aurelia',
   version: '1.3.1'
