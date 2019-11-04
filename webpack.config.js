@@ -3,7 +3,6 @@ const path = require('path');
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
 const { AureliaPlugin } = require('aurelia-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 // There are optional features
