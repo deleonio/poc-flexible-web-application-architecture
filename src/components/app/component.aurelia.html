@@ -2,6 +2,7 @@
   <div id="app">
     <h4>${$ctrl.framework.name} v${$ctrl.framework.version}</h4>
     <small>${$ctrl.finishedRendering} ms upcomming time</small>
-    <pre>TODO ...</pre>
+    <pre if.bind="$ctrl.resolvedRoute.url">TODO ...</pre>
+    <pre>${$ctrl.resolvedRoute}</pre>
   </div>
 </template>
