@@ -7,6 +7,8 @@ DI.register('Framework', {
   name: 'Aurelia',
   version: '1.3.1'
 });
+require('./shares/register');
+require('./shares/routing');
 
 export function configure(aurelia: Aurelia) {
   aurelia.use.standardConfiguration().developmentLogging();
