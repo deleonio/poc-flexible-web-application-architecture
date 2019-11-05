@@ -1,6 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
 
-import { RouterService } from '../../../services/router/service';
 import { EditSerieController } from './controller';
 
 @Component({
