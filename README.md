@@ -132,8 +132,8 @@ You should know that this project should show the generic architecture concept. 
 
 Currently the [Angular CLI] is partially supported. You must delete all non-angular sources from the `src/` folder.
 
-- `ng serve`
-- `ng build[ --prod]`
+- `yarn ng:serve` executes `ng serve`
+- `yarn ng:build` executes `ng build --prod --single-bundle`
 
 ##### Installation
 
