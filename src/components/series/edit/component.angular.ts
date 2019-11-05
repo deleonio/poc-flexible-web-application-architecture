@@ -22,17 +22,6 @@ import { EditSerieController } from './controller';
 export class EditSerieComponent extends EditSerieController implements OnChanges {
   @Input() public resolvedRoute: any;
 
-  public constructor() {
-    super(null);
-    RouterService.subscribe((route: any, params: any, query: any) => {
-      this.resolvedRoute = {
-        params,
-        query,
-        url: route.url
-      };
-    });
-  }
-
   public ngOnChanges() {
     this.changeMeasuredSerie(this.resolvedRoute.params.id);
   }
