@@ -61,7 +61,7 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 |                  Merkmal |  [Angular]  | [AngularJS] | [Aurelia] | [Inferno] | [Preact] | [React] | [Svelte] |          [Vue]          |
 | -----------------------: | :---------: | :---------: | :-------: | :-------: | :------: | :-----: | :------: | :---------------------: |
 |                  Version |     8.2     |     1.7     |    1.3    |    7.3    |   10.0   |  16.11  |   3.12   | 2.6 ([Composition API]) |
-|            Artifact size |   609 KiB   |   223 KiB   |  328 KiB  | 67.6 KiB  | 56.2 KiB | 176 KiB | 49.1KiB  |         120 KiB         |
+|            Artifact size |   609 KiB   |   223 KiB   |  344 KiB  | 67.6 KiB  | 56.2 KiB | 176 KiB | 49.1KiB  |         120 KiB         |
 |           Upcomming time |   ~50 ms    |   ~50 ms    |     -     |  ~11 ms   |  ~12 ms  | ~13 ms  |  ~13 ms  |         ~18 ms          |
 |         Performance test |     ⌛      |     ⌛      |    ⌛     |    ⌛     |    ⌛    |   ⌛    |    ⌛    |           ⌛            |
 | [Devtools](####devtools) |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
@@ -71,7 +71,7 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 |                    [PWA] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
 |                    [SSR] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
 |        Internet Explorer |     ❌      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ❌    |           ✔️            |
-|            Framework CLI | ✔️ (252 kB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
+|            Framework CLI | ✔️ (253 kB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
 
 \* The Aurelia CLI can not be used for this project.
 
