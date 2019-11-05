@@ -1,14 +1,13 @@
 import { RouterService } from '../../services/router/service';
 import { AppController } from './controller';
 
-export class App {
-  protected $ctrl: any = null;
+export class App extends AppController {
   public resolvedRoute: any = {
     url: 'series'
   };
 
   constructor() {
-    this.bindControllerLogic(new AppController());
+    super();
     RouterService.subscribe((route: any, params: any, query: any) => {
       this.resolvedRoute = {
         params,
@@ -17,14 +16,5 @@ export class App {
       };
       console.log(this.resolvedRoute);
     });
-  }
-
-  private bindControllerLogic($ctrl: Object) {
-    if (typeof $ctrl === 'object' && $ctrl !== null) {
-      try {
-        this.$ctrl = $ctrl;
-        // tslint:disable-next-line: no-empty
-      } catch (error) {}
-    }
   }
 }

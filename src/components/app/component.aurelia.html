@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <h4>${$ctrl.framework.name} v${$ctrl.framework.version}</h4>
-    <small>${$ctrl.finishedRendering} ms upcomming time</small>
-    <pre if.bind="$ctrl.resolvedRoute.url">TODO ...</pre>
-    <pre>${$ctrl.resolvedRoute}</pre>
+    <h4>${framework.name} v${framework.version}</h4>
+    <small>${finishedRendering} ms upcomming time</small>
+    <pre if.bind="resolvedRoute.url === 'series'">TODO list-serie ...</pre>
+    <pre if.bind="resolvedRoute.url === 'series/create'">TODO create-serie ...</pre>
+    <pre if.bind="resolvedRoute.url === 'series/edit'">TODO edit-serie ...</pre>
   </div>
 </template>
