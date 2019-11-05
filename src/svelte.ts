@@ -3,7 +3,7 @@ import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'Sverte',
-  version: '3.12.1'
+  version: '3.13.0-alpha.2'
 });
 require('./shares/register');
 require('./shares/routing');
