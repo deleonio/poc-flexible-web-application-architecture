@@ -14,7 +14,6 @@ export class App extends AppController {
         query,
         url: route.url
       };
-      console.log(this.resolvedRoute);
     });
   }
 }
