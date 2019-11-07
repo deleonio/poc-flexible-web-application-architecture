@@ -17,8 +17,8 @@ install:
 jobs:
   include:
     - script:
-        - yarn prettier --check
-        - yarn tslint
+        - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.svelte src/**/*.ts src/**/*.tsx src/**/*.vue
+        - tslint src/**/*.ts src/**/*.tsx
         - yarn coverage
         - yarn coveralls
         - yarn build-all
