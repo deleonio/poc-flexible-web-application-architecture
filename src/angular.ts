@@ -11,7 +11,4 @@ if (process.env.NODE_ENV === 'production') {
   enableProdMode();
 }
 
-const CONST = 5;
-console.log(CONST);
-
 platformBrowserDynamic().bootstrapModule(AppModule);
