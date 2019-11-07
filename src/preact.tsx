@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'development') {
 
 DI.register('Framework', {
   name: 'Preact',
-  version: '10.0.4'
+  version: require('preact/package.json').version
 });
 require('./shares/register');
 require('./shares/routing');

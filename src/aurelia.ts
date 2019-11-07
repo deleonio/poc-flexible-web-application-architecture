@@ -1,11 +1,12 @@
 import { bootstrap } from 'aurelia-bootstrapper';
 import { Aurelia } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
+
 import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'Aurelia',
-  version: '1.3.1'
+  version: require('aurelia-framework/package.json').version
 });
 require('./shares/register');
 require('./shares/routing');
