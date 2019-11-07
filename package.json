@@ -18,33 +18,22 @@
     "coverage": "cross-env NODE_ENV=test nyc mocha && nyc check-coverage",
     "coveralls": "coveralls < coverage/lcov.info",
     "e2e": "nightwatch",
-    "prettier": "prettier src/**/*.ts*",
+    "prettier": "prettier --write src/**/*.ts*",
     "reinstall": "rm -rf node_modules && yarn",
     "serve": "webpack-dev-server --colors --devtool source-map --progress --framework",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
     "test": "cross-env NODE_ENV=test mocha --watch-extensions ts",
-    "tslint": "tslint src/**/*.ts*",
+    "tslint": "tslint --fix src/**/*.ts*",
     "vue:serve": "vue-cli-service serve src/vue.ts",
     "vue:build": "vue-cli-service build src/vue.ts",
     "update": "yarn && yarn upgrade && yarn outdated"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
+      "pre-commit": "yarn prettier && yarn tslint && yarn test",
+      "pre-push": "yarn prettier && yarn tslint && yarn test"
     }
-  },
-  "lint-staged": {
-    "**/*,!scripts/**/*": [
-      "yarn prettier --write",
-      "git add"
-    ],
-    "**/*.{ts,tsx},!scripts/**/*": [
-      "yarn tslint",
-      "yarn test",
-      "git add"
-    ]
   },
   "dependencies": {
     "@angular/common": "next",
@@ -111,7 +100,6 @@
     "husky": "~3.0.0",
     "jsdom": "~15.2.0",
     "jsdom-global": "~3.0.0",
-    "lint-staged": "~9.4.0",
     "mocha": "~6.2.0",
     "mock-local-storage": "~1.1.0",
     "ngx-build-plus": "~9.0.0",
