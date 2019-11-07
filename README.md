@@ -58,20 +58,20 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
 
-|                  Merkmal |  [Angular]  | [AngularJS] | [Aurelia] | [Inferno] | [Preact] | [React] | [Svelte] |          [Vue]          |
-| -----------------------: | :---------: | :---------: | :-------: | :-------: | :------: | :-----: | :------: | :---------------------: |
-|                  Version |     8.2     |     1.7     |    1.3    |    7.3    |   10.0   |  16.11  |   3.12   | 2.6 ([Composition API]) |
-|            Artifact size |   609 KiB   |   223 KiB   |  362 KiB  | 67.6 KiB  | 56.2 KiB | 176 KiB | 49.1KiB  |         120 KiB         |
-|           Upcomming time |   ~50 ms    |   ~50 ms    |  ~10 ms   |  ~11 ms   |  ~12 ms  | ~13 ms  |  ~13 ms  |         ~18 ms          |
-|         Performance test |     ⌛      |     ⌛      |    ⌛     |    ⌛     |    ⌛    |   ⌛    |    ⌛    |           ⌛            |
-| [Devtools](####devtools) |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|                   Router |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|                       DI |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|                    [SPA] |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|                    [PWA] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|                    [SSR] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |           ✔️            |
-|        Internet Explorer |     ❌      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ❌    |           ✔️            |
-|            Framework CLI | ✔️ (253 kB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |           ✔️            |
+|                  Merkmal |  [Angular]  | [AngularJS] | [Aurelia] | [Inferno] | [Preact] | [React] | [Svelte] | [Vanilla] |          [Vue]          |
+| -----------------------: | :---------: | :---------: | :-------: | :-------: | :------: | :-----: | :------: | :-------: | :---------------------: |
+|                  Version |     8.2     |     1.7     |    1.3    |    7.3    |   10.0   |  16.11  |   3.12   |     -     | 2.6 ([Composition API]) |
+|            Artifact size |   609 KiB   |   223 KiB   |  362 KiB  | 67.6 KiB  | 56.2 KiB | 176 KiB | 49.1KiB  | 15.8 KiB  |         120 KiB         |
+|           Upcomming time |   ~50 ms    |   ~50 ms    |  ~10 ms   |  ~11 ms   |  ~12 ms  | ~13 ms  |  ~13 ms  |     -     |         ~18 ms          |
+|         Performance test |     ⌛      |     ⌛      |    ⌛     |    ⌛     |    ⌛    |   ⌛    |    ⌛    |    ⌛     |           ⌛            |
+| [Devtools](####devtools) |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |    ❌     |           ✔️            |
+|                   Router |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |    ✔️     |           ✔️            |
+|                       DI |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |    ✔️     |           ✔️            |
+|                    [SPA] |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |    ✔️     |           ✔️            |
+|                    [PWA] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |    ✔️     |           ✔️            |
+|                    [SSR] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |    ✔️     |           ✔️            |
+|        Internet Explorer |     ❌      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ❌    |    ❌     |           ✔️            |
+|            Framework CLI | ✔️ (253 kB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |    ❌     |           ✔️            |
 
 \* The Aurelia CLI can not be used for this project.
 
@@ -104,6 +104,7 @@ Currently the following frameworks are available:
 - `preact`
 - `react`
 - `svelte`
+- `vanilla`
 - `vue`
 
 Use this command to serve the application: `yarn serve <framework>[ --open]`

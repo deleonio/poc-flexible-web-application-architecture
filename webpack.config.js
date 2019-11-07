@@ -77,6 +77,9 @@ module.exports = (env, argv) => {
       });
       webpackEntries.svelte = path.join(__dirname, 'src', `svelte.ts`);
       break;
+    case 'vanilla':
+      webpackEntries.vanilla = path.join(__dirname, 'src', `vanilla.ts`);
+      break;
     case 'vue':
       webpackAdditionals.Loaders.push({
         test: /\.vue$/,
