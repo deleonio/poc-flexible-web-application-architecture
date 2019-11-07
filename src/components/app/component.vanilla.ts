@@ -25,5 +25,5 @@ customElements.define('wc-app', AppComponent);
 
 const hackThis = window.customElements.get('wc-app');
 hackThis.prototype.render = function() {
-  this.shadowRoot.innerHTML = `Putt (${this.counter} s)!`;
+  this.shadowRoot.innerHTML = `Hacked (${this.counter} s)!`;
 };
