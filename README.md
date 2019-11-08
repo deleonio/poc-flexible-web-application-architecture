@@ -56,7 +56,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 ### Frameworks
 
-The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html).
+The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_78.html).
 
 |                  Merkmal |  [Angular]  | [AngularJS] | [Aurelia] | [Inferno] | [Preact] | [React] |  [Svelte]  | Vanilla  |          [Vue]          |
 | -----------------------: | :---------: | :---------: | :-------: | :-------: | :------: | :-----: | :--------: | :------: | :---------------------: |
