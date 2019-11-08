@@ -1,9 +1,12 @@
+import '../series/list/component.vanilla';
+
 import { AppController } from './controller';
 
 function render($ctrl: any, counter: number) {
   return `<div id="app">
   <h4>${$ctrl.framework.name}</h4>
-  <small>${$ctrl.finishedRendering} ms upcomming time</small><br>
+  <small>${$ctrl.finishedRendering} ms upcomming time</small>
+  <wc-list-serie></wc-list-serie>
   <small>${counter} s ticks</small>
   </div>`;
 }
@@ -19,6 +22,7 @@ class AppComponent extends HTMLElement {
       this.counter++;
       this.render();
     }, 1000);
+    this.render();
   }
 
   private render() {

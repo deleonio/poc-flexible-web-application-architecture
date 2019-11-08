@@ -249,7 +249,7 @@ Usage: `yarn build react --minimizer terser`
 [spa]: https://en.wikipedia.org/wiki/Single-page_application
 [pwa]: https://de.wikipedia.org/wiki/Progressive_Web_App
 [composition api]: https://vue-composition-api-rfc.netlify.com
-[js-benchmark]: https://krausest.github.io/js-framework-benchmark/2019/table_chrome_77.html
+[js-benchmark]: https://krausest.github.io/js-framework-benchmark/2019/table_chrome_78.html
 [angular cli]: https://cli.angular.io
 [vue cli]: https://cli.vuejs.org
 [svelte]: https://svelte.dev
