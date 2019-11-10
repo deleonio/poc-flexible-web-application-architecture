@@ -50,7 +50,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 | [TypeScript] |     Language     |
 | [Mocha]      | Unit-Test-Runner |
 | [Chai]       |    Assertion     |
-| [Nightwatch] | E2E-Test-Runner  |
+| [Cypress]    | E2E-Test-Runner  |
 | [NYC]        |  Code-Coverage   |
 | [Storybook]  |  Documentation   |
 
@@ -259,7 +259,6 @@ Usage: `yarn build react --minimizer terser`
 [demo]: https://github.modevel.de/poc
 [mocha]: https://mochajs.org
 [chai]: https://www.chaijs.com
-[nightwatch]: https://nightwatchjs.org
 [nyc]: https://istanbul.js.org
 [storybook]: https://storybook.js.org/
 [angular devtools]: https://augury.rangle.io
