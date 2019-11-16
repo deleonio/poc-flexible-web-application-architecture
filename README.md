@@ -184,7 +184,7 @@ Currently **not** supported. (TODO: Cypress)
 - ~~Add router to the application context.~~ ✔️
 - Create a cheat sheet for the application architecture concept. ⌛
 - Provide a PWA manifest for each framework artifact. ⌛
-- Coverage test in the build pipeline. ⌛
+- ~~Coverage test in the build pipeline.~~ ✔️
 - E2E tests with Cypress instead of Nightwatch. ⌛
 - ~~Add filters to the application context.~~ ✔️
 
