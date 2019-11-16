@@ -12,7 +12,7 @@ export class AppController {
   public finishedRendering: number | null = null;
   public readonly framework: Framework = DI.get('Framework');
   public readonly filters: any = Filters;
-  public readonly dummies: Object = {
+  public readonly dummies: any = {
     date: new Date(2010, 3, 5),
     price: 123123123
   };
