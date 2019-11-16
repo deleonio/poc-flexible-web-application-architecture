@@ -1,7 +1,8 @@
 import { ListSerieController } from './controller';
 
-function render($ctrl: any) {
+function render($ctrl: any): string {
   let html = `<div>
+  <code>DUMMY ... </code>
   <h5>List</h5>
   <div>
     <button class="btn btn-success" id="add" type="button">
@@ -42,6 +43,7 @@ function render($ctrl: any) {
   });
   html += `<small>Duration: {{ $ctrl.duration }} ms</small>
   </div>`;
+  return html;
 }
 
 class ListSerieComponent extends HTMLElement {

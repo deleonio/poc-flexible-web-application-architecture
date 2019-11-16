@@ -3,7 +3,6 @@
   import { EditSerieController } from './controller';
   import EditorSerieComponent from '../editor/component.svelte';
 
-  export let measuredSerie;
   export let resolvedRoute;
 
   const ctrl = new EditSerieController(resolvedRoute.params.id);

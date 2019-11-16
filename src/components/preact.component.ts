@@ -1,7 +1,7 @@
 import { Component } from 'preact';
 
 export class PreactComponent extends Component {
-  protected $ctrl: Object = null;
+  protected $ctrl: any = null;
 
   constructor(props: any, $ctrl: Object = null) {
     super(props);

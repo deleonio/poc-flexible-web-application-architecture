@@ -5,6 +5,10 @@
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>
     <edit-serie v-if="resolvedRouteRef.url === 'series/:id/edit'" :resolvedRoute="resolvedRouteRef"></edit-serie>
+    <small
+      >Used filters: {{ $ctrl.filters.date($ctrl.dummies.date) }} |
+      {{ $ctrl.filters.currency($ctrl.dummies.price) }} €</small
+    >
   </div>
 </template>
 
@@ -16,6 +20,7 @@ import { ref } from '@vue/composition-api';
 import ListSerieComponent from '../series/list/component.vue';
 import CreateSerieComponent from '../series/create/component.vue';
 import EditSerieComponent from '../series/edit/component.vue';
+import { Filters } from '../../shares/filters';
 
 export default {
   components: {

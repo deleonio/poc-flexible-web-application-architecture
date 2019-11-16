@@ -29,6 +29,7 @@
   - [Open topics](#open-topics)
   - [Known bugs](#known-bugs)
   - [Gained knowledge](#gained-knowledge)
+    - [Moment increase artifact size](#moment-increase-artifact-size)
     - [Artifact analyser](#artifact-analyser)
     - [Artifact minimisation](#artifact-minimisation)
   - [References](#references)
@@ -184,12 +185,17 @@ Currently **not** supported. (TODO: Cypress)
 - Provide a PWA manifest for each framework artifact. ⌛
 - Coverage test in the build pipeline. ⌛
 - E2E tests with Cypress instead of Nightwatch. ⌛
+- ~~Add filters to the application context.~~ ✔️
 
 ## Known bugs
 
 - ~~In the parallel app execution the params routing breaks.~~ ✔️
 
 ## Gained knowledge
+
+### Moment increase artifact size
+
+[Moment] magnifies the build artifact immensely.
 
 ### Artifact analyser
 
@@ -267,3 +273,5 @@ Usage: `yarn build react --minimizer terser`
 [angularjs devtools]: https://chrome.google.com/webstore/detail/ng-inspect-for-angularjs/cidepfmbgngpdapgncfhpecbdhmnnemf
 [svelte devtools]: https://github.com/RedHatter/svelte-devtools
 [aurelia]: https://aurelia.io
+[moment]: https://momentjs.com
+[cypress]: https://cypress.io
