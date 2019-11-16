@@ -29,7 +29,7 @@
   - [Open topics](#open-topics)
   - [Known bugs](#known-bugs)
   - [Gained knowledge](#gained-knowledge)
-    - [Moment increase artifact size](#moment-increase-artifact-size)
+    - [Moment increases the artifact size](#moment-increases-the-artifact-size)
     - [Artifact analyser](#artifact-analyser)
     - [Artifact minimisation](#artifact-minimisation)
   - [References](#references)
@@ -194,7 +194,7 @@ Currently **not** supported. (TODO: Cypress)
 
 ## Gained knowledge
 
-### Moment increase artifact size
+### Moment increases the artifact size
 
 [Moment] magnifies the build artifact immensely.
 
