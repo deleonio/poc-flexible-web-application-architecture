@@ -74,16 +74,17 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 |        Internet Explorer |     ❌      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |     ❌     |    ❌    |           ✔️            |
 |            Framework CLI | ✔️ (253 kB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |     ❌     |    ❌    |           ✔️            |
 |               Scoped App |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |     ✔️     |    ❌    |           ✔️            |
+|         Language Support |     ✔️      |     ⌛      |    ⌛     |    JSX    |   JSX    |   JSX   |     ⌛     |    ✔️    |           ✔️            |
 
 \* The Aurelia CLI can not be used for this project.
 
 #### Devtools
 
-- [Angular Devtools]
+- [Angular Devtools] and language support
 - [AngularJS Devtools]
-- [React Devtools], also for Inferno and Preact
+- [React Devtools], also for Inferno and Preact and language support
 - [Svelte Devtools]
-- [Vue Devtools]
+- [Vue Devtools] and language support
 
 ## Installation
 
