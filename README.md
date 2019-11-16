@@ -62,7 +62,7 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 |                  Merkmal |  [Angular]  | [AngularJS] | [Aurelia] | [Inferno] | [Preact] | [React] |  [Svelte]  | Vanilla  |          [Vue]          |
 | -----------------------: | :---------: | :---------: | :-------: | :-------: | :------: | :-----: | :--------: | :------: | :---------------------: |
 |                  Version |   9.0 rc    |     1.7     |    1.3    |    7.3    |   10.0   |  16.11  | 3.13 alpha |    -     | 2.6 ([Composition API]) |
-|            Artifact size |   611 KiB   |   223 KiB   |  366 KiB  | 67.6 KiB  | 60.2 KiB | 176 KiB |  51.4 KiB  | 15.8 KiB |         120 KiB         |
+|            Artifact size |   611 KiB   |   224 KB   |  367 KB  | 68 KB  | 62 KB | 177 KB |  53 KiB  | 37 KiB |         121 KB         |
 |           Upcomming time |   ~50 ms    |   ~50 ms    |  ~10 ms   |  ~11 ms   |  ~12 ms  | ~13 ms  |   ~13 ms   |    -     |         ~18 ms          |
 |         Performance test |     ⌛      |     ⌛      |    ⌛     |    ⌛     |    ⌛    |   ⌛    |     ⌛     |    ⌛    |           ⌛            |
 | [Devtools](####devtools) |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |     ✔️     |    ❌    |           ✔️            |
