@@ -11,4 +11,6 @@ DI.register('Framework', {
 require('./shares/register');
 require('./shares/routing');
 
-ReactDOM.render(<AppComponent />, document.querySelector('div#react'));
+const htmlDivElement: HTMLDivElement | null = document.querySelector('div#react');
+htmlDivElement.style.display = 'inline';
+ReactDOM.render(<AppComponent />, htmlDivElement);

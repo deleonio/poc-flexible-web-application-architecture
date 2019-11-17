@@ -18,7 +18,9 @@ DI.register('Framework', {
 require('./shares/register');
 require('./shares/routing');
 
-document.querySelector('div#angular').appendChild(APP_HTML_ELEMENT);
+const htmlDivElement: HTMLDivElement | null = document.querySelector('div#angular');
+htmlDivElement.style.display = 'inline';
+htmlDivElement.appendChild(APP_HTML_ELEMENT);
 
 @NgModule({
   bootstrap: [AppComponent],

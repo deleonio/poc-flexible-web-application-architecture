@@ -8,6 +8,8 @@ DI.register('Framework', {
 require('./shares/register');
 require('./shares/routing');
 
+const htmlDivElement: HTMLDivElement | null = document.querySelector('div#svelte');
+htmlDivElement.style.display = 'inline';
 export default new App({
-  target: document.querySelector('div#svelte')
+  target: htmlDivElement
 });

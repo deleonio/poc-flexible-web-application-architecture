@@ -15,4 +15,6 @@ DI.register('Framework', {
 require('./shares/register');
 require('./shares/routing');
 
-render(<AppComponent />, document.querySelector('div#preact'));
+const htmlDivElement: HTMLDivElement | null = document.querySelector('div#preact');
+htmlDivElement.style.display = 'inline';
+render(<AppComponent />, htmlDivElement);

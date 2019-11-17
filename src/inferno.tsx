@@ -10,4 +10,6 @@ DI.register('Framework', {
 require('./shares/register');
 require('./shares/routing');
 
-render(<AppComponent />, document.querySelector('div#inferno'));
+const htmlDivElement: HTMLDivElement | null = document.querySelector('div#inferno');
+htmlDivElement.style.display = 'inline';
+render(<AppComponent />, htmlDivElement);
