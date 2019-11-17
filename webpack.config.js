@@ -139,7 +139,7 @@ module.exports = (env, argv) => {
       minimizer: webpackAdditionals.Minimizers
     },
     plugins: [
-      new CopyWebpackPlugin([{ from: 'src/assets', to: 'assets' }]),
+      new CopyWebpackPlugin([{ from: 'public/', to: '' }]),
       new HtmlWebpackPlugin({
         filename: argv.mode === 'production' ? `${argv.framework}.html` : 'index.html',
         template: 'template.html'
