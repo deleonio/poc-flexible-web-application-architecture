@@ -1,7 +1,7 @@
 import { h } from 'preact';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
-import { PreactComponent } from '../../preact.component';
+import { PreactComponent } from '../../component.preact';
 import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends PreactComponent {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ReactComponent } from '../../react.component';
+import { ReactComponent } from '../../component.react';
 import { EditorSerieComponent } from '../editor/component.react';
 import { CreateSerieController } from './controller';
 

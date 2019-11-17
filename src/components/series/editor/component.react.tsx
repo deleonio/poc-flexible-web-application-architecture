@@ -1,7 +1,7 @@
 import React from 'react';
 
+import { ReactComponent } from '../../component.react';
 import { InputComponent } from '../../input/component.react';
-import { ReactComponent } from '../../react.component';
 import { EditorSerieController } from './controller';
 
 export class EditorSerieComponent extends ReactComponent {

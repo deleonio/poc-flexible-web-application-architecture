@@ -1,4 +1,4 @@
-import { InfernoComponent } from '../../inferno.component';
+import { InfernoComponent } from '../../component.inferno';
 import { InputComponent } from '../../input/component.inferno';
 import { EditorSerieController } from './controller';
 

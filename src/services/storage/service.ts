@@ -1,6 +1,6 @@
 export class StorageService {
   private namespace: string = 'app-store';
-  private browserStorage: any = window.sessionStorage;
+  private browserStorage: any = sessionStorage;
   private memoryStorage: any = {};
 
   public constructor() {

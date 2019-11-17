@@ -1,4 +1,4 @@
-import { InfernoComponent } from '../inferno.component';
+import { InfernoComponent } from '../component.inferno';
 
 export class InputComponent extends InfernoComponent {
   public render() {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MeasuredSerieModel } from '../../../models/measured-series.model';
-import { ReactComponent } from '../../react.component';
+import { ReactComponent } from '../../component.react';
 import { ListSerieController } from './controller';
 
 export class ListSerieComponent extends ReactComponent {

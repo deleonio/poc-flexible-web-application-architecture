@@ -1,6 +1,6 @@
 import { h } from 'preact';
 
-import { PreactComponent } from '../preact.component';
+import { PreactComponent } from '../component.preact';
 
 export class InputComponent extends PreactComponent {
   public render() {

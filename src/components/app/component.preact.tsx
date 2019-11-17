@@ -1,7 +1,7 @@
 import { h } from 'preact';
 
 import { RouterService } from '../../services/router/service';
-import { PreactComponent } from '../preact.component';
+import { PreactComponent } from '../component.preact';
 import { CreateSerieComponent } from '../series/create/component.preact';
 import { EditSerieComponent } from '../series/edit/component.preact';
 import { ListSerieComponent } from '../series/list/component.preact';

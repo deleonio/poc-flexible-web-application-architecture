@@ -1,5 +1,5 @@
 import { RouterService } from '../../services/router/service';
-import { InfernoComponent } from '../inferno.component';
+import { InfernoComponent } from '../component.inferno';
 import { CreateSerieComponent } from '../series/create/component.inferno';
 import { EditSerieComponent } from '../series/edit/component.inferno';
 import { ListSerieComponent } from '../series/list/component.inferno';

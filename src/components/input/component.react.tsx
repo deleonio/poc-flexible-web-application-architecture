@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ReactComponent } from '../react.component';
+import { ReactComponent } from '../component.react';
 
 export class InputComponent extends ReactComponent {
   public render() {

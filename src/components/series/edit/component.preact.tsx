@@ -1,6 +1,6 @@
 import { h } from 'preact';
 
-import { PreactComponent } from '../../preact.component';
+import { PreactComponent } from '../../component.preact';
 import { EditorSerieComponent } from '../editor/component.preact';
 import { EditSerieController } from './controller';
 

@@ -1,7 +1,7 @@
 import { h } from 'preact';
 
+import { PreactComponent } from '../../component.preact';
 import { InputComponent } from '../../input/component.preact';
-import { PreactComponent } from '../../preact.component';
 import { EditorSerieController } from './controller';
 
 export class EditorSerieComponent extends PreactComponent {
