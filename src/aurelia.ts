@@ -12,11 +12,11 @@ require('./shares/register');
 require('./shares/routing');
 
 export function configure(aurelia: Aurelia) {
-  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#inferno');
+  const htmlDivElement: HTMLDivElement | null = document.querySelector('div#aurelia');
   htmlDivElement.style.display = 'inline';
   aurelia.use.standardConfiguration().developmentLogging();
   aurelia.start().then(() => {
-    aurelia.setRoot(PLATFORM.moduleName('components/app/component.aurelia'), document.querySelector('div#aurelia'));
+    aurelia.setRoot(PLATFORM.moduleName('components/app/component.aurelia'), htmlDivElement);
   });
 }
 

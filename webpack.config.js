@@ -146,7 +146,7 @@ module.exports = (env, argv) => {
         { from: 'service-worker.js', to: 'service-worker.js' }
       ]),
       new HtmlWebpackPlugin({
-        filename: `${argv.framework}.html`,
+        filename: argv.mode === 'production' ? `${argv.framework}.html` : 'index.html',
         template: 'template.html'
       })
     ].concat(webpackAdditionals.Plugins),
