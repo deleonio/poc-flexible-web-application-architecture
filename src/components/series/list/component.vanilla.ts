@@ -1,19 +1,21 @@
+import { VanillaComponent } from '../../component.vanilla';
 import { ListSerieController } from './controller';
 
 function render($ctrl: any): string {
   let html = `<div>
-  <code>DUMMY ... </code>
   <h5>List</h5>
   <div>
     <button class="btn btn-success" id="add" type="button">
       Add
-    </button>
-    <button class="btn btn-info" id="start" type="button" ng-if="$ctrl.showPerformanceButton">
+    </button>`;
+  if ($ctrl.showPerformanceButton) {
+    html += `<button class="btn btn-info" id="start" type="button" ng-if="$ctrl.showPerformanceButton">
       Performance
-    </button>
-  </div>`;
-  $ctrl.elements.forEach((element: any, index: number) => {
-    html += `<table class="table" key="${index}">
+    </button>`;
+  }
+  html += `</div>`;
+  for (let i = 0; i < $ctrl.elements.length; i++) {
+    html += `<table class="table" key="${i}">
      <thead>
        <tr>
          <th scope="col">#</th>
@@ -27,9 +29,9 @@ function render($ctrl: any): string {
     $ctrl.measuredSeries.forEach((serie: any, index2: number) => {
       html += `<tr key="${index2}">
       <td>${index2 + 1}</td>
-      <td>{{ serie.getId() }}</td>
-      <td>{{ serie.getTitle() }}</td>
-      <td>{{ serie.getUnit() }}</td>
+      <td>${serie.getId()}</td>
+      <td>${serie.getTitle()}</td>
+      <td>${serie.getUnit()}</td>
       <td>
         <button class="btn btn-info" id="edit-{{$index}}" type="button">
           Edit
@@ -40,25 +42,24 @@ function render($ctrl: any): string {
     html += `
      </tbody>
    </table>`;
-  });
-  html += `<small>Duration: {{ $ctrl.duration }} ms</small>
+  }
+  html += `<small>Duration: ${$ctrl.duration} ms</small>
   </div>`;
   return html;
 }
 
-class ListSerieComponent extends HTMLElement {
+class ListSerieComponent extends VanillaComponent {
   private readonly $ctrl: ListSerieController = new ListSerieController();
 
   constructor() {
     super();
-    this.attachShadow({ delegatesFocus: true, mode: 'open' });
-    this.render();
+    this.$ctrl.renderView = this.render.bind(this);
   }
 
-  private render() {
-    this.shadowRoot.innerHTML = render(this.$ctrl);
-    this.shadowRoot.querySelector('#add').addEventListener('click', this.$ctrl.add);
-    this.shadowRoot.querySelector('#start').addEventListener('click', this.$ctrl.onStart);
+  protected render() {
+    this.dom.innerHTML = render(this.$ctrl);
+    this.dom.querySelector('#add').addEventListener('click', this.$ctrl.add.bind(this.$ctrl));
+    this.dom.querySelector('#start').addEventListener('click', this.$ctrl.onStart.bind(this.$ctrl));
   }
 }
 customElements.define('wc-list-serie', ListSerieComponent);

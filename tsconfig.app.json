@@ -21,5 +21,12 @@
   },
   "files": ["src/angular.ts"],
   "include": ["src/**/*.ts"],
-  "exclude": ["**/svelte.ts", "**/vue.ts", "**/component.inferno.ts", "**/component.preact.ts", "**/component.react.ts"]
+  "exclude": [
+    "**/svelte.ts",
+    "**/vue.ts",
+    "**/component.inferno.ts",
+    "**/component.preact.ts",
+    "**/component.react.ts",
+    "**/component.vanilla.ts"
+  ]
 }
