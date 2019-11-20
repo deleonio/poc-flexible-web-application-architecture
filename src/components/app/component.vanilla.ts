@@ -1,23 +1,49 @@
 import '../series/list/component.vanilla';
 
+import { RouterService } from '../../services/router/service';
 import { VanillaComponent } from '../component.vanilla';
 import { AppController } from './controller';
 
-function render($ctrl: any, counter: number) {
-  return `<div id="app">
-  <h4>${$ctrl.framework.name}</h4>
-  <small>${$ctrl.finishedRendering} ms upcomming time</small>
-  <wc-list-serie></wc-list-serie>
-  <!-- small>${counter} s ticks</small -->
+function render(component: Object) {
+  let html = `<div id="app">
+  <h4>${component.$ctrl.framework.name}</h4>
+  <small>${component.$ctrl.finishedRendering} ms upcomming time</small>`;
+  if (component.resolvedRoute.url === 'series') {
+    html += `<wc-list-serie></wc-list-serie>`;
+  } else if (component.resolvedRoute.url === 'series') {
+    // html += `<wc-create-serie></wc-create-serie>`;
+  } else if (component.resolvedRoute.url === 'series') {
+    // html += `<wc-edit-serie></wc-edit-serie>`;
+  }
+  html += `<!-- small>${component.counter} s ticks</small -->
+  <small>Used filters: ${component.$ctrl.filters.date(
+    component.$ctrl.dummies.date
+  )} | ${component.$ctrl.filters.currency(component.$ctrl.dummies.price)} €</small>
   </div>`;
+  return html;
 }
 
 class AppComponent extends VanillaComponent {
   private readonly $ctrl: AppController = new AppController();
   private counter: number = 0;
+  public resolvedRoute: any = {
+    url: 'series'
+  };
+
+  public constructor() {
+    super();
+    RouterService.subscribe((route: any, params: any, query: any) => {
+      this.resolvedRoute = {
+        params,
+        query,
+        url: route.url
+      };
+      this.render();
+    });
+  }
 
   protected render() {
-    this.dom.innerHTML = render(this.$ctrl, this.counter);
+    this.dom.innerHTML = render(this);
   }
 }
 customElements.define('wc-app', AppComponent);
