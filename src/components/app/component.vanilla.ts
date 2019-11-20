@@ -4,7 +4,7 @@ import { RouterService } from '../../services/router/service';
 import { VanillaComponent } from '../component.vanilla';
 import { AppController } from './controller';
 
-function render(component: Object) {
+function render(component: AppComponent) {
   let html = `<div id="app">
   <h4>${component.$ctrl.framework.name}</h4>
   <small>${component.$ctrl.finishedRendering} ms upcomming time</small>`;
@@ -24,8 +24,8 @@ function render(component: Object) {
 }
 
 class AppComponent extends VanillaComponent {
-  private readonly $ctrl: AppController = new AppController();
-  private counter: number = 0;
+  public readonly $ctrl: AppController = new AppController();
+  public counter: number = 0;
   public resolvedRoute: any = {
     url: 'series'
   };
