@@ -54,6 +54,13 @@ class ListSerieComponent extends VanillaComponent {
   constructor() {
     super();
     this.$ctrl.renderView = this.render.bind(this);
+    // setInterval(() => {
+    //   this.hackMe(this);
+    // }, 10000);
+  }
+
+  public hackMe(component: ListSerieComponent) {
+    console.log(component);
   }
 
   protected render() {

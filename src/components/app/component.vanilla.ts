@@ -1,3 +1,4 @@
+import '../series/create/component.vanilla';
 import '../series/list/component.vanilla';
 
 import { RouterService } from '../../services/router/service';
@@ -10,10 +11,10 @@ function render(component: AppComponent) {
   <small>${component.$ctrl.finishedRendering} ms upcomming time</small>`;
   if (component.resolvedRoute.url === 'series') {
     html += `<wc-list-serie></wc-list-serie>`;
-  } else if (component.resolvedRoute.url === 'series') {
-    // html += `<wc-create-serie></wc-create-serie>`;
-  } else if (component.resolvedRoute.url === 'series') {
-    // html += `<wc-edit-serie></wc-edit-serie>`;
+  } else if (component.resolvedRoute.url === 'series/create') {
+    html += `<wc-create-serie></wc-create-serie>`;
+  } else if (component.resolvedRoute.url === 'series/edit') {
+    html += `<wc-edit-serie></wc-edit-serie>`;
   }
   html += `<!-- small>${component.counter} s ticks</small -->
   <small>Used filters: ${component.$ctrl.filters.date(
