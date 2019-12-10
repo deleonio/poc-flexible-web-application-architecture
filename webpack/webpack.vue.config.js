@@ -1,5 +1,4 @@
 module.exports = (argv, config, babelLoader) => {
-  const path = require('path');
   const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
   config.module.rules.push({
