@@ -1,12 +1,5 @@
-module.exports = (
-  babelConfigPlugins,
-  babelConfigPresets,
-  webpackAdditionals,
-  webpackEntries,
-  webpackResolveModules
-) => {
+module.exports = (argv, config, babelLoader) => {
   const path = require('path');
 
-  babelConfigPresets.push('@babel/preset-typescript');
-  webpackEntries.vanilla = path.join(__dirname, '../', 'src', `vanilla.ts`);
+  config.entry['vanilla'] = path.join(__dirname, '../', 'src', `vanilla.ts`);
 };

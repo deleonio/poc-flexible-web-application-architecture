@@ -1,7 +1,7 @@
-module.exports = (argv, webpackAdditionals) => {
+module.exports = (argv, config, babelLoader) => {
   if (argv.analyzer) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-    webpackAdditionals.Plugins.push(
+    config.plugins.push(
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
         reportFilename: `${argv.framework}.report.html`
@@ -11,15 +11,15 @@ module.exports = (argv, webpackAdditionals) => {
   switch (argv.minimizer) {
     case 'closure':
       const ClosureCompilerPlugin = require('closure-webpack-plugin');
-      webpackAdditionals.Minimizers = [new ClosureCompilerPlugin()];
+      config.optimization.minimizer = [new ClosureCompilerPlugin()];
       break;
     case 'terser':
       const TerserPlugin = require('terser-webpack-plugin');
-      webpackAdditionals.Minimizers = [new TerserPlugin()];
+      config.optimization.minimizer = [new TerserPlugin()];
       break;
     case 'uglifyjs':
       const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-      webpackAdditionals.Minimizers = [new UglifyJsPlugin()];
+      config.optimization.minimizer = [new UglifyJsPlugin()];
       break;
   }
 };

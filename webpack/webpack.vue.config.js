@@ -1,19 +1,12 @@
-module.exports = (
-  babelConfigPlugins,
-  babelConfigPresets,
-  webpackAdditionals,
-  webpackEntries,
-  webpackResolveModules
-) => {
+module.exports = (argv, config, babelLoader) => {
   const path = require('path');
   const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-  babelConfigPresets.push('@babel/preset-typescript');
-  webpackAdditionals.Loaders.push({
+  config.module.rules.push({
     test: /\.vue$/,
     exclude: /node_modules/,
     loader: 'vue-loader'
   });
-  webpackAdditionals.Plugins.push(new VueLoaderPlugin());
-  webpackEntries.vue = path.join(__dirname, '../', 'src', `vue.ts`);
+  config.plugins.push(new VueLoaderPlugin());
+  config.entry['vue'] = path.join(__dirname, '../', 'src', `vue.ts`);
 };

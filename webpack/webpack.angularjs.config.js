@@ -1,13 +1,6 @@
-module.exports = (
-  babelConfigPlugins,
-  babelConfigPresets,
-  webpackAdditionals,
-  webpackEntries,
-  webpackResolveModules
-) => {
+module.exports = (argv, config, babelLoader) => {
   const path = require('path');
 
-  babelConfigPlugins.push('angularjs-annotate');
-  babelConfigPresets.push('@babel/preset-typescript');
-  webpackEntries.angularjs = path.join(__dirname, '../', 'src', `angularjs.ts`);
+  babelLoader.use.options.plugins.push('angularjs-annotate');
+  config.entry['angularjs'] = path.join(__dirname, '../', 'src', `angularjs.ts`);
 };

@@ -4,25 +4,49 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // There are optional features
-const optionalWebpackConfig = require('./webpack/webpack.config.addons');
+const optionalWebpackConfig = require('./webpack/webpack.addons.config');
 
 module.exports = (env, argv) => {
-  const babelConfigPlugins = [];
-  const babelConfigPresets = [];
-  const webpackAdditionals = {
-    Loaders: [],
-    Plugins: []
+  const BABEL_LOADER = {
+    test: /\.(j|t)sx?$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        cacheDirectory: true,
+        plugins: [],
+        presets: ['@babel/preset-typescript']
+      }
+    }
   };
-  const webpackEntries = {};
-  const webpackResolveModules = ['node_modules'];
+
+  const config = {
+    entry: {},
+    output: {
+      path: path.resolve(__dirname, 'dist')
+    },
+    module: {
+      rules: [BABEL_LOADER]
+    },
+    optimization: {
+      minimizer: undefined
+    },
+    plugins: [
+      new CopyWebpackPlugin([{ from: 'public/', to: '' }]),
+      new HtmlWebpackPlugin({
+        filename: argv.mode === 'production' ? `${argv.framework}.html` : 'index.html',
+        template: 'template.html'
+      })
+    ],
+    resolve: {
+      alias: {},
+      modules: ['node_modules'],
+      extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
+    }
+  };
+
   try {
-    require(`./webpack/webpack.${argv.framework}.config`)(
-      babelConfigPlugins,
-      babelConfigPresets,
-      webpackAdditionals,
-      webpackEntries,
-      webpackResolveModules
-    );
+    require(`./webpack/webpack.${argv.framework}.config`)(argv, config, BABEL_LOADER);
   } catch (error) {
     if (/Cannot find module.+webpack..+.config/.test(error)) {
       console.log(`
@@ -36,48 +60,7 @@ module.exports = (env, argv) => {
   }
 
   // Optional features hook
-  optionalWebpackConfig(argv, webpackAdditionals);
-
-  const config = {
-    entry: webpackEntries,
-    output: {
-      path: path.resolve(__dirname, 'dist')
-    },
-    module: {
-      rules: webpackAdditionals.Loaders.concat([
-        {
-          test: /\.(j|t)sx?$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-              plugins: babelConfigPlugins,
-              presets: babelConfigPresets
-            }
-          }
-        }
-      ])
-    },
-    optimization: {
-      minimizer: webpackAdditionals.Minimizers
-    },
-    plugins: [
-      new CopyWebpackPlugin([{ from: 'public/', to: '' }]),
-      new HtmlWebpackPlugin({
-        filename: argv.mode === 'production' ? `${argv.framework}.html` : 'index.html',
-        template: 'template.html'
-      })
-    ].concat(webpackAdditionals.Plugins),
-    resolve: {
-      alias: {
-        'aurelia-binding': path.resolve(__dirname, 'node_modules/aurelia-binding'),
-        inferno: argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js'
-      },
-      modules: webpackResolveModules,
-      extensions: ['.mjs', '.js', '.jsx', '.svelte', '.ts', '.tsx', '.vue']
-    }
-  };
+  optionalWebpackConfig(argv, config);
 
   return config;
 };

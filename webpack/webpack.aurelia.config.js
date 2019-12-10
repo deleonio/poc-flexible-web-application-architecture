@@ -1,26 +1,20 @@
-module.exports = (
-  babelConfigPlugins,
-  babelConfigPresets,
-  webpackAdditionals,
-  webpackEntries,
-  webpackResolveModules
-) => {
+module.exports = (argv, config, babelLoader) => {
   const path = require('path');
   const { AureliaPlugin } = require('aurelia-webpack-plugin');
 
-  babelConfigPresets.push('@babel/preset-typescript');
-  webpackAdditionals.Plugins.push(
+  config.plugins.push(
     new AureliaPlugin({
       aureliaApp: 'aurelia'
     })
   );
-  webpackAdditionals.Loaders.push({
+  config.module.rules.push({
     test: /\.html$/,
     loader: 'html-loader',
     options: {
       attrs: false
     }
   });
-  webpackEntries.aurelia = path.join(__dirname, '../', 'src', `aurelia.ts`);
-  webpackResolveModules.push('src');
+  config.entry['aurelia'] = path.join(__dirname, '../', 'src', `aurelia.ts`);
+  config.resolve.alias['aurelia-binding'] = path.resolve(__dirname, '../', 'node_modules/aurelia-binding');
+  config.resolve.modules.push('src');
 };

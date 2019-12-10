@@ -1,18 +1,13 @@
-module.exports = (
-  babelConfigPlugins,
-  babelConfigPresets,
-  webpackAdditionals,
-  webpackEntries,
-  webpackResolveModules
-) => {
+module.exports = (argv, config, babelLoader) => {
   const path = require('path');
 
-  babelConfigPlugins.push([
+  babelLoader.use.options.plugins.push([
     'babel-plugin-inferno',
     {
       imports: true
     }
   ]);
-  babelConfigPresets.push('@babel/preset-typescript');
-  webpackEntries.inferno = path.join(__dirname, '../', 'src', `inferno.tsx`);
+  config.entry['inferno'] = path.join(__dirname, '../', 'src', `inferno.tsx`);
+  config.resolve.alias.inferno =
+    argv.mode === 'production' ? 'inferno/dist/index.esm.js' : 'inferno/dist/index.dev.esm.js';
 };
