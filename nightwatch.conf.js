@@ -2,6 +2,7 @@ const chromedriver = require('chromedriver');
 
 module.exports = {
   src_folders: ['e2e'],
+  globals_path: './config/global.js',
   webdriver: {
     start_process: true,
     server_path: chromedriver.path,
