@@ -45,6 +45,9 @@ module.exports = (env, argv) => {
     }
   };
 
+  // The default entry file
+  config.entry[argv.framework] = path.join(__dirname, 'src', `${argv.framework}.ts`);
+
   try {
     require(`./webpack/webpack.${argv.framework}.config`)(argv, config, BABEL_LOADER);
   } catch (error) {

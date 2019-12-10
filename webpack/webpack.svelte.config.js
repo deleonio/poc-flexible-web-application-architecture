@@ -6,5 +6,4 @@ module.exports = (argv, config, babelLoader) => {
     exclude: /node_modules/,
     use: 'svelte-loader'
   });
-  config.entry['svelte'] = path.join(__dirname, '../', 'src', `svelte.ts`);
 };

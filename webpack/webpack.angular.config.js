@@ -13,5 +13,4 @@ module.exports = (argv, config, babelLoader) => {
       sourceMap: true
     })
   );
-  config.entry['angular'] = path.join(__dirname, '../', 'src', 'angular.ts');
 };

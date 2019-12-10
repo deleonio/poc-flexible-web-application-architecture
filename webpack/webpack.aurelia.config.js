@@ -14,7 +14,6 @@ module.exports = (argv, config, babelLoader) => {
       attrs: false
     }
   });
-  config.entry['aurelia'] = path.join(__dirname, '../', 'src', `aurelia.ts`);
   config.resolve.alias['aurelia-binding'] = path.resolve(__dirname, '../', 'node_modules/aurelia-binding');
   config.resolve.modules.push('src');
 };

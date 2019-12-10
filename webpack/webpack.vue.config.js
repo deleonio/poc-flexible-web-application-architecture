@@ -8,5 +8,4 @@ module.exports = (argv, config, babelLoader) => {
     loader: 'vue-loader'
   });
   config.plugins.push(new VueLoaderPlugin());
-  config.entry['vue'] = path.join(__dirname, '../', 'src', `vue.ts`);
 };
