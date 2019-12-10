@@ -21,6 +21,7 @@ jobs:
         - tslint src/**/*.ts src/**/*.tsx
         - yarn coverage
         - yarn coveralls
+        - yarn e2e -e headless
         - yarn build-all
         # - export SSHPASS=${SFTP_PASSWORD}
         # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
