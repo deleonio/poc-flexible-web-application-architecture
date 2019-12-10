@@ -10,6 +10,8 @@ notifications:
   email:
     on_success: change
     on_failure: always
+addons:
+  chrome: stable
 # before_install:
 #   - sudo apt-get install sshpass
 install:
