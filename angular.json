@@ -18,7 +18,7 @@
           "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist",
-            "index": "index.html",
+            "index": "template.html",
             "main": "src/angular.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
