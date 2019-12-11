@@ -150,6 +150,24 @@ Currently the [Vue CLI] is partially supported. You must delete all non-vue sour
 - `yarn vue:serve` executes `vue-cli-service serve src/vue.ts`
 - `yarn vue:build[ --prod]` executes `vue-cli-service build src/vue.ts`
 
+> You must remove the root slashes!
+>
+> Before:
+>
+> ```
+> <script src="/js/chunk-vendors.c6f5dd88.js"></script>
+> <script src="/js/app.c9cc3ddc.js"></script>
+> ```
+>
+> After:
+>
+> ```
+> <script src="js/chunk-vendors.c6f5dd88.js"></script>
+> <script src="js/app.c9cc3ddc.js"></script>
+> ```
+>
+> .
+
 ##### Installation
 
 Please use primary this documentation: https://cli.vuejs.org/guide/installation.html
