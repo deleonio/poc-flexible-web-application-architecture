@@ -12,7 +12,7 @@ addons:
     packages:
     - libgconf-2-4
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.2
   - export PATH="$HOME/.yarn/bin:$PATH"
 #   - sudo apt-get install sshpass
 cache: yarn
