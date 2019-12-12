@@ -185,7 +185,7 @@ Currently **not** supported.
 
 ### E2E-Test
 
-Currently **not** supported. (TODO: Cypress)
+Execute all e2e tests with `yarn e2e` or `yarn e2e -e headless` for running headless.
 
 ## Documentation
 
