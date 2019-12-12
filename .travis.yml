@@ -1,36 +1,33 @@
+# sudo: true
 language: node_js
 node_js:
-  - "lts/*"
+  - 12
 cache:
   yarn: true
-#   directories:
-#     - ~/.cache
-#     - ~/.npm
-#     - ./node_modules
-#     - ./yarn.lock
-addons:
-  chrome: stable
-  apt:
-    packages:
-    - libgconf-2-4
+  directories:
+    - node_modules
 notifications:
   email:
     on_success: change
     on_failure: always
-before_install:
-  # - sudo apt-get install sshpass
+# addons:
+#   chrome: stable
+# before_install:
+#   - sudo apt-get install sshpass
 install:
   - yarn
-script:
-  - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
-  - tslint src/**/*.ts src/**/*.tsx
-  - yarn coverage
-  - yarn coveralls
-  # - yarn e2e -e headless
-  - yarn build-all
-  # - export SSHPASS=${SFTP_PASSWORD}
-  # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
-  # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
+jobs:
+  include:
+    - script:
+        - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
+        - tslint src/**/*.ts src/**/*.tsx
+        - yarn coverage
+        - yarn coveralls
+        # - yarn e2e -e headless
+        - yarn build-all
+        # - export SSHPASS=${SFTP_PASSWORD}
+        # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
+        # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
 # deploy:
 #   skip_cleanup: true
 #   provider: script
