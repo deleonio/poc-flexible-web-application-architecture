@@ -7,6 +7,7 @@ import { AppController } from './controller';
 
 function render(component: AppComponent) {
   let html = `<div id="app">
+  <code>- is currently not full implemented -</code>
   <h4>${component.$ctrl.framework.name}</h4>
   <small>${component.$ctrl.finishedRendering} ms upcomming time</small>`;
   if (component.resolvedRoute.url === 'series') {
