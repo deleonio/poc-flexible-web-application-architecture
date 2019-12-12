@@ -12,6 +12,7 @@ cache:
     - ./yarn.lock
   override:
     - yarn
+    - yarn upgrade
 addons:
   chrome: stable
   apt:
