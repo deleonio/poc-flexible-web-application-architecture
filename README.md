@@ -75,7 +75,7 @@ The selection of the following frameworks depends on this [report](https://ashle
 |        Internet Explorer |     ❌      |     ✔️      |    ❌     |    ✔️     |    ✔️    |   ✔️    |    ❌    |   ❌    |           ✔️            |
 |            Framework CLI | ✔️<br>(253 KB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |   ❌    |           ✔️<br>(121 KB)            |
 |               Scoped App |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ❌    |           ✔️            |
-|         Language Support |     ✔️      |     ⌛      |    ⌛     |    ✔️<br>JSX/TSX    |   ✔️<br>JSX/TSX    |   ✔️<br>JSX/TSX   |    ⌛    |   ✔️    |           ✔️            |
+|         Language Support |     ✔️      |     ⌛      |    ⌛     |    ✔️<br>[JSX/TSX]    |   ✔️<br>[JSX/TSX]    |   ✔️<br>[JSX/TSX]   |    ⌛    |   ✔️    |           ✔️            |
 
 \* The Aurelia CLI can not be used for this project.
 
@@ -296,3 +296,4 @@ Usage: `yarn build react --minimizer terser`
 [moment]: https://momentjs.com
 [cypress]: https://cypress.io
 [Nightwatch.js]: https://nightwatchjs.org
+[JSX/TSX]: https://www.jambit.com/aktuelles/toilet-papers/was-ist-eigentlich-jsx-tsx/
