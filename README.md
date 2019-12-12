@@ -72,7 +72,7 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 |                    [SPA] |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
 |                    [PWA] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
 |                    [SSR] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
-|        Internet Explorer |     ❌      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ❌    |   ❌    |           ✔️            |
+|        Internet Explorer |     ❌      |     ✔️      |    ❌     |    ✔️     |    ✔️    |   ✔️    |    ❌    |   ❌    |           ✔️            |
 |            Framework CLI | ✔️ (253 KB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |   ❌    |           ✔️            |
 |               Scoped App |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ❌    |           ✔️            |
 |         Language Support |     ✔️      |     ⌛      |    ⌛     |    JSX    |   JSX    |   JSX   |    ⌛    |   ✔️    |           ✔️            |
