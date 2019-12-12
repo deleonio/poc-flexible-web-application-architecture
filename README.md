@@ -51,6 +51,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 | [TypeScript] |     Language     |
 | [Mocha]      | Unit-Test-Runner |
 | [Chai]       |    Assertion     |
+| [Nightwatch.js]    | E2E-Test-Runner  |
 | [Cypress]    | E2E-Test-Runner  |
 | [NYC]        |  Code-Coverage   |
 | [Storybook]  |  Documentation   |
@@ -203,7 +204,7 @@ Currently **not** supported. (TODO: Cypress)
 - Create a cheat sheet for the application architecture concept. ⌛
 - Provide a PWA manifest for each framework artifact. ⌛
 - ~~Coverage test in the build pipeline.~~ ✔️
-- E2E tests with Cypress instead of Nightwatch. ⌛
+- ~~E2E tests with Cypress instead of Nightwatch.~~ ❌ // E2E-Testing in headless mode, works. ✔️
 - ~~Add filters to the application context.~~ ✔️
 
 ## Known bugs
@@ -294,3 +295,4 @@ Usage: `yarn build react --minimizer terser`
 [aurelia]: https://aurelia.io
 [moment]: https://momentjs.com
 [cypress]: https://cypress.io
+[Nightwatch.js]: https://nightwatchjs.org
