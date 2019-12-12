@@ -3,7 +3,6 @@ language: node_js
 node_js:
   - "lts/*"
 cache:
-#   npm: true
   yarn: true
   directories:
     - ~/.cache
@@ -17,6 +16,7 @@ addons:
   chrome: stable
   apt:
     packages:
+    # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
     - libgconf-2-4
 notifications:
   email:
@@ -31,15 +31,14 @@ before_install: # if "install" is overridden
   - sudo apt-get install -y -qq yarn
 #   - sudo apt-get install sshpass
 install:
-# - npm ci
-- yarn
-- yarn upgrade
+  - yarn
+  - yarn upgrade
 script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - tslint src/**/*.ts src/**/*.tsx
-  - npm run coverage
-  - npm run  coveralls
-  - npm run  e2e -e headless
+  - yarn coverage
+  - nyarn coveralls
+  - yarn e2e -e headless
   - yarn build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
