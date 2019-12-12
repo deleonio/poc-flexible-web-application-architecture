@@ -58,7 +58,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 ### Frameworks
 
-The selection of the following frameworks depends on this [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_78.html).
+The selection of the following frameworks depends on this [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential) and [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_78.html).
 
 |                  Merkmal |  [Angular]  | [AngularJS] | [Aurelia] | [Inferno] | [Preact] | [React] | [Svelte] | Vanilla |          [Vue]          |
 | -----------------------: | :---------: | :---------: | :-------: | :-------: | :------: | :-----: | :------: | :-----: | :---------------------: |
@@ -73,9 +73,9 @@ The selection of the following frameworks depends on this [benchmark](https://kr
 |                    [PWA] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
 |                    [SSR] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
 |        Internet Explorer |     ❌      |     ✔️      |    ❌     |    ✔️     |    ✔️    |   ✔️    |    ❌    |   ❌    |           ✔️            |
-|            Framework CLI | ✔️ (253 KB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |   ❌    |           ✔️            |
+|            Framework CLI | ✔️<br>(253 KB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |   ❌    |           ✔️<br>(121 KB)            |
 |               Scoped App |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ❌    |           ✔️            |
-|         Language Support |     ✔️      |     ⌛      |    ⌛     |    JSX    |   JSX    |   JSX   |    ⌛    |   ✔️    |           ✔️            |
+|         Language Support |     ✔️      |     ⌛      |    ⌛     |    ✔️<br>JSX/TSX    |   ✔️<br>JSX/TSX    |   ✔️<br>JSX/TSX   |    ⌛    |   ✔️    |           ✔️            |
 
 \* The Aurelia CLI can not be used for this project.
 
