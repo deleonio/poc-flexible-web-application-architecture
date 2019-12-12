@@ -77,8 +77,7 @@ The selection of the following frameworks depends on this [report](https://ashle
 |               Scoped App |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ❌    |           ✔️            |
 |         Language Support |     ✔️      |     ⌛      |    ⌛     |    ✔️<br>[JSX/TSX]    |   ✔️<br>[JSX/TSX]    |   ✔️<br>[JSX/TSX]   |    ⌛    |   ✔️    |           ✔️            |
 
-\* Maybe more polyfills are required for IE.
-
+\* Maybe more polyfills are required for IE.<br>
 \*\* The Aurelia CLI can not be used for this project.
 
 #### Devtools
