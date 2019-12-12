@@ -8,6 +8,7 @@ cache:
     - ~/.cache
     - ~/.npm
     - ./node_modules
+    - ./yarn.lock
 addons:
   chrome: stable
   apt:
@@ -25,8 +26,8 @@ before_install: # if "install" is overridden
   - sudo apt-get update -qq
   - sudo apt-get install -y -qq yarn
 #   - sudo apt-get install sshpass
-# install:
-#   - yarn
+install:
+  - yarn
 jobs:
   include:
     - script:
