@@ -3,7 +3,8 @@ language: node_js
 node_js:
   - "lts/*"
 cache:
-  yarn: true
+  npm: true
+  yarn: false
   directories:
     - ~/.cache
     - ~/.npm
@@ -25,16 +26,17 @@ before_install: # if "install" is overridden
   - sudo apt-get update -qq
   - sudo apt-get install -y -qq yarn
 #   - sudo apt-get install sshpass
-# install:
+install:
+- npm ci
 #   - yarn
 jobs:
   include:
     - script:
         - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
         - tslint src/**/*.ts src/**/*.tsx
-        - yarn coverage
-        - yarn coveralls
-        - yarn e2e -e headless
+        - npm run coverage
+        - npm run  coveralls
+        - npm run  e2e -e headless
         - yarn build-all
         # - export SSHPASS=${SFTP_PASSWORD}
         # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
