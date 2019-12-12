@@ -14,23 +14,19 @@ addons:
 # before_install:
 #   - sudo apt-get install sshpass
 cache: 
-  npm: true
+  yarn: true
   directories:
     - ~/.cache
-    - ~/.npm
     - ./node_modules
-    - ./package-lock.json
-  override:
-    - npm ci
-    - npm install
-    - npm update
+install:
+  - yarn
 script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - tslint src/**/*.ts src/**/*.tsx
-  - npm run coverage
-  - npm run coveralls
-  - npm run e2e -e headless
-  - npm run build-all
+  - yarn coverage
+  - yarn coveralls
+  - yarn e2e -e headless
+  - yarn build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
   # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
