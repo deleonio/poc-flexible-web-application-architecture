@@ -1,7 +1,7 @@
 # sudo: true
 language: node_js
 node_js:
-  - 12
+  - "lts/*"
 notifications:
   email:
     on_success: change
@@ -13,7 +13,16 @@ addons:
     - libgconf-2-4
 # before_install:
 #   - sudo apt-get install sshpass
-cache: npm
+cache: 
+  npm: true
+  directories:
+    - ~/.cache
+    - ~/.npm
+    - ./node_modules
+  override:
+    - npm ci
+    - npm install
+    - npm update
 script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - tslint src/**/*.ts src/**/*.tsx
