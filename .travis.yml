@@ -3,11 +3,11 @@ node_js:
   - "lts/*"
 cache:
   yarn: true
-  directories:
-    - ~/.cache
-    - ~/.npm
-    - ./node_modules
-    - ./yarn.lock
+#   directories:
+#     - ~/.cache
+#     - ~/.npm
+#     - ./node_modules
+#     - ./yarn.lock
 addons:
   chrome: stable
   apt:
