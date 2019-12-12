@@ -32,6 +32,7 @@ before_install: # if "install" is overridden
 install:
 # - npm ci
 - yarn
+- yarn upgrade
 script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - tslint src/**/*.ts src/**/*.tsx
