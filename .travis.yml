@@ -3,8 +3,8 @@ language: node_js
 node_js:
   - "lts/*"
 cache:
-  npm: true
-  yarn: false
+#   npm: true
+  yarn: true
   directories:
     - ~/.cache
     - ~/.npm
