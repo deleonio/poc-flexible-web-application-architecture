@@ -9,6 +9,7 @@ cache:
     - ~/.cache
     - ~/.npm
     - ./node_modules
+    - ./yarn.lock
   override:
     - yarn
 addons:
