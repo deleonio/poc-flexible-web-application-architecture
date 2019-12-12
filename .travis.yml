@@ -21,18 +21,16 @@ before_install:
   # - sudo apt-get install sshpass
 install:
   - yarn
-jobs:
-  include:
-    - script:
-        - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
-        - tslint src/**/*.ts src/**/*.tsx
-        - yarn coverage
-        - yarn coveralls
-        # - yarn e2e -e headless
-        - yarn build-all
-        # - export SSHPASS=${SFTP_PASSWORD}
-        # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
-        # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
+script:
+  - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
+  - tslint src/**/*.ts src/**/*.tsx
+  - yarn coverage
+  - yarn coveralls
+  # - yarn e2e -e headless
+  - yarn build-all
+  # - export SSHPASS=${SFTP_PASSWORD}
+  # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
+  # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
 # deploy:
 #   skip_cleanup: true
 #   provider: script
