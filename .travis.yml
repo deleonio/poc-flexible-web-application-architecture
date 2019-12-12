@@ -19,6 +19,7 @@ cache:
     - ~/.cache
     - ~/.npm
     - ./node_modules
+    - ./package-lock.json
   override:
     - npm ci
     - npm install
