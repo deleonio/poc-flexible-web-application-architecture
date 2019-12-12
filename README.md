@@ -72,12 +72,13 @@ The selection of the following frameworks depends on this [report](https://ashle
 |                    [SPA] |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
 |                    [PWA] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
 |                    [SSR] |     ✔️      |     ✔️      |    ⌛     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ✔️    |           ✔️            |
-|        Internet Explorer |     ❌      |     ✔️      |    ❌     |    ✔️     |    ✔️    |   ✔️    |    ❌    |   ❌    |           ✔️            |
-|            Framework CLI | ✔️<br>(253 KB) |     ❌      |   ✔️\*    |    ❌     |    ❌    |   ❌    |    ❌    |   ❌    |           ✔️<br>(121 KB)            |
+|        Internet Explorer\* |     ❌      |     ✔️      |    ❌     |    ✔️     |    ✔️    |   ✔️    |    ❌    |   ❌    |           ✔️            |
+|            Framework CLI | ✔️<br>(253 KB) |     ❌      |   ✔️\*\*    |    ❌     |    ❌    |   ❌    |    ❌    |   ❌    |           ✔️<br>(121 KB)            |
 |               Scoped App |     ✔️      |     ✔️      |    ✔️     |    ✔️     |    ✔️    |   ✔️    |    ✔️    |   ❌    |           ✔️            |
 |         Language Support |     ✔️      |     ⌛      |    ⌛     |    ✔️<br>[JSX/TSX]    |   ✔️<br>[JSX/TSX]    |   ✔️<br>[JSX/TSX]   |    ⌛    |   ✔️    |           ✔️            |
 
-\* The Aurelia CLI can not be used for this project.
+\* Maybe more polyfills are required for IE.
+\*\* The Aurelia CLI can not be used for this project.
 
 #### Devtools
 
