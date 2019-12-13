@@ -17,14 +17,14 @@
     "coveralls": "coveralls < coverage/lcov.info",
     "e2e": "nightwatch",
     "ng:serve": "ng serve",
-    "ng:build": "ng build --prod --single-bundle",
+    "ng:build": "ng build --prod",
     "reinstall": "rm -rf node_modules && npm run",
     "serve": "webpack-dev-server --colors --devtool source-map --progress --framework",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
     "test": "cross-env NODE_ENV=test mocha --watch-extensions ts",
     "vue:serve": "vue-cli-service serve src/vue.ts",
-    "vue:build": "vue-cli-service build src/vue.ts",
+    "vue:build": "vue-cli-service build src/vue.ts --prod",
     "update": "npm run && npm run upgrade && npm run outdated"
   },
   "husky": {

@@ -90,13 +90,13 @@ The selection of the following frameworks depends on this [report](https://ashle
 
 ## Installation
 
-Run `yarn` / `npm install` in the bash. If there any problems with the installed dependencies, you can reinstall everything with `yarn reinstall` / `npm run reinstall`.
+Run `npm install` in the bash. If there any problems with the installed dependencies, you can reinstall everything with `npm run reinstall` / `npm run reinstall`.
 
 ## Guide
 
 ### Usual usage without CLI
 
-Normally the binaries `yarn` or `npm` are used to execute the scripts.
+Normally the binaries `npm` are used to execute the scripts.
 
 #### Serve
 
@@ -112,22 +112,21 @@ Currently the following frameworks are available:
 - `vanilla`
 - `vue`
 
-Use this command to serve the application: `yarn serve <framework>[ --open]`
+Use this command to serve the application: `npm run serve <framework>[ -- --open]`
 
 For example:
 
-- `yarn serve inferno --open`
 - `npm run serve inferno`
+- `npm run serve inferno -- --open`
 
 > The optional option `--open` open the app in you default browser.
 
 #### Build
 
-Use this command to build the application: `yarn build <framework>`
+Use this command to build the application: `npm run build <framework>`
 
 For example:
 
-- `yarn build inferno`
 - `npm run build inferno`
 
 ### Command Line Interfaces
@@ -138,8 +137,8 @@ You should know that this project should show the generic architecture concept. 
 
 Currently the [Angular CLI] is partially supported. ~~You must delete all non-angular sources from the `src/` folder.~~
 
-- `yarn ng:serve` executes `ng serve`
-- `yarn ng:build` executes `ng build --prod --single-bundle`
+- `npm run ng:serve` executes `ng serve`
+- `npm run ng:build` executes `ng build --prod`
 
 ##### Installation
 
@@ -149,8 +148,8 @@ Please use primary this documentation: https://angular.io/cli
 
 Currently the [Vue CLI] is partially supported. You must delete all non-vue sources from the `src/` folder.
 
-- `yarn vue:serve` executes `vue-cli-service serve src/vue.ts`
-- `yarn vue:build[ --prod]` executes `vue-cli-service build src/vue.ts`
+- `npm run vue:serve` executes `vue-cli-service serve src/vue.ts`
+- `npm run vue:build` executes `vue-cli-service build src/vue.ts`
 
 > You must remove the root slashes!
 >
@@ -178,7 +177,7 @@ Please use primary this documentation: https://cli.vuejs.org/guide/installation.
 
 ### Unit-Test
 
-Execute all unit tests with `yarn test` or `yarn test --watch`.
+Execute all unit tests with `npm run test` or `npm run test -- --watch`.
 
 ### Snapshot-Test
 
@@ -186,14 +185,14 @@ Currently **not** supported.
 
 ### E2E-Test
 
-Execute all e2e tests with `yarn e2e` or `yarn e2e -e headless` for running headless.
+Execute all e2e tests with `npm run e2e` or `npm run e2e -- -e headless` for running headless.
 
 ## Documentation
 
 [Storybook] is a realy nice tool to document the components and there usage.
 
-- `yarn storybook:serve` for serve the documentation
-- `yarn storybook:build` for build the documentation
+- `npm run storybook:serve` for serve the documentation
+- `npm run storybook:build` for build the documentation
 
 ## Open topics
 
@@ -226,7 +225,7 @@ Needs additional devDependency:
 
 - webpack-bundle-analyzer: ~3.6.0
 
-Usage: `yarn build angular --analyser`
+Usage: `npm run build angular -- --analyser`
 
 ### Artifact minimisation
 
@@ -243,7 +242,7 @@ Needs additional devDependencies:
 - terser-webpack-plugin: ~2.2.0
 - uglifyjs-webpack-plugin: ~2.2.0
 
-Usage: `yarn build react --minimizer terser`
+Usage: `npm run build react -- --minimizer terser`
 
 ## References
 
