@@ -18,14 +18,14 @@
     "e2e": "nightwatch",
     "ng:serve": "ng serve",
     "ng:build": "ng build --prod",
-    "reinstall": "rm -rf node_modules && npm run",
+    "reinstall": "rm -rf node_modules package-lock.json && npm install --no-save",
     "serve": "webpack-dev-server --colors --devtool source-map --progress --framework",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
     "test": "cross-env NODE_ENV=test mocha --watch-extensions ts",
     "vue:serve": "vue-cli-service serve src/vue.ts",
     "vue:build": "vue-cli-service build src/vue.ts --prod",
-    "update": "npm run && npm run upgrade && npm run outdated"
+    "update": "npm install --no-save && npm update --no-save && npm outdated"
   },
   "husky": {
     "hooks": {

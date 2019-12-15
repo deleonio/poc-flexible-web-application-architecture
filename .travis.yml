@@ -1,7 +1,7 @@
 # sudo: true
 language: node_js
 node_js:
-  - "lts/*"
+  - 'lts/*'
 notifications:
   email:
     on_success: change
@@ -10,23 +10,23 @@ addons:
   chrome: stable
   apt:
     packages:
-    - libgconf-2-4
+      - libgconf-2-4
 # before_install:
 #   - sudo apt-get install sshpass
-cache: 
-  yarn: true
+cache:
+  npm: true
   directories:
     - ~/.cache
     - ./node_modules
-install:
-  - yarn
+# install:
+#   - npm install
 script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - tslint src/**/*.ts src/**/*.tsx
-  - yarn coverage
-  - yarn coveralls
-  - yarn e2e -e headless
-  - yarn build-all
+  - npm run coverage
+  - npm run coveralls
+  - npm run e2e -e headless
+  - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
   # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
