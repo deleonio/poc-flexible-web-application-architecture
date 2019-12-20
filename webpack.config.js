@@ -26,7 +26,18 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist')
     },
     module: {
-      rules: [BABEL_LOADER]
+      rules: [
+        BABEL_LOADER,
+        {
+          test: /\.s[ac]ss$/,
+          use: ['style-loader', 'css-loader', 'sass-loader']
+        },
+        // raw-loader ... good idea?!
+        {
+          test: /\.jpg$/,
+          use: 'raw-loader'
+        }
+      ]
     },
     optimization: {
       minimizer: undefined
