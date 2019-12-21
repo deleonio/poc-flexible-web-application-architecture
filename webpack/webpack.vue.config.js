@@ -1,6 +1,6 @@
 module.exports = (argv, config, babelLoader) => {
   const VueLoaderPlugin = require('vue-loader/lib/plugin');
-  const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
+  // const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 
   config.module.rules.push({
     test: /\.vue$/,
@@ -13,5 +13,5 @@ module.exports = (argv, config, babelLoader) => {
   });
 
   config.plugins.push(new VueLoaderPlugin());
-  config.plugins.push(new VuetifyLoaderPlugin());
+  // config.plugins.push(new VuetifyLoaderPlugin());
 };

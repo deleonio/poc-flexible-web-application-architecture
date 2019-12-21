@@ -1,9 +1,10 @@
-.nyc_output
-coverage
-dist
-node_modules
-storybook-static
-tests_output
+.ignore/
+.nyc_output/
+coverage/
+dist/
+node_modules/
+storybook-static/
+tests_output/
 package-lock.json
 yarn.lock
 *.log
