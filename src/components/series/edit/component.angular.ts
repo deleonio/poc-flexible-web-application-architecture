@@ -10,7 +10,7 @@ import { EditSerieController } from './controller';
       <editor-serie [editorForm]="$ctrl.editorForm"></editor-serie>
       <button class="btn btn-primary" type="submit" id="submit">Edit</button>
       <button class="btn btn-secondary" type="reset" id="cancel" (click)="$ctrl.onCancel()">
-        Abbrechen Abbrechen
+        Abbrechen
       </button>
       <button class="btn btn-danger" id="delete" type="button" (click)="$ctrl.onDelete()">
         Delete
