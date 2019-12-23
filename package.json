@@ -44,11 +44,37 @@
     ]
   },
   "dependencies": {
+    "@angular/common": "~9.0.0-rc",
+    "@angular/compiler": "~9.0.0-rc",
+    "@angular/core": "~9.0.0-rc",
+    "@angular/forms": "~9.0.0-rc",
+    "@angular/platform-browser": "~9.0.0-rc",
+    "@angular/platform-browser-dynamic": "~9.0.0-rc",
+    "@types/react": "~16.9.0",
+    "@vue/composition-api": "~0.3.0",
+    "angular": "~1.7.0",
+    "aurelia-framework": "~1.3.0",
+    "core-js": "~3.6.0",
+    "inferno": "~7.3.0",
     "navigo": "~7.1.0",
+    "preact": "~10.1.0",
+    "react": "~16.12.0",
+    "react-dom": "~16.12.0",
     "register-service-worker": "~1.6.0",
-    "rxjs": "~6.5.0"
+    "rxjs": "~6.5.0",
+    "svelte": "~3.16.0",
+    "vue": "~2.6.0",
+    "zone.js": "~0.10.0"
   },
   "devDependencies": {
-    "@modevel/cli": "~1.0.0-beta"
+    "@modevel/cli": "~1.0.0-beta",
+    "@modevel/cli-angular": "~1.0.0-beta",
+    "@modevel/cli-angularjs": "~1.0.0-beta",
+    "@modevel/cli-aurelia": "~1.0.0-beta",
+    "@modevel/cli-inferno": "~1.0.0-beta",
+    "@modevel/cli-react": "~1.0.0-beta",
+    "@modevel/cli-preact": "~1.0.0-beta",
+    "@modevel/cli-svelte": "~1.0.0-beta",
+    "@modevel/cli-vue": "~1.0.0-beta"
   }
 }
