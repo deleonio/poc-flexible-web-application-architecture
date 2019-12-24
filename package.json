@@ -9,7 +9,7 @@
     "url": "http://martinoppitz.com"
   },
   "scripts": {
-    "build": "webpack --mode production --framework",
+    "build": "mo build --framework",
     "build-all": "npm run build angular && npm run build angularjs && npm run build  aurelia && npm run build inferno && npm run build preact && npm run build react && npm run build svelte && npm run build vanilla && npm run build vue",
     "commit": "git add . && git commit && git push",
     "clear": "rm -rf .nyc_output coverage dist tests_output *.log",
@@ -19,7 +19,7 @@
     "ng:serve": "ng serve",
     "ng:build": "ng build --prod",
     "reinstall": "rm -rf node_modules package-lock.json && npm install --no-save",
-    "serve": "webpack-dev-server --colors --devtool source-map --progress --framework",
+    "serve": "mo serve --framework",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
     "test": "cross-env NODE_ENV=test mocha --watch-extensions ts",
