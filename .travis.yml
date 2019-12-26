@@ -13,14 +13,14 @@ addons:
       - libgconf-2-4
 # before_install:
 #   - sudo apt-get install sshpass
-cache:
-  npm: false
-  directories:
-    - ~/.cache
-    - ./node_modules
-install:
-  - npm install --no-save
-  - npm update --no-save
+# cache:
+#   npm: false
+#   directories:
+#     - ~/.cache
+#     - ./node_modules
+# install:
+# - npm install --no-save
+# - npm update --no-save
 script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - tslint src/**/*.ts src/**/*.tsx
