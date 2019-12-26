@@ -14,7 +14,7 @@ addons:
 # before_install:
 #   - sudo apt-get install sshpass
 cache:
-  npm: true
+  npm: false
   directories:
     - ~/.cache
     - ./node_modules
