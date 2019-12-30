@@ -9,19 +9,19 @@
     "url": "http://martinoppitz.com"
   },
   "scripts": {
-    "build": "webpack --config node_modules/@modevel/cli/webpack.config.js --mode production --framework",
-    "build-all": "npm run build angular && npm run build angularjs && npm run build  aurelia && npm run build inferno && npm run build preact && npm run build react && npm run build svelte && npm run build vanilla && npm run build vue",
+    "build": "mo build",
+    "build-all": "mo build -f angular && mo build -f angularjs && mo build -f  aurelia && mo build -f inferno && mo build -f preact && mo build -f react && mo build -f svelte && mo build -f vanilla && mo build -f vue",
     "clear": "rm -rf .nyc_output coverage dist storybook-static tests_output *.log",
     "coverage": "cross-env NODE_ENV=test nyc mocha --config node_modules/@modevel/cli/.mocharc.js && nyc check-coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "e2e": "nightwatch",
+    "e2e": "mo e2e",
     "ng:serve": "ng serve",
     "ng:build": "ng build --prod",
     "reinstall": "rm -rf node_modules package-lock.json && npm install --no-save",
-    "serve": "webpack-dev-server --config node_modules/@modevel/cli/webpack.config.js --colors --devtool source-map --progress --framework",
+    "serve": "mo serve",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
-    "test": "cross-env NODE_ENV=test mocha --config node_modules/@modevel/cli/.mocharc.js --watch-extensions ts",
+    "test": "mo test",
     "vue:serve": "vue-cli-service serve src/vue.ts",
     "vue:build": "vue-cli-service build src/vue.ts --prod",
     "update": "npm install --no-save && npm update --no-save && npm outdated"
@@ -74,6 +74,7 @@
     "@modevel/cli-react": "~1.0.0-beta",
     "@modevel/cli-preact": "~1.0.0-beta",
     "@modevel/cli-svelte": "~1.0.0-beta",
-    "@modevel/cli-vue": "~1.0.0-beta"
+    "@modevel/cli-vue": "~1.0.0-beta",
+    "commander": "~4.0.0"
   }
 }
