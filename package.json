@@ -74,7 +74,6 @@
     "@modevel/cli-react": "~1.0.0-beta",
     "@modevel/cli-preact": "~1.0.0-beta",
     "@modevel/cli-svelte": "~1.0.0-beta",
-    "@modevel/cli-vue": "~1.0.0-beta",
-    "commander": "~4.0.0"
+    "@modevel/cli-vue": "~1.0.0-beta"
   }
 }

@@ -112,22 +112,22 @@ Currently the following frameworks are available:
 - `vanilla`
 - `vue`
 
-Use this command to serve the application: `npm run serve <framework>[ -- --open]`
+Use this command to serve the application: `npx mo serve[ -f <framework> | -e <environment> | -t <tempate> | -o]`
 
 For example:
 
-- `npm run serve inferno`
-- `npm run serve inferno -- --open`
+- `npx mo serve -f inferno`
+- `npx mo serve -f inferno -o`
 
-> The optional option `--open` open the app in you default browser.
+> The optional option `-o` open the app in you default browser.
 
 #### Build
 
-Use this command to build the application: `npm run build <framework>`
+Use this command to build the application: `npx mo build[ -f <framework>]`
 
 For example:
 
-- `npm run build inferno`
+- `npx mo build -f inferno`
 
 ### Command Line Interfaces
 
@@ -177,7 +177,7 @@ Please use primary this documentation: https://cli.vuejs.org/guide/installation.
 
 ### Unit-Test
 
-Execute all unit tests with `npm run test` or `npm run test -- --watch`.
+Execute all unit tests with `npx mo test` or `npx mo test -w`.
 
 ### Snapshot-Test
 
@@ -185,7 +185,7 @@ Currently **not** supported.
 
 ### E2E-Test
 
-Execute all e2e tests with `npm run e2e` or `npm run e2e -- -e headless` for running headless.
+Execute all e2e tests with `npx mo e2e` or `npx mo e2e -h` for running headless.
 
 ## Documentation
 
