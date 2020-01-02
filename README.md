@@ -60,7 +60,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential) and [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_78.html).
 
-|                  Merkmal |   [Angular]    | [AngularJS] | [Aurelia] |    [Inferno]    |    [Preact]     |     [React]     | [Svelte] | Vanilla |          [Vue]          |
+|           Characteristic |   [Angular]    | [AngularJS] | [Aurelia] |    [Inferno]    |    [Preact]     |     [React]     | [Svelte] | Vanilla |          [Vue]          |
 | -----------------------: | :------------: | :---------: | :-------: | :-------------: | :-------------: | :-------------: | :------: | :-----: | :---------------------: |
 |                  Version |     9.0 rc     |     1.7     |    1.3    |       7.3       |      10.1       |      16.12      |   3.16   |    -    | 2.6 ([Composition API]) |
 |            Artifact size |     614 KB     |   224 KB    |  367 KB   |      69 KB      |      62 KB      |     177 KB      |  52 KiB  | 45 KiB  |         121 KB          |
