@@ -9,8 +9,8 @@
     "url": "http://martinoppitz.com"
   },
   "scripts": {
-    "build": "mo build",
-    "build-all": "mo build -f angular && mo build -f angularjs && mo build -f  aurelia && mo build -f inferno && mo build -f preact && mo build -f react && mo build -f svelte && mo build -f vanilla && mo build -f vue",
+    "build": "webpack --gzip --config node_modules/@modevel/cli/webpack.config.js --mode production --framework",
+    "build-all": "npm run build angular && npm run build angularjs && npm run build  aurelia && npm run build inferno && npm run build preact && npm run build react && npm run build svelte && npm run build vanilla && npm run build vue",
     "clear": "rm -rf .nyc_output coverage dist storybook-static tests_output *.log",
     "coverage": "cross-env NODE_ENV=test nyc mocha --config node_modules/@modevel/cli/.mocharc.js && nyc check-coverage",
     "coveralls": "coveralls < coverage/lcov.info",
@@ -52,6 +52,7 @@
     "@types/react": "~16.9.0",
     "@vue/composition-api": "~0.3.0",
     "angular": "~1.7.0",
+    "aurelia-bootstrapper": "~2.3.0",
     "aurelia-framework": "~1.3.0",
     "core-js": "~3.6.0",
     "inferno": "~7.3.0",
@@ -63,6 +64,7 @@
     "rxjs": "~6.5.0",
     "svelte": "~3.16.0",
     "vue": "~2.6.0",
+    "vue-template-compiler": "~2.6.0",
     "zone.js": "~0.10.0"
   },
   "devDependencies": {
