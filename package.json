@@ -18,7 +18,7 @@
     "ng:serve": "ng serve",
     "ng:build": "ng build --prod",
     "reinstall": "rm -rf node_modules package-lock.json && npm install --no-save",
-    "serve": "mo serve",
+    "serve": "webpack-dev-server --config node_modules/@modevel/cli/webpack.config.js --framework",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
     "test": "mo test",
@@ -69,6 +69,7 @@
   },
   "devDependencies": {
     "@modevel/cli": "~1.0.0-beta",
+    "@modevel/cli-addons": "~1.0.0-beta",
     "@modevel/cli-angular": "~1.0.0-beta",
     "@modevel/cli-angularjs": "~1.0.0-beta",
     "@modevel/cli-aurelia": "~1.0.0-beta",
