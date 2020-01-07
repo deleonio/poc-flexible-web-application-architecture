@@ -14,14 +14,14 @@
     "clear": "rm -rf .nyc_output coverage dist storybook-static tests_output *.log",
     "coverage": "cross-env NODE_ENV=test nyc mocha --config node_modules/@leanup/cli/.mocharc.js && nyc check-coverage",
     "coveralls": "coveralls < coverage/lcov.info",
-    "e2e": "mo e2e",
+    "e2e": "lean e2e",
     "ng:serve": "ng serve",
     "ng:build": "ng build --prod",
     "reinstall": "rm -rf node_modules package-lock.json && npm install --no-save",
     "serve": "webpack-dev-server --config node_modules/@leanup/cli/webpack.config.js --framework",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
-    "test": "mo test",
+    "test": "lean test",
     "vue:serve": "vue-cli-service serve src/vue.ts",
     "vue:build": "vue-cli-service build src/vue.ts --prod",
     "update": "npm install --no-save && npm update --no-save && npm outdated"
@@ -29,7 +29,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "lint-staged && mo test && mo e2e -h"
+      "pre-push": "lint-staged && lean test && lean e2e -h"
     }
   },
   "lint-staged": {
