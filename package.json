@@ -78,7 +78,7 @@
     "@modevel/cli-svelte": "~1.0.0-beta",
     "@modevel/cli-vue": "~1.0.0-beta",
     "coveralls": "~3.0.0",
-    "husky": "~3.1.0",
+    "husky": "~4.0.0",
     "lint-staged": "~9.5.0"
   }
 }
