@@ -1,1 +1,1 @@
-module.exports = require('@modevel/cli/babel.config');
+module.exports = require('@leanup/cli/babel.config');

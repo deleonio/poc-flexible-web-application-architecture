@@ -1,1 +1,1 @@
-module.exports = require('@modevel/cli/nyc.config');
+module.exports = require('@leanup/cli/nyc.config');

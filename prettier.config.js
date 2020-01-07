@@ -1,1 +1,1 @@
-module.exports = require('@modevel/cli/prettier.config');
+module.exports = require('@leanup/cli/prettier.config');
