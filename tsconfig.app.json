@@ -20,7 +20,6 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   },
-  "files": ["src/angular.ts"],
   "include": ["src/**/*.ts"],
   "exclude": [
     "**/svelte.ts",
