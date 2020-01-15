@@ -1,5 +1,13 @@
 [![Build Status](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture.svg?branch=master)](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture)
 [![Coverage Status](https://coveralls.io/repos/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg?branch=master)](https://coveralls.io/github/martinoppitz/poc-flexible-web-application-architecture?branch=master)
+[![dependencies][dependencies]][dependencies-url]
+[![vulnerabilities][vulnerabilities]][vulnerabilities-url]
+
+
+[dependencies]: https://img.shields.io/david/martinoppitz/poc-flexible-web-application-architecture
+[dependencies-url]: https://david-dm.org/martinoppitz/poc-flexible-web-application-architecture
+[vulnerabilities]: https://snyk.io/test/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg
+[vulnerabilities-url]: https://snyk.io/test/github/martinoppitz/poc-flexible-web-application-architecture?tab=dependencies
 
 > The source code is not completely clean for the architecture concept, but all aspects are evaluated.
 
@@ -268,6 +276,8 @@ Usage: `npm run build react -- --minimizer terser`
 - https://preactjs.com/guide/v10/getting-started/
 
 [babel]: https://babeljs.io
+[bootstrap]: https://getbootstrap.com
+[material]: https://material.io
 [typescript]: https:/typescriptlang.org
 [webpack]: https://webpack.js.org
 [angular]: https://angular.io
