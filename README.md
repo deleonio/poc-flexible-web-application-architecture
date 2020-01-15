@@ -1,11 +1,14 @@
 [![Build Status](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture.svg?branch=master)](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture)
 [![Coverage Status](https://coveralls.io/repos/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg?branch=master)](https://coveralls.io/github/martinoppitz/poc-flexible-web-application-architecture?branch=master)
 [![dependencies][dependencies]][dependencies-url]
+[![dev-dependencies][dev-dependencies]][dev-dependencies-url]
 [![vulnerabilities][vulnerabilities]][vulnerabilities-url]
 
 
 [dependencies]: https://img.shields.io/david/martinoppitz/poc-flexible-web-application-architecture
 [dependencies-url]: https://david-dm.org/martinoppitz/poc-flexible-web-application-architecture
+[dev-dependencies]: https://img.shields.io/david/dev/martinoppitz/poc-flexible-web-application-architecture
+[dev-dependencies-url]: https://david-dm.org/martinoppitz/poc-flexible-web-application-architecture?type=dev
 [vulnerabilities]: https://snyk.io/test/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg
 [vulnerabilities-url]: https://snyk.io/test/github/martinoppitz/poc-flexible-web-application-architecture?tab=dependencies
 
