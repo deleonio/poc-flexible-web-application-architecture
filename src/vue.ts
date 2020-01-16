@@ -2,9 +2,9 @@ import Vue from 'vue';
 
 import VueCompositionApi from '@vue/composition-api';
 
+import { DI } from '@leanup/features/injector';
 import App from './components/app/component.vue';
 import { APP_HTML_ELEMENT } from './shares/constant';
-import { DI } from './shares/injector';
 
 // https://github.com/vuejs/vue-devtools
 Vue.config.devtools = process.env.NODE_ENV === 'development';

@@ -1,7 +1,7 @@
 import { Component, h, render } from 'preact';
 
+import { DI } from '@leanup/features/injector';
 import { AppComponent } from './components/app/component.preact';
-import { DI } from './shares/injector';
 
 // https://github.com/preactjs/preact/blob/master/README.md#debug-mode
 if (process.env.NODE_ENV === 'development') {
