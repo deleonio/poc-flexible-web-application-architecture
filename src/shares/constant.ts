@@ -1,3 +1,5 @@
+import '../style.sass';
+
 import { register } from 'register-service-worker';
 
 export const APP_HTML_ELEMENT: HTMLElement = document.createElement('app');

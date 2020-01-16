@@ -1,5 +1,16 @@
 [![Build Status](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture.svg?branch=master)](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture)
 [![Coverage Status](https://coveralls.io/repos/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg?branch=master)](https://coveralls.io/github/martinoppitz/poc-flexible-web-application-architecture?branch=master)
+[![dependencies][dependencies]][dependencies-url]
+[![dev-dependencies][dev-dependencies]][dev-dependencies-url]
+[![vulnerabilities][vulnerabilities]][vulnerabilities-url]
+
+
+[dependencies]: https://img.shields.io/david/martinoppitz/poc-flexible-web-application-architecture
+[dependencies-url]: https://david-dm.org/martinoppitz/poc-flexible-web-application-architecture
+[dev-dependencies]: https://img.shields.io/david/dev/martinoppitz/poc-flexible-web-application-architecture
+[dev-dependencies-url]: https://david-dm.org/martinoppitz/poc-flexible-web-application-architecture?type=dev
+[vulnerabilities]: https://snyk.io/test/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg
+[vulnerabilities-url]: https://snyk.io/test/github/martinoppitz/poc-flexible-web-application-architecture?tab=dependencies
 
 > The source code is not completely clean for the architecture concept, but all aspects are evaluated.
 
@@ -44,17 +55,19 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 ### Tools
 
-| Tool            |   Description    |
-| --------------- | :--------------: |
-| [Babel]         |    Transpiler    |
-| [Webpack]       |     Bundler      |
-| [TypeScript]    |     Language     |
-| [Mocha]         | Unit-Test-Runner |
-| [Chai]          |    Assertion     |
-| [Nightwatch.js] | E2E-Test-Runner  |
-| [Cypress]       | E2E-Test-Runner  |
-| [NYC]           |  Code-Coverage   |
-| [Storybook]     |  Documentation   |
+| Tool            |   Description    | Status |
+| --------------- | :--------------: |:---: |
+| [Bootstrap]         |    Design    | ✔️
+| [Material] |    Design    | ⌛
+| [Babel]         |    Transpiler    | ✔️
+| [Webpack]       |     Bundler      | ✔️
+| [TypeScript]    |     Language     |✔️
+| [Mocha]         | Unit-Test-Runner |✔️
+| [Chai]          |    Assertion     |✔️
+| [Nightwatch.js] | E2E-Test-Runner  |✔️
+| [Cypress]       | E2E-Test-Runner  | ⌛
+| [NYC]           |  Code-Coverage   |✔️
+| [Storybook]     |  Documentation   |✔️
 
 ### Frameworks
 
@@ -62,7 +75,7 @@ The selection of the following frameworks depends on this [report](https://ashle
 
 |           Characteristic |   [Angular]    | [AngularJS] | [Aurelia] |    [Inferno]    |    [Preact]     |     [React]     | [Svelte] | Vanilla |          [Vue]          |
 | -----------------------: | :------------: | :---------: | :-------: | :-------------: | :-------------: | :-------------: | :------: | :-----: | :---------------------: |
-|                  Version |     9.0 rc     |     1.7     |    1.3    |       7.3       |      10.1       |      16.12      |   3.16   |    -    | 2.6 ([Composition API]) |
+|                  Version |     9.0 rc     |     1.7     |    1.3    |       7.3       |      10.2       |      16.12      |   3.17   |    -    | 2.6 ([Composition API]) |
 |            Artifact size |     611 KB     |   224 KB    |  368 KB   |      68.5 KB      |      62.3 KB      |     177 KB      |  52.1 KiB  | 44.3 KiB  |         121 KB          |
 |           Upcomming time |     ~50 ms     |   ~50 ms    |  ~10 ms   |     ~11 ms      |     ~12 ms      |     ~13 ms      |  ~13 ms  |    -    |         ~18 ms          |
 |         Performance test |       ⌛       |     ⌛      |    ⌛     |       ⌛        |       ⌛        |       ⌛        |    ⌛    |   ⌛    |           ⌛            |
@@ -90,7 +103,7 @@ The selection of the following frameworks depends on this [report](https://ashle
 
 ## Installation
 
-Run `npm install` in the bash. If there any problems with the installed dependencies, you can reinstall everything with `npm run reinstall` / `npm run reinstall`.
+Run `npm install` in the bash. If there any problems with the installed dependencies, you can reinstall everything with `npm run reinstall`.
 
 ## Guide
 
@@ -112,22 +125,22 @@ Currently the following frameworks are available:
 - `vanilla`
 - `vue`
 
-Use this command to serve the application: `npx mo serve[ -f <framework> | -e <environment> | -t <tempate> | -o]`
+Use this command to serve the application: `npm run serve[ <framework> [ -- --open]]`
 
 For example:
 
-- `npx mo serve -f inferno`
-- `npx mo serve -f inferno -o`
+- `npm run serve -f inferno`
+- `npm run serve -f inferno -- --open`
 
-> The optional option `-o` open the app in you default browser.
+> The optional option `--open` open the app in you default browser.
 
 #### Build
 
-Use this command to build the application: `npx mo build[ -f <framework>]`
+Use this command to build the application: `nom run build[ <framework>]`
 
 For example:
 
-- `npx mo build -f inferno`
+- `npm run build inferno`
 
 ### Command Line Interfaces
 
@@ -177,7 +190,7 @@ Please use primary this documentation: https://cli.vuejs.org/guide/installation.
 
 ### Unit-Test
 
-Execute all unit tests with `npx mo test` or `npx mo test -w`.
+Execute all unit tests with `npm run test` or `npm run test -- --watch`.
 
 ### Snapshot-Test
 
@@ -185,7 +198,7 @@ Currently **not** supported.
 
 ### E2E-Test
 
-Execute all e2e tests with `npx mo e2e` or `npx mo e2e -h` for running headless.
+Execute all e2e tests with `npm run e2e` or `npm run e2e --headless` for running headless.
 
 ## Documentation
 
@@ -227,7 +240,9 @@ Needs additional devDependency:
 
 Usage: `npm run build angular -- --analyser`
 
-### Artifact minimisation
+### Artifact minimisation (⨻ outdated)
+
+> The benefit of this function was too small.
 
 There are some optional plugins to minimize the build artifacts in webpack. However, these options are not really better than the default webpack setup.
 
@@ -264,6 +279,8 @@ Usage: `npm run build react -- --minimizer terser`
 - https://preactjs.com/guide/v10/getting-started/
 
 [babel]: https://babeljs.io
+[bootstrap]: https://getbootstrap.com
+[material]: https://material.io
 [typescript]: https:/typescriptlang.org
 [webpack]: https://webpack.js.org
 [angular]: https://angular.io
