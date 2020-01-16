@@ -1,7 +1,7 @@
-import { DI } from '@leanup/features/injector';
 import { RouterService } from '../../services/router/service';
 import { STARTUP_TIMESTAMP } from '../../shares/constant';
 import { Filters } from '../../shares/filters';
+import { DI } from '../../shares/injector';
 
 interface Framework {
   name: string;

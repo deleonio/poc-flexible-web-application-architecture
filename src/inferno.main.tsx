@@ -1,7 +1,7 @@
 import { render, version } from 'inferno';
 
-import { DI } from '@leanup/features/injector';
 import { AppComponent } from './components/app/component.inferno';
+import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'Inferno',
