@@ -50,6 +50,11 @@
     "@angular/forms": "~9.0.0-rc",
     "@angular/platform-browser": "~9.0.0-rc",
     "@angular/platform-browser-dynamic": "~9.0.0-rc",
+    "@material/dom": "~4.0.0",
+    "@material/button": "~4.0.0",
+    "@material/slider": "~4.0.0",
+    "@material/mwc-button": "~0.12.0",
+    "@material/mwc-slider": "~0.12.0",
     "@types/react": "~16.9.0",
     "@vue/composition-api": "~0.3.0",
     "angular": "~1.7.0",
@@ -75,12 +80,14 @@
     "@leanup/cli-angularjs": "~1.0.0-rc",
     "@leanup/cli-aurelia": "~1.0.0-rc",
     "@leanup/cli-inferno": "~1.0.0-rc",
-    "@leanup/cli-react": "~1.0.0-rc",
     "@leanup/cli-preact": "~1.0.0-rc",
+    "@leanup/cli-react": "~1.0.0-rc",
     "@leanup/cli-svelte": "~1.0.0-rc",
     "@leanup/cli-vue": "~1.0.0-rc",
     "coveralls": "~3.0.0",
     "husky": "~4.0.0",
-    "lint-staged": "~9.5.0"
+    "lint-staged": "~9.5.0",
+    "sass-convert": "~0.5.0",
+    "sass-lint": "~1.13.0"
   }
 }
