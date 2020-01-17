@@ -84,6 +84,7 @@
     "@leanup/cli-svelte": "~1.0.0-rc",
     "@leanup/cli-vue": "~1.0.0-rc",
     "@leanup/features": "~1.0.0-rc",
+    "chromedriver": "~79.0.0",
     "coveralls": "~3.0.0",
     "husky": "~4.0.0",
     "lint-staged": "~9.5.0",
