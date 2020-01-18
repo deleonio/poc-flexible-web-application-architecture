@@ -27,7 +27,7 @@ script:
   - tslint src/**/*.ts src/**/*.tsx
   - npm run coverage
   - npm run coveralls
-  - npm run e2e -- -h
+  - npm run e2e -- --headless
   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
