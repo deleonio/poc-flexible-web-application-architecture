@@ -4,6 +4,7 @@ import { RouterService } from '../../services/router/service';
 import { PreactComponent } from '../component.preact';
 import { ButtonComponent } from '../material/button/component.preact';
 import { SliderComponent } from '../material/slider/component.preact';
+import { TextFieldComponent } from '../material/test-field/component.preact';
 import { CreateSerieComponent } from '../series/create/component.preact';
 import { EditSerieComponent } from '../series/edit/component.preact';
 import { ListSerieComponent } from '../series/list/component.preact';
@@ -32,6 +33,7 @@ export class AppComponent extends PreactComponent {
       <div id="app">
         <ButtonComponent></ButtonComponent>
         <SliderComponent></SliderComponent>
+        <TextFieldComponent></TextFieldComponent>
         <h4>
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version}
         </h4>

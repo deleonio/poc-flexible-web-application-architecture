@@ -20,7 +20,7 @@ export class ButtonComponent extends PreactComponent {
 
   public render() {
     return (
-      <button class="mdc-button">
+      <button class="mdc-button" ref={this.ref}>
         <div class="mdc-button__ripple"></div>
         <span class="mdc-button__label">Button</span>
       </button>
