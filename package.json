@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "lean build --gzip",
-    "build-all": "lean build -gzip --framework angular && lean build -gzip --framework angularjs && lean build -gzip --framework aurelia && lean build -gzip --framework inferno && lean build -gzip --framework preact && lean build -gzip --framework react && lean build -gzip --framework svelte && lean build && lean build -gzip --framework vue",
+    "build-all": "lean build --gzip --framework angular && lean build --gzip --framework angularjs && lean build --gzip --framework aurelia && lean build --gzip --framework inferno && lean build --gzip --framework preact && lean build --gzip --framework react && lean build --gzip --framework svelte && lean build && lean build --gzip --framework vue",
     "clear": "rm -rf .nyc_output coverage dist storybook-static tests_output *.log",
     "coverage": "lean coverage",
     "coveralls": "coveralls < coverage/lcov.info",
