@@ -8,8 +8,9 @@ import './components/series/list/component.angularjs';
 
 import * as angular from 'angular';
 
+import { DI } from '@leanup/features/injector';
+
 import { APP_HTML_ELEMENT } from './shares/constant';
-import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'AngularJS',

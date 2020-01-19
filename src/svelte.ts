@@ -1,5 +1,6 @@
+import { DI } from '@leanup/features/injector';
+
 import App from './components/app/component.svelte';
-import { DI } from './shares/injector';
 
 DI.register('Framework', {
   name: 'Svelte',

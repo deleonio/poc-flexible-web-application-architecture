@@ -2,7 +2,7 @@
 
 import { expect } from 'chai';
 
-import { DI } from './injector';
+import { DI } from '@leanup/features/injector';
 
 describe(`Test: Injector-Service (DI)`, () => {
   describe(`Service registrieren`, () => {
