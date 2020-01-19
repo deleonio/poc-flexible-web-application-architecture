@@ -32,9 +32,6 @@ export class AppComponent extends PreactComponent {
   public render() {
     return (
       <div id="app">
-        <ButtonComponent></ButtonComponent>
-        <SliderComponent></SliderComponent>
-        <TextFieldComponent></TextFieldComponent>
         <h4>
           {this.$ctrl.framework.name} v{this.$ctrl.framework.version}
         </h4>
@@ -46,6 +43,16 @@ export class AppComponent extends PreactComponent {
           Used filters: {this.$ctrl.filters.date(this.$ctrl.dummies.date)} |{' '}
           {this.$ctrl.filters.currency(this.$ctrl.dummies.price)} €
         </small>
+        <hr />
+        <div style="border: 1px solid; max-width: 350px; background: #ddd">
+          <p>
+            In this box we study the usage of <a href="https://material.io/">Google Material Design</a> as capsulated
+            multiframework components.
+          </p>
+          <ButtonComponent></ButtonComponent>
+          <SliderComponent></SliderComponent>
+          <TextFieldComponent></TextFieldComponent>
+        </div>
       </div>
     );
   }
