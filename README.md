@@ -18,6 +18,8 @@
 
 - [PoC - Flexible web application architecture](#poc---flexible-web-application-architecture)
   - [Motivation](#motivation)
+    - [Addressee](#addressee)
+    - [Rules](#rules)
   - [Introduction](#introduction)
     - [Tools](#tools)
     - [Frameworks](#frameworks)
@@ -47,7 +49,26 @@
 
 ## Motivation
 
-This project demonstrate a scalable and flexible [Babel] and [Webpack] based web application architecture.
+This project demonstrates a scalable, flexible, and framework-neutral JavaScript web application architecture.
+
+![Web application architecture](doc/media/PoC&#32;-&#32;Cheat&#32;sheet.jpg "Web application architecture")
+
+### Addressee
+
+This document is intended for everyone who cares about the following criteria:
+
+- Learnability 
+- Controllability
+- Universality
+- Flexibility
+- Scalability
+- Durability
+
+### Rules
+
+- Vanilla/TypeScript code is universally applicable
+- use the relevant functions directly without "instantaneous water heaters"
+- only the connection layer between controller and material design is framework-specific
 
 ## Introduction
 
@@ -214,7 +235,7 @@ Execute all e2e tests with `npm run e2e` or `npm run e2e --headless` for running
 - ~~Prepare the project for unit and e2e testing.~~ ✔️
 - Extends the application with adding measurements. ⌛
 - ~~Add router to the application context.~~ ✔️
-- Create a cheat sheet for the application architecture concept. ⌛
+- ~~Create a cheat sheet for the application architecture concept.~~ ✔️
 - Provide a PWA manifest for each framework artifact. ⌛
 - ~~Coverage test in the build pipeline.~~ ✔️
 - ~~E2E tests with Cypress instead of Nightwatch.~~ ❌ // E2E-Testing in headless mode, works. ✔️
