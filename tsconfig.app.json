@@ -20,7 +20,7 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "node_modules/@leanup/**/*.ts"],
   "exclude": [
     "**/svelte.ts",
     "**/vue.ts",
