@@ -1,10 +1,11 @@
 import { createRef, h } from 'preact';
 
+import { ButtonComponent } from '@leanup/material-preact/button.component';
+import { SliderComponent } from '@leanup/material-preact/slider.component';
+import { TextFieldComponent } from '@leanup/material-preact/text-field.component';
+
 import { RouterService } from '../../services/router/service';
 import { PreactComponent } from '../component.preact';
-import { ButtonComponent } from '../material/button/component.preact';
-import { SliderComponent } from '../material/slider/component.preact';
-import { TextFieldComponent } from '../material/test-field/component.preact';
 import { CreateSerieComponent } from '../series/create/component.preact';
 import { EditSerieComponent } from '../series/edit/component.preact';
 import { ListSerieComponent } from '../series/list/component.preact';
