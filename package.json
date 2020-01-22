@@ -22,7 +22,7 @@
     "serve": "lean serve",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
-    "test": "lean test",
+    "test": "cross-env NODE_ENV=test mocha --config=node_modules/@leanup/cli/.mocharc.js",
     "update": "npm install --no-save && npm update --no-save && npm outdated",
     "vue:serve": "vue-cli-service serve src/vue.ts",
     "vue:build": "vue-cli-service build src/vue.ts --prod"
