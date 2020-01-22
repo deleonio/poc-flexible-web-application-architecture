@@ -17,14 +17,15 @@
     "e2e": "lean e2e",
     "ng:serve": "ng serve",
     "ng:build": "ng build --prod",
-    "reinstall": "rm -rf node_modules package-lock.json && npm install --no-save",
+    "reinstall": "npm run remove && npm run update",
+    "remove": "rm -rf node_modules package-lock.json",
     "serve": "lean serve",
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
     "test": "lean test",
+    "update": "npm install --no-save && npm update --no-save && npm outdated",
     "vue:serve": "vue-cli-service serve src/vue.ts",
-    "vue:build": "vue-cli-service build src/vue.ts --prod",
-    "update": "npm install --no-save && npm update --no-save && npm outdated"
+    "vue:build": "vue-cli-service build src/vue.ts --prod"
   },
   "husky": {
     "hooks": {
@@ -87,7 +88,7 @@
     "@leanup/cli-vue": "~1.0.0-rc",
     "chromedriver": "~79.0.0",
     "coveralls": "~3.0.0",
-    "husky": "~4.0.0",
+    "husky": "~4.2.0",
     "lint-staged": "~10.0.0",
     "sass-convert": "~0.5.0",
     "sass-lint": "~1.13.0",
