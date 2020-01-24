@@ -76,6 +76,7 @@
     "zone.js": "~0.10.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.900.0-rc",
     "@angular/cli": "~9.0.0-rc",
     "@leanup/cli": "~1.0.0-rc",
     "@leanup/cli-addons": "~1.0.0-rc",
@@ -88,9 +89,10 @@
     "@leanup/cli-svelte": "~1.0.0-rc",
     "@leanup/cli-vue": "~1.0.0-rc",
     "@vue/cli": "~4.1.0",
+    "@vue/cli-service": "~4.1.0",
     "chromedriver": "~79.0.0",
-    "graphql": "~14.5.0",
     "coveralls": "~3.0.0",
+    "graphql": "~14.5.0",
     "husky": "~4.2.0",
     "lint-staged": "~10.0.0",
     "sass-convert": "~0.5.0",
