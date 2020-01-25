@@ -53,8 +53,8 @@
     "@angular/platform-browser-dynamic": "~9.0.0-rc",
     "@leanup/features": "~1.0.0-rc",
     "@leanup/material-preact": "~1.0.0-rc",
-    "@material/dom": "~4.0.0",
     "@material/button": "~4.0.0",
+    "@material/dom": "~4.0.0",
     "@material/slider": "~4.0.0",
     "@material/textfield": "~4.0.0",
     "@types/react": "~16.9.0",
@@ -71,8 +71,8 @@
     "register-service-worker": "~1.6.0",
     "svelte": "~3.17.0",
     "vue": "~2.6.0",
-    "vuetify": "~2.2.0",
     "vue-template-compiler": "~2.6.0",
+    "vuetify": "~2.2.0",
     "zone.js": "~0.10.0"
   },
   "devDependencies": {

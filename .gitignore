@@ -1,9 +1,10 @@
 .ignore/
 .nyc_output/
+.yarn/
 coverage/
 dist/
 node_modules/
 storybook-static/
 tests_output/
-yarn.lock
+.pnp.js
 *.log
