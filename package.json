@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "lean build --gzip",
-    "build-all": "rm -rf dist && lean build --gzip --framework angular && lean build --gzip --framework angularjs && lean build --gzip --framework aurelia && lean build --gzip --framework inferno && lean build --gzip --framework preact && lean build --gzip --framework react && lean build --gzip --framework svelte && lean build --gzip && lean build --gzip --framework vue",
+    "build-all": "sh build.sh",
     "clear": "rm -rf .nyc_output coverage dist storybook-static tests_output *.log",
     "coverage": "lean coverage",
     "coveralls": "coveralls < coverage/lcov.info",
@@ -23,7 +23,7 @@
     "storybook:serve": "start-storybook",
     "storybook:build": "build-storybook",
     "test": "cross-env NODE_ENV=test mocha --config=node_modules/@leanup/cli/.mocharc.js",
-    "update": "npm install --no-save && npm update --no-save",
+    "update": "npm install && npm update --no-save",
     "vue:serve": "vue-cli-service serve src/vue.ts",
     "vue:build": "vue-cli-service build src/vue.ts --prod"
   },
@@ -92,14 +92,11 @@
     "@vue/cli-service": "~4.1.0",
     "chromedriver": "~79.0.0",
     "coveralls": "~3.0.0",
-    "graphql": "~14.5.0",
+    "graphql": "~14.6.0",
     "husky": "~4.2.0",
     "lint-staged": "~10.0.0",
     "sass-convert": "~0.5.0",
     "sass-lint": "~1.13.0",
-    "typescript": "~3.7.0",
-    "@typescript-eslint/parser": "2.17.0",
-    "@typescript-eslint/eslint-plugin": "2.17.0",
-    "eslint-plugin-mocha": "6.2.2"
+    "typescript": "~3.7.0"
   }
 }

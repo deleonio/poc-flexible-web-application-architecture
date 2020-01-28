@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="angular.css" />
+<link rel="stylesheet" href="angularjs.css" />
+<link rel="stylesheet" href="aurelia.css" />
+<link rel="stylesheet" href="inferno.css" />
+<link rel="stylesheet" href="preact.css" />
+<link rel="stylesheet" href="react.css" />
+<link rel="stylesheet" href="svelte.css" />
+<link rel="stylesheet" href="vanilla.css" />
+<link rel="stylesheet" href="vue.css" />
+
+<!-- add the PWA manifest -->
+<link rel="manifest" href="manifest.json" />
+
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="application-name" content="PoC" />
+<meta name="apple-mobile-web-app-title" content="PoC" />
+<meta name="theme-color" content="#ddd" />
+<meta name="msapplication-navbutton-color" content="#ddd" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="msapplication-starturl" content="https://github.modevel.de/poc/" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<link rel="icon" sizes="144x144" href="assets/pwa.icon.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="assets/pwa.icon.png" />
+
+<title>PoC - Flexible web application architecture</title>
+<div class="container-fluid">
+  <header>
+    <h1>PoC - Flexible web application architecture</h1>
+    <p>This project demonstrate a flexible Babel and Webpack based web application architecture.</p>
+    <p>
+      More about the PoC you can find in this
+      <a href="https://github.com/martinoppitz/poc-flexible-web-application-architecture" target="github-martinoppitz"
+        >GitHub Repository</a
+      >.
+    </p>
+  </header>
+  <main>
+    <div class="row">
+      <div class="col">
+        <h3>Technologies</h3>
+        <ul>
+          <li>
+            <a href="http://vanilla-js.com" target="vanilla-js.com"
+              ><img src="assets/logo.javascript.png" title="JavaScript" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.typescriptlang.org" target="typescriptlang.org"
+              ><img src="assets/logo.typescript.png" title="TypeScript" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="https://babeljs.io" target="babeljs.io"
+              ><img src="assets/logo.babel.png" title="Babel" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="https://webpack.js.org" target="webpack.js.org"
+              ><img src="assets/logo.webpack.png" title="Webpack" width="100" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h3>Frameworks</h3>
+        <ul>
+          <li>
+            <a href="angular.html"><img src="assets/logo.angular.png" title="Angular" width="100" /> </a>
+          </li>
+          <li>
+            <a href="angularjs.html">
+              <img src="assets/logo.angularjs.png" title="AngularJS" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="aurelia.html">
+              <img src="assets/logo.aurelia.png" title="Aurelia" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="inferno.html">
+              <img src="assets/logo.inferno.png" title="Inferno" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="preact.html">
+              <img src="assets/logo.preact.png" title="Preact" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="react.html">
+              <img src="assets/logo.react.png" title="React" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="svelte.html">
+              <img src="assets/logo.svelte.png" title="Svelte" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="vanilla.html">
+              <img src="assets/logo.vanilla.png" title="Web Components" width="100" />
+            </a>
+          </li>
+          <li>
+            <a href="vue.html">
+              <img src="assets/logo.vue.png" title="Vue" width="100" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h3>Apps</h3>
+        <div id="angular" class="app"></div>
+        <div id="angularjs" class="app"></div>
+        <div id="aurelia" class="app"></div>
+        <div id="inferno" class="app"></div>
+        <div id="preact" class="app"></div>
+        <div id="react" class="app"></div>
+        <div id="svelte" class="app"></div>
+        <div id="vanilla" class="app"></div>
+        <div id="vue" class="app"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <hr />
+    <code>
+      <b>Author:</b> Martin Oppitz | <a href="mailto:github@martinoppitz.com">github@martinoppitz.com</a> |
+      <a href="http://martinoppitz.com" target="http://martinoppitz.com">http://martinoppitz.com</a></code
+    >
+  </footer>
+</div>
+<script src="angular.js"></script>
+<script src="angularjs.js"></script>
+<script src="aurelia.js"></script>
+<script src="inferno.js"></script>
+<script src="preact.js"></script>
+<script src="react.js"></script>
+<script src="svelte.js"></script>
+<script src="vanilla.js"></script>
+<script src="vue.js"></script>
