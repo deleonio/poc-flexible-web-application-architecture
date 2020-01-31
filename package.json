@@ -37,10 +37,6 @@
     "**/*.{html,js,json,jsx,ts,tsx,vue,yml}": [
       "prettier --write",
       "git add"
-    ],
-    "**/*.{ts,tsx}": [
-      "tslint --fix",
-      "git add"
     ]
   },
   "dependencies": {
