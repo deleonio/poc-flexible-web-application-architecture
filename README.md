@@ -84,10 +84,13 @@ We write always the same application with different JavaScript-Frameworks. Here 
 | [TypeScript]    |     Language     |   ✔️   |
 | [Mocha]         | Unit-Test-Runner |   ✔️   |
 | [Chai]          |    Assertion     |   ✔️   |
+| [ESLint]        |      Linter      |   ✔️   |
+| [Prettier]      |    Formatter     |   ✔️   |
 | [Nightwatch.js] | E2E-Test-Runner  |   ✔️   |
 | [Cypress]       | E2E-Test-Runner  |   ⌛   |
 | [NYC]           |  Code-Coverage   |   ✔️   |
 | [Storybook]     |  Documentation   |   ✔️   |
+| [Workbox]       |   PWA-Tooling    |   ✔️   |
 
 ### Frameworks
 
@@ -235,7 +238,7 @@ Execute all e2e tests with `npm run e2e` or `npm run e2e --headless` for running
 - Extends the application with adding measurements. ⌛
 - ~~Add router to the application context.~~ ✔️
 - ~~Create a cheat sheet for the application architecture concept.~~ ✔️
-- Provide a PWA manifest for each framework artifact. ⌛
+- ~~Provide a PWA manifest for each framework artifact.~~ ✔️ // Use [workbox]
 - ~~Coverage test in the build pipeline.~~ ✔️
 - ~~E2E tests with Cypress instead of Nightwatch.~~ ❌ // E2E-Testing in headless mode, works. ✔️
 - ~~Add filters to the application context.~~ ✔️
@@ -334,3 +337,6 @@ Usage: `npm run build react -- --minimizer terser`
 [cypress]: https://cypress.io
 [nightwatch.js]: https://nightwatchjs.org
 [jsx/tsx]: https://www.jambit.com/aktuelles/toilet-papers/was-ist-eigentlich-jsx-tsx/
+[workbox]: https://developers.google.com/web/tools/workbox
+[eslint]: https://eslint.org
+[prettier]: https://prettier.io
