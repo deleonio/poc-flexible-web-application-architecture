@@ -1,5 +1,5 @@
 module.exports = {
-  swDest: 'sw.js',
+  swDest: 'dist/sw.js',
   runtimeCaching: [
     {
       urlPattern: /\.(css|gif|gz|jpg|js|png|html|json)$/,

@@ -28,3 +28,5 @@ lean build --gzip --framework vue
 mv dist/index.html dist/vue.html
 
 mv dist/all.html dist/index.html
+
+workbox generateSW workbox-config.js
