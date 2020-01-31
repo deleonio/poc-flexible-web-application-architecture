@@ -43,7 +43,7 @@ export class AppComponent extends PreactComponent {
           Used filters: {this.$ctrl.filters.date(this.$ctrl.dummies.date)} |{' '}
           {this.$ctrl.filters.currency(this.$ctrl.dummies.price)} €
         </small>
-        <hr />
+        {/* <hr />
         <div style="border: 1px solid; max-width: 350px; background: #ddd">
           <p>
             In this box we study the usage of <a href="https://material.io/">Google Material Design</a> as capsulated
@@ -52,7 +52,7 @@ export class AppComponent extends PreactComponent {
           <ButtonComponent></ButtonComponent>
           <SliderComponent></SliderComponent>
           <TextFieldComponent></TextFieldComponent>
-        </div>
+        </div> */}
       </div>
     );
   }

@@ -1,10 +1,11 @@
 module.exports = {
-  include: ['**/*.{css,gz,js,png,html,json}'],
-  swDest: 'public/sw.js',
+  swDest: 'sw.js',
   runtimeCaching: [
     {
-      urlPattern: /\.(css|gz|js|png|html|json)$/,
+      urlPattern: /\.(css|gif|gz|jpg|js|png|html|json)$/,
       handler: 'CacheFirst'
     }
-  ]
+  ],
+  skipWaiting: true,
+  clientsClaim: true
 };
