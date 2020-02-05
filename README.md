@@ -99,7 +99,7 @@ The selection of the following frameworks depends on this [report](https://ashle
 |           Characteristic |   [Angular]    | [AngularJS] | [Aurelia] |    [Inferno]    |    [Preact]     |     [React]     | [Svelte] | Vanilla  |          [Vue]          |
 | -----------------------: | :------------: | :---------: | :-------: | :-------------: | :-------------: | :-------------: | :------: | :------: | :---------------------: |
 |                  Version |     9.0 rc     |     1.7     |    1.3    |       7.4       |      10.2       |      16.12      |   3.18   |    -     | 2.6 ([Composition API]) |
-|            Artifact size |    605 KiB     |   224 KiB   |  368 KiB  |    68.7 KiB     |      62.4       |     177 KiB     | 52.4 KiB | 44.5 KiB |         121 KiB         |
+|            Artifact size |    605 KiB     |   224 KiB   |  368 KiB  |    68.6 KiB     |      63.2       |     177 KiB     | 52.3 KiB | 44.4 KiB |         121 KiB         |
 |           Upcomming time |     ~50 ms     |   ~50 ms    |  ~10 ms   |     ~11 ms      |     ~12 ms      |     ~13 ms      |  ~13 ms  |    -     |         ~18 ms          |
 |         Performance test |       ⌛        |      ⌛      |     ⌛     |        ⌛        |        ⌛        |        ⌛        |    ⌛     |    ⌛     |            ⌛            |
 | [Devtools](####devtools) |       ✔️       |     ✔️      |     ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ❌     |           ✔️            |

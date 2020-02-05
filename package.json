@@ -86,7 +86,7 @@
     "@leanup/cli-vue": "~1.0.0-rc",
     "@vue/cli": "~4.1.0",
     "@vue/cli-service": "~4.1.0",
-    "chromedriver": "~79.0.0",
+    "chromedriver": "~80.0.0",
     "coveralls": "~3.0.0",
     "graphql": "~14.6.0",
     "husky": "~4.2.0",
