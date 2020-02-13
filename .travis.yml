@@ -18,8 +18,8 @@ addons:
 #   directories:
 #     - ~/.cache
 #     - ./node_modules
-install:
-  - npm run reinstall
+# install:
+#   - npm run reinstall
 # - npm install --no-save
 # - npm update --no-save
 script:
