@@ -28,6 +28,7 @@ script:
   - npm run coverage
   - npm run coveralls
   # - npm run e2e -- --headless
+  - npx nightwatch -e selenium.chrome
   - npx nightwatch -e selenium.firefox
   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
