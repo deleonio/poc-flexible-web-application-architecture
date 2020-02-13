@@ -8,11 +8,11 @@ module.exports = {
    *
    * @param results
    */
-  reporter: function(results) {
-    allure2.write(results);
+  reporter: function(...args) {
+    allure2.write(...args);
     if (
-      (typeof results.failed === 'undefined' || results.failed === 0) &&
-      (typeof results.error === 'undefined' || results.error === 0)
+      (typeof args.results.failed === 'undefined' || args.results.failed === 0) &&
+      (typeof args.results.error === 'undefined' || args.results.error === 0)
     ) {
       process.exit(0);
     } else {
