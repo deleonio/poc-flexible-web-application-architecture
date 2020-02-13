@@ -19,7 +19,7 @@ addons:
 #     - ~/.cache
 #     - ./node_modules
 install:
-  - npm install
+  - npm ci
 # - npm run reinstall
 # - npm install --no-save
 # - npm update --no-save
