@@ -2,10 +2,10 @@ const ACTION_DELAY = 1500;
 
 function testFall(host) {
   return (browser) => {
-    console.log(`http://${host}`);
+    console.log(url);
     try {
       browser
-      .url(`http://${host}`)
+      .url(url)
       .pause(ACTION_DELAY)
       .waitForElementVisible('h1')
       .pause(ACTION_DELAY)
@@ -46,7 +46,11 @@ function testFall(host) {
 
 let tests = {};
 [
-  'https://github.modevel.de/poc/'
+  'https://github.modevel.de/poc/angular.html',
+  'https://github.modevel.de/poc/angularjs.html',
+  'https://github.modevel.de/poc/preact.html',
+  'https://github.modevel.de/poc/inferno.html',
+  'https://github.modevel.de/poc/aurelia.html'
 ].forEach((host) => {
   tests[host] = testFall(host);
 });
