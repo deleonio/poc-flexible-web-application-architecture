@@ -36,9 +36,9 @@ function testFall(url) {
       .click('#edit-2')
       .pause(ACTION_DELAY)
       .click('#delete')
+//       .pause(ACTION_DELAY)
+//       .click('#start')
       .pause(ACTION_DELAY)
-      .click('#start')
-      .pause(60000)
       .end();
     } catch (e) {}
   };
