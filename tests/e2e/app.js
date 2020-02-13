@@ -2,10 +2,10 @@ const ACTION_DELAY = 1500;
 
 function testFall(host) {
   return (browser) => {
-    console.log(`http://${host}:8080`);
+    console.log(`http://${host}`);
     try {
       browser
-      .url(`http://${host}:8080`)
+      .url(`http://${host}`)
       .pause(ACTION_DELAY)
       .waitForElementVisible('h1')
       .pause(ACTION_DELAY)
