@@ -24,7 +24,7 @@ install:
 # - npm install --no-save
 # - npm update --no-save
 script:
-  - npm outdated || true
+#   - npm outdated || true
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - npm run coverage
   - npm run coveralls
