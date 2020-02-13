@@ -31,6 +31,8 @@ script:
   # - npm run e2e -- --headless
   - npx nightwatch -e selenium.chrome
 #   - npx nightwatch -e selenium.firefox
+  - ls -la
+  - ls -la output_folder
   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
