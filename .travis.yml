@@ -25,7 +25,6 @@ install:
 script:
   - npm outdated || true
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
-  - tslint src/**/*.ts src/**/*.tsx
   - npm run coverage
   - npm run coveralls
   # - npm run e2e -- --headless
