@@ -1,1 +1,1 @@
-import '../e2e.test';
+module.exports = require('../e2e.test');
