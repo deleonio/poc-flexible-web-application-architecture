@@ -9,14 +9,6 @@ module.exports = {
     port: 9515
   },
   test_settings: {
-    default: {
-      desiredCapabilities: {
-        browserName: 'chrome',
-        chromeOptions: {
-          w3c: false
-        }
-      }
-    },
     selenium: {
       // Selenium Server is running locally and is managed by Nightwatch
       selenium: {
