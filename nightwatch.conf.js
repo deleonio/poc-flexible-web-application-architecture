@@ -1,6 +1,9 @@
+const path = require('path');
+
 const COMMON = {
   acceptInsecureCerts: true,
-  javascriptEnabled: true
+  javascriptEnabled: true,
+  acceptSslCerts: true
 };
 const CHROME = {
   ...COMMON,
@@ -16,21 +19,30 @@ const FIREFOX = {
 
 module.exports = {
   src_folders: ['tests/e2e'],
-  globals_path: './nightwatch.global.js',
+  globals_path: path.resolve(__dirname, './nightwatch.global.js'),
   test_workers: {
     enabled: true,
     workers: 'auto'
   },
   test_settings: {
-    localChrome: {
+    chrome: {
       webdriver: {
         start_process: true,
         server_path: require('chromedriver').path,
-        port: 9515
+        port: 9515,
+        cli_args: ['--verbose']
       },
       desiredCapabilities: CHROME
     },
-    localFirefox: {
+    headlessChrome: {
+      extends: 'chrome',
+      desiredCapabilities: {
+        chromeOptions: {
+          args: ['headless']
+        }
+      }
+    },
+    firefox: {
       webdriver: {
         start_process: true,
         server_path: require('geckodriver').path,
@@ -39,9 +51,7 @@ module.exports = {
       desiredCapabilities: FIREFOX
     },
     selenium: {
-      // Selenium Server is running locally and is managed by Nightwatch
       selenium: {
-        start_process: true,
         port: 4444,
         server_path: require('selenium-server').path,
         cli_args: {
@@ -59,7 +69,6 @@ module.exports = {
       desiredCapabilities: FIREFOX
     },
     seleniumHub: {
-      // Selenium Server is running locally and is managed by Nightwatch
       selenium: {
         port: 4444,
         host: 'triton927.startdedicated.de'
