@@ -25,7 +25,7 @@ module.exports = {
     workers: 'auto'
   },
   test_settings: {
-    chrome: {
+    default: {
       webdriver: {
         start_process: true,
         server_path: require('chromedriver').path,
@@ -33,14 +33,6 @@ module.exports = {
         cli_args: ['--verbose']
       },
       desiredCapabilities: CHROME
-    },
-    headlessChrome: {
-      extends: 'chrome',
-      desiredCapabilities: {
-        chromeOptions: {
-          args: ['headless']
-        }
-      }
     },
     firefox: {
       webdriver: {
