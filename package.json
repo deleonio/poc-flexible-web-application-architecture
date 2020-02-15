@@ -92,6 +92,6 @@
     "sass-convert": "~0.5.0",
     "sass-lint": "~1.13.0",
     "typescript": "~3.7.0",
-    "nightwatch-allure2-adapter": "latest"
+    "selenium-server": "3.141.59"
   }
 }
