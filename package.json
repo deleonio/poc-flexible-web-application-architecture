@@ -30,7 +30,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "lint-staged && lean test && lean e2e -h"
+      "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
@@ -48,11 +48,7 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@leanup/features": "^1.0.0-rc.134",
-    "@leanup/material-preact": "^1.0.0-rc.140",
-    "@material/button": "~4.0.0",
-    "@material/dom": "~4.0.0",
-    "@material/slider": "~4.0.0",
-    "@material/textfield": "~4.0.0",
+    "@leanup/material-preact": "~1.0.0-rc",
     "@types/react": "~16.9.0",
     "@vue/composition-api": "~0.3.0",
     "angular": "~1.7.0",
@@ -61,7 +57,7 @@
     "core-js": "~3.6.0",
     "inferno": "~7.4.0",
     "navigo": "~7.1.0",
-    "preact": "^10.3.1",
+    "preact": "~10.3.0",
     "react": "~16.12.0",
     "react-dom": "~16.12.0",
     "register-service-worker": "~1.6.0",
