@@ -30,10 +30,10 @@ script:
   - npm run coveralls
   - npx nightwatch -e chrome --headless
   - npx nightwatch -e firefox --headless
-  - npx nightwatch -e seleniumFirefox --headless
-  - npx nightwatch -e seleniumFirefox --headless
+  # - npx nightwatch -e seleniumFirefox --headless
+  # - npx nightwatch -e seleniumFirefox --headless
   - npx nightwatch -e seleniumHubChrome
-  - npx nightwatch -e seleniumHubFirefox
+  # - npx nightwatch -e seleniumHubFirefox
   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
