@@ -27,23 +27,27 @@ module.exports = {
         enabled: true,
         path: path.resolve(__dirname, '.nightwatch_output', 'screenshots'),
         on_failure: true
-      },
-      desiredCapabilities: FIREFOX,
-      webdriver: {
-        start_process: true,
-        server_path: require('geckodriver').path
       }
     },
     chrome: {
       webdriver: {
+        start_process: true,
         server_path: require('chromedriver').path,
         port: 9515
       },
       desiredCapabilities: CHROME
     },
-    firefox: {},
+    firefox: {
+      webdriver: {
+        start_process: true,
+        server_path: require('geckodriver').path,
+        port: 4444
+      },
+      desiredCapabilities: FIREFOX
+    },
     selenium: {
       selenium: {
+        start_process: true,
         port: 4444,
         server_path: require('selenium-server').path,
         cli_args: {

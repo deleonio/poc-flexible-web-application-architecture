@@ -28,11 +28,12 @@ script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - npm run coverage
   - npm run coveralls
-  - npm run e2e -- --headless
-  # - npx nightwatch -e seleniumChrome
-  # - npx nightwatch -e seleniumFirefox
+  - npx nightwatch -e chrome --headless
+  - npx nightwatch -e firefox --headless
+  - npx nightwatch -e seleniumFirefox --headless
+  - npx nightwatch -e seleniumFirefox --headless
   - npx nightwatch -e seleniumHubChrome
-  # - npx nightwatch -e seleniumHubFirefox
+  - npx nightwatch -e seleniumHubFirefox
   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
