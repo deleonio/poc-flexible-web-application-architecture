@@ -1,4 +1,5 @@
 .ignore/
+.nightwatch_output/
 .nyc_output/
 .yarn/
 coverage/

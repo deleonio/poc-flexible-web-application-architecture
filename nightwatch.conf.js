@@ -20,28 +20,28 @@ const FIREFOX = {
 module.exports = {
   src_folders: ['tests/e2e'],
   globals_path: path.resolve(__dirname, './nightwatch.global.js'),
-  test_workers: {
-    enabled: true,
-    workers: 'auto'
-  },
+  output_folder: path.resolve(__dirname, '.nightwatch_output'),
   test_settings: {
     default: {
+      screenshots: {
+        enabled: true,
+        path: 'screenshots',
+        on_failure: true
+      },
+      desiredCapabilities: FIREFOX,
       webdriver: {
         start_process: true,
+        server_path: require('geckodriver').path
+      }
+    },
+    chrome: {
+      webdriver: {
         server_path: require('chromedriver').path,
-        port: 9515,
-        cli_args: ['--verbose']
+        port: 9515
       },
       desiredCapabilities: CHROME
     },
-    firefox: {
-      webdriver: {
-        start_process: true,
-        server_path: require('geckodriver').path,
-        port: 9515
-      },
-      desiredCapabilities: FIREFOX
-    },
+    firefox: {},
     selenium: {
       selenium: {
         port: 4444,
