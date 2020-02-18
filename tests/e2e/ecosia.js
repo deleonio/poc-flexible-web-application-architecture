@@ -1,5 +1,5 @@
-module.exports = {
-  'Demo test ecosia.org': function(browser) {
+describe(`Demo's`, () => {
+  it('ecosia.org', browser => {
     browser
       .url('https://www.ecosia.org/')
       .waitForElementVisible('body')
@@ -10,5 +10,5 @@ module.exports = {
       .click('button[type=submit]')
       .assert.containsText('.mainline-results', 'Nightwatch.js')
       .end();
-  }
-};
+  });
+});

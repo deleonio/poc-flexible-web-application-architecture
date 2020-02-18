@@ -19,16 +19,14 @@ const FIREFOX = {
 
 module.exports = {
   src_folders: ['tests/e2e'],
-  // globals_path: path.resolve(__dirname, "./nightwatch.global.js"),
   output_folder: path.resolve(__dirname, '.nightwatch_output'),
+  screenshots: {
+    enabled: true,
+    path: path.resolve(__dirname, '.nightwatch_output', 'screenshots'),
+    on_failure: true
+  },
+  test_runner: 'mocha',
   test_settings: {
-    default: {
-      screenshots: {
-        enabled: true,
-        path: path.resolve(__dirname, '.nightwatch_output', 'screenshots'),
-        on_failure: true
-      }
-    },
     chrome: {
       webdriver: {
         start_process: true,
