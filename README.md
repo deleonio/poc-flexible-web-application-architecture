@@ -78,7 +78,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 | Tool            |   Description    | Status |
 | --------------- | :--------------: | :----: |
 | [Bootstrap]     |      Design      |   ✔️   |
-| [Material]      |      Design      |   ⌛    |
+| [Material]      |      Design      |   ⌛   |
 | [Babel]         |    Transpiler    |   ✔️   |
 | [Webpack]       |     Bundler      |   ✔️   |
 | [TypeScript]    |     Language     |   ✔️   |
@@ -87,7 +87,7 @@ We write always the same application with different JavaScript-Frameworks. Here 
 | [ESLint]        |      Linter      |   ✔️   |
 | [Prettier]      |    Formatter     |   ✔️   |
 | [Nightwatch.js] | E2E-Test-Runner  |   ✔️   |
-| [Cypress]       | E2E-Test-Runner  |   ⌛    |
+| [Cypress]       | E2E-Test-Runner  |   ⌛   |
 | [NYC]           |  Code-Coverage   |   ✔️   |
 | [Storybook]     |  Documentation   |   ✔️   |
 | [Workbox]       |   PWA-Tooling    |   ✔️   |
@@ -98,20 +98,20 @@ The selection of the following frameworks depends on this [report](https://ashle
 
 |           Characteristic |   [Angular]    | [AngularJS] | [Aurelia] |    [Inferno]    |    [Preact]     |     [React]     | [Svelte] | Vanilla  |          [Vue]          |
 | -----------------------: | :------------: | :---------: | :-------: | :-------------: | :-------------: | :-------------: | :------: | :------: | :---------------------: |
-|                  Version |     9.0 rc     |     1.7     |    1.3    |       7.4       |      10.2       |      16.12      |   3.18   |    -     | 2.6 ([Composition API]) |
-|            Artifact size |    605 KiB     |   224 KiB   |  368 KiB  |    68.6 KiB     |      63.2       |     177 KiB     | 52.3 KiB | 44.4 KiB |         121 KiB         |
+|                  Version |      9.0       |     1.7     |    1.3    |       7.4       |      10.2       |      16.13      |   3.18   |    -     | 2.6 ([Composition API]) |
+|            Artifact size |    606 KiB     |   224 KiB   |  367 KiB  |    68.5 KiB     |      63.7       |     176 KiB     | 52.3 KiB | 44.4 KiB |         121 KiB         |
 |           Upcomming time |     ~50 ms     |   ~50 ms    |  ~10 ms   |     ~11 ms      |     ~12 ms      |     ~13 ms      |  ~13 ms  |    -     |         ~18 ms          |
-|         Performance test |       ⌛        |      ⌛      |     ⌛     |        ⌛        |        ⌛        |        ⌛        |    ⌛     |    ⌛     |            ⌛            |
-| [Devtools](####devtools) |       ✔️       |     ✔️      |     ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ❌     |           ✔️            |
+|         Performance test |       ⌛       |     ⌛      |    ⌛     |       ⌛        |       ⌛        |       ⌛        |    ⌛    |    ⌛    |           ⌛            |
+| [Devtools](####devtools) |       ✔️       |     ✔️      |    ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ❌    |           ✔️            |
 |                   Router |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
 |                       DI |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
 |                    [SPA] |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|                    [PWA] |       ✔️       |     ✔️      |     ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|                    [SSR] |       ✔️       |     ✔️      |     ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|      Internet Explorer\* |       ❌        |     ✔️      |     ❌     |       ✔️        |       ✔️        |       ✔️        |    ❌     |    ❌     |           ✔️            |
-|            Framework CLI | ✔️<br>(253 KB) |      ❌      |  ✔️\*\*   |        ❌        |        ❌        |        ❌        |    ❌     |    ❌     |     ✔️<br>(121 KB)      |
-|               Scoped App |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ❌     |           ✔️            |
-|         Language Support |       ✔️       |      ⌛      |     ⌛     | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] |    ⌛     |    ✔️    |           ✔️            |
+|                    [PWA] |       ✔️       |     ✔️      |    ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
+|                    [SSR] |       ✔️       |     ✔️      |    ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
+|      Internet Explorer\* |       ❌       |     ✔️      |    ❌     |       ✔️        |       ✔️        |       ✔️        |    ❌    |    ❌    |           ✔️            |
+|            Framework CLI | ✔️<br>(253 KB) |     ❌      |  ✔️\*\*   |       ❌        |       ❌        |       ❌        |    ❌    |    ❌    |     ✔️<br>(121 KB)      |
+|               Scoped App |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ❌    |           ✔️            |
+|         Language Support |       ✔️       |     ⌛      |    ⌛     | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] |    ⌛    |    ✔️    |           ✔️            |
 
 \* Maybe more polyfills are required for IE.<br>
 \*\* The Aurelia CLI can not be used for this project.
