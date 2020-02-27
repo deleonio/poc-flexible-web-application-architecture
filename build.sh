@@ -24,7 +24,7 @@ mv dist/index.html dist/svelte.html
 lean build --gzip
 mv dist/index.html dist/vanilla.html
 
-lean build --gzip --framework vue
+lean build --gzip --framework vue --pwa generateSw
 mv dist/index.html dist/vue.html
 
 mv dist/all.html dist/index.html
