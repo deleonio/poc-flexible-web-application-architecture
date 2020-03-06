@@ -31,6 +31,19 @@ abstract class AbstractControl {
   }
 }
 
+export class InputControl extends AbstractControl {
+  public label: string | null = null;
+  public value: any = null;
+
+  constructor(name: string, properties: any = {}) {
+    super(name);
+    if (properties) {
+      this.label = properties.label;
+      this.value = properties.value;
+    }
+  }
+}
+
 export class FormControl extends AbstractControl {
   private readonly inputs: Map<string, InputControl> = new Map();
 
@@ -69,19 +82,6 @@ export class FormControl extends AbstractControl {
       return input;
     } else {
       throw new Error(`An input control with the name '${name}' does not exists.`);
-    }
-  }
-}
-
-export class InputControl extends AbstractControl {
-  public label: string | null = null;
-  public value: any = null;
-
-  constructor(name: string, properties: any = {}) {
-    super(name);
-    if (properties) {
-      this.label = properties.label;
-      this.value = properties.value;
     }
   }
 }

@@ -34,7 +34,7 @@ export class RouterService {
   }
 
   public static currect() {
-    return NAVIGO.lastRouteResolved;
+    return NAVIGO.lastRouteResolved();
   }
 
   public static subscribe(subscriber: Function) {
