@@ -2,7 +2,7 @@ export class StorageService {
   private memoryStorage: any;
   private namespace: string;
 
-  public constructor(namespace: string = 'app-store') {
+  public constructor(namespace = 'app-store') {
     this.namespace = namespace;
     this.restore();
   }

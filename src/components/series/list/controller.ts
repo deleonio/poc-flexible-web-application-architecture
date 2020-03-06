@@ -4,7 +4,7 @@ import { MeasuredSerieModel } from '../../../models/measured-series.model';
 import { MeasurementService } from '../../../services/measurements/service';
 import { RouterService } from '../../../services/router/service';
 
-const PERFORMANCE_ANZAHL: number = 2500;
+const PERFORMANCE_ANZAHL = 2500;
 
 export class ListSerieController {
   private readonly measurementService: MeasurementService = DI.get('MeasurementService');
@@ -13,8 +13,8 @@ export class ListSerieController {
   // tslint:disable-next-line: no-empty
   public renderView: Function = () => {};
   public elements: any[] = [null];
-  public duration: number = 0;
-  public showPerformanceButton: boolean = true;
+  public duration = 0;
+  public showPerformanceButton = true;
 
   constructor() {
     this.measurementService.observe.subscribe(() => {

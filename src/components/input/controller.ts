@@ -1,5 +1,5 @@
 abstract class AbstractControl {
-  public name: string = 'unnamed';
+  public name = 'unnamed';
   private readonly parentForms: Map<string, FormControl> = new Map();
 
   constructor(name: string) {

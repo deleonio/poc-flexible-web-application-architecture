@@ -29,7 +29,7 @@ export class RouterService {
     });
   }
 
-  public static navigate(route: string, absolute: boolean = false) {
+  public static navigate(route: string, absolute = false) {
     NAVIGO.navigate(route, absolute);
   }
 

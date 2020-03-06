@@ -27,7 +27,7 @@ function render(component: AppComponent) {
 
 class AppComponent extends VanillaComponent {
   public readonly $ctrl: AppController = new AppController();
-  public counter: number = 0;
+  public counter = 0;
   public resolvedRoute: any = {
     url: 'series'
   };
