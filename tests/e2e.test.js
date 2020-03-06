@@ -44,7 +44,7 @@ function testFall(url) {
   };
 }
 
-let tests = {};
+const tests = {};
 [
   'https://github.modevel.de/poc/angular.html',
   'https://github.modevel.de/poc/angularjs.html',
