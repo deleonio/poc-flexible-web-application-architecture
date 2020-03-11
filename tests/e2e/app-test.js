@@ -1,4 +1,4 @@
-const ACTION_DELAY = 1500;
+const ACTION_DELAY = 250;
 
 function testFall(url) {
   return browser => {
@@ -46,7 +46,14 @@ function testFall(url) {
 
 const tests = {};
 [
-  'https://github.modevel.de/poc/preact.html'
+  'https://github.modevel.de/poc/angular.html',
+  'https://github.modevel.de/poc/angularjs.html',
+  'https://github.modevel.de/poc/aurelia.html', 
+  'https://github.modevel.de/poc/inferno.html',
+  'https://github.modevel.de/poc/preact.html',
+  'https://github.modevel.de/poc/react.html',
+  'https://github.modevel.de/poc/svelte.html',
+  'https://github.modevel.de/poc/vue.html'
 ].forEach(url => {
   tests[url] = testFall(url);
 });
