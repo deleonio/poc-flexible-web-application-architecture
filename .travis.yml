@@ -18,8 +18,8 @@ addons:
 #   directories:
 #     - ~/.cache
 #     - ./node_modules
-install:
-  - npm install
+# install:
+# - npm install
 # - npm run reinstall
 # - npm install --no-save
 # - npm update --no-save
@@ -33,7 +33,7 @@ script:
   # - npx nightwatch -e seleniumFirefox --headless
   # - npx nightwatch -e seleniumFirefox --headless
   - npx nightwatch -e seleniumHubChrome
-  # - npx nightwatch -e seleniumHubFirefox
+  - npx nightwatch -e seleniumHubFirefox
   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
