@@ -24,7 +24,6 @@ install:
 # - npm install --no-save
 # - npm update --no-save
 script:
-  - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
   - npx do coverage
   - npx do format
   - npx do lint
