@@ -25,14 +25,17 @@ install:
 # - npm update --no-save
 script:
   - prettier --check src/**/*.html src/**/*.js src/**/*.json src/**/*.jsx src/**/*.ts src/**/*.tsx src/**/*.vue
-  - npm run coverage
+  - npx do coverage
+  - npx do format
+  - npx do lint
+  - npx do test
+  # - npx do e2e -e chrome --headless
+  # - npx do e2e -e firefox --headless
+  # - npx do e2e -e seleniumChrome --headless
+  # - npx do e2e -e seleniumFirefox --headless
+  - npx do e2e -e seleniumHubChrome
+  # - npx do e2e -e seleniumHubFirefox
   - npm run coveralls
-  # - npx nightwatch -e chrome --headless
-  # - npx nightwatch -e firefox --headless
-  # - npx nightwatch -e seleniumChrome --headless
-  # - npx nightwatch -e seleniumFirefox --headless
-  - npx nightwatch -e seleniumHubChrome
-  # - npx nightwatch -e seleniumHubFirefox
   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
