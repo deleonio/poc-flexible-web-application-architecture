@@ -1,4 +1,4 @@
-const ACTION_DELAY = 250;
+const ACTION_DELAY = 25;
 
 function testFall(url) {
   return browser => {
