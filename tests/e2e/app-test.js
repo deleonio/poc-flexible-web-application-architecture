@@ -48,7 +48,7 @@ const tests = {};
 [
   'https://github.modevel.de/poc/angular.html',
   'https://github.modevel.de/poc/angularjs.html',
-  'https://github.modevel.de/poc/aurelia.html', 
+  'https://github.modevel.de/poc/aurelia.html',
   'https://github.modevel.de/poc/inferno.html',
   'https://github.modevel.de/poc/preact.html',
   'https://github.modevel.de/poc/react.html',
