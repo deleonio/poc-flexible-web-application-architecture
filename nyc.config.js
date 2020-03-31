@@ -1,7 +1,7 @@
 module.exports = {
   ...require('@leanup/cli/nyc.config'),
-  statements: 0,
-  branches: 0,
-  functions: 0,
-  lines: 0
+  statements: 2.2,
+  branches: 9.7,
+  functions: 1.5,
+  lines: 2.2
 };
