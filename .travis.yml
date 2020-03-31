@@ -35,7 +35,7 @@ script:
   - npx do e2e -e seleniumHubChrome
   # - npx do e2e -e seleniumHubFirefox
   - npm run coveralls
-  - npm run build-all
+#   - npm run build-all
   # - export SSHPASS=${SFTP_PASSWORD}
   # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
   # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
