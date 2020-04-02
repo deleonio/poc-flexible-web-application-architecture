@@ -28,5 +28,6 @@ lean build --gzip --framework vue --pwa generateSw
 mv dist/index.html dist/vue.html
 
 mv dist/all.html dist/index.html
+rm -rf dist/dist
 
 workbox generateSW workbox-config.js
