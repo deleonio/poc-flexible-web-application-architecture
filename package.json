@@ -93,7 +93,7 @@
     "sass-convert": "^0.5.0",
     "sass-lint": "^1.13.0",
     "selenium-server": "^3.141.59",
-    "typescript": "~3.7.5",
+    "typescript": "~3.8.3",
     "workbox-cli": "^5.1.2"
   }
 }
