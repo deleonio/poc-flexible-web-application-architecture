@@ -1,0 +1,26 @@
+{
+  "editor.renderWhitespace": "all",
+  "extensions.autoUpdate": true,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "mochaExplorer.env": {
+    "NODE_ENV": "test"
+  },
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "window.zoomLevel": 0,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.enableSmartCommit": true,
+  "editor.formatOnSave": true,
+  "[sass]": {
+    "editor.defaultFormatter": "sasa.vscode-sass-format"
+  },
+  "importCost.smallPackageSize": 0,
+  "importCost.debug": true,
+  "importCost.typescriptExtensions": ["\\.tsx?$"],
+  "importCost.javascriptExtensions": ["\\.jsx?$"],
+  "importCost.bundleSizeDecoration": "both"
+}
