@@ -1,6 +1,6 @@
 import { Component } from 'inferno';
 
-export class InfernoComponent extends Component {
+export abstract class InfernoComponent<P, S> extends Component<P, S> {
   protected $ctrl: any = null;
 
   constructor(props: any, $ctrl: Object = null) {

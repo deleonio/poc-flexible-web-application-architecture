@@ -1,6 +1,6 @@
 import { Component } from 'preact';
 
-export class PreactComponent extends Component {
+export abstract class PreactComponent<P, S> extends Component<P, S> {
   protected $ctrl: any = null;
 
   constructor(props: any, $ctrl: Object = null) {

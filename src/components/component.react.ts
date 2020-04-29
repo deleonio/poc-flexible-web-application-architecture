@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-export class ReactComponent extends Component {
+export abstract class ReactComponent<P, S> extends Component<P, S> {
   protected $ctrl: any = null;
 
   constructor(props: any, $ctrl: Object = null) {

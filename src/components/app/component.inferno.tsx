@@ -3,20 +3,20 @@ import { InfernoComponent } from '../component.inferno';
 import { CreateSerieComponent } from '../series/create/component.inferno';
 import { EditSerieComponent } from '../series/edit/component.inferno';
 import { ListSerieComponent } from '../series/list/component.inferno';
-import { AppController } from './controller';
+import { AppController, Props } from './controller';
 
-export class AppComponent extends InfernoComponent {
+export class AppComponent extends InfernoComponent<Props, unknown> {
   private resolvedRoute: any = {
-    url: 'series'
+    url: 'series',
   };
 
-  public constructor(props: any) {
+  public constructor(props: Props) {
     super(props, new AppController());
     RouterService.subscribe((route: any, params: any, query: any) => {
       this.resolvedRoute = {
         params,
         query,
-        url: route.url
+        url: route.url,
       };
       this.forceUpdate();
     });

@@ -5,11 +5,11 @@ import { ReactComponent } from '../component.react';
 import { CreateSerieComponent } from '../series/create/component.react';
 import { EditSerieComponent } from '../series/edit/component.react';
 import { ListSerieComponent } from '../series/list/component.react';
-import { AppController } from './controller';
+import { AppController, Props } from './controller';
 
-export class AppComponent extends ReactComponent {
+export class AppComponent extends ReactComponent<Props, unknown> {
   private resolvedRoute: any = {
-    url: 'series'
+    url: 'series',
   };
 
   public constructor(props: any) {
@@ -18,7 +18,7 @@ export class AppComponent extends ReactComponent {
       this.resolvedRoute = {
         params,
         query,
-        url: route.url
+        url: route.url,
       };
       this.forceUpdate();
     });

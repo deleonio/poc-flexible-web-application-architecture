@@ -1,4 +1,4 @@
-import { Component, h, render } from 'preact';
+import { h, render } from 'preact';
 
 import { DI } from '@leanup/features/injector';
 
@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'development') {
 
 DI.register('Framework', {
   name: 'Preact',
-  version: require('preact/package.json').version
+  version: require('preact/package.json').version,
 });
 require('./shares/register');
 require('./shares/routing');

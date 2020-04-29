@@ -9,21 +9,21 @@ import { PreactComponent } from '../component.preact';
 import { CreateSerieComponent } from '../series/create/component.preact';
 import { EditSerieComponent } from '../series/edit/component.preact';
 import { ListSerieComponent } from '../series/list/component.preact';
-import { AppController } from './controller';
+import { AppController, Props } from './controller';
 
-export class AppComponent extends PreactComponent {
+export class AppComponent extends PreactComponent<Props, unknown> {
   private resolvedRoute: any = {
-    url: 'series'
+    url: 'series',
   };
   public ref = createRef();
 
-  public constructor(props: any) {
+  public constructor(props: Props) {
     super(props, new AppController());
     RouterService.subscribe((route: any, params: any, query: any) => {
       this.resolvedRoute = {
         params,
         query,
-        url: route.url
+        url: route.url,
       };
       this.forceUpdate();
     });
