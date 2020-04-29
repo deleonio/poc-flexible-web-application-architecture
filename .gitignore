@@ -1,11 +1,4 @@
-.ignore/
-.nightwatch_output/
-.nyc_output/
-.yarn/
-coverage/
+.reports/
 dist/
 node_modules/
-storybook-static/
-tests_output/
-.pnp.js
 *.log
