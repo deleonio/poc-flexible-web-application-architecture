@@ -31,14 +31,13 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
+      "commit-msg": "commitlint -E GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "**/*.{html,js,json,jsx,ts,tsx,vue,yml}": [
+    "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "dependencies": {
@@ -85,6 +84,7 @@
     "@vue/cli": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
     "chromedriver": "^81.0.0",
+    "commitlint": "^8.3.5",
     "coveralls": "^3.1.0",
     "eslint-plugin-prettier": "^3.1.3",
     "geckodriver": "^1.19.0",
