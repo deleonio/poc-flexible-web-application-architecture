@@ -47,5 +47,5 @@ ANGULARJS_MODULE.component('listSerie', {
       </table>
       <small>Duration: {{ $ctrl.duration }} ms</small>
     </div>
-`
+`,
 });

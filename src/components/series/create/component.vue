@@ -14,16 +14,16 @@ import { ref } from '@vue/composition-api';
 
 export default {
   components: {
-    'editor-serie': EditorSerieComponent
+    'editor-serie': EditorSerieComponent,
   },
   setup() {
     const $ctrl = new CreateSerieController();
     const editorFormRef = ref($ctrl.editorForm);
 
-    const onCancel = event => {
+    const onCancel = (event) => {
       $ctrl.onCancel();
     };
-    const onSubmit = event => {
+    const onSubmit = (event) => {
       event.preventDefault();
       event.stopPropagation();
       $ctrl.onSubmit();
@@ -33,8 +33,8 @@ export default {
     return {
       editorFormRef,
       onCancel,
-      onSubmit
+      onSubmit,
     };
-  }
+  },
 };
 </script>

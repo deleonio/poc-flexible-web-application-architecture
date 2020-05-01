@@ -36,6 +36,7 @@
   },
   "lint-staged": {
     "**/*.{html,js,json,jsx,ts,tsx,vue,yml}": [
+      "eslint --fix",
       "prettier --write",
       "git add"
     ]

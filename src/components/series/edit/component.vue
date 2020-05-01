@@ -16,7 +16,7 @@ import { ref, watch } from '@vue/composition-api';
 export default {
   props: ['resolvedRoute'],
   components: {
-    'editor-serie': EditorSerieComponent
+    'editor-serie': EditorSerieComponent,
   },
   setup(props) {
     const $ctrl = new EditSerieController(props.resolvedRoute.params.id);
@@ -28,19 +28,19 @@ export default {
         return props.resolvedRoute;
       },
       // get the return value of the previous function
-      resolvedRoute => {
+      (resolvedRoute) => {
         $ctrl.changeMeasuredSerie(resolvedRoute.params.id);
         editorFormRef.value = $ctrl.editorForm;
       }
     );
 
-    const onCancel = event => {
+    const onCancel = (event) => {
       $ctrl.onCancel();
     };
     const onDelete = () => {
       $ctrl.onDelete();
     };
-    const onSubmit = event => {
+    const onSubmit = (event) => {
       event.preventDefault();
       event.stopPropagation();
       $ctrl.editorForm = editorFormRef.value;
@@ -52,8 +52,8 @@ export default {
       editorFormRef,
       onCancel,
       onDelete,
-      onSubmit
+      onSubmit,
     };
-  }
+  },
 };
 </script>

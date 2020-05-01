@@ -3,7 +3,7 @@ import { AppController } from './controller';
 
 export class App extends AppController {
   public resolvedRoute: any = {
-    url: 'series'
+    url: 'series',
   };
 
   constructor() {
@@ -12,7 +12,7 @@ export class App extends AppController {
       this.resolvedRoute = {
         params,
         query,
-        url: route.url
+        url: route.url,
       };
     });
   }

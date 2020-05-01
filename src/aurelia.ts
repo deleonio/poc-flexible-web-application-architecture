@@ -6,7 +6,7 @@ import { DI } from '@leanup/features/injector';
 
 DI.register('Framework', {
   name: 'Aurelia',
-  version: require('aurelia-framework/package.json').version
+  version: require('aurelia-framework/package.json').version,
 });
 require('./shares/register');
 require('./shares/routing');

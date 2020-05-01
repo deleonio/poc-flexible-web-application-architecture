@@ -4,7 +4,10 @@
     <small>{{ $ctrl.finishedRendering }} ms upcomming time</small>
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>
-    <edit-serie v-if="resolvedRouteRef.url === 'series/:id/edit'" :resolvedRoute="resolvedRouteRef"></edit-serie>
+    <edit-serie
+      v-if="resolvedRouteRef.url === 'series/:id/edit'"
+      :resolvedRoute="resolvedRouteRef"
+    ></edit-serie>
     <small
       >Used filters: {{ $ctrl.filters.date($ctrl.dummies.date) }} |
       {{ $ctrl.filters.currency($ctrl.dummies.price) }} €</small
@@ -27,24 +30,24 @@ export default {
     'app-input': InputComponent,
     'list-serie': ListSerieComponent,
     'create-serie': CreateSerieComponent,
-    'edit-serie': EditSerieComponent
+    'edit-serie': EditSerieComponent,
   },
   setup() {
     const $ctrl = new AppController();
     const resolvedRouteRef = ref({
-      url: 'series'
+      url: 'series',
     });
     RouterService.subscribe((route, params, query) => {
       resolvedRouteRef.value = {
         params,
         query,
-        url: route.url
+        url: route.url,
       };
     });
     return {
       $ctrl,
-      resolvedRouteRef
+      resolvedRouteRef,
     };
-  }
+  },
 };
 </script>

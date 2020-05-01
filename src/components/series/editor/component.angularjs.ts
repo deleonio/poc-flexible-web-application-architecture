@@ -3,7 +3,7 @@ import { EditorSerieController } from './controller';
 
 ANGULARJS_MODULE.component('editorSerie', {
   bindings: {
-    editorForm: '<'
+    editorForm: '<',
   },
   controller: EditorSerieController,
   template: `
@@ -11,5 +11,5 @@ ANGULARJS_MODULE.component('editorSerie', {
     <app-input control="$ctrl.editorForm.getInput('title')"></app-input>
     <app-input control="$ctrl.editorForm.getInput('unit')"></app-input>
   </div>
-`
+`,
 });

@@ -4,7 +4,7 @@ import { DI } from '@leanup/features/injector';
 
 DI.register('Framework', {
   name: 'Vanilla',
-  version: null
+  version: null,
 });
 require('./shares/register');
 require('./shares/routing');

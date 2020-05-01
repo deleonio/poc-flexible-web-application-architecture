@@ -38,7 +38,9 @@ export class AppComponent extends PreactComponent<Props, unknown> {
         <small>{this.$ctrl.finishedRendering} ms upcomming time</small>
         {this.resolvedRoute.url === 'series' && <ListSerieComponent />}
         {this.resolvedRoute.url === 'series/create' && <CreateSerieComponent />}
-        {this.resolvedRoute.url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={this.resolvedRoute} />}
+        {this.resolvedRoute.url === 'series/:id/edit' && (
+          <EditSerieComponent resolvedRoute={this.resolvedRoute} />
+        )}
         <small>
           Used filters: {this.$ctrl.filters.date(this.$ctrl.dummies.date)} |{' '}
           {this.$ctrl.filters.currency(this.$ctrl.dummies.price)} €

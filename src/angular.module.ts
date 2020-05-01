@@ -13,7 +13,7 @@ import { APP_HTML_ELEMENT } from './shares/constant';
 
 DI.register('Framework', {
   name: 'Angular',
-  version: VERSION.full
+  version: VERSION.full,
 });
 require('./shares/register');
 require('./shares/routing');
@@ -30,8 +30,8 @@ htmlDivElement.appendChild(APP_HTML_ELEMENT);
     CreateSerieComponent,
     EditSerieComponent,
     EditorSerieComponent,
-    ListSerieComponent
+    ListSerieComponent,
   ],
-  imports: [BrowserModule, FormsModule]
+  imports: [BrowserModule, FormsModule],
 })
 export class AppModule {}

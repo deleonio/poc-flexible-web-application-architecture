@@ -2,7 +2,7 @@ import { ANGULARJS_MODULE } from '../../angularjs.module';
 
 ANGULARJS_MODULE.component('appInput', {
   bindings: {
-    control: '<'
+    control: '<',
   },
   template: `
   <div class="form-group">
@@ -14,5 +14,5 @@ ANGULARJS_MODULE.component('appInput', {
       ng-model="$ctrl.control.value"
     />
   </div>
-`
+`,
 });

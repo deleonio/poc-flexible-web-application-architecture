@@ -13,6 +13,6 @@ import { CreateSerieController } from './controller';
         Abbrechen
       </button>
     </form>
-  `
+  `,
 })
 export class CreateSerieComponent extends CreateSerieController {}

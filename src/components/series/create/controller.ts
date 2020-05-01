@@ -11,7 +11,10 @@ export class CreateSerieController {
 
   public onSubmit() {
     this.measurementService.addSerie(
-      new MeasuredSerieModel(this.editorForm.getInput('title').value, this.editorForm.getInput('unit').value)
+      new MeasuredSerieModel(
+        this.editorForm.getInput('title').value,
+        this.editorForm.getInput('unit').value
+      )
     );
     this.measurementService.store();
     this.editorForm = new EditorForm('new');

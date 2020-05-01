@@ -7,7 +7,7 @@ ANGULARJS_MODULE.component('app', {
     '$scope',
     class extends AppController {
       public resolvedRoute: any = {
-        url: 'series'
+        url: 'series',
       };
 
       public constructor($scope: any) {
@@ -16,12 +16,12 @@ ANGULARJS_MODULE.component('app', {
           this.resolvedRoute = {
             params,
             query,
-            url: route.url
+            url: route.url,
           };
           $scope.$apply();
         });
       }
-    }
+    },
   ],
   template: `
   <div id="app">
@@ -32,5 +32,5 @@ ANGULARJS_MODULE.component('app', {
     <edit-serie ng-if="$ctrl.resolvedRoute.url === 'series/:id/edit'" resolved-route="$ctrl.resolvedRoute" test="$ctrl.resolvedRoute"></edit-serie>
     <small>Used filters: {{ $ctrl.filters.date($ctrl.dummies.date) }} | {{ $ctrl.filters.currency($ctrl.dummies.price) }} €</small>
   </div>
-`
+`,
 });

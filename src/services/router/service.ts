@@ -24,7 +24,7 @@ export class RouterService {
         as: route.url,
         uses: (params: any, query: any) => {
           RouterService.notify(route, params, query);
-        }
+        },
       }).resolve();
     });
   }

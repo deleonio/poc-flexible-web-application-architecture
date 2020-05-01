@@ -1,7 +1,7 @@
 const CURRENCY_FORMATTER: Intl.NumberFormat = new Intl.NumberFormat('de-DE', {
   currency: 'EUR',
   maximumFractionDigits: 2,
-  minimumFractionDigits: 2
+  minimumFractionDigits: 2,
 });
 
 /**

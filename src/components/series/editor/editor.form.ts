@@ -6,13 +6,13 @@ export class EditorForm extends FormControl {
     this.addInput(
       new InputControl('title', {
         label: 'Title',
-        value: ''
+        value: '',
       })
     );
     this.addInput(
       new InputControl('unit', {
         label: 'Unit',
-        value: ''
+        value: '',
       })
     );
   }

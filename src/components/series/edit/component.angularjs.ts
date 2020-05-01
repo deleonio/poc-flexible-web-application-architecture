@@ -3,7 +3,7 @@ import { EditSerieController } from './controller';
 
 ANGULARJS_MODULE.component('editSerie', {
   bindings: {
-    resolvedRoute: '<'
+    resolvedRoute: '<',
   },
   controller: class extends EditSerieController {
     public resolvedRoute: any;
@@ -24,5 +24,5 @@ ANGULARJS_MODULE.component('editSerie', {
         Delete
       </button>
     </form>
-`
+`,
 });

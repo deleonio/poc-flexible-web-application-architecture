@@ -12,5 +12,5 @@ ANGULARJS_MODULE.component('createSerie', {
       Abbrechen
     </button>
   </form>
-`
+`,
 });

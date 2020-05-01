@@ -7,7 +7,7 @@ import { AppComponent } from './components/app/component.react';
 
 DI.register('Framework', {
   name: 'React',
-  version
+  version,
 });
 require('./shares/register');
 require('./shares/routing');

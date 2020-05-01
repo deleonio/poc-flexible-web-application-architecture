@@ -1,5 +1,5 @@
 describe(`Demo's`, () => {
-  it('ecosia.org', browser => {
+  it('ecosia.org', (browser) => {
     browser
       .url('https://www.ecosia.org/')
       .waitForElementVisible('body')

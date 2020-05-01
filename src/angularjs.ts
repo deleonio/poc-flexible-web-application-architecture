@@ -14,7 +14,7 @@ import { APP_HTML_ELEMENT } from './shares/constant';
 
 DI.register('Framework', {
   name: 'AngularJS',
-  version: angular.version.full
+  version: angular.version.full,
 });
 require('./shares/register');
 require('./shares/routing');

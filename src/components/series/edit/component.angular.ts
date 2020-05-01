@@ -16,7 +16,7 @@ import { EditSerieController } from './controller';
         Delete
       </button>
     </form>
-  `
+  `,
 })
 export class EditSerieComponent implements OnChanges {
   public $ctrl: EditSerieController = new EditSerieController(null);

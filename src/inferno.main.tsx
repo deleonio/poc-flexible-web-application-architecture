@@ -6,7 +6,7 @@ import { AppComponent } from './components/app/component.inferno';
 
 DI.register('Framework', {
   name: 'Inferno',
-  version
+  version,
 });
 require('./shares/register');
 require('./shares/routing');

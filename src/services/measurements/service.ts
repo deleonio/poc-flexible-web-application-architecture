@@ -71,14 +71,14 @@ export class MeasurementService {
       measuredSerie.getMeasurements().forEach((measurement: any) => {
         measurements.push({
           date: measurement.date,
-          value: measurement.value
+          value: measurement.value,
         });
       });
       series.push({
         id: measuredSerie.getId(),
         measurements,
         title: measuredSerie.getTitle(),
-        unit: measuredSerie.getUnit()
+        unit: measuredSerie.getUnit(),
       });
     });
     this.storageStorage.setItem('measuredSeries', series);

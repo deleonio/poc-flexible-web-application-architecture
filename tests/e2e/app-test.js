@@ -1,7 +1,7 @@
 const ACTION_DELAY = 25;
 
 function testFall(url) {
-  return browser => {
+  return (browser) => {
     console.log(url);
     try {
       browser
@@ -45,7 +45,7 @@ function testFall(url) {
 }
 
 const tests = {};
-['https://github.modevel.de/poc/preact.html'].forEach(url => {
+['https://github.modevel.de/poc/preact.html'].forEach((url) => {
   tests[url] = testFall(url);
 });
 module.exports = tests;

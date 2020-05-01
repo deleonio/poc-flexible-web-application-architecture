@@ -11,14 +11,20 @@ import { AppController } from './controller';
       <small>{{ finishedRendering }} ms upcomming time</small>
       <list-serie *ngIf="resolvedRoute.url === 'series'"></list-serie>
       <create-serie *ngIf="resolvedRoute.url === 'series/create'"></create-serie>
-      <edit-serie *ngIf="resolvedRoute.url === 'series/:id/edit'" [resolvedRoute]="resolvedRoute"></edit-serie>
-      <small>Used filters: {{ filters.date(dummies.date) }} | {{ filters.currency(dummies.price) }} €</small>
+      <edit-serie
+        *ngIf="resolvedRoute.url === 'series/:id/edit'"
+        [resolvedRoute]="resolvedRoute"
+      ></edit-serie>
+      <small
+        >Used filters: {{ filters.date(dummies.date) }} |
+        {{ filters.currency(dummies.price) }} €</small
+      >
     </div>
-  `
+  `,
 })
 export class AppComponent extends AppController {
   public resolvedRoute: any = {
-    url: 'series'
+    url: 'series',
   };
 
   public constructor(appRef: ApplicationRef) {
@@ -27,7 +33,7 @@ export class AppComponent extends AppController {
       this.resolvedRoute = {
         params,
         query,
-        url: route.url
+        url: route.url,
       };
       appRef.tick();
     });

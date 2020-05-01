@@ -29,7 +29,7 @@ class AppComponent extends VanillaComponent {
   public readonly $ctrl: AppController = new AppController();
   public counter = 0;
   public resolvedRoute: any = {
-    url: 'series'
+    url: 'series',
   };
 
   public constructor() {
@@ -38,7 +38,7 @@ class AppComponent extends VanillaComponent {
       this.resolvedRoute = {
         params,
         query,
-        url: route.url
+        url: route.url,
       };
       this.render();
     });
