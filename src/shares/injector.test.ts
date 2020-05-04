@@ -2,9 +2,16 @@
 
 import { expect } from 'chai';
 
-import { DI } from './injector';
+import { DI, Injector } from './injector';
 
 describe(`Test: Injector-Service (DI)`, () => {
+  const myDI: Injector = new Injector();
+
+  it('DI is instance of Injector', () => {
+    expect(DI instanceof Injector).be.true;
+    expect(myDI instanceof Injector).be.true;
+  });
+
   describe(`Service registrieren`, () => {
     function test(type: string, service: any) {
       it(`Test-Case register (${type})`, () => {

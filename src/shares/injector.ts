@@ -1,12 +1,8 @@
-class Injector {
+export class Injector {
   private readonly services: any = {};
 
   public register(identifier: string, service: Object) {
-    if (
-      typeof identifier === 'string' &&
-      this.services.hasOwnProperty(identifier) === false &&
-      service !== undefined
-    ) {
+    if (typeof identifier === 'string' && this.services.hasOwnProperty(identifier) === false && service !== undefined) {
       Object.defineProperty(this.services, identifier, {
         value: service,
         writable: false,
