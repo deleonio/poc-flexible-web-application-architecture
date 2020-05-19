@@ -28,6 +28,7 @@ script:
   - npx do format
   - npx do lint
   - npx do test
+  - hint https://github.modevel.de/poc/
   # - npx do e2e -e chrome --headless
   # - npx do e2e -e firefox --headless
   # - npx do e2e -e seleniumChrome --headless
