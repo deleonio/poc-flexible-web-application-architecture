@@ -22,8 +22,7 @@ export class StorageService {
   }
 
   private restore() {
-    this.memoryStorage =
-      JSON.parse(window.sessionStorage.getItem(this.namespace)) || require('./mock.json');
+    this.memoryStorage = JSON.parse(window.sessionStorage.getItem(this.namespace)) || require('./mock.json');
   }
 
   private store() {

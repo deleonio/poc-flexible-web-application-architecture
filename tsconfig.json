@@ -17,13 +17,16 @@
     "skipLibCheck": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "strict": true
   },
   "include": [
     "src/**/*",
     "tests/**/*",
-    "node_modules/@leanup/features/**/*",
-    "node_modules/@leanup/material/**/*",
+    "node_modules/@leanup/**/*",
     "node_modules/inferno/dist/index.d.ts",
     "node_modules/preact/src/index.d.ts",
     "node_modules/vue/types/index.d.ts"

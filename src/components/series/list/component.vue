@@ -3,13 +3,7 @@
     <h5>List</h5>
     <div>
       <button class="btn btn-success" id="add" type="button" @click="onAdd()">Add</button>
-      <button
-        class="btn btn-info"
-        id="start"
-        type="button"
-        v-if="showPerformanceButtonRef"
-        @click="onStart()"
-      >
+      <button class="btn btn-info" id="start" type="button" v-if="showPerformanceButtonRef" @click="onStart()">
         Performance
       </button>
     </div>

@@ -4,10 +4,7 @@
     <small>{{ $ctrl.finishedRendering }} ms upcomming time</small>
     <list-serie v-if="resolvedRouteRef.url === 'series'"></list-serie>
     <create-serie v-if="resolvedRouteRef.url === 'series/create'"></create-serie>
-    <edit-serie
-      v-if="resolvedRouteRef.url === 'series/:id/edit'"
-      :resolvedRoute="resolvedRouteRef"
-    ></edit-serie>
+    <edit-serie v-if="resolvedRouteRef.url === 'series/:id/edit'" :resolvedRoute="resolvedRouteRef"></edit-serie>
     <small
       >Used filters: {{ $ctrl.filters.date($ctrl.dummies.date) }} |
       {{ $ctrl.filters.currency($ctrl.dummies.price) }} €</small

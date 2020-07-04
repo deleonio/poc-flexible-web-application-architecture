@@ -7,12 +7,7 @@ import { InputControl } from './controller';
   template: `
     <div class="form-group">
       <label for="{{ control.id }}">{{ control.label }}</label>
-      <input
-        class="form-control"
-        id="{{ control.id }}"
-        name="{{ control.name }}"
-        [(ngModel)]="control.value"
-      />
+      <input class="form-control" id="{{ control.id }}" name="{{ control.name }}" [(ngModel)]="control.value" />
     </div>
   `,
 })

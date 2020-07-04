@@ -5,13 +5,7 @@
       <button class="btn btn-success" id="add" type="button" click.delegate="add()">
         Add
       </button>
-      <button
-        class="btn btn-info"
-        id="start"
-        type="button"
-        if.bind="showPerformanceButton"
-        click.delegate="onStart()"
-      >
+      <button class="btn btn-info" id="start" type="button" if.bind="showPerformanceButton" click.delegate="onStart()">
         Performance
       </button>
     </div>
@@ -32,12 +26,7 @@
           <td>${serie.getTitle()}</td>
           <td>${serie.getUnit()}</td>
           <td>
-            <button
-              class="btn btn-info"
-              id="edit-${$index}"
-              type="button"
-              click.delegate="edit(serie)"
-            >
+            <button class="btn btn-info" id="edit-${$index}" type="button" click.delegate="edit(serie)">
               Edit
             </button>
           </td>

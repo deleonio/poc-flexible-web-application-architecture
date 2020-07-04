@@ -26,7 +26,7 @@ install:
 script:
   - npx do coverage
   - npx do format
-  - npx do lint
+  # - npx do lint
   - npx do test
   - npm install hint
   - npx hint https://github.modevel.de/poc/
@@ -38,9 +38,9 @@ script:
   # - npx do e2e -e seleniumHubFirefox
   - npm run coveralls
 #   - npm run build-all
-  # - export SSHPASS=${SFTP_PASSWORD}
-  # - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
-  # - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
+# - export SSHPASS=${SFTP_PASSWORD}
+# - sshpass -e sftp -oBatchMode=no -b batchfile.sftp ${SFTP_USER}@${SFTP_HOST}:poc
+# - curl --ftp-create-dirs -T dist/angular.js sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_HOST}/poc/angular.js
 # deploy:
 #   skip_cleanup: true
 #   provider: script
