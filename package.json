@@ -14,7 +14,7 @@
     "build-all": "sh build.sh",
     "clear": "rm -rf .nyc_output coverage dist storybook-static tests_output *.log",
     "coverage": "lean coverage",
-    "coveralls": "coveralls < coverage/lcov.info",
+    "coveralls": "coveralls < .reports/coverage/lcov.info",
     "e2e": "lean e2e",
     "ng:serve": "ng serve",
     "ng:build": "ng build --prod",
@@ -28,12 +28,6 @@
     "update": "npm install && npm update",
     "vue:serve": "vue-cli-service serve src/vue.ts",
     "vue:build": "vue-cli-service build src/vue.ts --prod"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "{src,tests}/**/*.{html,js,json,jsx,ts,tsx,gql,graphql}": [
