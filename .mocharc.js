@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli/.mocharc');
+module.exports = require('@leanup/cli-core-test/.mocharc');

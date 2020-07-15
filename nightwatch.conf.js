@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli/nightwatch.conf');
+module.exports = require('@leanup/cli-core-e2e/nightwatch.conf');

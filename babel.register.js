@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli/babel.register');
+module.exports = require('@leanup/cli-core-test/babel.register');

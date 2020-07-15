@@ -1,1 +1,1 @@
-module.exports = require('@leanup/cli-core-e2e/cucumber.conf');
+module.exports = require('@leanup/cli-cucumber/cucumber.conf');

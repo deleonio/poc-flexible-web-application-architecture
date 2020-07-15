@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture.svg?branch=master)](https://travis-ci.com/martinoppitz/poc-flexible-web-application-architecture)
+![GitHub CI](https://github.com/martinoppitz/poc-flexible-web-application-architecture/workflows/GitHub%20CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/martinoppitz/poc-flexible-web-application-architecture/badge.svg?branch=master)](https://coveralls.io/github/martinoppitz/poc-flexible-web-application-architecture?branch=master)
 [![dependencies][dependencies]][dependencies-url]
 [![dev-dependencies][dev-dependencies]][dev-dependencies-url]
@@ -43,7 +43,7 @@
   - [Gained knowledge](#gained-knowledge)
     - [Moment increases the artifact size](#moment-increases-the-artifact-size)
     - [Artifact analyser](#artifact-analyser)
-    - [Artifact minimisation (⨻ outdated)](#artifact-minimisation-%e2%a8%bb-outdated)
+    - [Artifact minimisation (⨻ outdated)](#artifact-minimisation--outdated)
   - [References](#references)
 
 ## Motivation
@@ -77,21 +77,21 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 | Tool            |   Description    | Status |
 | --------------- | :--------------: | :----: |
-| [Ant]           |      Design      |   ⌛   |
-| [Bootstrap]     |      Design      |   ✔️   |
-| [Material]      |      Design      |   ⌛   |
-| [Babel]         |    Transpiler    |   ✔️   |
-| [Webpack]       |     Bundler      |   ✔️   |
-| [TypeScript]    |     Language     |   ✔️   |
-| [Mocha]         | Unit-Test-Runner |   ✔️   |
-| [Chai]          |    Assertion     |   ✔️   |
-| [ESLint]        |      Linter      |   ✔️   |
-| [Prettier]      |    Formatter     |   ✔️   |
-| [Nightwatch.js] | E2E-Test-Runner  |   ✔️   |
-| [Cypress]       | E2E-Test-Runner  |  ❌\*  |
-| [NYC]           |  Code-Coverage   |   ✔️   |
-| [Storybook]     |  Documentation   |   ✔️   |
-| [Workbox]       |   PWA-Tooling    |   ✔️   |
+| [Ant]           |      Design      |   ⌛    |
+| [Bootstrap]     |      Design      |   ✔️    |
+| [Material]      |      Design      |   ⌛    |
+| [Babel]         |    Transpiler    |   ✔️    |
+| [Webpack]       |     Bundler      |   ✔️    |
+| [TypeScript]    |     Language     |   ✔️    |
+| [Mocha]         | Unit-Test-Runner |   ✔️    |
+| [Chai]          |    Assertion     |   ✔️    |
+| [ESLint]        |      Linter      |   ✔️    |
+| [Prettier]      |    Formatter     |   ✔️    |
+| [Nightwatch.js] | E2E-Test-Runner  |   ✔️    |
+| [Cypress]       | E2E-Test-Runner  |  ❌\*   |
+| [NYC]           |  Code-Coverage   |   ✔️    |
+| [Storybook]     |  Documentation   |   ✔️    |
+| [Workbox]       |   PWA-Tooling    |   ✔️    |
 
 \* It is difficult to keep focus with [Cypress] as it is more a nice tool than an effective tool. It is expected that a lot of time will be invested to justify the requirements of a project.
 
@@ -99,22 +99,22 @@ We write always the same application with different JavaScript-Frameworks. Here 
 
 The selection of the following frameworks depends on this [report](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results#js-framework-essential) and [benchmark](https://krausest.github.io/js-framework-benchmark/2019/table_chrome_78.html).
 
-|           Characteristic |   [Angular]    | [AngularJS] | [Aurelia] |    [Inferno]    |    [Preact]     |     [React]     | [Svelte] | Vanilla  |          [Vue]          |
-| -----------------------: | :------------: | :---------: | :-------: | :-------------: | :-------------: | :-------------: | :------: | :------: | :---------------------: |
-|                  Version |      9.1       |     1.7     |    1.3    |       7.4       |      10.4       |      16.13      |   3.20   |    -     | 2.6 ([Composition API]) |
-|            Artifact size |    598 KiB     |   213 KiB   |  354 KiB  |    52.4 KiB     |    47.9 KiB     |     160 KiB     | 45.3 KiB | 31.8 KiB |         114 KiB         |
-|           Upcomming time |    ~53.5 ms    |   ~50 ms    |  ~10 ms   |     ~11 ms      |     ~12 ms      |     ~13 ms      |  ~13 ms  |    -     |         ~18 ms          |
-|         Performance test |       ⌛       |     ⌛      |    ⌛     |       ⌛        |       ⌛        |       ⌛        |    ⌛    |    ⌛    |           ⌛            |
-| [Devtools](####devtools) |       ✔️       |     ✔️      |    ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ❌    |           ✔️            |
-|                   Router |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|                       DI |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|                    [SPA] |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|                    [PWA] |       ✔️       |     ✔️      |    ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|                    [SSR] |       ✔️       |     ✔️      |    ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ✔️    |           ✔️            |
-|      Internet Explorer\* |       ❌       |     ✔️      |    ❌     |       ✔️        |       ✔️        |       ✔️        |    ❌    |    ❌    |           ✔️            |
-|            Framework CLI | ✔️<br>(253 KB) |     ❌      |  ✔️\*\*   |       ❌        |       ❌        |       ❌        |    ❌    |    ❌    |     ✔️<br>(121 KB)      |
-|               Scoped App |       ✔️       |     ✔️      |    ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️    |    ❌    |           ✔️            |
-|         Language Support |       ✔️       |     ⌛      |    ⌛     | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] |    ⌛    |    ✔️    |           ✔️            |
+|           Characteristic |   [Angular]   | [AngularJS] | [Aurelia] |   [Inferno]    |    [Preact]    |    [React]     | [Svelte] | Vanilla  |          [Vue]          |
+| -----------------------: | :-----------: | :---------: | :-------: | :------------: | :------------: | :------------: | :------: | :------: | :---------------------: |
+|                  Version |      9.1      |     1.7     |    1.3    |      7.4       |      10.4      |     16.13      |   3.20   |    -     | 2.6 ([Composition API]) |
+|            Artifact size |    598 KiB    |   213 KiB   |  354 KiB  |    52.4 KiB    |    47.9 KiB    |    160 KiB     | 45.3 KiB | 31.8 KiB |         114 KiB         |
+|           Upcomming time |   ~53.5 ms    |   ~50 ms    |  ~10 ms   |     ~11 ms     |     ~12 ms     |     ~13 ms     |  ~13 ms  |    -     |         ~18 ms          |
+|         Performance test |       ⌛       |      ⌛      |     ⌛     |       ⌛        |       ⌛        |       ⌛        |    ⌛     |    ⌛     |            ⌛            |
+| [Devtools](####devtools) |       ✔️       |      ✔️      |     ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️     |    ❌     |            ✔️            |
+|                   Router |       ✔️       |      ✔️      |     ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️     |    ✔️     |            ✔️            |
+|                       DI |       ✔️       |      ✔️      |     ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️     |    ✔️     |            ✔️            |
+|                    [SPA] |       ✔️       |      ✔️      |     ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️     |    ✔️     |            ✔️            |
+|                    [PWA] |       ✔️       |      ✔️      |     ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️     |    ✔️     |            ✔️            |
+|                    [SSR] |       ✔️       |      ✔️      |     ⌛     |       ✔️        |       ✔️        |       ✔️        |    ✔️     |    ✔️     |            ✔️            |
+|      Internet Explorer\* |       ❌       |      ✔️      |     ❌     |       ✔️        |       ✔️        |       ✔️        |    ❌     |    ❌     |            ✔️            |
+|            Framework CLI | ✔️<br>(253 KB) |      ❌      |   ✔️\*\*   |       ❌        |       ❌        |       ❌        |    ❌     |    ❌     |      ✔️<br>(121 KB)      |
+|               Scoped App |       ✔️       |      ✔️      |     ✔️     |       ✔️        |       ✔️        |       ✔️        |    ✔️     |    ❌     |            ✔️            |
+|         Language Support |       ✔️       |      ⌛      |     ⌛     | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] | ✔️<br>[JSX/TSX] |    ⌛     |    ✔️     |            ✔️            |
 
 \* Maybe more polyfills are required for IE.<br>
 \*\* The Aurelia CLI can not be used for this project.

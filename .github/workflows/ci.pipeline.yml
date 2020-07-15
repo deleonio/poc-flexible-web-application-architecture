@@ -1,0 +1,39 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: GitHub CI
+
+on:
+  push:
+    branches:
+      - development
+      - master
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install
+        run: npm ci
+      - name: Coverage
+        run: npx do coverage
+      - name: Format
+        run: npx do format
+      # - name: Lint
+      #   run: npx do lint
+      - name: Unit-Test
+        run: npx do test
+      - name: Build
+        run: npm run build-all
+      - name: E2E-Test
+        run: npx do e2e -e seleniumHubChrome
+      # - name: Coverage-Bericht
+      #   run: npm run coveralls

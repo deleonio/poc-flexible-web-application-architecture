@@ -1,9 +1,13 @@
 declare module 'navigo' {
+  interface NavigoOn {
+    resolve: Function;
+  }
+
   class Navigo {
-    constructor(root: any, hash: boolean);
-    public on(...args: any): any;
-    public navigate(...args: any): any;
-    public lastRouteResolved(...args: any): any;
+    public constructor(root: unknown, hash: boolean);
+    public on(...args: unknown): NavigoOn;
+    public navigate(...args: unknown): any;
+    public lastRouteResolved(...args: unknown): Object;
   }
   export default Navigo;
 }
