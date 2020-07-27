@@ -14,7 +14,7 @@ abstract class AbstractControl {
     return `${id}${this.name}`;
   }
 
-  public addParentForm(form: FormControl) {
+  public addParentForm(form: FormControl): void {
     if (this.parentForms.has(form.name) === false) {
       this.parentForms.set(form.name, form);
     } else {
@@ -22,7 +22,7 @@ abstract class AbstractControl {
     }
   }
 
-  public removeParentForm(name: string) {
+  public removeParentForm(name: string): void {
     if (this.parentForms.has(name) === true) {
       this.parentForms.delete(name);
     } else {
@@ -51,7 +51,7 @@ export class FormControl extends AbstractControl {
     return `${this.name}`;
   }
 
-  public addInput(input: InputControl) {
+  public addInput(input: InputControl): void {
     if (this.inputs.has(input.name) === false) {
       input.addParentForm(this);
       this.inputs.set(input.name, input);
@@ -60,7 +60,7 @@ export class FormControl extends AbstractControl {
     }
   }
 
-  public removeInput(name: string) {
+  public removeInput(name: string): void {
     if (this.inputs.has(name) === true) {
       const input = this.inputs.get(name);
       if (input instanceof InputControl) {

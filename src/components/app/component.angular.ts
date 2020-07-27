@@ -2,6 +2,7 @@ import { ApplicationRef, Component } from '@angular/core';
 
 import { RouterService } from '../../services/router/service';
 import { AppController } from './controller';
+import { currency, date } from '@leanup/features/filters';
 
 @Component({
   selector: 'app',
@@ -12,11 +13,13 @@ import { AppController } from './controller';
       <list-serie *ngIf="resolvedRoute.url === 'series'"></list-serie>
       <create-serie *ngIf="resolvedRoute.url === 'series/create'"></create-serie>
       <edit-serie *ngIf="resolvedRoute.url === 'series/:id/edit'" [resolvedRoute]="resolvedRoute"></edit-serie>
-      <small>Used filters: {{ filters.date(dummies.date) }} | {{ filters.currency(dummies.price) }} €</small>
+      <small>Used filters: {{ date(dummies.date) }} | {{ currency(dummies.price) }} €</small>
     </div>
   `,
 })
 export class AppComponent extends AppController {
+  public currency = currency;
+  public date = date;
   public resolvedRoute: any = {
     url: 'series',
   };

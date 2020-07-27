@@ -6,21 +6,21 @@ export class MeasuredSerieModel {
   private title: string;
   private unit: string;
 
-  constructor(title: string, unit: string) {
+  public constructor(title: string, unit: string) {
     this.title = title;
     this.unit = unit;
   }
 
-  public addMeasurement(measurement: MeasuredItemModel) {
+  public addMeasurement(measurement: MeasuredItemModel): void {
     this.measurements.push(measurement);
   }
-  public remmoveMeasurement(measurement: MeasuredItemModel) {
+  public remmoveMeasurement(measurement: MeasuredItemModel): void {
     const index = this.measurements.indexOf(measurement);
     if (index >= 0) {
       this.measurements.splice(index, 1);
     }
   }
-  public setId(id: number) {
+  public setId(id: number): void {
     this.id = id;
   }
   public getId(): number {
@@ -29,13 +29,13 @@ export class MeasuredSerieModel {
   public getMeasurements(): MeasuredItemModel[] {
     return this.measurements;
   }
-  public setTitle(title: string) {
+  public setTitle(title: string): void {
     this.title = title;
   }
   public getTitle(): string {
     return this.title;
   }
-  public setUnit(unit: string) {
+  public setUnit(unit: string): void {
     this.unit = unit;
   }
   public getUnit(): string {

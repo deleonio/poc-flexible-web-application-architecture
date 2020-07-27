@@ -4,16 +4,17 @@
   import ListSerieComponent from '../series/list/component.svelte';
   import CreateSerieComponent from '../series/create/component.svelte';
   import EditSerieComponent from '../series/edit/component.svelte';
+  import { currency, date } from '@leanup/features/filters';
 
   const ctrl = new AppController();
   let resolvedRoute = {
-    url: 'series'
+    url: 'series',
   };
   RouterService.subscribe((route, params, query) => {
     resolvedRoute = {
       params,
       query,
-      url: route.url
+      url: route.url,
     };
   });
 </script>
@@ -30,5 +31,5 @@
   {#if resolvedRoute.url === 'series/:id/edit'}
     <EditSerieComponent {resolvedRoute} />
   {/if}
-  <small>Used filters: {ctrl.filters.date(ctrl.dummies.date)} | {ctrl.filters.currency(ctrl.dummies.price)} €</small>
+  <small>Used filters: {date(ctrl.dummies.date)} | {currency(ctrl.dummies.price)} €</small>
 </div>

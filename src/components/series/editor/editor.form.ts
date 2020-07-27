@@ -1,7 +1,7 @@
 import { FormControl, InputControl } from '../../input/controller';
 
 export class EditorForm extends FormControl {
-  constructor(name: string) {
+  public constructor(name: string) {
     super(name);
     this.addInput(
       new InputControl('title', {

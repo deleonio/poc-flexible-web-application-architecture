@@ -6,27 +6,27 @@ import { RouterService } from '../../../services/router/service';
 import { EditorForm } from '../editor/editor.form';
 
 export class EditSerieController {
-  private readonly measurementService: MeasurementService = DI.get('MeasurementService');
+  private readonly measurementService: MeasurementService = DI.get('MeasurementService') as MeasurementService;
   public editorForm: EditorForm | null = null;
-  private measuredSerie: MeasuredSerieModel | null = null;
+  private measuredSerie: MeasuredSerieModel | undefined;
 
   public constructor(measuredSerieId: number) {
     this.changeMeasuredSerie(measuredSerieId);
   }
 
-  public changeMeasuredSerie(measuredSerieId: number) {
+  public changeMeasuredSerie(measuredSerieId: number): void {
     this.measuredSerie = this.measurementService.getSerie(measuredSerieId);
     this.mapTo(this.measuredSerie);
   }
 
-  public updateProps(measuredSerie: MeasuredSerieModel) {
+  public updateProps(measuredSerie: MeasuredSerieModel): void {
     if (measuredSerie instanceof MeasuredSerieModel) {
       this.measuredSerie = measuredSerie;
       this.mapTo(measuredSerie);
     }
   }
 
-  public mapTo(measuredSerie: MeasuredSerieModel) {
+  public mapTo(measuredSerie: MeasuredSerieModel): void {
     if (measuredSerie instanceof MeasuredSerieModel) {
       this.editorForm = new EditorForm('edit');
       this.editorForm.getInput('title').value = this.measuredSerie.getTitle();
@@ -34,14 +34,14 @@ export class EditSerieController {
     }
   }
 
-  public onDelete() {
+  public onDelete(): void {
     if (this.measuredSerie instanceof MeasuredSerieModel) {
       this.measurementService.removeSerie(this.measuredSerie);
       this.onCancel();
     }
   }
 
-  public onSubmit() {
+  public onSubmit(): void {
     if (this.measuredSerie instanceof MeasuredSerieModel && this.editorForm instanceof EditorForm) {
       this.measuredSerie.setTitle(this.editorForm.getInput('title').value);
       this.measuredSerie.setUnit(this.editorForm.getInput('unit').value);
@@ -50,7 +50,7 @@ export class EditSerieController {
     }
   }
 
-  public onCancel() {
+  public onCancel(): void {
     RouterService.navigate('series');
   }
 }

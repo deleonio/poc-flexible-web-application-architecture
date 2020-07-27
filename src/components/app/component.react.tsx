@@ -6,6 +6,7 @@ import { CreateSerieComponent } from '../series/create/component.react';
 import { EditSerieComponent } from '../series/edit/component.react';
 import { ListSerieComponent } from '../series/list/component.react';
 import { AppController, Props } from './controller';
+import { currency, date } from '@leanup/features/filters';
 
 export class AppComponent extends ReactComponent<Props, unknown> {
   private resolvedRoute: any = {
@@ -35,8 +36,7 @@ export class AppComponent extends ReactComponent<Props, unknown> {
         {this.resolvedRoute.url === 'series/create' && <CreateSerieComponent />}
         {this.resolvedRoute.url === 'series/:id/edit' && <EditSerieComponent resolvedRoute={this.resolvedRoute} />}
         <small>
-          Used filters: {this.$ctrl.filters.date(this.$ctrl.dummies.date)} |{' '}
-          {this.$ctrl.filters.currency(this.$ctrl.dummies.price)} €
+          Used filters: {date(this.$ctrl.dummies.date)} | {currency(this.$ctrl.dummies.price)} €
         </small>
       </div>
     );

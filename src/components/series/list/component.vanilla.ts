@@ -1,7 +1,8 @@
 import { VanillaComponent } from '../../component.vanilla';
 import { ListSerieController } from './controller';
+import { MeasuredSerieModel } from '../../../models/measured-series.model';
 
-function render($ctrl: any): string {
+function render($ctrl: ListSerieController): string {
   let html = `<div>
   <h5>List</h5>
   <div>
@@ -26,7 +27,7 @@ function render($ctrl: any): string {
        </tr>
      </thead>
      <tbody>`;
-    $ctrl.measuredSeries.forEach((serie: any, index2: number) => {
+    $ctrl.measuredSeries.forEach((serie: MeasuredSerieModel, index2: number) => {
       html += `<tr key="${index2}">
       <td>${index2 + 1}</td>
       <td>${serie.getId()}</td>
@@ -51,7 +52,7 @@ function render($ctrl: any): string {
 class ListSerieComponent extends VanillaComponent {
   private readonly $ctrl: ListSerieController = new ListSerieController();
 
-  constructor() {
+  public constructor() {
     super();
     this.$ctrl.renderView = this.render.bind(this);
     // setInterval(() => {
@@ -59,7 +60,7 @@ class ListSerieComponent extends VanillaComponent {
     // }, 10000);
   }
 
-  public hackMe(component: ListSerieComponent) {
+  public hackMe(component: ListSerieComponent): void {
     console.log(component);
   }
 

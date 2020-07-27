@@ -1,7 +1,7 @@
 export class VanillaComponent extends HTMLElement {
   protected readonly dom: HTMLElement | ShadowRoot;
 
-  constructor() {
+  public constructor() {
     super();
     this.dom = this;
     // this.attachShadow({ delegatesFocus: true, mode: 'open' });
@@ -9,9 +9,9 @@ export class VanillaComponent extends HTMLElement {
   }
 
   // tslint:disable-next-line: no-empty
-  protected render() {}
+  protected render(): void {}
 
-  public connectedCallback() {
+  public connectedCallback(): void {
     this.render();
   }
 }

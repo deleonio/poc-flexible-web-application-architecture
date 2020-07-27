@@ -4,6 +4,7 @@ import '../series/list/component.vanilla';
 import { RouterService } from '../../services/router/service';
 import { VanillaComponent } from '../component.vanilla';
 import { AppController } from './controller';
+import { currency, date } from '@leanup/features/filters';
 
 function render(component: AppComponent) {
   let html = `<div id="app">
@@ -18,23 +19,27 @@ function render(component: AppComponent) {
     html += `<wc-edit-serie></wc-edit-serie>`;
   }
   html += `<!-- small>${component.counter} s ticks</small -->
-  <small>Used filters: ${component.$ctrl.filters.date(
-    component.$ctrl.dummies.date
-  )} | ${component.$ctrl.filters.currency(component.$ctrl.dummies.price)} €</small>
+  <small>Used filters: ${date(component.$ctrl.dummies.date)} | ${currency(component.$ctrl.dummies.price)} €</small>
   </div>`;
   return html;
 }
 
+type ResolveRoute = {
+  params?: unknown;
+  query?: unknown;
+  url: string;
+};
+
 class AppComponent extends VanillaComponent {
   public readonly $ctrl: AppController = new AppController();
   public counter = 0;
-  public resolvedRoute: any = {
+  public resolvedRoute: ResolveRoute = {
     url: 'series',
   };
 
   public constructor() {
     super();
-    RouterService.subscribe((route: any, params: any, query: any) => {
+    RouterService.subscribe((route: { url: string }, params: unknown, query: unknown) => {
       this.resolvedRoute = {
         params,
         query,

@@ -13,7 +13,10 @@
     "target": "es2015",
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
-    "types": ["mocha", "node"]
+    "types": ["mocha", "node"],
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "strict": false
   },
   "angularCompilerOptions": {
     "enableIvy": true,
@@ -22,11 +25,14 @@
   },
   "include": ["src/**/*.ts", "node_modules/@leanup/**/*.ts"],
   "exclude": [
-    "**/svelte.ts",
-    "**/vue.ts",
-    "**/component.inferno.ts",
-    "**/component.preact.ts",
-    "**/component.react.ts",
-    "**/component.vanilla.ts"
+    "node_modules/@leanup/**/template/**/*",
+    "src/**/svelte.ts",
+    "src/**/vue.ts",
+    "src/**/*angularjs*.ts",
+    "src/**/*aurelia*.ts",
+    "src/**/*inferno*.ts",
+    "src/**/*preact*.ts",
+    "src/**/*react*.ts",
+    "src/**/*vanilla*.ts"
   ]
 }

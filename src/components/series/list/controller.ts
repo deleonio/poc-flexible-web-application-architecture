@@ -7,7 +7,7 @@ import { RouterService } from '../../../services/router/service';
 const PERFORMANCE_ANZAHL = 2500;
 
 export class ListSerieController {
-  private readonly measurementService: MeasurementService = DI.get('MeasurementService');
+  private readonly measurementService: MeasurementService = DI.get('MeasurementService') as MeasurementService;
   public measuredSeries: MeasuredSerieModel[] = [];
   public measuredSerie: MeasuredSerieModel | null = null;
   // tslint:disable-next-line: no-empty
@@ -16,27 +16,27 @@ export class ListSerieController {
   public duration = 0;
   public showPerformanceButton = true;
 
-  constructor() {
+  public constructor() {
     this.measurementService.observe.subscribe(() => {
       this.update();
     });
     this.update();
   }
 
-  public add() {
+  public add(): void {
     RouterService.navigate('series/create');
   }
 
-  public edit(measuredSerie: MeasuredSerieModel) {
+  public edit(measuredSerie: MeasuredSerieModel): void {
     RouterService.navigate(`series/${measuredSerie.getId()}/edit`);
   }
 
-  public update() {
+  public update(): void {
     this.measuredSeries = this.measurementService.getSeries();
     this.renderView();
   }
 
-  public onStart() {
+  public onStart(): void {
     this.showPerformanceButton = false;
     setTimeout(() => {
       const start: number = Date.now();

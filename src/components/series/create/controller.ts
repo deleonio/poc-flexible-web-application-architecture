@@ -6,10 +6,10 @@ import { RouterService } from '../../../services/router/service';
 import { EditorForm } from '../editor/editor.form';
 
 export class CreateSerieController {
-  private readonly measurementService: MeasurementService = DI.get('MeasurementService');
+  private readonly measurementService: MeasurementService = DI.get('MeasurementService') as MeasurementService;
   public editorForm: EditorForm = new EditorForm('new');
 
-  public onSubmit() {
+  public onSubmit(): void {
     this.measurementService.addSerie(
       new MeasuredSerieModel(this.editorForm.getInput('title').value, this.editorForm.getInput('unit').value)
     );
@@ -18,7 +18,7 @@ export class CreateSerieController {
     this.onCancel();
   }
 
-  public onCancel() {
+  public onCancel(): void {
     RouterService.navigate('series');
   }
 }

@@ -1,6 +1,6 @@
 import Navigo from 'navigo';
 
-export const NAVIGO = new Navigo(null, true);
+export const NAVIGO: Navigo = new Navigo(null, true);
 
 export interface Route {
   component?: Object;
@@ -10,15 +10,16 @@ export interface Route {
 
 export class RouterService {
   private static readonly subscribers: Function[] = [];
+
   private constructor() {}
 
-  private static notify(route: Route, params: any, query: any) {
+  private static notify(route: Route, params: any, query: any): void {
     RouterService.subscribers.forEach((subscriber: Function) => {
       subscriber(route, params, query);
     });
   }
 
-  public static register(routes: Route[]) {
+  public static register(routes: Route[]): void {
     routes.forEach((route: Route) => {
       NAVIGO.on(route.url, {
         as: route.url,
@@ -29,15 +30,15 @@ export class RouterService {
     });
   }
 
-  public static navigate(route: string, absolute = false) {
+  public static navigate(route: string, absolute = false): void {
     NAVIGO.navigate(route, absolute);
   }
 
-  public static currect() {
+  public static currect(): Object {
     return NAVIGO.lastRouteResolved();
   }
 
-  public static subscribe(subscriber: Function) {
+  public static subscribe(subscriber: Function): void {
     if (subscriber instanceof Function) {
       this.subscribers.push(subscriber);
     } else {
@@ -45,7 +46,7 @@ export class RouterService {
     }
   }
 
-  public static unsubscribe(subscriber: Function) {
+  public static unsubscribe(subscriber: Function): void {
     const index = this.subscribers.indexOf(subscriber);
     if (index >= 0) {
       this.subscribers.splice(index, 1);
