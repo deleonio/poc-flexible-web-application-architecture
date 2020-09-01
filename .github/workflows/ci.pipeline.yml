@@ -21,19 +21,21 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Install
-        run: npm ci
-      - name: Coverage
-        run: npx do coverage
-      - name: Format
-        run: npx do format
-      # - name: Lint
-      #   run: npx do lint
-      - name: Unit-Test
-        run: npx do test
-      - name: Build
-        run: npm run build-all
-      - name: E2E-Test
-        run: npx do e2e -e seleniumHubChrome
-      # - name: Coverage-Bericht
-      #   run: npm run coveralls
+      - name: Build all framework variants
+        run: |
+          git status
+          sh wake-up-all.sh
+          git status
+        working-directory: .github/workflows
+      - name: List files
+        run: ls -la dist
+      - name: Git-Status
+        run: git status
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: sftp://home292045786.1and1-data.host
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          known-hosts: ${{ secrets.FTP_KNOWN_HOSTS }}
+          local-dir: dist/
