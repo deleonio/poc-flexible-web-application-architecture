@@ -1,6 +1,6 @@
 mkdir workspace
 cd workspace
-npm install @leanup/cli@latest @leanup/cli-$1@latest --no-save
+npm install @leanup/cli@$2 @leanup/cli-$1@$2 --no-save
 npx lean create -o -n template
 # npx $1 create -o -n template
 # npm install

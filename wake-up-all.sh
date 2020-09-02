@@ -1,11 +1,11 @@
 cp -r public dist
-sh ./wake-up.sh angular
-sh ./wake-up.sh angularjs
-sh ./wake-up.sh aurelia
-sh ./wake-up.sh inferno
-sh ./wake-up.sh preact
-sh ./wake-up.sh react
-sh ./wake-up.sh svelte
-sh ./wake-up.sh vanilla
-sh ./wake-up.sh vue
-sh ./wake-up.sh vue3
+sh ./wake-up.sh angular $1
+sh ./wake-up.sh angularjs $1
+sh ./wake-up.sh aurelia $1
+sh ./wake-up.sh inferno $1
+sh ./wake-up.sh preact $1
+sh ./wake-up.sh react $1
+sh ./wake-up.sh svelte $1
+sh ./wake-up.sh vanilla $1
+sh ./wake-up.sh vue $1
+sh ./wake-up.sh vue3 $1
