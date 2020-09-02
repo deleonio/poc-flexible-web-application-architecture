@@ -1,6 +1,5 @@
-rm -rf $1 || true
-mkdir $1
-cd $1
+mkdir workspace
+cd workspace
 npm install @leanup/cli@latest @leanup/cli-$1@latest --no-save
 npx lean create -o -n template
 # npx $1 create -o -n template
@@ -26,4 +25,4 @@ cp dist/app.js.gz ../../../dist/$1.js.gz
 # npx $1 e2e -e chrome
 npm outdated || true
 npm list --depth=0 || true
-
+rm -rf workspace

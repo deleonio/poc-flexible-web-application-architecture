@@ -1,21 +1,11 @@
 cp -r ../../public ../../dist
 sh ./wake-up.sh angular
-rm -rf angular
 sh ./wake-up.sh angularjs
-rm -rf angularjs
 sh ./wake-up.sh aurelia
-rm -rf aurelia
 sh ./wake-up.sh inferno
-rm -rf inferno
 sh ./wake-up.sh preact
-rm -rf preact
 sh ./wake-up.sh react
-rm -rf react
 sh ./wake-up.sh svelte
-rm -rf svelte
 sh ./wake-up.sh vanilla
-rm -rf vanilla
 sh ./wake-up.sh vue
-rm -rf vue
 sh ./wake-up.sh vue3
-rm -rf vue3
