@@ -17,8 +17,9 @@ npx lean coverage
 # npx $1 coverage
 npx lean build --gzip
 # npx $1 build --gzip
-cp dist/app.js ../../../dist/$1.js
-cp dist/app.js.gz ../../../dist/$1.js.gz
+cp dist/app.css ../dist/app.css
+cp dist/app.js ../dist/$1.js
+cp dist/app.js.gz ../dist/$1.js.gz
 # npx lean serve -o -m production
 # npx $1 serve -o -m production
 # npx lean e2e -e chrome

@@ -1,4 +1,4 @@
-cp -r ../../public ../../dist
+cp -r public dist
 sh ./wake-up.sh angular
 sh ./wake-up.sh angularjs
 sh ./wake-up.sh aurelia
