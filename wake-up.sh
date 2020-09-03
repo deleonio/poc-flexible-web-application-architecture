@@ -3,16 +3,16 @@ cd workspace
 npm install @leanup/cli@$2 @leanup/cli-$1@$2 --no-save
 npx lean create -o -n template
 npx $1 create -o -n template
-npm install
-npm update
-npx lean lint -f
-npx $1 lint -f
-npx lean lint || true
-npx $1 lint || true
-npx lean format -f
-npx $1 format -f
-npx lean format || true
-npx $1 format || true
+# npm install
+# npm update
+# npx lean lint -f
+# npx $1 lint -f
+npx lean lint
+npx $1 lint
+# npx lean format -f
+# npx $1 format -f
+npx lean format
+npx $1 format
 npx lean test
 npx $1 test
 npx lean coverage
