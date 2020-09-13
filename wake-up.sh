@@ -4,6 +4,7 @@ npm install @leanup/cli@$2 @leanup/cli-$1@$2 --no-save
 npx lean create -o -n template
 npx $1 create -o -n template
 # npm install
+npm outdated || true
 npm update
 # npx lean lint -f
 # npx $1 lint -f
