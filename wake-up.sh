@@ -6,6 +6,7 @@ npx $1 create -o -n template
 # npm install
 npm outdated || true
 npm update
+npm list --depth=0
 # npx lean lint -f
 # npx $1 lint -f
 npx lean lint
