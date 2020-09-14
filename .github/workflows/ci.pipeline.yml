@@ -22,6 +22,8 @@ jobs:
           node-version: 12.x
       - name: Build all framework variants
         run: sh wake-up-all.sh latest
+      - name: List build artifacts
+        run: ls -la dist/
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
