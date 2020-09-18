@@ -21,4 +21,4 @@ jobs:
         with:
           node-version: 12.x
       - name: Build all framework variants
-        run: sh wake-up-all.sh canary
+        run: sh wake-up-all.sh next
