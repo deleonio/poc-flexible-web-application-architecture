@@ -32,3 +32,4 @@ jobs:
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           known-hosts: ${{ secrets.FTP_KNOWN_HOSTS }}
           local-dir: dist/
+          git-ftp-args: --all
