@@ -1,18 +1,18 @@
 mkdir workspace
 cd workspace
 npm install @leanup/cli@$2 @leanup/cli-$1@$2 --no-save
-npx lean create -o -n template
+# npx lean create -o -n template
 npx $1 create -o -n template
 npm update
-npx lean lint
+# npx lean lint
 npx $1 lint
-npx lean format
+# npx lean format
 npx $1 format
-npx lean test
-npx $1 test
-npx lean coverage
+# npx lean test
+# npx $1 test
+# npx lean coverage
 npx $1 coverage
-npx lean build --gzip
+# npx lean build --gzip
 npx $1 build --gzip
 cp dist/app.css ../dist/app.css
 cp dist/app.js ../dist/$1.js
