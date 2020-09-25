@@ -4,9 +4,6 @@
 name: GitHub CI (Next)
 
 on:
-  push:
-    branches:
-      - master
   schedule:
     - cron: "0 16 * * *"
 
