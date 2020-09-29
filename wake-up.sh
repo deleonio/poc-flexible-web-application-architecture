@@ -10,8 +10,8 @@ npx $1 lint
 npx $1 format
 # npx lean test
 # npx $1 test
-# npx lean coverage
-npx $1 coverage
+# npx lean coverage --check-coverage
+npx $1 coverage --check-coverage
 # npx lean build --gzip
 npx $1 build --gzip
 cp dist/app.css ../dist/app.css
