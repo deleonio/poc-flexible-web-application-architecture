@@ -4,8 +4,13 @@
 name: GitHub CI (Next)
 
 on:
+  workflow_run:
+  workflow_dispatch:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 0 * * *"
+
+env:
+  tag: next
 
 jobs:
   build:
@@ -18,9 +23,14 @@ jobs:
         with:
           node-version: 12.x
       - name: Build all framework variants
-        run: sh wake-up-all.sh next
+        run: sh wake-up-all.sh ${ENV.tag}
       - name: List build artifacts
-        run: ls -la dist/
+        run: |
+          ls -la dist/
+          mkdir ${ENV.tag}
+          mv dist/* ${ENV.tag}/
+          mv ${ENV.tag} dist/
+          ls -la dist/${ENV.tag}/
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
