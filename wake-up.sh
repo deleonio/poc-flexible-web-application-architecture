@@ -1,27 +1,27 @@
-mkdir workspace
-cd workspace
-npm install @leanup/cli@$2 @leanup/cli-$1@$2 --no-save
-# npx lean create -o -n template
-npx $1 create -o -n template
-npm update
-# npx lean lint
-npx $1 lint
-# npx lean format
-npx $1 format
-# npx lean test
-# npx $1 test
-# npx lean coverage --check-coverage
-npx $1 coverage --check-coverage
-# npx lean build --gzip
-npx $1 build --gzip
-cp dist/app.css ../dist/app.css
-cp dist/app.js ../dist/$1.js
-cp dist/app.js.gz ../dist/$1.js.gz
-# npx lean serve -o -m production
-# npx $1 serve -o -m production
-# npx lean e2e -e chrome
-# npx $1 e2e -e chrome
+mkdir workspace || { echo 'command failed' ; exit 1; }
+cd workspace || { echo 'command failed' ; exit 1; }
+npm install @leanup/cli@$2 @leanup/cli-$1@$2 --no-save || { echo 'command failed' ; exit 1; }
+# npx lean create -o -n template || { echo 'command failed' ; exit 1; }
+npx $1 create -o -n template || { echo 'command failed' ; exit 1; }
+npm update || { echo 'command failed' ; exit 1; }
+# npx lean lint || { echo 'command failed' ; exit 1; }
+npx $1 lint || { echo 'command failed' ; exit 1; }
+# npx lean format || { echo 'command failed' ; exit 1; }
+npx $1 format || { echo 'command failed' ; exit 1; }
+# npx lean test || { echo 'command failed' ; exit 1; }
+# npx $1 test || { echo 'command failed' ; exit 1; }
+# npx lean coverage --check-coverage || { echo 'command failed' ; exit 1; }
+npx $1 coverage --check-coverage || { echo 'command failed' ; exit 1; }
+# npx lean build --gzip || { echo 'command failed' ; exit 1; }
+npx $1 build --gzip || { echo 'command failed' ; exit 1; }
+cp dist/app.css ../dist/app.css || { echo 'command failed' ; exit 1; }
+cp dist/app.js ../dist/$1.js || { echo 'command failed' ; exit 1; }
+cp dist/app.js.gz ../dist/$1.js.gz || { echo 'command failed' ; exit 1; }
+# npx lean serve -o -m production || { echo 'command failed' ; exit 1; }
+# npx $1 serve -o -m production || { echo 'command failed' ; exit 1; }
+# npx lean e2e -e chrome || { echo 'command failed' ; exit 1; }
+# npx $1 e2e -e chrome || { echo 'command failed' ; exit 1; }
 npm outdated || true
 npm list --depth=0 || true
-cd ..
-rm -rf workspace
+cd .. || { echo 'command failed' ; exit 1; }
+rm -rf workspace || { echo 'command failed' ; exit 1; }

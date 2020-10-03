@@ -6,7 +6,7 @@ name: GitHub CI (Next)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */4 * * *"
 
 env:
   tag: next
