@@ -13,7 +13,7 @@ npx $1 format || { echo 'command failed' ; exit 1; }
 # npx lean coverage || { echo 'command failed' ; exit 1; }
 npx $1 coverage || { echo 'command failed' ; exit 1; }
 # npx lean build --gzip || { echo 'command failed' ; exit 1; }
-npx $1 build --gzip || { echo 'command failed' ; exit 1; }
+npx $1 build || { echo 'command failed' ; exit 1; }
 cp dist/app.css ../dist/app.css || { echo 'command failed' ; exit 1; }
 cp dist/app.js ../dist/$1.js || { echo 'command failed' ; exit 1; }
 cp dist/app.js.gz ../dist/$1.js.gz || { echo 'command failed' ; exit 1; }
