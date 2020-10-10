@@ -17,7 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with: webpack/svelte
+        with: 
+          ref: webpack/svelte
       - name: Set up Node.js 12.x
         uses: actions/setup-node@v1
         with:
