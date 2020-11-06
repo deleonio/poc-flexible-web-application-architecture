@@ -9,7 +9,7 @@ on:
     - cron: "0 */4 * * *"
 
 env:
-  tag: webpack
+  tag: next
 
 jobs:
   build:
