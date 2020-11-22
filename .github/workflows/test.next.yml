@@ -14,6 +14,12 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        framework: [angular, angularjs]
+    name: Test "${{matrix.angular}}" framework
     steps:
       - uses: actions/checkout@v2
         with:
@@ -22,8 +28,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Build all framework variants
-        run: sh wake-up-all.sh ${{env.tag}}
+      - name: Build "${{matrix.angular}}" framework
+        run: sh wake-up.sh ${{matrix.angular}} ${{env.tag}}
       - name: List build artifacts
         run: |
           ls -la dist/
