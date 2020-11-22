@@ -19,7 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         framework: [angular, angularjs]
-    name: Test "${{matrix.angular}}" framework
+    name: Test "${{matrix.framework}}" framework
     steps:
       - uses: actions/checkout@v2
         with:
@@ -28,7 +28,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Build "${{matrix.angular}}" framework
+      - name: Build "${{matrix.framework}}" framework
         run: sh wake-up.sh ${{matrix.angular}} ${{env.tag}}
       - name: List build artifacts
         run: |
