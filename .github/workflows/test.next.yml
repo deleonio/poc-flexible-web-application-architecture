@@ -29,7 +29,9 @@ jobs:
         with:
           node-version: 12.x
       - name: Build "${{matrix.framework}}" framework
-        run: sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
+        run: |
+          cp -r public dist
+          sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
       - name: List build artifacts
         run: |
           ls -la dist/
