@@ -9,7 +9,7 @@ on:
       tag:
         description: 'Tag'     
         required: true
-        default: 'latest'
+        default: 'next'
   schedule:
     - cron: "0 */4 * * *"
 
