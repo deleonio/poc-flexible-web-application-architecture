@@ -35,10 +35,6 @@ jobs:
       - name: List build artifacts
         run: |
           ls -la dist/
-          mkdir ${{github.event.inputs.tag}}
-          mv dist/* ${{github.event.inputs.tag}}/
-          mv ${{github.event.inputs.tag}} dist/
-          ls -la dist/${{github.event.inputs.tag}}/
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
