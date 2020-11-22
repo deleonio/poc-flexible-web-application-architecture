@@ -5,11 +5,13 @@ name: GitHub CI (Next)
 
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag'     
+        required: true
+        default: 'latest'
   schedule:
     - cron: "0 */4 * * *"
-
-env:
-  tag: next
 
 jobs:
   build:
@@ -31,14 +33,14 @@ jobs:
       - name: Build "${{matrix.framework}}" framework
         run: |
           cp -r public dist
-          sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
+          sh wake-up.sh ${{matrix.framework}} ${{github.event.inputs.tag}}
       - name: List build artifacts
         run: |
           ls -la dist/
-          mkdir ${{env.tag}}
-          mv dist/* ${{env.tag}}/
-          mv ${{env.tag}} dist/
-          ls -la dist/${{env.tag}}/
+          mkdir ${{github.event.inputs.tag}}
+          mv dist/* ${{github.event.inputs.tag}}/
+          mv ${{github.event.inputs.tag}} dist/
+          ls -la dist/${{github.event.inputs.tag}}/
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
