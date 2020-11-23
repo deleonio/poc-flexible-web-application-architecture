@@ -19,7 +19,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    # continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
@@ -27,10 +27,10 @@ jobs:
     name: Test "${{matrix.framework}}" framework
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Node.js 12.x
+      - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 14.x
       - name: Test "${{matrix.framework}}" framework
         run: |
           cp -r public dist
