@@ -12,6 +12,9 @@ on:
         default: 'canary'
   schedule:
     - cron: "*/5 * * * *"
+      
+env:
+  tag: ${{github.event.inputs.tag}} || 'canary'
 
 jobs:
   build:
@@ -28,5 +31,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - name: Test "${{matrix.framework}}" framework "${{github.event.inputs.tag}}"
+      - name: Test "${{matrix.framework}}" framework "${{env.tag}}"
         run: ls -la
