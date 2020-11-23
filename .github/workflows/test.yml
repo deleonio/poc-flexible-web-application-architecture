@@ -14,7 +14,7 @@ on:
     - cron: "*/5 * * * *"
       
 env:
-  tag: ${{github.event.inputs.tag}} || 'canary'
+  tag: ${{github.event.inputs.tag || 'canary'}}
 
 jobs:
   build:
