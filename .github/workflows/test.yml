@@ -11,7 +11,7 @@ on:
         required: true
         default: 'canary'
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   build:
