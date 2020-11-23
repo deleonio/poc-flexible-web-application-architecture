@@ -1,9 +1,9 @@
 mkdir workspace || { echo 'command failed' ; exit 1; }
 cd workspace || { echo 'command failed' ; exit 1; }
-npm install @leanup/cli@$2 @leanup/cli-$1@$2 --no-save || { echo 'command failed' ; exit 1; }
-# npx lean create -n template || { echo 'command failed' ; exit 1; }
+npm install --legacy-peer-deps @leanup/cli@$2 @leanup/cli-$1@$2 --no-save || { echo 'command failed' ; exit 1; }
+# npx lean create -o -n template || { echo 'command failed' ; exit 1; }
 npx $1 create -o -n template || { echo 'command failed' ; exit 1; }
-# npm update || { echo 'command failed' ; exit 1; }
+# npm update --legacy-peer-deps || { echo 'command failed' ; exit 1; }
 # npx lean lint || { echo 'command failed' ; exit 1; }
 npx $1 lint || { echo 'command failed' ; exit 1; }
 # npx lean format || { echo 'command failed' ; exit 1; }

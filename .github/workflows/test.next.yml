@@ -5,13 +5,16 @@ name: GitHub CI (Next)
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag'     
-        required: true
-        default: 'next'
+    # inputs:
+    #   tag:
+    #     description: 'Tag'     
+    #     required: true
+    #     default: 'next'
   schedule:
     - cron: "0 */4 * * *"
+
+env:
+  tag: 'next'
 
 jobs:
   build:
@@ -28,17 +31,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Build "${{matrix.framework}}" framework
+      - name: Test "${{matrix.framework}}" framework
         run: |
           cp -r public dist
-          sh wake-up.sh ${{matrix.framework}} ${{github.event.inputs.tag}}
+          sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
       - name: List build artifacts
         run: |
           ls -la dist/
-          mkdir ${{github.event.inputs.tag}}
-          mv dist/* ${{github.event.inputs.tag}}/
-          mv ${{github.event.inputs.tag}} dist/
-          ls -la dist/${{github.event.inputs.tag}}/
+          mkdir ${{env.tag}}
+          mv dist/* ${{env.tag}}/
+          mv ${{env.tag}} dist/
+          ls -la dist/${{env.tag}}/
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:

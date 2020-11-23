@@ -5,13 +5,16 @@ name: GitHub CI (Latest)
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag'     
-        required: true
-        default: 'latest'
+    # inputs:
+    #   tag:
+    #     description: 'Tag'     
+    #     required: true
+    #     default: 'latest'
   schedule:
     - cron: "0 */4 * * *"
+
+env:
+  tag: 'canary'
 
 jobs:
   build:
@@ -28,10 +31,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Build "${{matrix.framework}}" framework
+      - name: Text "${{matrix.framework}}" framework
         run: |
           cp -r public dist
-          sh wake-up.sh ${{matrix.framework}} ${{github.event.inputs.tag}}
+          sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
       - name: List build artifacts
         run: |
           ls -la dist/
