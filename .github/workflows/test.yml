@@ -1,0 +1,32 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: GitHub CI (Test)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag'     
+        required: true
+        default: 'canary'
+  schedule:
+    - cron: "0 */4 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        framework: [angular, angularjs, aurelia, inferno, preact, react, svelte, vanilla, vue, vue3]
+    name: Test "${{matrix.framework}}" framework
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Test "${{matrix.framework}}" framework "${{github.event.inputs.tag || canary}}"
+        run: ls -la
