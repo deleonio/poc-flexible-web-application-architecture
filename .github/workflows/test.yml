@@ -27,9 +27,5 @@ jobs:
     name: Test "${{matrix.framework}}" framework "${{env.tag}}"
     steps: 
       - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
       - name: Test "${{matrix.framework}}" framework "${{env.tag}}"
         run: ls -la
