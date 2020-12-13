@@ -4,7 +4,6 @@
 name: GitHub CI (Canary)
 
 on:
-  B
   workflow_dispatch:
     # inputs:
     #   tag:
