@@ -9,9 +9,9 @@ npx $1 lint || { echo 'command failed' ; exit 1; }
 # npx lean format || { echo 'command failed' ; exit 1; }
 npx $1 format || { echo 'command failed' ; exit 1; }
 # npx lean test || { echo 'command failed' ; exit 1; }
-# npx $1 test || { echo 'command failed' ; exit 1; }
+npx $1 test || { echo 'command failed' ; exit 1; }
 # npx lean coverage || { echo 'command failed' ; exit 1; }
-npx $1 coverage || { echo 'command failed' ; exit 1; }
+# npx $1 coverage || { echo 'command failed' ; exit 1; }
 # npx lean build --gzip || { echo 'command failed' ; exit 1; }
 npx $1 build || { echo 'command failed' ; exit 1; }
 # cp dist/app.css ../dist/app.css || { echo 'command failed' ; exit 1; }
