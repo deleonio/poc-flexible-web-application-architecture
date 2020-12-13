@@ -4,6 +4,7 @@
 name: GitHub CI (Canary)
 
 on:
+  B
   workflow_dispatch:
     # inputs:
     #   tag:
@@ -11,7 +12,7 @@ on:
     #     required: true
     #     default: 'canary'
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: "0 4 * * *"
 
 env:
   tag: 'canary'
