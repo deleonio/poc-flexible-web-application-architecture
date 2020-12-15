@@ -2,7 +2,7 @@ mkdir workspace || { echo 'command failed' ; exit 1; }
 cd workspace || { echo 'command failed' ; exit 1; }
 npm install --no-save --global @leanup/cli@$2 @leanup/cli-$1@$2 || { echo 'command failed' ; exit 1; }
 # npx lean create -n template || { echo 'command failed' ; exit 1; }
-$1 create -o -n template || { echo 'command failed' ; exit 1; }
+$1 create -n template || { echo 'command failed' ; exit 1; }
 # npm update --legacy-peer-deps || { echo 'command failed' ; exit 1; }
 npm install --no-save @leanup/cli@$2 @leanup/cli-$1@$2 || { echo 'command failed' ; exit 1; }
 # npx lean lint || { echo 'command failed' ; exit 1; }
