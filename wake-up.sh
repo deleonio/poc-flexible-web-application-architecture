@@ -16,7 +16,7 @@ npm run test || { echo 'command failed' ; exit 1; }
 npx lean coverage || { echo 'command failed' ; exit 1; }
 npx $1 coverage || { echo 'command failed' ; exit 1; }
 npm run coverage || { echo 'command failed' ; exit 1; }
-npx lean build --gzip || { echo 'command failed' ; exit 1; }
+npx lean build || { echo 'command failed' ; exit 1; }
 npx $1 build || { echo 'command failed' ; exit 1; }
 npm run build || { echo 'command failed' ; exit 1; }
 cp dist/app.js ../dist/$1.js || { echo 'command failed' ; exit 1; }
