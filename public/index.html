@@ -5,6 +5,12 @@
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 />
 <title>PoC - Flexible web application architecture</title>
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
 <style>
 header {
     float: left;
@@ -15,15 +21,20 @@ ul{
     margin: 0;
     padding: 0;
 }
-    li{
-        float: left;
+li{
+    float: left;
 }
 img {
-	height: 100px !important;
+    height: 100px !important;
 }
 main > div > div {
-	max-width: 500px;
-	float: left;
+    padding: .25em;
+    width: 350px;
+    float: left;
+}
+a {
+    color: dodgerblue;
+    text-decoration: underline;
 }
 </style>
 <div style="margin: 10px">
@@ -45,94 +56,23 @@ main > div > div {
         >GitHub Repository</a
       >.
     </p>
-    <p>
-        <h3>Frameworks</h3>
-        <ul>
-          <li>
-            <a href="angular.html"><img src="assets/logo.angular.png" title="Angular" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="angularjs.html">
-              <img src="assets/logo.angularjs.png" title="AngularJS" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="aurelia.html">
-              <img src="assets/logo.aurelia.png" title="Aurelia" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="inferno.html">
-              <img src="assets/logo.inferno.png" title="Inferno" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="preact.html">
-              <img src="assets/logo.preact.png" title="Preact" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="react.html">
-              <img src="assets/logo.react.png" title="React" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="svelte.html">
-              <img src="assets/logo.svelte.png" title="Svelte" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="vanilla.html">
-              <img src="assets/logo.vanilla.png" title="Web Components" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="vue.html">
-              <img src="assets/logo.vue.png" title="Vue" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="lit-element.html">
-              <img src="assets/logo.polymer.png" title="Polymer - lit-element" width="100">
-            </a>
-          </li>
-          <li>
-            <a href="https://tailwindcss.com/" target="tailwindcss">
-              <img src="assets/logo.tailwindcss.png" title="Tailwindcss" width="100">
-            </a>
-          </li>
-        </ul>
-    </p>
   </header>
   <main>
     <h3>Apps</h3>
-    <div class="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-      <div id="angular"></div>
+    <div style="display: root-flow">
+      <div id="inferno"></div>
+      <div id="preact"></div>
+      <div id="svelte"></div>
+      <div id="lit-element"></div>
+      <div id="vue3"></div>
+      <div id="vue"></div>
+      <div id="react"></div>
       <div id="angularjs"></div>
       <div id="aurelia"></div>
-      <div id="inferno"></div>
-      <div id="lit-element"></div>
-      <div id="preact"></div>
-      <div id="react"></div>
-      <div id="svelte"></div>
-      <div id="vue"></div>
-      <div id="vue3"></div>
-    </div>
-    <div class="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+      <div id="angular"></div>
       <div id="vanilla"></div>
     </div>
   </main>
-  <footer>
-    <hr />
-    <code>
-      <b>Author:</b> Martin Oppitz |
-      <a href="mailto:github@martinoppitz.com">github@martinoppitz.com</a> |
-      <a href="http://martinoppitz.com" target="http://martinoppitz.com"
-        >http://martinoppitz.com</a
-      ></code
-    >
-  </footer>
 </div>
 <script src="angular.js"></script>
 <script src="angularjs.js"></script>
@@ -142,6 +82,6 @@ main > div > div {
 <script src="preact.js"></script>
 <script src="react.js"></script>
 <script src="svelte.js"></script>
+<script src="vanilla.js"></script>
 <script src="vue.js"></script>
 <script src="vue3.js"></script>
-<script src="vanilla.js"></script>
