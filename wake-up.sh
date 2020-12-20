@@ -19,7 +19,7 @@ npx lean build || { echo 'command failed' ; exit 1; }
 npx $1 build || { echo 'command failed' ; exit 1; }
 npm run build || { echo 'command failed' ; exit 1; }
 cp dist/app.js ../dist/$1.js || { echo 'command failed' ; exit 1; }
-cp dist/app.css ../dist/$1.css || true
+cp dist/app.css ../dist/style.css || true
 cp -r dist/assets ../dist/ || { echo 'command failed' ; exit 1; }
 # npx lean serve -o -m production || { echo 'command failed' ; exit 1; }
 # npx $1 serve -o -m production || { echo 'command failed' ; exit 1; }
