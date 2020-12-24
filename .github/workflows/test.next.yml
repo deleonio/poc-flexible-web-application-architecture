@@ -41,6 +41,7 @@ jobs:
           sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
       - name: List build artifacts
         run: |
+          npx lean build --mode=${{ secrets.FTP_HOST }}
           ls -la dist/
           mkdir ${{env.tag}}
           mv dist/* ${{env.tag}}/
