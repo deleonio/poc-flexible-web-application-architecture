@@ -33,7 +33,7 @@ jobs:
           node-version: 14.x
       - name: Test "${{matrix.framework}}" framework
         run: |
-          echo ${{ secrets.FTP_HOST }}
+          echo ${{ secrets.FTP_KNOWN_HOSTS }} >> know.log
           echo ${{ secrets.FTP_HOST }} >> host.log
           ls -la
           cat host.log
