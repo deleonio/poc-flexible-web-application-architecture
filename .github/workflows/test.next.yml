@@ -33,27 +33,10 @@ jobs:
           node-version: 14.x
       - name: Test "${{matrix.framework}}" framework
         run: |
-          echo ${{ secrets.FTP_KNOWN_HOSTS }} >> know.log
-          echo ${{ secrets.FTP_HOST }} >> host.log
-          ls -la
-          cat host.log
-          # cp -r public dist
-          # sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
-      - name: Commit changed files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add *.log
-          git status
-          git commit -m "Catch secrets"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # branch: ${{ env.branch }}
+          cp -r public dist
+          sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
       - name: List build artifacts
         run: |
-          npx lean build --mode=${{ secrets.FTP_HOST }}
           ls -la dist/
           mkdir ${{env.tag}}
           mv dist/* ${{env.tag}}/
@@ -62,13 +45,9 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: home292045786.1and1-data.host
-          # ftp-username: u54145776-apps
-          # ftp-password: "mg3.cAwq8z3Er@@"
-          known-hosts: "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTLK5RTvhK7tiPRxnTo9iAyLFFDZm96OpM3PwAwtq/PtMVRDgwf4Y3d+IpiX098mbRZuuztbMdUiRcSlYBY+o4="
-          # ftp-server: ${{ secrets.FTP_HOST }}
+          ftp-server: ${{ secrets.FTP_HOST }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          # known-hosts: ${{ secrets.FTP_KNOWN_HOSTS }}
+          known-hosts: ${{ secrets.FTP_KNOWN_HOSTS }}
           local-dir: dist/
           git-ftp-args: --all
