@@ -32,9 +32,10 @@ jobs:
         with:
           node-version: 14.x
       - name: Test "${{matrix.framework}}" framework
+        shell: bash
         run: |
           cp -r public dist
-          sh wake-up.sh ${{matrix.framework}} ${{env.tag}}
+          bash ./wake-up.sh ${{matrix.framework}} ${{env.tag}}
       - name: List build artifacts
         run: |
           ls -la dist/

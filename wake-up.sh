@@ -28,4 +28,4 @@ cp -r dist/assets ../dist/ || { echo 'command failed' ; exit 1; }
 npm outdated || true
 npm list --depth=0 || true
 cd .. || { echo 'command failed' ; exit 1; }
-rm -rf workspace || { echo 'command failed' ; exit 1; }
+# rm -rf workspace || { echo 'command failed' ; exit 1; }
