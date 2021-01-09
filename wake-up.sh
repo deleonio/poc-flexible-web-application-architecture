@@ -20,7 +20,7 @@ npx lean build || { echo 'command failed' ; exit 1; }
 npx $1 build || { echo 'command failed' ; exit 1; }
 npm run build || { echo 'command failed' ; exit 1; }
 cp dist/app.js ../dist/$1.js || { echo 'command failed' ; exit 1; }
-cp dist/app.css ../dist/style.css || true
+# cp dist/app.css ../dist/style.css || true
 cp -r dist/assets ../dist/ || { echo 'command failed' ; exit 1; }
 npx lean serve --port 8080 & || { echo 'command failed' ; exit 1; }
 npx $1 serve --port 8081 & || { echo 'command failed' ; exit 1; }
