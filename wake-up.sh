@@ -1,4 +1,5 @@
 cp -r public dist
+cp -r public dist/$1
 rm -rf workspace || { echo 'command failed' ; exit 1; }
 mkdir workspace || { echo 'command failed' ; exit 1; }
 cd workspace || { echo 'command failed' ; exit 1; }
@@ -20,9 +21,10 @@ npm run coverage || { echo 'command failed' ; exit 1; }
 npx lean build || { echo 'command failed' ; exit 1; }
 npx $1 build || { echo 'command failed' ; exit 1; }
 npm run build || { echo 'command failed' ; exit 1; }
-mkdir deploy
+cp -r dist ../dist/$1 || { echo 'command failed' ; exit 1; }
 cp -r dist/*.js ../dist/ || { echo 'command failed' ; exit 1; }
 cp dist/main.js ../dist/$1.js || { echo 'command failed' ; exit 1; }
+cp dist/main.js ../dist/$1/$1.js || { echo 'command failed' ; exit 1; }
 cp dist/main.css ../dist/style.css || true
 cp -r dist/assets ../dist/ || { echo 'command failed' ; exit 1; }
 npx lean serve --port 8080 &
