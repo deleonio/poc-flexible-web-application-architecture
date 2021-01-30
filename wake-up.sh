@@ -1,3 +1,4 @@
+cp -r public dist
 rm -rf workspace || { echo 'command failed' ; exit 1; }
 mkdir workspace || { echo 'command failed' ; exit 1; }
 cd workspace || { echo 'command failed' ; exit 1; }
