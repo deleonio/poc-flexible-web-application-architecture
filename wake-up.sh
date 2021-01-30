@@ -21,15 +21,16 @@ npm run coverage || { echo 'command failed' ; exit 1; }
 npx lean build || { echo 'command failed' ; exit 1; }
 npx $1 build || { echo 'command failed' ; exit 1; }
 npm run build || { echo 'command failed' ; exit 1; }
-cp -r dist/ ../dist/$1 || { echo 'command failed' ; exit 1; }
+cp -r dist/* ../dist/$1 || { echo 'command failed' ; exit 1; }
 cp -r dist/*.js ../dist/ || { echo 'command failed' ; exit 1; }
 cp dist/main.js ../dist/$1.js || { echo 'command failed' ; exit 1; }
 cp dist/main.js ../dist/$1/$1.js || { echo 'command failed' ; exit 1; }
 cp dist/main.css ../dist/style.css || true
 cp -r dist/assets ../dist/ || { echo 'command failed' ; exit 1; }
-npx lean serve --port 8080 &
-npx $1 serve --port 8081 &
-npx lean serve -- --port 8082 &
+npm run build:snowpack
+# npx lean serve --port 8080 &
+# npx $1 serve --port 8081 &
+# npx lean serve -- --port 8082 &
 # npx lean e2e -e chrome || { echo 'command failed' ; exit 1; }
 # npx $1 e2e -e chrome || { echo 'command failed' ; exit 1; }
 npm outdated || true
