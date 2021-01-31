@@ -1,5 +1,5 @@
 cp -r public/* dist
-cp -r public/* dist/$1
+cp -r public dist/$1
 rm -rf workspace || { echo 'command failed' ; exit 1; }
 mkdir workspace || { echo 'command failed' ; exit 1; }
 cd workspace || { echo 'command failed' ; exit 1; }
