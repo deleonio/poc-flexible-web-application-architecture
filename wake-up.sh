@@ -23,10 +23,6 @@ npx $1 build || { echo 'command failed' ; exit 1; }
 npm run build || { echo 'command failed' ; exit 1; }
 npm run build:snowpack
 cp -r dist/* ../dist/$1 || { echo 'command failed' ; exit 1; }
-cp -r dist/*.js ../dist/ || { echo 'command failed' ; exit 1; }
-cp dist/main.js ../dist/main.$1.js || { echo 'command failed' ; exit 1; }
-cp dist/main.js ../dist/$1/main.$1.js || { echo 'command failed' ; exit 1; }
-cp dist/main.css ../dist/style.css || true
 cp -r dist/assets ../dist/ || { echo 'command failed' ; exit 1; }
 # npx lean serve --port 8080 &
 # npx $1 serve --port 8081 &
