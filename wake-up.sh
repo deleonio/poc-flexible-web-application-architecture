@@ -21,6 +21,7 @@ npm run coverage || { echo 'command failed' ; exit 1; }
 npx lean build || { echo 'command failed' ; exit 1; }
 npx $1 build || { echo 'command failed' ; exit 1; }
 npm run build || { echo 'command failed' ; exit 1; }
+npm run build:snowpack || true
 mkdir ../dist/$1
 cp -r dist/* ../dist/$1 || { echo 'command failed' ; exit 1; }
 mkdir ../dist/$1/$1
