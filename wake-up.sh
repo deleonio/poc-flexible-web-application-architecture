@@ -39,6 +39,6 @@ npm run build:snowpack || true
 # npx $1 e2e -e chrome || { echo 'command failed' ; exit 1; }
 npm outdated || true
 npm list --depth=0 || true
-npx tsc -p tsconfig.json || { echo 'command failed' ; exit 1; }
+# npx tsc -p tsconfig.json || { echo 'command failed' ; exit 1; }
 cd .. || { echo 'command failed' ; exit 1; }
 # rm -rf workspace || { echo 'command failed' ; exit 1; }
