@@ -1,81 +1,84 @@
 <!DOCTYPE html>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>PoC - Flexible web application architecture</title>
-<link rel="stylesheet" href="angular/app.css">
-<style>
-  header {
-    float: left;
-    width: 100%;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    float: left;
-  }
-  img {
-    height: 100px !important;
-  }
-  main > div > div {
-    padding: 0.25em;
-    width: 350px;
-    float: left;
-  }
-  a {
-    color: dodgerblue;
-    text-decoration: underline;
-  }
-</style>
-<div style="margin: 10px">
-  <header>
-    <h1>PoC - Flexible web application architecture</h1>
-    <p>
-      This project demonstrate a flexible
-      <a href="https://esbuild.github.io/">ESBuild</a>/<a
-        href="https://babeljs.io/"
-        >Babel</a
-      >
-      and <a href="https://webpack.js.org/">Webpack</a> based web application
-      architecture. The styling was realized with
-      <a href="https://tailwindcss.com/">Tailwindcss</a>.
-    </p>
-    <p>
-      More about the PoC you can find in this
-      <a
-        href="https://github.com/martinoppitz/poc-flexible-web-application-architecture"
-        target="github-martinoppitz"
-        >GitHub Repository</a
-      >.
-    </p>
-  </header>
-  <main>
-    <h3>Apps</h3>
-    <div style="display: root-flow">
-      <div id="inferno"></div>
-      <div id="preact"></div>
-      <div id="svelte"></div>
-      <div id="lit-element"></div>
-      <div id="vue3"></div>
-      <div id="vue"></div>
-      <div id="react"></div>
-      <div id="angularjs"></div>
-      <div id="aurelia"></div>
-      <div id="angular"></div>
-      <div id="vanilla"></div>
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PoC - Flexible web application architecture</title>
+    <link rel="stylesheet" href="angular/app.css" />
+    <style>
+      header {
+        float: left;
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        float: left;
+      }
+      img {
+        height: 100px !important;
+      }
+      main > div > div {
+        padding: 0.25em;
+        width: 350px;
+        float: left;
+      }
+      a {
+        color: dodgerblue;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin: 10px">
+      <header>
+        <h1>PoC - Flexible web application architecture</h1>
+        <p>
+          This project demonstrate a flexible
+          <a href="https://esbuild.github.io/">ESBuild</a>/<a href="https://babeljs.io/">Babel</a> and
+          <a href="https://webpack.js.org/">Webpack</a> based web application architecture. The styling was realized
+          with <a href="https://tailwindcss.com/">Tailwindcss</a>.
+        </p>
+        <p>
+          More about the PoC you can find in this
+          <a
+            href="https://github.com/martinoppitz/poc-flexible-web-application-architecture"
+            target="github-martinoppitz"
+            >GitHub Repository</a
+          >.
+        </p>
+      </header>
+      <main>
+        <h3>Apps</h3>
+        <div style="display: root-flow">
+          <div id="inferno"></div>
+          <div id="preact"></div>
+          <div id="svelte"></div>
+          <div id="lit-element"></div>
+          <div id="vue3"></div>
+          <div id="vue"></div>
+          <div id="react"></div>
+          <div id="angularjs"></div>
+          <div id="aurelia"></div>
+          <div id="angular"></div>
+          <div id="vanilla"></div>
+        </div>
+      </main>
     </div>
-  </main>
-</div>
-<script type="module" src="angular/main.js"></script>
-<script type="module" src="angularjs/main.js"></script>
-<script type="module" src="aurelia/main.js"></script>
-<script type="module" src="inferno/main.js"></script>
-<script type="module" src="lit-element/main.js"></script>
-<script type="module" src="preact/main.js"></script>
-<script type="module" src="react/main.js"></script>
-<script type="module" src="svelte/main.js"></script>
-<script type="module" src="vanilla/main.js"></script>
-<script type="module" src="vue/main.js"></script>
-<script type="module" src="vue3/main.js"></script>
+    <script src="angular/main.js"></script>
+    <script src="angularjs/main.js"></script>
+    <script src="aurelia/main.js"></script>
+    <script src="inferno/main.js"></script>
+    <script src="lit-element/main.js"></script>
+    <script src="preact/main.js"></script>
+    <script src="react/main.js"></script>
+    <script src="svelte/main.js"></script>
+    <script src="vanilla/main.js"></script>
+    <script src="vue/main.js"></script>
+    <script src="vue3/main.js"></script>
+  </body>
+</html>
