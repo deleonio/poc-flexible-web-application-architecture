@@ -11,7 +11,7 @@ on:
     #     required: true
     #     default: 'next'
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 */4 * * *"
 
 env:
   tag: 'next'
