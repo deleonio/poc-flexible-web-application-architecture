@@ -9,6 +9,7 @@ npx lean serve &
 npx lean lint || { echo 'command failed' ; exit 1; }
 npx $1 lint || { echo 'command failed' ; exit 1; }
 npm run lint || { echo 'command failed' ; exit 1; }
+npx tsc -p tsconfig.json || { echo 'command failed' ; exit 1; }
 npx lean format || { echo 'command failed' ; exit 1; }
 npx $1 format || { echo 'command failed' ; exit 1; }
 npm run format || { echo 'command failed' ; exit 1; }
