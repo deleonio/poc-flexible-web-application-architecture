@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: GitHub CI (Next)
+name: GitHub CI (Canary v1.1)
 
 on:
   workflow_dispatch:
@@ -9,12 +9,12 @@ on:
     #   tag:
     #     description: 'Tag'
     #     required: true
-    #     default: 'next'
+    #     default: 'canary'
   schedule:
     - cron: "0 */4 * * *"
 
 env:
-  tag: "next"
+  tag: "canary-1.1"
 
 jobs:
   build:
@@ -55,10 +55,6 @@ jobs:
           mv dist/* ${{env.tag}}/
           mv ${{env.tag}} dist/
           ls -la dist/${{env.tag}}/
-      - name: Test snowpack
-        continue-on-error: true
-        run: npm run build:snowpack
-        working-directory: workplace
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
